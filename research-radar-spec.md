@@ -35,21 +35,9 @@ Radar 定位为 Ymem 的**核心进化层**:它不直接修改 kernel 主线,而
 
 ## 2. 信息源
 
-```text
-论文源:
-- arXiv cs.AI / cs.CL / cs.IR / cs.LG
-- OpenReview: ICLR / NeurIPS / ICML / ACL / EMNLP
-- Papers with Code / Semantic Scholar
-
-产品与工程源:
-- Anthropic / OpenAI / Google / Microsoft / Meta 官方 docs 和 blog
-- LangChain / LlamaIndex / Zep / Mem0 / Graphiti / MCP 生态
-- GitHub trending / release notes
-
-社区信号:
-- HN / Reddit / X / 研究者博客
-- Karpathy / Lilian Weng / Chip Huyen 等高质量个人来源
-```
+详见 [`information-sources.md`](information-sources.md) —— 10 个类别的完整
+catalog,中文社区单独成节。该文档是 Radar 信息面的 single source of truth,
+此处不再重复。
 
 ## 3. ResearchItem schema
 

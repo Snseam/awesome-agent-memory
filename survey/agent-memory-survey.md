@@ -59,11 +59,23 @@ language: zh-CN
 - long-range understanding
 - selective forgetting
 
-主要 benchmark:
-- LongMemEval([papers/longmemeval.md](../papers/longmemeval.md))
-- MemoryAgentBench([papers/memoryagentbench.md](../papers/memoryagentbench.md))
-- LoCoMo([papers/locomo.md](../papers/locomo.md))
-- MemoryArena(待加)
+主要 benchmark(经典 + 2025 H2 / 2026 H1 新增):
+
+| Benchmark | 笔记 | 覆盖能力 | 备注 |
+|---|---|---|---|
+| LongMemEval | [`papers/longmemeval.md`](../papers/longmemeval.md) | accurate retrieval / long-range | 经典基线 |
+| MemoryAgentBench | [`papers/memoryagentbench.md`](../papers/memoryagentbench.md) | 四种能力划分的来源 | 同上 |
+| LoCoMo | [`papers/locomo.md`](../papers/locomo.md) | 长对话记忆 | Mem0 ECAI 2025 横评的主要 benchmark |
+| ConvoMem | (papers/index)| 对话记忆 | 2025-12 新增 |
+| CloneMem | (papers/index)| AI clone / 长程一致性 | 2025-12 |
+| KnowMe-Bench | (papers/index)| digital companion | 2025-12 |
+| RealMem | (papers/index)| real-world 多模态交互 | 2025-12,arXiv 2601.06966 |
+| PersonaMem-v2 | (papers/index)| 隐式 persona | 2025-12 |
+| LoCoBench-Agent | (papers/index)| SE / coding agent | 2025-12 |
+| MemoryArena | (papers/index)| 综合 | 待 ResearchItem 升级 |
+
+未在表里的 stub 见 [`papers/index.md`](../papers/index.md);该索引按 9 仓
+跨引用度排序,基线移动信号优先看 top-10。
 
 ## 4. 关键启发与 Ymem 立场
 
@@ -96,10 +108,25 @@ David Soria Parra 的 MCP 分享对 Ymem API 的启示:不要暴露
 
 按优先级:
 
-1. **Memory-T1** / 时间版本化:对 Ymem `valid_from/valid_to` 的设计影响
-2. **MemAgent / ReMemR1** / 长上下文与 memory 的边界
-3. **Skills over MCP** / 影响 host-app 侧但反推 Ymem 输出形状
-4. **HiPRAG / MC-Search** / agentic retrieval 是否进入 Ymem `retrieve` 的默认实现
+1. **Mnemonic sovereignty / 反污染**:[`papers/mnemonic-sovereignty.md`](../papers/mnemonic-sovereignty.md)
+   提出 cross-session poisoning / 越权访问 / 状态污染三类威胁,直接驱动
+   Ymem `security-privacy` 模块的最小可行设计。**P0**。
+2. **Temporal KG / valid-time**:Memory-T1、Graphiti、Zep 三者都在做"时间感知图谱",
+   对 Ymem `valid_from/valid_to/supersedes` 字段是直接对照。
+3. **Dream consolidation 的实证**:从 [`products/claude-dreams.md`](../products/claude-dreams.md)
+   到 MemoryT1,off-line consolidation 还没有公开 benchmark。Ymem 的
+   `dream-consolidator` 实验需要自己造 EvalCase。
+4. **Graph memory 的边界**:[`papers/from-storage-to-experience.md`](../papers/from-storage-to-experience.md)
+   主张 Storage → Reflection → Experience 三阶段化;Ymem 不绑死图谱,但要
+   能从 Storage 平滑过渡到 Reflection。
+5. **MemAgent / ReMemR1 / long-context vs memory**:长上下文与 memory 的边界
+   尚未在产品上分清,Ymem 的产品边界陈述需要持续锐化。
+6. **Agentic retrieval**:HiPRAG / MC-Search 等是否进入 Ymem `retrieve` 的
+   默认实现路径;还是作为 plugin。
+7. **Skills over MCP**:影响 host-app 侧,反推 Ymem `MemoryResult` 的形状。
+
+待跟进的具体论文清单见 [`papers/index.md`](../papers/index.md);本节只跟踪
+"已经具备 ImpactReport 潜力"的方向。
 
 ## 6. 工作流
 

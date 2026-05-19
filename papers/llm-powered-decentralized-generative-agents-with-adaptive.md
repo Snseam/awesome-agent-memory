@@ -1,0 +1,17 @@
+---
+title: "LLM-Powered Decentralized Generative Agents with Adaptive Hierarchical Knowledge Graph for Cooperative Planning"
+arxiv_id: "2502.05453"
+date: 2025
+domain: unclassified
+status: stub
+sources:
+  - DEEP-PolyU
+local_pdf: deferred
+urls:
+  - "https://arxiv.org/abs/2502.05453"
+---
+
+> **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
+> ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+(arXiv'25) **LLM-Powered Decentralized Generative Agents with Adaptive Hierarchical Knowledge Graph for Cooperative Planning** [[Paper]](https://arxiv.org/abs/2502.05453)

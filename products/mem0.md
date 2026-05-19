@@ -59,6 +59,54 @@ layer)。Ymem 的差异化应该清晰:
 - Mem0 在 LongMemEval / MemoryAgentBench 上的实测表现?
 - 长期 store 的存储成本是否被 LLM 抽取膨胀?
 
+## 2026-04 算法 v2
+
+2026-04-01 Mem0 在博客 "State of AI Agent Memory 2026: Benchmarks,
+Architectures & Production Gaps" 公布了一版新算法(下文按时间称为 algorithm
+v2;Mem0 自己没有用 "v2" 这个标签,但社区一般以发布时间区分)。两个核心
+改动:
+
+- **Single-pass hierarchical extraction**:单次抽取走层次化结构;特别地,
+  **agent 自己生成的事实**在权重上被提到与用户陈述同等,记忆覆盖面扩大,
+  对话之外的 agent 推理也进入 memory
+- **Multi-signal retrieval**:并行打分,语义相似度 + BM25 关键词 + entity
+  匹配三路融合成同一份排序结果(而不是 vector-first 串接 rerank)
+
+Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
+
+- **Temporal reasoning +29.6** 分
+- **Multi-hop +23.1** 分
+
+绝对分数(在 ~6,900 tokens/query 预算下):
+
+| Benchmark | Score | Tokens/Query |
+|-----------|-------|--------------|
+| LoCoMo | 91.6 | 6,956 |
+| LongMemEval | 93.4 | 6,787 |
+| BEAM (1M) | 64.1 | 6,719 |
+| BEAM (10M) | 48.6 | 6,914 |
+
+### 对 Ymem 的启发
+
+- **agent fact 与 user fact 等权**这个选择,直接挑战了 Ymem 现在的默认
+  分级(我们倾向 user 高于 agent 推理)。需要列入 schema 讨论:`MemoryRecord`
+  里是否要保留 `source_actor` + 不同 actor 的默认权重,而不是一刀切
+- **三路并行检索** vs **串行 rerank** 是 retriever-reranker 模块的工程
+  决策点;Mem0 选了并行融合,值得我们做 A/B
+- BEAM 1M → 10M 报告 **25% 退化**,说明长尺度 temporal 推理仍未解决 —
+  这是 Ymem `evaluator-benchmark` 模块应该重点跟的题目
+
+### 待验证
+
+- Mem0 自报数字 vs 独立复现(Ymem `evaluator-benchmark` 套件覆盖之前需要
+  存疑)
+- "single-pass hierarchical" 的层次结构具体是什么(博客未给出 schema)
+- agent fact 等权对 noise 的实际影响 — 是否真的没有放大低价值 fact?
+
+> 来源:https://mem0.ai/blog/state-of-ai-agent-memory-2026
+> archive:[`archives/mem0-blog-state-of-2026.md`](archives/mem0-blog-state-of-2026.md)、
+> [`archives/mem0-april-2026-release.md`](archives/mem0-april-2026-release.md)
+
 ## Notes
 
 (随版本更新追踪)
