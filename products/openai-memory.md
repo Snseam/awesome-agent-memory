@@ -6,7 +6,7 @@ date_first_seen: 2024-02
 domain: LLM-builtin
 business_model: big-tech-builtin
 license: proprietary
-ymem_modules:
+memory_modules:
   - ingest-adapter
   - retriever-reranker
 status: full
@@ -52,19 +52,19 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
   不开放
 - **runtime**:与 OpenAI 模型强绑定
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
 - **对照点**:它定义了 "vendor-managed memory" 的对照基线 — 用户/开发者
   把记忆形态、保留策略、隐私边界完全交给一个供应商
 - **借鉴点**:
   - **memory 条目可被用户直接编辑** 的产品形态值得抄(对应 host-app 的
-    `audit-ui` 模块,而不是 Ymem kernel)
-  - 区分"自动写"与"用户显式 remember 指令" 两条入口,对应 Ymem
+    `audit-ui` 模块,而不是 memory kernel)
+  - 区分"自动写"与"用户显式 remember 指令" 两条入口,对应
     `ingest-adapter` 的两类 source
-- **互补点**:Ymem 提供"vendor-neutral 的 schema + diff",正是 OpenAI
+- **互补点**:memory kernel 提供"vendor-neutral 的 schema + diff",正是 OpenAI
   memory 的反面 — 后者数据出境且 lock-in,前者 host 自治
-- **不重叠 / 竞争点**:面向 host-app 开发者时 Ymem 与 OpenAI memory **不在
-  同一层**;但企业用户决策"是不是直接用 ChatGPT enterprise"时,Ymem 的
+- **不重叠 / 竞争点**:面向 host-app 开发者时 memory kernel 与 OpenAI memory **不在
+  同一层**;但企业用户决策"是不是直接用 ChatGPT enterprise"时,kernel 的
   价值主张需要明确回答 vs vendor-builtin 的差异
 
 ## 5. 适用 / 不适用场景
@@ -92,3 +92,8 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
 - 帮助中心:https://help.openai.com/en/articles/8983136-what-is-the-memory-feature
 - Assistants API:https://platform.openai.com/docs/assistants/how-it-works
 - 公告:https://openai.com/index/memory-and-new-controls-for-chatgpt/
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

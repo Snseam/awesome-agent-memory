@@ -81,10 +81,10 @@ language: zh-CN
 | Replika | SaaS | C 端 |
 | Nomi | SaaS | C 端 |
 
-这一类对**长程一致性**与**身份持久**要求高,与 Ymem 的 `dream-consolidator` /
-`memorydiff-generator` 设计有间接借鉴价值;但其 ethical/safety 模型与
-[`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md) 的关注点冲突,
-不作为 Ymem 主要参考对象。
+这一类对**长程一致性**与**身份持久**要求高,与 `dream-consolidator` /
+`memorydiff-generator` 类模块的设计有间接借鉴价值;但其 ethical/safety
+模型与 [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md)
+的关注点冲突,落地需要谨慎对待。
 
 ### A7. 客服 / 销售 / 业务对话 agent
 
@@ -115,7 +115,7 @@ language: zh-CN
 | pgvector + 应用层 | OSS | 个人 / 团队 |
 
 这类"伪 memory"提供存储但不提供更新 / 过期 / 冲突解决,严格意义上不是 memory layer。
-Ymem 与之的关系是:Ymem **复用**它们做底层 vector store,**不取代**它们。
+memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取代**它们。
 
 ## B. 按 audience 分类(快速反查表)
 
@@ -138,21 +138,7 @@ Character.AI / Replika / Mem.ai / Mymind。
 Letta(LeStar 学界出身) / MemGPT 论文复现 / Mem0 OSS / Graphiti OSS。
 学术用户主要消费 OSS 框架而非 SaaS。
 
-## C. Ymem 在这张图里的位置
-
-Ymem **不是产品**,是给 host-app(如 ZhiOne)用的 memory kernel。它最直接对照
-A1 中的 **Mem0 OSS / Letta / Graphiti** —— 这三者也都把自己定位为"被 host 嵌入"。
-
-差异:
-- **比 Mem0 多一层**:Mem0 直接处理 raw conversation;Ymem 假设 host 已经做了
-  conversation → MemoryRecord 的转换。这让 Ymem 更纯,host 更重。
-- **比 Letta 少一层**:Letta 是 agent runtime + memory;Ymem 只是 memory,不
-  管 agent loop。host 要自己跑 agent。
-- **比 Graphiti 更 schema-driven**:Graphiti 提供 KG primitives;Ymem 提供
-  `MemoryRecord` + `MemoryDiff` + `MemoryResult` 三件套,KG 是可选 enricher 而
-  非核心数据模型。
-
-## D. 不进入这张图的相邻范畴
+## C. 不进入这张图的相邻范畴
 
 为了不让本页失焦,**有意排除**:
 
@@ -163,3 +149,6 @@ A1 中的 **Mem0 OSS / Letta / Graphiti** —— 这三者也都把自己定位�
 
 这些都和 agent memory 有交集,但**不是把 memory 当一等公民**。把它们排除让
 "memory product" 的定义保持锐利。
+
+> 本仓发起方 Ymem 在这张图里的位置(对照 A1 的 Mem0 / Letta / Graphiti),
+> 见 [`ymem-binding/relevance-index.md`](ymem-binding/relevance-index.md) §"Ymem 在产品全景里的位置"。

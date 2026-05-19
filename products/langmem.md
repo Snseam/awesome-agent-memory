@@ -6,7 +6,7 @@ date_first_seen: 2025-02
 domain: agent-memory-layer
 business_model: OSS (LangChain 体系内)
 license: 未在首页明示;遵循 LangChain 体系常规(多为 MIT / Apache 2.0,需以仓库为准)
-ymem_modules:
+memory_modules:
   - ingest-adapter
   - retriever-reranker
   - dream-consolidator
@@ -47,20 +47,20 @@ LangMem 提出三类记忆原语:**semantic / episodic / procedural**(官方教�
   明合并规则与冲突解决策略 → **未公开**(需读源码)
 - **runtime 绑定**:与 LangGraph 紧耦合,在 LangChain 生态外使用价值打折
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
-- **对照点**:LangMem 的 "hot path tools + background manager" 拆分,与 Ymem
-  "retrieve(在线) + consolidate(离线)"的分层几乎同构
+- **对照点**:LangMem 的 "hot path tools + background manager" 拆分,与本仓追踪的
+  memory kernel "retrieve(在线) + consolidate(离线)"的分层几乎同构
 - **借鉴点**:
-  - **store 抽象**(InMemory → Postgres 平滑切换)是 Ymem persistence 层
+  - **store 抽象**(InMemory → Postgres 平滑切换)是 kernel persistence 层
     的好参考
-  - **把 memory ops 暴露为 tool** 而不是隐式中间件,这与 Letta / Ymem 的
+  - **把 memory ops 暴露为 tool** 而不是隐式中间件,这与 Letta 风格的
     显式 API 哲学一致
-  - **背景 manager** 与 Ymem `consolidate` 的设计语义重叠;可比较两者对
+  - **背景 manager** 与 kernel `consolidate` 的设计语义重叠;可比较两者对
     "什么时候触发"的处理方式
-- **互补点**:LangMem 没有显式的 diff / 审核流;Ymem 的 `MemoryDiff` 流可以
+- **互补点**:LangMem 没有显式的 diff / 审核流;`MemoryDiff` 流可以
   补它的可审计性短板
-- **不重叠 / 竞争点**:LangMem 把生态绑死在 LangGraph,Ymem 必须保持
+- **不重叠 / 竞争点**:LangMem 把生态绑死在 LangGraph,memory kernel 必须保持
   host-agnostic;两者直接竞争的可能性低,但功能清单会被用户拿来对比
 
 ## 5. 适用 / 不适用场景
@@ -84,3 +84,8 @@ LangMem 提出三类记忆原语:**semantic / episodic / procedural**(官方教�
 - archive: [`archives/langmem-overview.md`](archives/langmem-overview.md)
 - 官方:https://langchain-ai.github.io/langmem/
 - 配套:LangGraph long-term memory store 文档
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

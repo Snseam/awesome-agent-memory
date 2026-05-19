@@ -3,7 +3,7 @@ title: MemoryAgentBench — Evaluating Memory in LLM Agents via Incremental Mult
 source: ICLR 2026 (https://iclr.cc/virtual/2026/poster/10010781) / OpenReview pdf
 date: 2026
 domain: eval
-ymem_modules:
+memory_modules:
   - evaluator-benchmark
   - retriever-reranker
   - dream-consolidator
@@ -11,6 +11,7 @@ evidence_level: strong
 code_available: check
 license: check
 status: seed
+last_revised: 2026-05-19
 ---
 
 # MemoryAgentBench
@@ -42,18 +43,23 @@ selective forgetting
 ## Cost / complexity
 
 - 中等
-- 适合作为 Ymem v0 评估套件的核心组成
+- 适合作为 memory kernel v0 评估套件的核心组成
 
-## Relevance to Ymem
+## Decision relevance
 
-- 这四类能力对应 Ymem 不同模块:
+- 这四类能力对应 memory kernel 不同模块:
   - accurate retrieval → `retriever-reranker`
   - test-time learning → `ingest-adapter` + `retriever-reranker` 联合
   - long-range understanding → `semantic-dedup` + `dream-consolidator`
   - selective forgetting → `dream-consolidator` 的 forget-candidate 检测
-- 直接定义了 Ymem `MemoryDiff` 中 `archive` / `supersede` 候选的 acceptance
+- 直接定义了 `MemoryDiff` 中 `archive` / `supersede` 候选的 acceptance
   criteria 思路
 
 ## Notes
 
 (随精读迭代)
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

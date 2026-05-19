@@ -17,9 +17,6 @@
 
 ---
 
-> 服务于 [Ymem](https://github.com/Snseam/Ymem)(一个 agent 记忆 kernel)的
-> 算法迭代,同时作为公开资源开放给所有正在为 AI agent 构建记忆系统的人。
-
 本仓库**有意保持窄域**:不是通用 AI/ML 阅读清单。每一条目都应当能合理说明
 agent 如何**记忆、遗忘、检索、整合**信息。
 
@@ -27,11 +24,11 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 
 | | 一般 awesome-list | **awesome-agent-memory** |
 |---|---|---|
-| 目标 | 求覆盖 | 驱动 Ymem 决策 |
+| 目标 | 求覆盖 | 决策驱动的精选 |
 | 单篇笔记 | 标题 + 链接 | 七节 ResearchItem 模板 |
 | PDF | 只留链接,链接坏掉就丢 | 本地存档(`papers/pdfs/`)|
 | 跨仓信号 | 无 | 每个 stub 记录 9 个同生态 list 中哪些引用了它 |
-| 模块映射 | 无 | 每个 full 笔记必须映射到 `taxonomy.md` 中的 Ymem 模块 |
+| 模块映射 | 无 | 每个 full 笔记必须映射到通用 memory kernel 模块([`taxonomy.md`](taxonomy.md))|
 | 工作流 | 读 | 读 → ImpactReport → 沙盒实验 → ADR |
 
 ## 目录
@@ -42,9 +39,8 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 4. [Stub 与 Full 笔记](#stub-与-full-笔记)
 5. [新增 full 笔记的字段要求](#新增-full-笔记的字段要求)
 6. [License 与存档策略](#license-与存档策略)
-7. [与中文同行的关系](#与中文同行的关系)
-8. [姊妹仓库](#姊妹仓库)
-9. [贡献](#贡献)
+7. [发起方与维护](#发起方与维护)
+8. [贡献](#贡献)
 
 ## 一眼总览
 
@@ -72,10 +68,10 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 
 | 文件 | 用途 |
 |---|---|
-| [`survey/agent-memory-survey.md`](survey/agent-memory-survey.md) | **我们的**活综述。首选入口。 |
+| [`survey/agent-memory-survey.md`](survey/agent-memory-survey.md) | 维护者的活综述。首选入口。 |
 | [`surveys.md`](surveys.md) | **外部** meta-survey 索引(2025-12 ~ 2026-05)。 |
-| [`taxonomy.md`](taxonomy.md) | Ymem 模块 taxonomy + 三套外部 taxonomy 的对照。 |
-| [`research-radar-spec.md`](research-radar-spec.md) | 论文/产品 → ImpactReport → Ymem 沙盒 → ADR 工作流。 |
+| [`taxonomy.md`](taxonomy.md) | 通用 agent memory taxonomy:三套外部分类轴对照。 |
+| [`research-radar-spec.md`](research-radar-spec.md) | 通用 Radar workflow:论文 → ResearchItem → ImpactReport → 沙盒 → ADR。 |
 | [`information-sources.md`](information-sources.md) | 10 类信息源 catalog,含 zh-CN 独立节。 |
 | [`related-work.md`](related-work.md) | 9 个同生态 awesome-list 与我们的差异。 |
 | [`products-landscape.md`](products-landscape.md) | agent memory 产品按**领域 × 服务对象**全景。 |
@@ -91,6 +87,7 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 | [`products/`](products/) | 10 个产品笔记。 |
 | [`products/archives/`](products/archives/) | 产品页面的 markdown 快照。 |
 | [`impact-reports/`](impact-reports/) | `ArchitectureImpactReport` 草稿(当前为空)。 |
+| [`ymem-binding/`](ymem-binding/) | 维护者所在的 [Ymem](https://github.com/Snseam/Ymem) 项目特定绑定;如果你不维护 Ymem,可以跳过。 |
 
 ## 工作流
 
@@ -103,15 +100,15 @@ ResearchItem 笔记(papers/ 或 products/)
     ↓
 ArchitectureImpactReport(impact-reports/)
     ↓
-Ymem 沙盒实验
+沙盒实验(在你自己的 kernel 仓内)
     ↓
-ADR(写在 Ymem 仓内)
+ADR(在你自己的 kernel 仓内)
     ↓
-进入 Ymem 主线 或 归档
+进入主线 或 归档
 ```
 
-外部 survey 索引和我们的活综述反映当前理解面;逐条笔记是原材料;
-ImpactReport 是评估通道;最终 ADR(在 Ymem 仓)记录决策。
+外部 survey 索引和活综述反映当前理解面;逐条笔记是原材料;ImpactReport
+是评估通道;最终 ADR(在你的 kernel 仓)记录决策。
 
 ## Stub 与 Full 笔记
 
@@ -129,7 +126,7 @@ stub 在有人通读论文后填完七节模板,升级为 **full** 笔记:
 2. 核心 claim
 3. 方法 / 框架
 4. 评估 / benchmark
-5. 与 Ymem 的关系      ★ taxonomy 映射
+5. 决策相关性           ★ 通用 memory kernel 模块映射
 6. 优劣 / 注意事项
 7. 待跟进
 ```
@@ -143,13 +140,13 @@ stub 在有人通读论文后填完七节模板,升级为 **full** 笔记:
 - core claim · method summary · required assumptions · benchmarks used
 - evidence level(`weak | medium | strong`)
 - code available(yes/no + 链接)· license · cost/complexity 估算
-- **relevance to Ymem** 必须映射到 [`taxonomy.md`](taxonomy.md) 中的模块
+- **decision relevance** —— 影响的 memory kernel 模块(见 [`taxonomy.md`](taxonomy.md))
 
 完整 schema 与命名约定见 [`research-radar-spec.md`](research-radar-spec.md)。
 
 ## License 与存档策略
 
-笔记与综述内容以 [Apache 2.0](LICENSE) 协议发布(与 sister repos 一致)。
+笔记与综述内容以 [Apache 2.0](LICENSE) 协议发布。
 **引用自外部论文与文章的摘录**仍归原作者所有,本仓在 fair use / fair dealing
 框架下出于研究评议目的使用。
 
@@ -162,22 +159,23 @@ arXiv perpetual non-exclusive license、ACL Anthology 的 CC-BY、OpenReview
 页面变更或消失后仍可审计。它们**不是**重新发布材料;商用引用请以快照 header
 中的 `source_url` 为准。
 
+## 发起方与维护
+
+本仓由 [**Ymem**](https://github.com/Snseam/Ymem)(一个 agent memory
+kernel)项目发起和维护。**项目特定绑定** —— 笔记 frontmatter 引用的模块
+名、维护者对单篇论文的具体立场、内部 benchmark 选择 —— 都收纳到
+[`ymem-binding/`](ymem-binding/) 子目录,以确保顶层文档对外完全中性。如果你
+不维护 Ymem 可以忽略该子目录。
+
 ## 与中文同行的关系
 
 - [IAAR-Shanghai/Awesome-AI-Memory](https://github.com/IAAR-Shanghai/Awesome-AI-Memory)
   是中文社区目前 agent memory 覆盖最全的双语 awesome-list。我们引用它的条目
   作为 cross-list 信号源(详见 [`related-work.md`](related-work.md))。
-  **差异**:我们的每条 ResearchItem 都标注 Ymem 模块映射,并且围绕"驱动 Ymem
-  决策"组织,不追求百科式覆盖。
+  **差异**:我们的每条 ResearchItem 都标注 memory kernel 模块映射,并且围绕
+  "决策驱动"组织,不追求百科式覆盖。
 - 完整中文社区信息源(知乎 / B 站 / 公众号 / 小红书 / 中文 awesome 仓)单独
   成节,见 [`information-sources.md`](information-sources.md) §6。
-
-## 姊妹仓库
-
-| Repo | 角色 |
-|---|---|
-| [Ymem](https://github.com/Snseam/Ymem) | agent 记忆 kernel,消费本仓的输出。 |
-| [ZhiOne](https://github.com/Snseam/zhione) | 首个基于 Ymem 的 host app。 |
 
 ## 贡献
 

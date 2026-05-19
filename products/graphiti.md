@@ -6,7 +6,7 @@ date_first_seen: 2024-08
 domain: KG-memory
 business_model: OSS
 license: Apache 2.0
-ymem_modules:
+memory_modules:
   - retriever-reranker
   - semantic-dedup
   - parser-chunker
@@ -52,22 +52,22 @@ FalkorDB 1.1.2+,Kuzu 0.11.2+,Amazon Neptune(配合 OpenSearch Serverless)。
 - **provenance**:每条 derived fact 可回溯到生成它的 episode
 - **LLM provider**:支持 OpenAI / Anthropic / Groq 等,通过 extras 装
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
-- **对照点**:Graphiti 是目前最直接可比的"开源 memory kernel"。它和 Ymem
-  都试图把记忆做成一个独立 library,而不是绑定到 agent runtime
+- **对照点**:Graphiti 是目前最直接可比的"开源 memory kernel"。它和本仓
+  跟踪的 memory kernel 都试图把记忆做成一个独立 library,而不是绑定到 agent runtime
 - **借鉴点**:
   - **双时间轴**(valid-time / transaction-time)的 schema 设计可以直接进
-    Ymem `MemoryRecord` 的讨论稿
+    `MemoryRecord` 的讨论稿
   - **三路并行检索**(语义 + BM25 + 图遍历)的工程取舍值得抄
-  - 把 **episode** 作为 ground truth 一等概念,与 Ymem 的 `ProvenanceRef`
+  - 把 **episode** 作为 ground truth 一等概念,与 `ProvenanceRef`
     思路完全对齐
 - **互补点**:
-  - Graphiti 没有 dream-style 离线整理产物;Ymem 的 `MemoryDiff` 与
+  - Graphiti 没有 dream-style 离线整理产物;`MemoryDiff` 与
     consolidate 流程是补充
-  - Graphiti 要求图数据库后端;Ymem kernel 不假设特定存储介质,host 可选
+  - Graphiti 要求图数据库后端;memory kernel 不假设特定存储介质,host 可选
 - **不重叠 / 竞争点**:在"开源 memory 内核"这条线上 Graphiti 是直接对手。
-  Ymem 的差异化必须落在 audit / diff / host-agnostic 这几个轴上
+  本仓视角下的差异化必须落在 audit / diff / host-agnostic 这几个轴上
 
 ## 5. 适用 / 不适用场景
 
@@ -94,3 +94,8 @@ FalkorDB 1.1.2+,Kuzu 0.11.2+,Amazon Neptune(配合 OpenSearch Serverless)。
 - archive: [`archives/graphiti-overview.md`](archives/graphiti-overview.md)
 - 配套笔记:[`zep.md`](zep.md)(hosted 产品)
 - 仓库:https://github.com/getzep/graphiti
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

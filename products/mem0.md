@@ -3,7 +3,7 @@ title: Mem0 — memory layer for AI agents
 source: https://github.com/mem0ai/mem0
 date: 2024-2026 (ongoing)
 domain: memory
-ymem_modules:
+memory_modules:
   - ingest-adapter
   - semantic-dedup
   - retriever-reranker
@@ -11,6 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
+last_revised: 2026-05-19
 ---
 
 # Mem0
@@ -28,12 +29,12 @@ status: seed
 - 检索:语义检索 + scope filtering(user_id / agent_id / run_id)
 - Hosted SaaS + self-host SDK
 
-## Relevance to Ymem
+## Decision relevance
 
-**对照学习对象**:Mem0 占据了和 Ymem 相似的生态位(host-agnostic memory
-layer)。Ymem 的差异化应该清晰:
+**对照学习对象**:Mem0 占据了和 memory kernel 相似的生态位(host-agnostic memory
+layer)。kernel 的差异化应该清晰:
 
-| 维度 | Mem0 | Ymem(目标) |
+| 维度 | Mem0 | memory kernel(目标) |
 |---|---|---|
 | 抽取 | LLM 抽 fact,粒度细,易产生噪声 | host 决定抽取策略,kernel 不强制抽 fact |
 | Schema | 偏对话场景,User/Agent/Run 三元 scope | 通用 MemoryRecord + ProvenanceRef,不假设对话 |
@@ -51,8 +52,8 @@ layer)。Ymem 的差异化应该清晰:
 ## What to deliberately not copy
 
 - Mem0 的 LLM 抽 fact 默认管线:它在产品演示里好看,但在长期工作流里产生大量
-  低价值 fact,反而是 Ymem 要解决的问题
-- in-place mutation:违背 Ymem 的"diff 优先"原则
+  低价值 fact,反而是 memory kernel 要解决的问题
+- in-place mutation:违背 kernel 的"diff 优先"原则
 
 ## Open questions
 
@@ -86,19 +87,19 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 | BEAM (1M) | 64.1 | 6,719 |
 | BEAM (10M) | 48.6 | 6,914 |
 
-### 对 Ymem 的启发
+### 对 memory kernel 的启发
 
-- **agent fact 与 user fact 等权**这个选择,直接挑战了 Ymem 现在的默认
+- **agent fact 与 user fact 等权**这个选择,直接挑战了 kernel 现在的默认
   分级(我们倾向 user 高于 agent 推理)。需要列入 schema 讨论:`MemoryRecord`
   里是否要保留 `source_actor` + 不同 actor 的默认权重,而不是一刀切
 - **三路并行检索** vs **串行 rerank** 是 retriever-reranker 模块的工程
   决策点;Mem0 选了并行融合,值得我们做 A/B
 - BEAM 1M → 10M 报告 **25% 退化**,说明长尺度 temporal 推理仍未解决 —
-  这是 Ymem `evaluator-benchmark` 模块应该重点跟的题目
+  这是 `evaluator-benchmark` 模块应该重点跟的题目
 
 ### 待验证
 
-- Mem0 自报数字 vs 独立复现(Ymem `evaluator-benchmark` 套件覆盖之前需要
+- Mem0 自报数字 vs 独立复现(`evaluator-benchmark` 套件覆盖之前需要
   存疑)
 - "single-pass hierarchical" 的层次结构具体是什么(博客未给出 schema)
 - agent fact 等权对 noise 的实际影响 — 是否真的没有放大低价值 fact?
@@ -110,3 +111,8 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 ## Notes
 
 (随版本更新追踪)
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

@@ -6,7 +6,7 @@ date_first_seen: 2023-10
 domain: agent-runtime
 business_model: OSS (论文 + 开源参考实现)
 license: Apache 2.0(参考实现 letta-ai/letta,作为后继版本继承)
-ymem_modules:
+memory_modules:
   - retriever-reranker
   - dream-consolidator
 status: full
@@ -55,20 +55,20 @@ Patil, Ion Stoica, Joseph E. Gonzalez(UC Berkeley)。
   在对话中维护
 - **eval 形态**:文档 QA + 多 session chat,而不是结构化 fact recall
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
 - **对照点**:MemGPT 是"显式 memory tool 调用"这一派的奠基,直接影响了
-  Ymem 选择"显式 ingest / retrieve / consolidate API"而非隐式中间件的
+  memory kernel 选择"显式 ingest / retrieve / consolidate API"而非隐式中间件的
   决定
 - **借鉴点**:
-  - **memory block 分类**(persona / human / archival)对应到 Ymem
+  - **memory block 分类**(persona / human / archival)对应到
     `MemoryRecord.kind`(profile / session / fact / procedure / trace)
   - **tool-call paging** 提示:agent 能主动决定"该读哪一段"比框架强塞
     更可解释
   - 把记忆与控制流挂钩(中断模型)指出 host-app 侧需要的事件接口
-- **互补点**:MemGPT 把 memory 与 agent runtime 绑得紧;Ymem 只做 kernel,
-  控制流由 host(zhione 等)管
-- **不重叠 / 竞争点**:作为论文 MemGPT 是先行思想,不与 Ymem 竞争;作为
+- **互补点**:MemGPT 把 memory 与 agent runtime 绑得紧;memory kernel 只做 library,
+  控制流由 host app 管
+- **不重叠 / 竞争点**:作为论文 MemGPT 是先行思想,不与本仓视角下的 kernel 竞争;作为
   产品其后继 Letta 才是直接对位(见 letta.md)
 
 ## 5. 适用 / 不适用场景
@@ -94,3 +94,8 @@ Patil, Ion Stoica, Joseph E. Gonzalez(UC Berkeley)。
 - archive: [`archives/memgpt-overview.md`](archives/memgpt-overview.md)
 - 论文:https://arxiv.org/abs/2310.08560
 - 后继产品:[`letta.md`](letta.md) / https://github.com/letta-ai/letta
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

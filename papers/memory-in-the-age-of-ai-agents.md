@@ -11,7 +11,7 @@ evidence_level: strong
 code_available: yes (项目:Shichun-Liu/Agent-Memory-Paper-List)
 license: (未在 PDF 中明确说明)
 local_pdf: pdfs/memory-in-the-age-of-ai-agents.pdf
-ymem_modules:
+memory_modules:
   - parser-chunker
   - retriever-reranker
   - dream-consolidator
@@ -80,19 +80,19 @@ PDF §3–§7 把 100+ 篇近期论文按三轴铺成大表:
 - 多个 multi-agent / coordination benchmark
 
 并指出现有 benchmark **几乎全部偏向 Recall function、Token-level form**,对
-Parametric form 与 Forget dynamic 几乎零覆盖。这与 Ymem 自己的 evaluator 设计
+Parametric form 与 Forget dynamic 几乎零覆盖。这与 memory kernel 自己的 evaluator 设计
 直接相关。
 
-## 与 Ymem 的关系
+## 5. 决策相关性 / Decision relevance
 
-- **Forms 轴**直接对应 Ymem `MemoryRecord` schema 设计:Ymem v0 只承认
+- **Forms 轴**直接对应 memory kernel 的 `MemoryRecord` schema 设计:kernel v0 只承认
   Token-level form;Parametric form 是 host-app 的训练侧问题,kernel 暂不管。
-- **Functions 轴**与 Ymem 读路径 / 写路径设计紧贴:`retriever-reranker` 服务
+- **Functions 轴**与 kernel 的读路径 / 写路径设计紧贴:`retriever-reranker` 服务
   Recall + Personalization,`context-packer`(host 侧)服务 Planning。
-- **Dynamics 轴**几乎一一对应 Ymem 离线 path:`dream-consolidator` 负责
+- **Dynamics 轴**几乎一一对应 kernel 的离线 path:`dream-consolidator` 负责
   Consolidate + Forget,`memorydiff-generator` 负责 Update / Merge 的可审核
   落地。
-- §8 关于 evaluation gap 的批评直接对 `evaluator-benchmark` 提需求:Ymem 必须
+- §8 关于 evaluation gap 的批评直接对 `evaluator-benchmark` 提需求:kernel 必须
   覆盖 forgetting 与 consolidation,而不能只测 retrieval accuracy。
 
 ## 优劣 / 注意事项
@@ -107,13 +107,18 @@ Parametric form 与 Forget dynamic 几乎零覆盖。这与 Ymem 自己的 evalu
 - PDF 在多个对比点(Parametric form 的可解释性、Latent form 的迁移成本)上给
   出的判断带有作者倾向,而非实证;复用其结论时应注意源材料。
 - §8 的 9 个 open challenges 是定性列举,缺乏量化判据。
-- 本 radar 在抽取 §7 multi-agent 内容时只读了 1 遍,如要在 Ymem 内引用 multi-
+- 本 radar 在抽取 §7 multi-agent 内容时只读了 1 遍,如要在下游项目内引用 multi-
   agent 部分需复读原文。
 
 ## 待跟进
 
-- PDF 中提到的 "Sleep-time learning" 与 Ymem `dream-consolidator` 设计直接相关,
+- PDF 中提到的 "Sleep-time learning" 与 `dream-consolidator` 设计直接相关,
   需单独追踪此线下论文(可能是 2025 新工作)。
 - §6 multi-agent memory 章节列举的 access-control 工作 vs mnemonic-sovereignty
   (papers/mnemonic-sovereignty.md)的 share-phase 对比,值得做一篇 ImpactNote。
-- 该综述未覆盖中文场景与多模态 memory,Ymem 在 host(zhione)落地时需补 delta。
+- 该综述未覆盖中文场景与多模态 memory,host app 落地时需补 delta。
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

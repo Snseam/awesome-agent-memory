@@ -6,7 +6,7 @@ date_first_seen: 2024-09
 domain: KG-memory
 business_model: OSS+SaaS
 license: Apache 2.0 (OSS); 商业云另收费
-ymem_modules:
+memory_modules:
   - ingest-adapter
   - parser-chunker
   - semantic-dedup
@@ -52,20 +52,20 @@ OSS 部分在 GitHub(`topoteretes/cognee`,约 17.1k stars at fetch time),
 - **runtime 接入**:走 MCP / 各 agent 框架适配层,而不是绑定单一 host
 - **权限**:fine-grained permission 是产品页明文卖点,适合多租户
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
-- **对照点**:Cognee 和 Ymem 都试图覆盖"记忆 + 知识结构"两件事,而不是
+- **对照点**:Cognee 和本仓追踪的 memory kernel 都试图覆盖"记忆 + 知识结构"两件事,而不是
   只做 vector retrieval
 - **借鉴点**:
-  - **多源 ingest adapter**(28+ source)的清单值得参考,Ymem 的
+  - **多源 ingest adapter**(28+ source)的清单值得参考,
     `ingest-adapter` 模块可以借用其 source 分类法
-  - **ontology 自动提取**的产品形态指出了一个 Ymem 可选演进方向:在
+  - **ontology 自动提取**的产品形态指出了一个可选演进方向:在
     `MemoryRecord` 之上叠一层 concept hierarchy
   - **权限模型作为一等公民**值得我们提早纳入 `security-privacy` 模块讨论
-- **互补点**:Cognee 重在"build & manage world model",Ymem 重在
+- **互补点**:Cognee 重在"build & manage world model",memory kernel 重在
   "diff-first audit & consolidate";两者的强项可叠加
 - **不重叠 / 竞争点**:在 OSS+SaaS 双轨这个商业形态上 Cognee 是潜在对手,
-  但它更靠近"企业知识平台",Ymem 仍是 kernel 形态
+  但它更靠近"企业知识平台",memory kernel 仍是 library 形态
 
 ## 5. 适用 / 不适用场景
 
@@ -88,3 +88,8 @@ OSS 部分在 GitHub(`topoteretes/cognee`,约 17.1k stars at fetch time),
 - archive: [`archives/cognee-overview.md`](archives/cognee-overview.md)
 - 仓库:https://github.com/topoteretes/cognee
 - 官方:https://www.cognee.ai/
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

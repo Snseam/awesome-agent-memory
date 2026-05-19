@@ -13,7 +13,7 @@ evidence_level: strong
 code_available: yes (https://mem0.ai/research)
 license: 未在 PDF 中明确说明(GitHub: Apache-2.0 历史上,需复核)
 local_pdf: pdfs/mem0-building-production-ready-ai-agents-with-scalable-long.pdf
-ymem_modules:
+memory_modules:
   - dream-consolidator
   - memorydiff-generator
   - retriever-reranker
@@ -78,18 +78,18 @@ extraction 流程图。关键设计:
 - 局限:Full-context 仍是 J 最高(72.90),Mem0 / Mem0g 都没追平,只能在
   cost / latency 上赢。
 
-## 与 Ymem 的关系
+## 决策相关性 / Decision relevance
 
-- **ADD / UPDATE / DELETE / NOOP 四 op** 是 Ymem `memorydiff-generator` 的
-  最小基底;Ymem 在此基础上扩展两个 op:`consolidate`(把多个旧 memory 压成
+- **ADD / UPDATE / DELETE / NOOP 四 op** 是 memory kernel `memorydiff-generator` 的
+  最小基底;kernel 在此基础上扩展两个 op:`consolidate`(把多个旧 memory 压成
   一条 lesson,来自 storage-to-experience 综述)与 `forget`(verifiable
   forgetting,来自 mnemonic-sovereignty)。
-- **Async summary generator** 思想直接映射到 Ymem `dream-consolidator` 的离
+- **Async summary generator** 思想直接映射到 `dream-consolidator` 的离
   线 worker 模型:不阻塞读路径,在 batch 内异步更新 summary / lesson。
-- **Mem0g 的 entity + relation 两 stage extraction** 对 host(zhione)的
-  knowledge view 有借鉴价值,但 Ymem kernel 不强行 commit graph 形态,留给
+- **Mem0g 的 entity + relation 两 stage extraction** 对 host app 的
+  knowledge view 有借鉴价值,但 memory kernel 不强行 commit graph 形态,留给
   host 决定 substrate(对应 2603.07670 的 substrate 维)。
-- LOCOMO 是 Ymem `evaluator-benchmark` 的 v0 评测目标之一,与 LongMemEval、
+- LOCOMO 是 `evaluator-benchmark` 的 v0 评测目标之一,与 LongMemEval、
   ConvoMem 三套并行。
 - ConvoMem(papers/convomem.md)用同一个 Mem0 作为 RAG baseline,发现
   Mem0 在 user-facts 上达到 60–77%,在 preferences/implicit 上掉到 30–45%;
@@ -101,24 +101,29 @@ extraction 流程图。关键设计:
 优势:
 - 工业实测:p95 ≈ 1.44 s(Mem0)/ 2.59 s(Mem0g),96% 用户场景可接受。
 - LLM-as-Judge 跑 10 次平均、报标准差,可信度强于多数同类 paper。
-- 显式给出 cost 与 latency 数字,便于 Ymem 做选型对照。
+- 显式给出 cost 与 latency 数字,便于做选型对照。
 - 论文公开 prompt 与 algorithm,工程复现路径清晰。
 
 注意事项 / fabrication 风险:
 - 所有数字都基于 LOCOMO 10 个 conversation,**样本量极小**(LOCOMO 整套也才
-  ~1.7k QA);ConvoMem 论文已批评 LOCOMO 的统计有效性。Ymem 引用 Mem0 的"
+  ~1.7k QA);ConvoMem 论文已批评 LOCOMO 的统计有效性。引用 Mem0 的"
   26% 提升"时应注明 benchmark 局限。
 - baseline 不完全可比:OpenAI ChatGPT memory 是被作者手工 ingest 的;Zep 的
   低分可能与构建延迟有关(论文承认隔几小时再查会显著好,但仍按"实时"评)。
 - graph 变体在 multi-hop 上**不如非 graph 版**,作者解释为 graph overhead;
-  这说明 Ymem 在引入 graph 时应有可关闭开关,而非默认开启。
+  这说明 kernel 在引入 graph 时应有可关闭开关,而非默认开启。
 - Open-source license 在论文正文未明确说明(GitHub 历史是 Apache-2.0),发
   布 stub 时此条留 "check"。
 
 ## 待跟进
 
 - 跟踪 Mem0 在 LongMemEval、ConvoMem 上的横向数字,做一篇 ImpactNote。
-- Mem0 的 4-op 框架是否能扩展到 consolidate / forget,是 Ymem
+- Mem0 的 4-op 框架是否能扩展到 consolidate / forget,是
   `memorydiff-generator` v1 的关键设计问题;PDF 未给出答案。
-- Mem0g 的 Neo4j 选型对 Ymem host(zhione)有参考价值,但 kernel 不绑定;
+- Mem0g 的 Neo4j 选型对 host app 有参考价值,但 kernel 不绑定;
   应单独追踪 graph substrate 替代品(LanceDB-graph 等)。
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

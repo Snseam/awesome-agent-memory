@@ -12,7 +12,7 @@ evidence_level: medium
 code_available: 未在 PDF 中明确说明
 license: (未在 PDF 中明确说明)
 local_pdf: pdfs/from-storage-to-experience.pdf
-ymem_modules:
+memory_modules:
   - parser-chunker
   - dream-consolidator
   - memorydiff-generator
@@ -57,17 +57,17 @@ PDF 第 1 章提出一个被现有 agent memory 文献忽视的问题:**"记得"
 PDF §3 给出公式化建模(本 radar 已在 problem statement 抄录),§4 是
 storage 综述,§5 是 reflection 综述,§6 是 experience 综述。
 
-两个新概念值得 Ymem 注意:
+两个新概念值得注意:
 
 - **Active exploration**(§5.4)— agent 主动设计 trace 以收集后续 reflect 所
-  需的数据,而不是被动等用户输入。直接映射到 host(zhione)的 onboarding 与
+  需的数据,而不是被动等用户输入。直接映射到 host app 的 onboarding 与
   intentional question loop。
 - **Cross-trajectory abstraction**(§6.3)— 在多条 trace 上做归纳,产出
-  rule。与 Mem0 当前架构的 per-message ADD/UPDATE 操作不在一个层级,Ymem 的
+  rule。与 Mem0 当前架构的 per-message ADD/UPDATE 操作不在一个层级,kernel 的
   `dream-consolidator` 必须容纳这一层。
 
 §7 给出评估视角:作者主张应评估 `K` 的 **transferability**(在新任务上不再
-fine-tune 直接用),而非仅看 storage 上的 recall。本 radar 认为这是 Ymem
+fine-tune 直接用),而非仅看 storage 上的 recall。本 radar 认为这是 memory kernel
 evaluator 的下一步要走的方向。
 
 ## 评估 / benchmark
@@ -81,14 +81,14 @@ evaluator 的下一步要走的方向。
 PDF 在 §8 提到 LongMemEval、MemBench 都不足以衡量 experience-level 性能,
 属于 storage / reflection 评估。
 
-## 与 Ymem 的关系
+## 决策相关性 / Decision relevance
 
-- **Storage 阶段**就是 Ymem 当前 v0 的全部:`ingest-adapter` →
+- **Storage 阶段**就是 kernel 当前 v0 的全部:`ingest-adapter` →
   `parser-chunker` → `semantic-dedup` → `retriever-reranker`。
-- **Reflection 阶段**就是 Ymem `dream-consolidator` 的 v1 目标:从 trace 提
+- **Reflection 阶段**就是 kernel `dream-consolidator` 的 v1 目标:从 trace 提
   lesson,落到 `memorydiff-generator` 的 new_insight diff 类型。
-- **Experience 阶段**对应 Ymem v2 路线图的 rule-set / skill.md 产物
-  (host 侧 `publisher` 的输出),与 zhione 的 `awesome-agent-memory` 知识库
+- **Experience 阶段**对应 kernel v2 路线图的 rule-set / skill.md 产物
+  (host 侧 `publisher` 的输出),与 `awesome-agent-memory` 知识库
   本身共享 ontology。
 - **Active exploration** 概念是 host 侧创新点,kernel 暂不实现,但
   `ingest-adapter` 的 schema 应预留 `intent` 字段以便 host 标注主动采集动机。
@@ -99,10 +99,10 @@ PDF 在 §8 提到 LongMemEval、MemBench 都不足以衡量 experience-level �
 - **形式化**(τ, Mraw, F_ref, F_exp, T_batch, K)给了一套可量化的语言,远
   超 Hu 与 Du 两份综述的纯定性归类。这是本 radar 见到的第一篇从 storage 跳到
   experience 的综述。
-- 31 页适中,且每节有代表性工作 anchor,可作为 Ymem v2 路线图的术语来源。
+- 31 页适中,且每节有代表性工作 anchor,可作为 kernel v2 路线图的术语来源。
 
 注意事项 / fabrication 风险:
-- 形式化框架是作者**新提**,并非业界共识;Ymem 在引用 `F_ref / F_exp` 时应
+- 形式化框架是作者**新提**,并非业界共识;在引用 `F_ref / F_exp` 时应
   注明来源,避免造成"这是标准术语"的误印象。
 - §6 关于 Implicit experience(参数化经验)的讨论较少,主要引用 LoRA 类工
   作;若需深入,应单独跟进 parametric memory 线。
@@ -112,7 +112,12 @@ PDF 在 §8 提到 LongMemEval、MemBench 都不足以衡量 experience-level �
 ## 待跟进
 
 - 跟踪 ExpeL / AutoManual / Voyager 在 reflection 与 experience 段的实现细节,
-  作为 Ymem `dream-consolidator` v1 的设计参考。
+  作为 `dream-consolidator` v1 的设计参考。
 - §5.4 active exploration 章节列举的论文(本 radar 未一一抄录)值得补 stub。
-- 评估 K(rule set)的 transferability 没有现成 benchmark,Ymem `evaluator-
+- 评估 K(rule set)的 transferability 没有现成 benchmark,`evaluator-
   benchmark` 模块可以把这个空白作为 v2 自研方向。
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

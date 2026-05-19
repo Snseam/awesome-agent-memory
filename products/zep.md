@@ -6,7 +6,7 @@ date_first_seen: 2024-05
 domain: agent-memory-layer
 business_model: OSS+SaaS
 license: proprietary (hosted) + Apache 2.0 (Graphiti, the OSS core)
-ymem_modules:
+memory_modules:
   - retriever-reranker
   - semantic-dedup
   - dream-consolidator
@@ -52,19 +52,19 @@ healthcare 等行业的预置 entity schema 模板。
 - **性能**:产品页声称 P95 < 200ms,LoCoMo 单次检索 80.32%
 - **合规**:SOC 2 Type II / HIPAA(hosted 版)
 
-## 4. 与 Ymem 的关系
+## 4. 决策相关性 / Decision relevance
 
-- **对照点**:Zep 占据和 Ymem 几乎相同的生态位 — host-agnostic 的记忆层。它
+- **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它
   对外的 surface(add / get / search / context)和我们的目标 API 高度同构。
 - **借鉴点**:
   - fact 的 **valid-time + transaction-time 双时间轴**,正是我们 audit 路线想
     要的形状,可以直接进 `MemoryRecord` schema 讨论
-  - 失效而非删除,与 Ymem"diff 优先、不就地 mutate"的原则同源
+  - 失效而非删除,与 kernel "diff 优先、不就地 mutate"的原则同源
   - graph + vector + BM25 三路融合,是 retriever-reranker 模块的合理基线
-- **互补点**:Zep 不提供 dream-style 离线整理 job(它是在线增量的),Ymem 的
+- **互补点**:Zep 不提供 dream-style 离线整理 job(它是在线增量的),kernel 的
   `consolidate` 与 MemoryDiff 是一块差异化空间
 - **不重叠 / 竞争点**:hosted Zep 直接面向 production agent 开发者,价值主张
-  是"省时间";Ymem 的目标是 host-app 可拆装的 kernel,不与 Zep 直接竞争
+  是"省时间";memory kernel 的目标是 host-app 可拆装的 library,不与 Zep 直接竞争
   end-user,但 GraphitiOSS 是直接可比的对手
 
 ## 5. 适用 / 不适用场景
@@ -95,3 +95,8 @@ domain × audience 表:
 - archive: [`archives/zep-overview.md`](archives/zep-overview.md)
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

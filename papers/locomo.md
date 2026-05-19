@@ -3,13 +3,14 @@ title: LoCoMo — Evaluating Very Long-Term Conversational Memory of LLM Agents
 source: ACL 2024 (https://aclanthology.org/2024.acl-long.747.pdf)
 date: 2024
 domain: eval
-ymem_modules:
+memory_modules:
   - evaluator-benchmark
   - retriever-reranker
 evidence_level: strong
 code_available: check
 license: check
 status: seed
+last_revised: 2026-05-19
 ---
 
 # LoCoMo
@@ -33,13 +34,13 @@ status: seed
 - 多种 QA 类型分层
 - 评估时间和因果推理而不仅仅是事实问答
 
-## Relevance to Ymem
+## Decision relevance
 
-- 时间推理直接反推 Ymem schema 需要 `valid_from / valid_to / supersedes /
+- 时间推理直接反推 memory kernel 的 schema 需要 `valid_from / valid_to / supersedes /
   contradicted_by` 字段
 - 因果推理对 `semantic-dedup` 在合并相似事件时的策略有影响:不能简单合并,
   需要保留时间序列
-- LoCoMo 可作为 Ymem `evaluator-benchmark` 中"事实+时间+因果"维度的标准
+- LoCoMo 可作为 `evaluator-benchmark` 中"事实+时间+因果"维度的标准
 
 ## 与 LongMemEval / MemoryAgentBench 对比
 
@@ -49,8 +50,13 @@ status: seed
 |---|---|---|---|
 | 主轴 | 五种核心能力 | 四类 memory 维度 | 长程对话 + 时间因果 |
 | 评估单位 | QA accuracy | 维度独立 | QA + 时间逻辑 |
-| 适合 Ymem | 端到端验证 | 模块定位 | schema 设计验证 |
+| 适合定位 | 端到端验证 | 模块定位 | schema 设计验证 |
 
 ## Notes
 
 (随精读迭代)
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

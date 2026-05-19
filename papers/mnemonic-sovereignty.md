@@ -13,7 +13,7 @@ evidence_level: medium
 code_available: 未在 PDF 中明确说明
 license: (未在 PDF 中明确说明)
 local_pdf: pdfs/mnemonic-sovereignty.pdf
-ymem_modules:
+memory_modules:
   - security-privacy
   - dream-consolidator
   - memorydiff-generator
@@ -77,19 +77,19 @@ PDF 的方法侧亮点有两块:
 
 本身不提出 benchmark,但 VF_ε(verifiable forgetting)给出了**可量化的评估
 协议**:在 stored memory 上 inject n 个 probe,删除后用同一 retrieval 接口
-查询;若回想率高于 ε 即认为 forget 失败。这是 Ymem `security-privacy` 模块
+查询;若回想率高于 ε 即认为 forget 失败。这是 `security-privacy` 模块
 可以直接实现的第一个测试套件。
 
-## 与 Ymem 的关系
+## 决策相关性 / Decision relevance
 
-- **Ymem 把 `security-privacy` 列为 kernel-side 模块**,正是因为本论文揭示
+- **把 `security-privacy` 列为 kernel-side 模块**,正是因为本论文揭示
   的主权缺口;taxonomy.md 末尾已经显式记录"主流三套 taxonomy 都不覆盖,本
   论文单独追踪"。
-- **WA / PV / PS** 三条直接落到 Ymem `MemoryRecord` 的 `provenance` 字段与
+- **WA / PV / PS** 三条直接落到 `MemoryRecord` 的 `provenance` 字段与
   `ingest-adapter` 的 provenance 校验上。
-- **RB / VF_ε** 是 Ymem `dream-consolidator` 的 forget 策略必须满足的合约,
+- **RB / VF_ε** 是 `dream-consolidator` 的 forget 策略必须满足的合约,
   且为 `audit-ui`(host 侧)提供测试基线。
-- §7 的 9-primitive 表可以作为 Ymem 自评检查表:每发布一个版本应填一行,标
+- §7 的 9-primitive 表可以作为 kernel 自评检查表:每发布一个版本应填一行,标
   注 covered / partial / not-yet。
 
 ## 优劣 / 注意事项
@@ -98,7 +98,7 @@ PDF 的方法侧亮点有两块:
 - 是 2026 H1 唯一一篇把"安全与治理"作为一等问题处理的 agent memory 论文;
   62 页扎实,引用面横跨认知科学、密码学、数据库审计。
 - VF_ε 给出的统计-可验证遗忘协议是少见的**可执行 spec**。
-- 跨学科 §3 章节是写 ImpactNote 的好素材,可作为对外宣传 Ymem `security-
+- 跨学科 §3 章节是写 ImpactNote 的好素材,可作为对外宣传 `security-
   privacy` 必要性的文献支撑。
 
 注意事项 / fabrication 风险:
@@ -106,14 +106,19 @@ PDF 的方法侧亮点有两块:
   Forget oracle、Memory firewall)在工业界尚无成熟实现,引用时不应给出
   "已被验证有效"的暗示。
 - VF_ε 的 n ≈ 300 是基于 Hoeffding 上界的 worst-case 估计,实际部署中可能
-  显著更低或更高,Ymem 实现时应自行做 power analysis,不能直接抄 300。
+  显著更低或更高,实现时应自行做 power analysis,不能直接抄 300。
 - §7 的对比表带作者主观打分,引用时应保留"according to Lin et al."的
   归因。
 
 ## 待跟进
 
-- 实现一个 minimal VF_ε 测试 harness,挂到 Ymem `evaluator-benchmark` 的
+- 实现一个 minimal VF_ε 测试 harness,挂到 `evaluator-benchmark` 的
   security 子套件下(v1 目标)。
 - 跟踪 MemOS、Collaborative Memory 等 PDF 中提到的 system,补 stub。
 - §3 跨学科四现象与 ConvoMem(papers/convomem.md)的 changing-facts /
   abstention category 有内在联系,值得做横向 ImpactNote。
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

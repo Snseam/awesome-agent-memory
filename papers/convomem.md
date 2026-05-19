@@ -13,7 +13,7 @@ code_available: yes (https://github.com/SalesforceAIResearch/ConvoMem,数据集
   https://huggingface.co/datasets/Salesforce/ConvoMem)
 license: 未在 PDF 中明确说明(check)
 local_pdf: pdfs/convomem.pdf
-ymem_modules:
+memory_modules:
   - evaluator-benchmark
   - retriever-reranker
   - dream-consolidator
@@ -89,19 +89,19 @@ answer),在某些场景下甚至**比 long-context 还高**(70.8% vs 63.5%),且
 - 评测 protocol 完全开源,且声称已经把 LongMemEval 与 LoCoMo 也都迁入此框
   架(可统一回归)。
 
-## 与 Ymem 的关系
+## 决策相关性 / Decision relevance
 
 - **直接进入 `evaluator-benchmark` v0 的金牌评测三件套**:LongMemEval +
   ConvoMem + (LOCOMO 来自 Mem0 论文)。统计有效性问题:LongMemEval 提供
   能力分类、ConvoMem 提供大样本与 multi-evidence 维度,二者互补。
-- **30 / 150 / 300 conversation 拐点**直接影响 Ymem `context-packer` 的
-  设计:host(zhione)在用户对话历史 < 30 时应优先 full-context;30–150 时
-  转 hybrid;> 150 时上 Mem0-style retrieval。Ymem kernel 应让 host 容易切
+- **30 / 150 / 300 conversation 拐点**直接影响 `context-packer` 的
+  设计:host app 在用户对话历史 < 30 时应优先 full-context;30–150 时
+  转 hybrid;> 150 时上 Mem0-style retrieval。memory kernel 应让 host 容易切
   换。
-- **mid-tier model 是 sweet spot**这一发现对 Ymem 选型很重要:`retriever-
+- **mid-tier model 是 sweet spot**这一发现对模型选型很重要:`retriever-
   reranker` 与 `dream-consolidator` 不应默认 Pro tier。
-- **Preferences 与 implicit connections 是 RAG 的弱项**——这两类对应 Ymem
-  的 `dream-consolidator` 需要做 lesson 抽象(对应 from-storage-to-experience
+- **Preferences 与 implicit connections 是 RAG 的弱项**——这两类对应
+  `dream-consolidator` 需要做 lesson 抽象(对应 from-storage-to-experience
   的 F_ref / F_exp),不能靠纯 retrieval 解决。
 - 同一篇 ConvoMem 用 Mem0 作 baseline,与 Mem0 论文(papers/mem0-paper.md)
   在 LOCOMO 上的高分形成对比,说明 benchmark 之间不可简单比较。
@@ -111,7 +111,7 @@ answer),在某些场景下甚至**比 long-context 还高**(70.8% vs 63.5%),且
 优势:
 - 样本量最大(75,336),六类能力 + multi-evidence 维度覆盖最广。
 - 数据集与代码都公开(HF Salesforce/ConvoMem、GitHub
-  SalesforceAIResearch/ConvoMem),Ymem 可直接 fork。
+  SalesforceAIResearch/ConvoMem),可直接 fork。
 - 给出**经济与精度的联合曲线**(Figure 2/13),工程团队选型可立刻参照。
 - 把 long-context、Mem0、block-based hybrid 三种范式横向跑同一套题,结论统
   一可比。
@@ -127,12 +127,17 @@ answer),在某些场景下甚至**比 long-context 还高**(70.8% vs 63.5%),且
 
 ## 待跟进
 
-- 在 Ymem `evaluator-benchmark` 中实现 ConvoMem 子集回归,优先 user-facts
+- 在 `evaluator-benchmark` 中实现 ConvoMem 子集回归,优先 user-facts
   与 changing-facts 两类(直接对应 `memorydiff-generator` 的 ADD/UPDATE/
   DELETE)。
-- §3.4.5 block-based two-phase extraction 与 Ymem 的 host-side 解耦设计
+- §3.4.5 block-based two-phase extraction 与 host-side 解耦设计
   天然契合(Phase-1 在 kernel,Phase-2 在 host context-packer),值得做一篇
   ImpactNote。
 - 与 mnemonic-sovereignty(2604.16548)的 abstention / changing-facts 攻击
   面对比:ConvoMem 给出了 abstention 测试,但没有从安全角度评估(对抗注入下
   abstention 是否仍保持)。
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*

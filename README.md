@@ -2,7 +2,7 @@
 
 # awesome-agent-memory
 
-**A curated reading list, survey, and decision base for AI agent memory research.**
+**A curated reading list, survey, and decision-aiding base for AI agent memory research.**
 
 [中文](README_cn.md) · **English**
 
@@ -17,10 +17,6 @@
 
 ---
 
-> Built to support [Ymem](https://github.com/Snseam/Ymem) — an agent memory
-> kernel — and published as a public resource for anyone building memory
-> systems for AI agents.
-
 This repo is intentionally **narrow**. It is not a general AI/ML reading list.
 Every entry should plausibly inform how an agent **remembers, forgets, retrieves,
 or consolidates** information.
@@ -29,11 +25,11 @@ or consolidates** information.
 
 | | Most awesome-lists | **awesome-agent-memory** |
 |---|---|---|
-| Goal | Coverage | Driving Ymem decisions |
+| Goal | Coverage | Decision-driven curation |
 | Per-paper note | Title + link | 7-section ResearchItem template |
 | PDF availability | URL only, breaks over time | Local archive (`papers/pdfs/`) |
 | Cross-list signal | None | Each stub records which of 9 sibling lists referenced it |
-| Module mapping | None | Every full note maps to `taxonomy.md` Ymem modules |
+| Module mapping | None | Every full note maps to common memory-kernel modules ([`taxonomy.md`](taxonomy.md)) |
 | Workflow | Read | Read → ImpactReport → Sandbox → ADR |
 
 ## Table of contents
@@ -44,7 +40,7 @@ or consolidates** information.
 4. [Stub vs full notes](#stub-vs-full-notes)
 5. [Adding an entry](#adding-an-entry)
 6. [License / archival policy](#license--archival-policy)
-7. [Sister repos](#sister-repos)
+7. [Origin / maintenance](#origin--maintenance)
 
 ## At a glance
 
@@ -72,10 +68,10 @@ or consolidates** information.
 
 | File | Purpose |
 |---|---|
-| [`survey/agent-memory-survey.md`](survey/agent-memory-survey.md) | **Our** living literature review. Read first. |
+| [`survey/agent-memory-survey.md`](survey/agent-memory-survey.md) | A living literature review by the maintainer. Read first. |
 | [`surveys.md`](surveys.md) | Index of **external** meta-surveys (2025-12 ~ 2026-05). |
-| [`taxonomy.md`](taxonomy.md) | Ymem module taxonomy + cross-walk to 3 external taxonomies. |
-| [`research-radar-spec.md`](research-radar-spec.md) | Paper / product → ImpactReport → Ymem sandbox → ADR workflow. |
+| [`taxonomy.md`](taxonomy.md) | Generic agent-memory taxonomy: cross-walk of 3 external frameworks. |
+| [`research-radar-spec.md`](research-radar-spec.md) | Generic Radar workflow: Paper → ResearchItem → ImpactReport → sandbox → ADR. |
 | [`information-sources.md`](information-sources.md) | 10-category source catalog with a dedicated zh-CN section. |
 | [`related-work.md`](related-work.md) | 9 sibling awesome-list repos with positioning vs each. |
 | [`products-landscape.md`](products-landscape.md) | Agent-memory products by **domain × audience**. |
@@ -91,6 +87,7 @@ or consolidates** information.
 | [`products/`](products/) | 10 product notes (Mem0, Letta, Zep, Graphiti, …). |
 | [`products/archives/`](products/archives/) | Markdown snapshots of canonical product pages. |
 | [`impact-reports/`](impact-reports/) | `ArchitectureImpactReport` drafts (currently empty). |
+| [`ymem-binding/`](ymem-binding/) | Project-specific bindings from the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel; safe to ignore if you don't use Ymem. |
 
 ## How the loop works
 
@@ -103,16 +100,16 @@ classification against taxonomy.md
     ↓
 ArchitectureImpactReport (impact-reports/)
     ↓
-Ymem sandbox experiment
+sandbox experiment (in your kernel repo)
     ↓
-ADR (in Ymem repo)
+ADR (in your kernel repo)
     ↓
-graduated to Ymem main, or rejected
+graduated to main, or rejected
 ```
 
 The external survey index and our living survey reflect the current
 understanding; the per-item notes are the raw material; the impact reports
-are how candidates are evaluated; the ADR (in the Ymem repo) is where
+are how candidates are evaluated; the ADR (in your kernel repo) is where
 decisions are recorded.
 
 ## Stub vs full notes
@@ -133,7 +130,7 @@ seven-section template:
 2. 核心 claim         Central thesis
 3. 方法 / 框架        Method
 4. 评估 / benchmark   Evaluation
-5. 与 Ymem 的关系      ★ Relevance to Ymem (taxonomy mapping)
+5. 决策相关性          ★ Decision relevance (memory-module mapping)
 6. 优劣 / 注意事项    Pros / cons
 7. 待跟进             Follow-ups
 ```
@@ -149,17 +146,18 @@ Per-item full notes must include, at minimum:
 - core claim · method summary · required assumptions · benchmarks used
 - evidence level (`weak | medium | strong`)
 - code available (yes/no + link) · license · cost/complexity estimate
-- **relevance to Ymem** mapped to [`taxonomy.md`](taxonomy.md) modules
+- **decision relevance** — which memory-kernel modules this would affect
+  (see [`taxonomy.md`](taxonomy.md))
 
 See [`research-radar-spec.md`](research-radar-spec.md) for the full schema
 and naming conventions.
 
 ## License / archival policy
 
-Notes and survey content are released under the [Apache License 2.0](LICENSE)
-(same as the sister repos). Quoted excerpts from external papers and
-articles remain the property of their respective authors and are used under
-fair use / fair dealing for commentary and research purposes.
+Notes and survey content are released under the [Apache License 2.0](LICENSE).
+Quoted excerpts from external papers and articles remain the property of
+their respective authors and are used under fair use / fair dealing for
+commentary and research purposes.
 
 **Locally archived PDFs** (`papers/pdfs/`) come from sources that explicitly
 permit redistribution — arXiv perpetual non-exclusive license, CC-BY at ACL
@@ -174,12 +172,15 @@ change or disappear. They are **not** re-published material; commercial
 citation should always use the original URL in the snapshot's `source_url`
 header.
 
-## Sister repos
+## Origin / maintenance
 
-| Repo | Role |
-|---|---|
-| [Ymem](https://github.com/Snseam/Ymem) | The agent memory kernel that consumes outputs from this repo. |
-| [ZhiOne](https://github.com/Snseam/zhione) | The first host app built on Ymem. |
+This repo was started and is maintained by the
+[**Ymem**](https://github.com/Snseam/Ymem) project (an agent memory
+kernel). Project-specific bindings — module names referenced in note
+frontmatter, the maintainer's stance on individual papers, internal
+benchmark choices — live in [`ymem-binding/`](ymem-binding/) so that the
+top-level files stay product-neutral. If you don't use Ymem you can simply
+ignore that subdirectory.
 
 ---
 

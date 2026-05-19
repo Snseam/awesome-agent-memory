@@ -10,9 +10,9 @@ language: zh-CN
 agent memory 领域的"综述的综述"。**deep note 已经写在 `papers/` 里**;本页只
 是单页索引,方便快速比对每篇 survey 的切入角度。
 
-`survey/agent-memory-survey.md` 是**我们自己**维护的活综述(读者画像:Ymem
-设计者),与本页列出的外部 survey 互补:外部 survey 求覆盖,我们的 survey 求
-"对 Ymem 决策有用"。
+`survey/agent-memory-survey.md` 是维护者自己维护的活综述,与本页列出的外部
+survey 互补:外部 survey 求覆盖,本仓 survey 求"对正在落地 memory kernel
+的人有用"。
 
 ## 索引表
 
@@ -27,28 +27,24 @@ agent memory 领域的"综述的综述"。**deep note 已经写在 `papers/` 里
 
 ## 三个主流 taxonomy 的对照
 
-下表对应 [`taxonomy.md`](taxonomy.md) §"与其他 taxonomy 的对照"小节,详见那里。
-本页只做一句话指引:
+完整对照见 [`taxonomy.md`](taxonomy.md)。本页只做一句话指引:
 
-- **2512.13564** 的 `Forms × Functions × Dynamics` → Forms 映射 Ymem 的存储层
-  (`semantic-dedup` / `parser-chunker`);Functions 映射 read path
-  (`retriever-reranker` / `context-packer`);Dynamics 映射 write path
-  (`dream-consolidator` / `memorydiff-generator`)。**这条对齐最干净,首推。**
-- **2603.07670** 的 `temporal-scope × substrate × control-policy` →
-  temporal-scope 与 `valid_from / valid_to` 字段对应;substrate 与底层 store
-  选型对应;control-policy 与 dream / diff / supersede 的策略对应。
-- **TsinghuaC3I** 的 `Persistence × Curation` → Persistence ≈ Ymem 存储层;
-  Curation ≈ write path 的 `consolidate / dedup / diff`。
+- **2512.13564** 的 `Forms × Functions × Dynamics` —— Forms 描述存储形状,
+  Functions 描述读路径,Dynamics 描述写路径。**对齐最干净,首推。**
+- **2603.07670** 的 `temporal-scope × substrate × control-policy` ——
+  最先把"记忆怎么变"作为独立维度命名,适合工程切分。
+- **TsinghuaC3I** 的 `Persistence × Curation` —— 最简,适合 stub 笔记快速
+  归位。
 
-## 我们的 survey 与外部 survey 的分工
+## 外部 survey 与本仓 survey 的分工
 
 | 维度 | 外部 surveys | 本仓 `survey/` |
 |---|---|---|
-| 读者画像 | 学界 / 广义 NLP 研究者 | Ymem 设计者 + zhione 工程师 |
+| 读者画像 | 学界 / 广义 NLP 研究者 | 正在落地 memory kernel 的工程师与研究者 |
 | 覆盖 | 求全 | 求"能进入 ADR" |
 | 体例 | 学术综述,citation 完备 | living doc,可随时改 |
-| 评估 | 整理 benchmark 数字 | 评估**对 Ymem 模块的影响** |
+| 评估 | 整理 benchmark 数字 | 评估**对 kernel 模块的影响** |
 | 更新节奏 | 半年一次 v2 | 阅读时同步改写 |
 
-外部 survey 是"输入",我们的 survey 是"输出层"。本页的索引让任何架构讨论
+外部 survey 是"输入",本仓 survey 是"输出层"。本页的索引让任何架构讨论
 都能在两类 survey 之间快速跳转。

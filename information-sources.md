@@ -17,7 +17,7 @@ language: zh-CN
   agent memory 在 cs.AI 占主流,RL 类记忆走 cs.LG,UI / audit 类工作偶尔出现在 cs.HC。
 - **OpenReview**:ICLR / NeurIPS / ICML / ACL / EMNLP / COLM 的 active 投稿与公开评审。
   在大会前 1-2 个月看 OpenReview 的偏好分数,经常能比 arXiv crawl 早抓到趋势。
-- **Papers with Code**:同时跟"有 code 没 code"是 Ymem evidence_level
+- **Papers with Code**:同时跟"有 code 没 code"是 `evidence_level`
   判断的快速过滤器。
 - **Semantic Scholar**:做"被引-引用"图谱、找 lineage 时用,但搜索功能不如 arXiv。
 - **会议 deadline 表**(AI Deadlines / Conference Partner):**用作 pre-print 浪潮信号**
@@ -40,14 +40,14 @@ language: zh-CN
 | 大厂研究 | Anthropic 研究页 / OpenAI 研究页 / Google DeepMind blog / Microsoft Research / Meta AI / Mistral / DeepSeek | memory 系统级架构 |
 | 大厂工程 | Anthropic Engineering 博客 / OpenAI Cookbook / DeepMind technical blog | 工程 trade-off, eval 方法 |
 | 平台与 SDK | LangChain / LlamaIndex / LangGraph / AutoGen / CrewAI release notes | API 形状,反推 host-app 需求 |
-| memory 专门 | Mem0 / Letta / Zep / Cognee / Graphiti 博客与 changelog | 直接对标 Ymem |
+| memory 专门 | Mem0 / Letta / Zep / Cognee / Graphiti 博客与 changelog | 直接对标 memory kernel |
 | 上下文协议 | MCP spec 与官方 server 列表 | memory 与 tool / prompt 的边界 |
 | IDE/Agent host | Cursor / Windsurf / Replit / Devin / Claude Code blog | memory 在真实 agent 工作流里的露出形态 |
 
 ## 4. 同生态 awesome-list
 
 详见 [`related-work.md`](related-work.md)。9 个仓库被 Radar 视为
-"先看一眼"层 —— 它们已经替我们做了一遍粗筛,Ymem 笔记从这里挑选深读对象。
+"先看一眼"层 —— 它们已经替我们做了一遍粗筛,deep notes 从这里挑选深读对象。
 **但我们不直接复制这些 list 的笔记**,只引用条目与 source。
 
 ## 5. 个人 / 独立精品来源
@@ -55,7 +55,7 @@ language: zh-CN
 - **Karpathy**:LLM Wiki / X 长贴对 memory architecture 的直觉判断
 - **Lilian Weng**:OpenAI 出身,memory 与 agent 综述质量高,更新慢但稳
 - **Chip Huyen**:工程化视角,LLM 系统设计书
-- **Hamel Husain** / **Eugene Yan**:eval / observability 视角,补 Ymem benchmark 思路
+- **Hamel Husain** / **Eugene Yan**:eval / observability 视角,补 benchmark 思路
 - **Simon Willison**:产品发布层面的"快讯 + 一句话评论",滤掉公关稿
 - **Latent Space**(swyx)/ **The Sequence**(TheSequence)/ **Import AI**(Jack Clark)/
   **Interconnects**(Nathan Lambert)/ **Ahead of AI**(Sebastian Raschka):周报型,

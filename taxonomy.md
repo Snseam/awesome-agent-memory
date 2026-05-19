@@ -1,127 +1,107 @@
 ---
-title: Ymem module taxonomy for research mapping
-date: 2026-05-08
-revised: 2026-05-18
+title: Agent memory taxonomy — cross-walk of three external frameworks
+date: 2026-05-19
 status: working-spec
 language: zh-CN
 ---
 
-# Ymem 模块 taxonomy
+# Agent memory taxonomy
 
-每条 `ResearchItem`(`papers/*.md`、`products/*.md`)在写完后,应该至少标注一个
-所影响的 Ymem 模块。这份文档列出当前承认的模块名,便于 ImpactReport 聚合与
-后续 radar 自动归类。
+agent memory 领域 2026 H1 同时出现了**三套**主流分类轴。它们不互斥 ——
+描述的是同一个空间的不同切面。任何想给一篇新论文归位、或者给自己 memory
+系统的模块命名的人,都会反复在这三套之间跳。
 
-## 模块列表
+这页是一份**对照速查表**,让三套术语能彼此翻译,并把"记忆怎么变"这个核心
+难题在三套里的位置标清楚。每套 taxonomy 的完整介绍见
+[`surveys.md`](surveys.md);相关的活综述见
+[`survey/agent-memory-survey.md`](survey/agent-memory-survey.md)。
 
-| 模块 | 责任 | 典型研究/产品 |
-|---|---|---|
-| `ingest-adapter` | 把外部源(对话、文件、API 输出)转成 `MemoryRecord` | host-app 侧,但 schema 由 Ymem 定义 |
-| `parser-chunker` | 把原始内容切分成语义单元,记录 provenance | LongChunker 类工作 |
-| `semantic-dedup` | 检测语义重复并合并 / 选择 canonical 表述 | clustering, MinHash, embedding sim |
-| `retriever-reranker` | 在线读路径:候选检索 + 重排 | BM25/FTS + dense + LLM rerank,Agentic RAG |
-| `context-packer` | 在预算内组装结果,标注 why-used、omitted、conflicts(host-app 边界对象,kernel 只产出原料) | host 侧概念,但 kernel 提供 `MemoryResult` |
-| `dream-consolidator` | 离线生成 `MemoryDiff` 候选(merge / supersede / archive / new_insight) | Claude Dreams, MemoryT1 |
-| `memorydiff-generator` | 把检测结果落成可审核 diff | — |
-| `evaluator-benchmark` | EvalCase 数据格式与回归套件 | LongMemEval, MemoryAgentBench, LoCoMo |
-| `publisher` | host 侧概念:llms.txt / skill.md / wiki view | host 侧,不在 Ymem |
-| `interface` | host 侧概念:CLI / MCP / SDK | host 侧,不在 Ymem |
-| `audit-ui` | host 侧概念:why-used / diff review UI | host 侧,不在 Ymem |
-| `security-privacy` | provenance、tool-poisoning 防护、敏感字段策略 | — |
+> **想给自己的 memory kernel 起模块名?** 本页给的是分类**轴**,不是具名
+> 模块清单。如果你需要一份具体到 `ingest-adapter` / `retriever-reranker` /
+> `dream-consolidator` 的模块切分参考,见
+> [`ymem-binding/taxonomy-modules.md`](ymem-binding/taxonomy-modules.md)。
 
-## 使用方式
+## 三套主流 taxonomy
 
-在论文/产品笔记的 frontmatter 或 body 顶部:
-
-```yaml
-ymem_modules:
-  - retriever-reranker
-  - semantic-dedup
-```
-
-或在 body 中:
-
-```markdown
-**Ymem modules affected**: `retriever-reranker`, `semantic-dedup`
-```
-
-ImpactReport 必须使用本文档列出的模块名;若发现新模块概念,先在此文档 PR 增加,
-再写 ImpactReport。
-
-## host-side vs kernel-side
-
-并非所有模块都属于 Ymem。`context-packer` / `publisher` / `interface` /
-`audit-ui` 都是 host-app(目前是 ZhiOne)的责任。但 radar 仍然追踪这些模块的
-研究,因为:
-
-1. host 侧的需求会反推 Ymem 输出的形状(例如 `MemoryResult` 需要带 omitted /
-   conflicts 字段以支持 ContextPack);
-2. host 侧的真实 trace 是 Ymem benchmark 的重要补充。
-
-ImpactReport 应明确标注 `affected_modules` 是 kernel-side 还是 host-side,
-避免把 host 侧改造硬推进 Ymem。
-
-## 与其他 taxonomy 的对照
-
-agent memory 领域 2026 H1 同时出现了三套主流分类轴。本节给出它们到 Ymem
-模块的映射表,以便我们在阅读外部 survey 时能快速反向定位影响的 Ymem 模块。
-
-详细 survey 见 [`surveys.md`](surveys.md);此处只做结构对照。
-
-### "Memory in the Age of AI Agents"(arXiv 2512.13564)
+### A. "Memory in the Age of AI Agents"(arXiv 2512.13564)
 
 切入轴:`Forms × Functions × Dynamics`。
 
-| 该轴 | 子分类(节选) | 对应 Ymem 模块 |
+| 维度 | 关注 | 子分类(节选)|
 |---|---|---|
-| **Forms**(记忆"长什么样")| episodic / semantic / procedural / workspace | `parser-chunker`、`semantic-dedup`(语义单元形状) |
-| **Functions**(记忆"做什么")| recall / personalization / planning | `retriever-reranker`、`context-packer`(读路径) |
-| **Dynamics**(记忆"如何变")| write / update / forget / consolidate | `dream-consolidator`、`memorydiff-generator`(写路径) |
+| **Forms** | 记忆"长什么样" | episodic / semantic / procedural / workspace |
+| **Functions** | 记忆"做什么" | recall / personalization / planning |
+| **Dynamics** | 记忆"如何变" | write / update / forget / consolidate |
 
-**对齐最干净的一套,首推**。Ymem 的"读 / 写 / 离线"三路径几乎和 Functions /
-Dynamics 一一对应。
+**最干净的一套**。"做什么 / 长什么样 / 如何变"三问对照鲜明,适合做读者
+入口。
 
-### "Memory for Autonomous LLM Agents"(arXiv 2603.07670)
+### B. "Memory for Autonomous LLM Agents"(arXiv 2603.07670)
 
 切入轴:`temporal-scope × substrate × control-policy`,套在
 `write → manage → read` 循环里。
 
-| 该轴 | 含义 | 对应 Ymem |
+| 维度 | 关注 | 子分类 |
 |---|---|---|
-| **temporal-scope** | short-term / mid / long-term;valid period | 与 Ymem 的 `valid_from / valid_to / supersedes` 字段直接对应 |
-| **substrate** | vector / KG / wiki / hybrid 等存储介质 | 底层 store 选型(host-side 决策,但 Ymem 的 `MemoryRecord` schema 必须兼容) |
-| **control-policy** | append / overwrite / supersede / consolidate | `dream-consolidator` 的策略选择 + `memorydiff-generator` 的 diff 种类 |
-| **write–manage–read 循环** | 三阶段闭环 | `ingest-adapter` → `dream-consolidator` → `retriever-reranker` |
+| **temporal-scope** | 记忆的"有效时间" | short / mid / long-term;valid period;supersession |
+| **substrate** | 记忆的"底层存储" | vector / KG / wiki / hybrid |
+| **control-policy** | 记忆的"更新策略" | append / overwrite / supersede / consolidate |
 
-特别有用的一点:**control-policy** 这个名字明确把"记忆怎么变"作为独立维度,
-比 2512.13564 的 Dynamics 更细致,可以直接借用为 Ymem 策略层的术语。
+**control-policy** 这个名字最先把"记忆怎么变"作为独立维度命名,比 A 套的
+`Dynamics` 更细致 —— 适合做工程切分。
 
-### TsinghuaC3I/Awesome-Memory-for-Agents
+### C. TsinghuaC3I/Awesome-Memory-for-Agents
 
 切入轴:`Persistence × Curation`。
 
-| 该轴 | 含义 | 对应 Ymem |
+| 维度 | 关注 | 子分类 |
 |---|---|---|
-| **Persistence** | 短期 vs 长期 vs 跨 session | 与 `temporal-scope`(2603.07670)等价 |
-| **Curation** | 怎么挑、怎么合并、怎么丢 | `semantic-dedup` + `dream-consolidator` + `memorydiff-generator` |
+| **Persistence** | 记忆"留多久" | session / cross-session / persistent |
+| **Curation** | 记忆"怎么管" | select / merge / drop / supersede |
 
-最简的一套。**适合用作 stub 笔记的快速归类**:任何新论文先回答它是
-Persistence 类还是 Curation 类,再决定深读优先级。
+**最简的一套**。两个维度就能把新论文快速归位;适合做 stub 笔记的批量分类
+前置。
 
-### Ymem 模块 × 三套 taxonomy 的反查
+## 三套对照速查
 
-| Ymem 模块 | 2512.13564 | 2603.07670 | TsinghuaC3I |
+| 概念 | A: 2512.13564 | B: 2603.07670 | C: TsinghuaC3I |
 |---|---|---|---|
-| `ingest-adapter` | (host 侧)Forms 边界 | write 阶段 | Persistence 入口 |
-| `parser-chunker` | Forms | substrate(语义单元粒度)| Curation 前置 |
-| `semantic-dedup` | Forms / Dynamics | control-policy | Curation 核心 |
-| `retriever-reranker` | Functions | read 阶段 | (跨两轴) |
-| `context-packer` | Functions(host 侧)| read 阶段 | — |
-| `dream-consolidator` | Dynamics | manage 阶段 + control-policy | Curation 离线 |
-| `memorydiff-generator` | Dynamics | control-policy | Curation 产物 |
-| `evaluator-benchmark` | (元层)| (元层)| (元层)|
-| `security-privacy` | (未覆盖)| (未覆盖)| (未覆盖)— 由 [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md) 单独覆盖 |
+| "长什么样" | Forms | substrate | (隐含)|
+| "做什么"(读路径)| Functions | read 阶段 | (跨两轴)|
+| "如何变"(写路径)| Dynamics | manage + control-policy | Curation |
+| "留多久" | Forms 的 workspace 等 | temporal-scope | Persistence |
+| "记忆 vs 上下文" | (Forms 的 workspace 边界)| (substrate + scope)| (Persistence 边界)|
 
-最后一行解释了为什么我们必须**独立追踪 `mnemonic-sovereignty`**:主流三套
-taxonomy 都不把"安全 / 隐私 / 反污染"作为一等公民,但 Ymem 把它列为 kernel
-模块。这是 Ymem 与外部综述的一个显式 delta。
+## 通用 memory kernel 的常见模块切分
+
+任何想做 memory kernel 的人,都会自然产生类似这样的模块名(命名细节可能不同,
+角色基本一致):
+
+| 通用角色 | 在三套 taxonomy 里 | 典型工作 |
+|---|---|---|
+| **ingest** | 写路径起点 | host → record 转换 |
+| **parse / chunk** | A.Forms / B.substrate 决定 | 切分语义单元、保留 provenance |
+| **dedup** | A.Dynamics / B.control-policy / C.Curation | 语义聚合 / canonical 选择 |
+| **retrieve / rerank** | A.Functions / B.read | 在线读路径 |
+| **pack / present** | A.Functions 边界(host 侧)| 在预算内组装结果 |
+| **consolidate** | A.Dynamics / B.manage / C.Curation 离线 | 离线生成更新候选(merge / supersede / archive) |
+| **diff / audit** | A.Dynamics / B.control-policy | 把检测结果落成可审 diff |
+| **eval / benchmark** | (元层)| 回归套件 |
+| **security / privacy** | (各家都未覆盖)| provenance、tool-poisoning 防护 |
+
+最后一行是个**显著空洞**:三套主流 taxonomy 都没把"安全 / 隐私 / 反污染"
+当作一等公民。但 [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md)
+说明这是个真问题。任何想真正落地的 memory kernel 都应当把它作为独立模块
+对待。
+
+## 不在本页讨论的边界
+
+- **纯 RAG**:RAG 不是 memory —— RAG 是查检索;memory 多了 write path 与
+  state lifecycle。
+- **纯 long-context inference**:长上下文不是 memory —— 它不解决 selective
+  forgetting、versioning、conflict resolution。
+- **纯 vector DB**:vector store 是 substrate(B 套术语),不是 memory
+  kernel 本身。
+
+这些边界本身也是 agent memory 产品边界的常见误区。
+[`products-landscape.md`](products-landscape.md) §D 重复了这条立场。

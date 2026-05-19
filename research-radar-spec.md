@@ -1,43 +1,41 @@
 ---
-title: Research Radar spec
+title: Research Radar — agent memory knowledge → kernel decisions workflow
 date: 2026-05-08
-revised: 2026-05-18
+revised: 2026-05-19
 status: working-spec
 language: zh-CN
-origin: |
-  Originally drafted as §12 of zhione/docs/design/context-evolution-2026-05-08.md
-  when the Radar was scoped as a ZhiOne v1+ feature. On 2026-05-18 the Radar
-  was promoted to an independent repository, awesome-agent-memory, so that
-  algorithm iteration (in Ymem) and product iteration (in zhione) can both
-  consume from a shared, public knowledge base.
 ---
 
 # Research Radar / Architecture Review Loop
 
-## 0. 目的
+agent memory 领域的论文和产品在不断更新。**Radar** 是一套机制,把"外部新东西"
+有节奏地转成"对你自己 memory kernel 的架构判断"。
 
-论文和 AI 产品的进步是不断更新的。Radar 是一套机制,可以定期获取最新的信息,并且评判是否需要对 Ymem 架构进行更新。
-
-Radar 定位为 Ymem 的**核心进化层**:它不直接修改 kernel 主线,而是产出 ResearchItem、ImpactReport 和实验提案。
+本页是 awesome-agent-memory 的**通用 Radar 工作流**:与任何 memory kernel
+项目都不绑定。如果你想看本仓发起者(Ymem)的具体绑定,见
+[`ymem-binding/research-radar.md`](ymem-binding/research-radar.md)。
 
 ## 1. 核心流程
 
 ```text
 定期获取前沿信息
--> 结构化理解论文/产品更新
--> 映射到 Ymem 能力模块
--> 评估证据强度和适配度
--> 生成 ArchitectureImpactReport
--> Ymem 沙盒实验
--> benchmark / shadow run
--> 人审后进入 Ymem roadmap 或插件 / 否则归档
+  → 结构化理解论文/产品更新
+  → 映射到 memory kernel 能力模块
+  → 评估证据强度和适配度
+  → 生成 ArchitectureImpactReport
+  → 沙盒实验
+  → benchmark / shadow run
+  → 人审后进入 roadmap 或插件 / 否则归档
 ```
+
+Radar 的设计原则:**不直接修改 kernel 主线**,只产出 ResearchItem、
+ImpactReport 和实验提案。kernel 主线的变更走 ADR 流程,由 Radar 输出作为
+证据。
 
 ## 2. 信息源
 
 详见 [`information-sources.md`](information-sources.md) —— 10 个类别的完整
-catalog,中文社区单独成节。该文档是 Radar 信息面的 single source of truth,
-此处不再重复。
+catalog,中文社区单独成节。该文档是 Radar 信息面的 single source of truth。
 
 ## 3. ResearchItem schema
 
@@ -46,37 +44,45 @@ catalog,中文社区单独成节。该文档是 Radar 信息面的 single source
 ```text
 ResearchItem
 - title
-- source            # arXiv ID, conference, URL
-- date              # 论文发布或产品更新时间
-- domain            # memory | retrieval | graph | agent | eval | compression | UI | security
+- source              # arXiv ID, conference, URL
+- date                # 论文发布或产品更新时间
+- domain              # memory | retrieval | graph | agent | eval | compression | UI | security
 - core_claim
 - method_summary
 - required_assumptions
 - benchmark_used
-- evidence_level    # weak | medium | strong
-- code_available    # yes/no + link
+- evidence_level      # weak | medium | strong
+- code_available      # yes/no + link
 - license
-- cost_complexity   # 简短:相对实现成本
-- relevance_to_ymem # 1-2 句:对 Ymem 哪些模块有启发
+- cost_complexity     # 简短:相对实现成本
+- memory_modules      # 影响的 kernel 模块,见 taxonomy.md
+- decision_relevance  # 1-2 段:对你自己 kernel 决策的启发
 ```
 
 存放约定:
+
 - 论文 → `papers/<short-slug>.md`
 - 产品/工程文章 → `products/<short-slug>.md`
-- slug 用 kebab-case,论文以一作姓或工作名为主(`longmemeval`、`memoryagentbench`)
+- slug 用 kebab-case,论文以一作姓或工作名为主(`longmemeval`、
+  `memoryagentbench`)
 
 ## 4. 模块 taxonomy
 
-详见 [`taxonomy.md`](taxonomy.md)。每条 ResearchItem 必须映射到至少一个 Ymem 模块,以便 impact report 能按模块聚合。
+通用 axes 见 [`taxonomy.md`](taxonomy.md)。每条 ResearchItem 必须映射到至少
+一个 kernel 模块,以便 ImpactReport 能按模块聚合。
+
+具名模块清单需要你自己维护(每个项目的模块切分不同)。本仓发起者使用的清单
+作为参考,见 [`ymem-binding/taxonomy-modules.md`](ymem-binding/taxonomy-modules.md)。
 
 ## 5. ArchitectureImpactReport
 
-候选改进进入沙盒实验前,需要写一份 impact report,放在 `impact-reports/<short-slug>.md`:
+候选改进进入沙盒实验前,需要写一份 impact report,放在
+`impact-reports/<short-slug>.md`:
 
 ```text
 ImpactReport
 - solves_what_problem
-- affected_modules            # 引用 taxonomy.md 中的模块名
+- affected_modules            # 引用模块清单中的名字
 - expected_gain
 - evidence_strength           # weak | medium | strong
 - implementation_cost
@@ -92,25 +98,25 @@ ImpactReport
   - consider_core_change
 ```
 
-## 6. 沙盒实验(在 Ymem 仓内执行)
+## 6. 沙盒实验(在你自己 kernel 仓内执行)
 
 ```text
 candidate plugin / module
--> run on fixed EvalCase suite
--> run on historical traces (when available from host apps)
--> shadow compare against current baseline
--> measure:
-   - retrieval quality
-   - duplicate collapse
-   - stale/conflict detection
-   - context token reduction (host-app metric, optional)
-   - latency/cost
-   - regression rate
+  → run on fixed EvalCase suite
+  → run on historical traces (when available from host apps)
+  → shadow compare against current baseline
+  → measure:
+     - retrieval quality
+     - duplicate collapse
+     - stale/conflict detection
+     - context token reduction (host-app metric, optional)
+     - latency/cost
+     - regression rate
 ```
 
-## 7. 架构决策
+## 7. 架构决策(ADR)
 
-通过实验的候选在 Ymem 仓内生成 ADR:
+通过实验的候选在 kernel 仓内生成 ADR:
 
 ```text
 ADR
@@ -125,6 +131,8 @@ ADR
 
 ## 8. 演进规划
 
+本仓 Radar 自动化的路径:
+
 ```text
 v0 (当前):
 - 手动维护 papers/ 和 products/
@@ -133,7 +141,7 @@ v0 (当前):
 v0.5:
 - 把每周/双周阅读整理成 ResearchItem
 - 为高优候选写 ImpactReport
-- 在 Ymem 沙盒做 1-2 个实验
+- 在 sandbox 做 1-2 个实验
 
 v1:
 - 定期 radar:每周/每月扫描论文和产品更新
@@ -142,15 +150,17 @@ v1:
 
 v2:
 - 自动 benchmark / shadow run
-- 通过阈值后自动生成 Ymem ADR 草稿
+- 通过阈值后自动生成 ADR 草稿
 ```
 
-## 9. 与 Ymem 的契约
+## 9. 与你 kernel 仓的契约(建议模板)
 
-- 本仓不写 Ymem 代码,只提供决策依据。
-- Ymem ADR 必须 cite 至少一份 ImpactReport(或解释为何不需要)。
-- 本仓不为已废弃的论文/产品保留 ImpactReport;只保留对 Ymem 决策仍有 traceability 价值的。
+- 本仓不写 kernel 代码,只提供决策依据。
+- kernel ADR 必须 cite 至少一份 ImpactReport(或解释为何不需要)。
+- 本仓不为已废弃的论文/产品保留 ImpactReport;只保留对 kernel 决策仍有
+  traceability 价值的。
 
 一句话:
 
-> Ymem 不只管理记忆,也管理记忆系统自己的进化 —— 而 awesome-agent-memory 是这套进化机制的输入面。
+> 一个 memory kernel 项目要长寿,不只要管理记忆,还要管理"记忆系统自己的
+> 进化" —— 而 awesome-agent-memory 是这套进化机制的输入面。
