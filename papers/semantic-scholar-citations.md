@@ -1,5 +1,5 @@
 ---
-title: "![Semantic Scholar Citations"
+title: "Semantic Scholar Citations"
 arxiv_id: null
 date: null
 domain: unclassified

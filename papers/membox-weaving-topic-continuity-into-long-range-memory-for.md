@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-07 Membox: Weaving Topic Continuity into Long-Range Memory for LLM Agents

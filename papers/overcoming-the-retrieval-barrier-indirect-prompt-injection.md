@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/overcoming-the-retrieval-barrier-indirect-prompt-injection.pdf
 urls:
   - "https://arxiv.org/abs/2601.07072"
   - "https://arxiv.org/abs/2601.07072v1"

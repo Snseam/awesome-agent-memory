@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/making-theft-useless-adulteration-based-protection-of.pdf
 urls:
   - "https://arxiv.org/abs/2601.00274"
   - "https://arxiv.org/abs/2601.00274v1"

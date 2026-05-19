@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/conditional-memory-via-scalable-lookup-a-new-axis-of.pdf
 urls:
   - "https://arxiv.org/abs/2601.07372"
 ---

@@ -7,8 +7,8 @@
 **中文** · [English](README.md)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Papers](https://img.shields.io/badge/papers-980-brightgreen.svg)](papers/index.md)
-[![PDFs](https://img.shields.io/badge/local_PDFs-125-orange.svg)](papers/pdfs/)
+[![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
+[![PDFs](https://img.shields.io/badge/local_PDFs-529-orange.svg)](papers/pdfs/)
 [![Products](https://img.shields.io/badge/products-10-purple.svg)](products/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](signals.md)
@@ -45,8 +45,8 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 ## 一眼总览
 
 ```text
-980 篇唯一论文     ← 9 个同生态 awesome-list 抓取去重
-125 个本地 PDF     ← arXiv 开放协议,跨仓引用 ≥3 才入库
+989 篇唯一论文     ← 9 个同生态 awesome-list 抓取去重
+529 个本地 PDF     ← arXiv 开放协议;跨仓引用 ≥2 或 2026 新作 或 有 GitHub 链接 才入库
  10 个产品笔记     ← Mem0、Letta、Zep、Graphiti、Cognee、LangMem、…
   9 个页面快照     ← markdown 形式,便于审计
   7 个深读笔记     ← 七节模板,基于实际读过的 PDF
@@ -81,8 +81,8 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 
 | 路径 | 内容 |
 |---|---|
-| [`papers/`](papers/) | ~990 篇笔记(stub + full)。主索引 [`papers/index.md`](papers/index.md)。 |
-| [`papers/pdfs/`](papers/pdfs/) | 125 个本地 PDF(~500 MB)。详见存档策略。 |
+| [`papers/`](papers/) | ~998 篇笔记(stub + full)。主索引 [`papers/index.md`](papers/index.md)。 |
+| [`papers/pdfs/`](papers/pdfs/) | 529 个本地 PDF(~1.8 GB)。详见存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物:抓取脚本 + dedup JSON。 |
 | [`products/`](products/) | 10 个产品笔记。 |
 | [`products/archives/`](products/archives/) | 产品页面的 markdown 快照。 |

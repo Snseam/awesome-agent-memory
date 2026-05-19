@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-10-10 Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory

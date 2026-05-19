@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/himes-hippocampus-inspired-memory-system-for-personalized.pdf
 urls:
   - "https://arxiv.org/abs/2601.06152"
   - "https://arxiv.org/abs/2601.06152v1"
@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-06 HiMeS: Hippocampus-inspired Memory System for Personalized AI Assistants

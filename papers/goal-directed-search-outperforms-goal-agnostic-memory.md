@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/goal-directed-search-outperforms-goal-agnostic-memory.pdf
 urls:
   - "https://arxiv.org/abs/2511.21726"
 ---

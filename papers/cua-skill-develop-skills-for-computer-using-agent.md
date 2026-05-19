@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/cua-skill-develop-skills-for-computer-using-agent.pdf
 urls:
   - "http://arxiv.org/abs/2601.21123v2"
   - "https://arxiv.org/abs/2601.21123"

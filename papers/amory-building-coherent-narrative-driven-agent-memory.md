@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/amory-building-coherent-narrative-driven-agent-memory.pdf
 urls:
   - "https://arxiv.org/abs/2601.06282"
   - "https://arxiv.org/abs/2601.06282v1"

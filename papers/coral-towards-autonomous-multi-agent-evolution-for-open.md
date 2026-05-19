@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/coral-towards-autonomous-multi-agent-evolution-for-open.pdf
 urls:
   - "https://arxiv.org/abs/2604.01658"
   - "https://arxiv.org/pdf/2604.01658"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/persona-mme-a-benchmark-for-long-term-personalized.pdf
 urls:
   - "https://arxiv.org/abs/2604.13074"
 ---

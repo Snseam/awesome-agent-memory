@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/egolife-towards-egocentric-life-assistant.pdf
 urls:
   - "https://arxiv.org/abs/2503.03803"
 ---

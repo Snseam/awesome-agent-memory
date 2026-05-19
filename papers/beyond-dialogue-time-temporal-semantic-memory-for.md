@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-12 Beyond Dialogue Time: Temporal Semantic Memory for Personalized LLM Agents

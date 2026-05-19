@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/less-is-more-for-rag-information-gain-pruning-for-generator.pdf
 urls:
   - "http://arxiv.org/abs/2601.17532v1"
   - "https://arxiv.org/abs/2601.17532"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/contextual-agentic-memory-is-a-memo-not-true-memory.pdf
 urls:
   - "https://arxiv.org/abs/2604.27707"
 ---

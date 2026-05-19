@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/learning-to-collaborate-an-orchestrated-decentralized.pdf
 urls:
   - "http://arxiv.org/abs/2601.17133v1"
   - "https://arxiv.org/abs/2601.17133"

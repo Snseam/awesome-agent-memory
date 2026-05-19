@@ -1,5 +1,5 @@
 ---
-title: "Nemori: Self-Organizing Agent Memory Inspired by Cognitive Science"
+title: "NEMORI: SELF-ORGANIZING AGENT MEMORY INSPIRED BY COGNITIVE SCIENCE"
 arxiv_id: "2508.03341"
 date: 2025
 domain: unclassified
@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-08-05 NEMORI: SELF-ORGANIZING AGENT MEMORY INSPIRED BY COGNITIVE SCIENCE

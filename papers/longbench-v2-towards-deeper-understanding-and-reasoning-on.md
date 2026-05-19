@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2015-01-03 LongBench v2: Towards Deeper Understanding and Reasoning on Realistic Long-context Multitasks

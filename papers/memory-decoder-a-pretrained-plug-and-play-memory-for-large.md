@@ -12,7 +12,6 @@ local_pdf: pdfs/memory-decoder-a-pretrained-plug-and-play-memory-for-large.pdf
 urls:
   - "https://arxiv.org/abs/2508.09874"
   - "https://www.arxiv.org/abs/2508.09874"
-  - "https://openreview.net/forum?id=aCPFCDL9QY"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full

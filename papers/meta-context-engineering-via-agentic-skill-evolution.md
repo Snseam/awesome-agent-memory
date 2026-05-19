@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/meta-context-engineering-via-agentic-skill-evolution.pdf
 urls:
   - "http://arxiv.org/abs/2601.21557v2"
   - "https://arxiv.org/abs/2601.21557"

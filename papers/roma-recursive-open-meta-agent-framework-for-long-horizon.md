@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/roma-recursive-open-meta-agent-framework-for-long-horizon.pdf
 urls:
   - "https://arxiv.org/abs/2602.01848"
   - "https://arxiv.org/abs/2602.01848v1"

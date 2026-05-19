@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-06 MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory

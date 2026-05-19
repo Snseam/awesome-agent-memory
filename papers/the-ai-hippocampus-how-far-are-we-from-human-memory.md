@@ -5,13 +5,14 @@ date: 2026
 domain: unclassified
 status: stub
 sources:
+  - DEEP-PolyU
   - TeleAI-UAGI
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/the-ai-hippocampus-how-far-are-we-from-human-memory.pdf
 urls:
   - "https://arxiv.org/abs/2601.09113"
   - "https://arxiv.org/abs/2601.09113v1"
-  - "https://arxiv.org/pdf/2601.09113v1"
+  - "https://openreview.net/forum?id=Sk7pwmLuAY"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full

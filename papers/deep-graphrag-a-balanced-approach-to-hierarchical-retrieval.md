@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/deep-graphrag-a-balanced-approach-to-hierarchical-retrieval.pdf
 urls:
   - "http://arxiv.org/abs/2601.11144v3"
   - "https://arxiv.org/abs/2601.11144"

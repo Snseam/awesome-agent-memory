@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/fastinsight-fast-and-insightful-retrieval-via-fusion.pdf
 urls:
   - "http://arxiv.org/abs/2601.18579v1"
   - "https://arxiv.org/abs/2601.18579"

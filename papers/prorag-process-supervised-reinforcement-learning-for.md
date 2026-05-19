@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/prorag-process-supervised-reinforcement-learning-for.pdf
 urls:
   - "http://arxiv.org/abs/2601.21912v1"
   - "https://arxiv.org/abs/2601.21912"

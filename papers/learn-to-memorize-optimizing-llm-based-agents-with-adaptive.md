@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/learn-to-memorize-optimizing-llm-based-agents-with-adaptive.pdf
 urls:
   - "https://arxiv.org/abs/2508.16629"
 ---

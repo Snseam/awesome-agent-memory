@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/vidore-v3-a-comprehensive-evaluation-of-rag-in-complex-real.pdf
 urls:
   - "https://arxiv.org/abs/2601.08620"
   - "https://arxiv.org/abs/2601.08620v1"

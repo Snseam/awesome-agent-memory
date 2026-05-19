@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/towards-verifiably-safe-tool-use-for-llm-agents.pdf
 urls:
   - "https://arxiv.org/abs/2601.08012"
   - "https://arxiv.org/abs/2601.08012v1"

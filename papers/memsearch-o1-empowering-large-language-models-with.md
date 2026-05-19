@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/memsearch-o1-empowering-large-language-models-with.pdf
 urls:
   - "https://arxiv.org/abs/2604.17265"
 ---

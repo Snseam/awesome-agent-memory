@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: pdfs/rgmem-renormalization-group-based-memory-evolution-for.pdf
 urls:
   - "https://arxiv.org/abs/2510.16392"
 ---

@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - IAAR-Shanghai
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2502.05589"
   - "https://arxiv.org/pdf/2502.05589"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-01-23 ON MEMORY CONSTRUCTION AND RETRIEVAL FOR PERSONALIZED CONVERSATIONAL AGENTS

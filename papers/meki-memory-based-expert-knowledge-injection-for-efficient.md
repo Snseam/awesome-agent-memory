@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/meki-memory-based-expert-knowledge-injection-for-efficient.pdf
 urls:
   - "https://arxiv.org/abs/2602.03359"
 ---

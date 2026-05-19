@@ -14,8 +14,10 @@ local_pdf: pdfs/reasoningbank-scaling-agent-self-evolving-with-reasoning.pdf
 urls:
   - "https://arxiv.org/abs/2509.25140"
   - "https://arxiv.org/abs/2509.25140v1"
-  - "https://openreview.net/forum?id=nElqyHPHAz"
+  - "https://arxiv.org/pdf/2509.25140"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-09-29 ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory

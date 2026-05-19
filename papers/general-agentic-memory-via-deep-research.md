@@ -1,5 +1,5 @@
 ---
-title: "General Agentic Memory via Deep Research"
+title: "General Agentic Memory Via Deep Research"
 arxiv_id: "2511.18423"
 date: 2025
 domain: unclassified

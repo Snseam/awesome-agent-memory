@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/toward-autonomous-long-horizon-engineering-for-ml-research.pdf
 urls:
   - "https://arxiv.org/abs/2604.13018"
 ---

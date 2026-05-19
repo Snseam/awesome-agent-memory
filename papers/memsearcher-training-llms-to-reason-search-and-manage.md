@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-11-04 MemSearcher Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning

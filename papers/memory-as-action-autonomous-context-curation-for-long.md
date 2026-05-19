@@ -1,5 +1,5 @@
 ---
-title: "Memory As Action: Autonomous Context Curation for Long-Horizon Agentic Tasks"
+title: "Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks"
 arxiv_id: "2510.12635"
 date: 2025
 domain: unclassified
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-10-14 Memory as Action Autonomous Context Curation for Long-Horizon Agentic Tasks

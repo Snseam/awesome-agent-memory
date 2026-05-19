@@ -7,7 +7,7 @@ status: stub
 sources:
   - Shichun-Liu
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/evermemos-a-self-organizing-memory-operating-system-for.pdf
 urls:
   - "https://arxiv.org/abs/2601.02163"
   - "https://www.arxiv.org/abs/2601.02163"

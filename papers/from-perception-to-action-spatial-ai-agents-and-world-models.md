@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/from-perception-to-action-spatial-ai-agents-and-world-models.pdf
 urls:
   - "https://arxiv.org/abs/2602.01644"
   - "https://arxiv.org/abs/2602.01644v1"

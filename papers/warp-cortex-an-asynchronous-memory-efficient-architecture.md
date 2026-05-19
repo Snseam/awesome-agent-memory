@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/warp-cortex-an-asynchronous-memory-efficient-architecture.pdf
 urls:
   - "https://arxiv.org/abs/2601.01298"
   - "https://arxiv.org/abs/2601.01298v1"

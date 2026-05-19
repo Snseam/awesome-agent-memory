@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/self-evolving-distributed-memory-architecture-for-scalable.pdf
 urls:
   - "https://arxiv.org/abs/2601.05569"
 ---

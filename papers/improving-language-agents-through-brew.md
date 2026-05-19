@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/improving-language-agents-through-brew.pdf
 urls:
   - "https://arxiv.org/abs/2511.20297"
 ---

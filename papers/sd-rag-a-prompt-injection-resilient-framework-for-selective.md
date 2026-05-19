@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/sd-rag-a-prompt-injection-resilient-framework-for-selective.pdf
 urls:
   - "http://arxiv.org/abs/2601.11199v1"
   - "https://arxiv.org/abs/2601.11199"

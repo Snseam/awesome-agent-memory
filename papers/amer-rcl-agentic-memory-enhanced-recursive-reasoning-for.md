@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/amer-rcl-agentic-memory-enhanced-recursive-reasoning-for.pdf
 urls:
   - "https://arxiv.org/abs/2601.02732"
   - "https://arxiv.org/abs/2601.02732v1"

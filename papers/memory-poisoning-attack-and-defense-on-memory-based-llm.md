@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/memory-poisoning-attack-and-defense-on-memory-based-llm.pdf
 urls:
   - "https://arxiv.org/abs/2601.05504"
   - "https://arxiv.org/abs/2601.05504v2"

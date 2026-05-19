@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/minenpc-task-task-suite-for-memory-aware-minecraft-agents.pdf
 urls:
   - "https://arxiv.org/abs/2601.05215"
   - "https://arxiv.org/abs/2601.05215v2"

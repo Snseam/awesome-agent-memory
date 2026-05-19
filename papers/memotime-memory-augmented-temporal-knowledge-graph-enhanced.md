@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/memotime-memory-augmented-temporal-knowledge-graph-enhanced.pdf
 urls:
   - "https://arxiv.org/abs/2510.13614"
 ---

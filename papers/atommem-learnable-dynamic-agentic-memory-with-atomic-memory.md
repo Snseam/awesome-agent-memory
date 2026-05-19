@@ -1,5 +1,5 @@
 ---
-title: "AtomMem: Learnable Dynamic Agentic Memory with Atomic Memory Operation"
+title: "AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation"
 arxiv_id: "2601.08323"
 date: 2026
 domain: unclassified
@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-13 AtomMem: Learnable Dynamic Agentic Memory with Atomic Memory Operation

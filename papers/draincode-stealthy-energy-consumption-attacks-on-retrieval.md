@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/draincode-stealthy-energy-consumption-attacks-on-retrieval.pdf
 urls:
   - "http://arxiv.org/abs/2601.20615v3"
   - "https://arxiv.org/abs/2601.20615"

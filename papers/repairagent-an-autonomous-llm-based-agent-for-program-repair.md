@@ -10,7 +10,6 @@ local_pdf: deferred
 urls:
   - "http://arxiv.org/abs/2403.17134"
   - "https://arxiv.org/abs/2403.17134"
-  - "https://openreview.net/forum?id=NTAhi2JEEE"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full

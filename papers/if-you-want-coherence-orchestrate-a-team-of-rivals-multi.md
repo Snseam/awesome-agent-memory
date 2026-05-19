@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/if-you-want-coherence-orchestrate-a-team-of-rivals-multi.pdf
 urls:
   - "http://arxiv.org/abs/2601.14351v1"
   - "https://arxiv.org/abs/2601.14351"

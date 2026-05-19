@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/mitigating-hallucination-in-financial-retrieval-augmented.pdf
 urls:
   - "https://arxiv.org/abs/2602.05723"
   - "https://arxiv.org/abs/2602.05723v1"

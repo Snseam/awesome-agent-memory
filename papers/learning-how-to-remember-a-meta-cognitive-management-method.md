@@ -7,7 +7,7 @@ status: stub
 sources:
   - TsinghuaC3I
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/learning-how-to-remember-a-meta-cognitive-management-method.pdf
 urls:
   - "https://arxiv.org/abs/2601.07470"
   - "https://arxiv.org/abs/2601.07470v1"

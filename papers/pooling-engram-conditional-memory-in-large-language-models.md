@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/pooling-engram-conditional-memory-in-large-language-models.pdf
 urls:
   - "https://arxiv.org/abs/2603.10087"
 ---

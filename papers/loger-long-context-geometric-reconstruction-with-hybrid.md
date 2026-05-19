@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/loger-long-context-geometric-reconstruction-with-hybrid.pdf
 urls:
   - "https://arxiv.org/abs/2603.03269"
 ---

@@ -7,7 +7,7 @@ status: stub
 sources:
   - DEEP-PolyU
   - IAAR-Shanghai
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2502.01630"
   - "https://arxiv.org/pdf/2502.01630"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-02-03 TReMu: Towards Neuro-Symbolic Temporal Reasoning for LLM-Agents with Memory in Multi-Session Dialogues

@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/learning-on-the-job-an-experience-driven-self-evolving.pdf
 urls:
   - "https://arxiv.org/abs/2510.08002"
 ---

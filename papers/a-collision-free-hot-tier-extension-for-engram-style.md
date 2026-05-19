@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/a-collision-free-hot-tier-extension-for-engram-style.pdf
 urls:
   - "https://arxiv.org/abs/2601.16531"
 ---

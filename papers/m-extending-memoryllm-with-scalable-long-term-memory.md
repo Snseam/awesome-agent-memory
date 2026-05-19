@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/m-extending-memoryllm-with-scalable-long-term-memory.pdf
 urls:
   - "https://arxiv.org/abs/2502.00592"
 ---

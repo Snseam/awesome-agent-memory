@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/opendecoder-open-llm-decoding-to-incorporate-document.pdf
 urls:
   - "https://arxiv.org/abs/2601.09028"
   - "https://arxiv.org/abs/2601.09028v2"

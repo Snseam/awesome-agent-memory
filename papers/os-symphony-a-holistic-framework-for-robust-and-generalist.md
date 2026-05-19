@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/os-symphony-a-holistic-framework-for-robust-and-generalist.pdf
 urls:
   - "https://arxiv.org/abs/2601.07779"
   - "https://arxiv.org/abs/2601.07779v1"

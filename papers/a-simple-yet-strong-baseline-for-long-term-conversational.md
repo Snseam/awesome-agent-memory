@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: pdfs/a-simple-yet-strong-baseline-for-long-term-conversational.pdf
 urls:
   - "https://arxiv.org/abs/2511.17208"
 ---

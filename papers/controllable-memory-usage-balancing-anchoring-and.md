@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/controllable-memory-usage-balancing-anchoring-and.pdf
 urls:
   - "https://arxiv.org/abs/2601.05107"
   - "https://arxiv.org/abs/2601.05107v1"

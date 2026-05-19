@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/toward-efficient-agents-memory-tool-learning-and-planning.pdf
 urls:
   - "http://arxiv.org/abs/2601.14192v1"
   - "https://arxiv.org/abs/2601.14192"

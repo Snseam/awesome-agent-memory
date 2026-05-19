@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2407.01178"
   - "https://arxiv.org/abs/2407.01178v1"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/hermes-kv-cache-as-hierarchical-memory-for-efficient.pdf
 urls:
   - "https://arxiv.org/abs/2601.14724"
 ---

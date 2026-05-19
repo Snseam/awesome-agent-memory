@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/plugmem-a-task-agnostic-plugin-memory-module-for-llm-agents.pdf
 urls:
   - "https://arxiv.org/abs/2603.03296"
 ---

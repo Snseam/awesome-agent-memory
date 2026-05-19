@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/beyond-conditional-computation-retrieval-augmented-genomic.pdf
 urls:
   - "https://arxiv.org/abs/2601.22203"
 ---

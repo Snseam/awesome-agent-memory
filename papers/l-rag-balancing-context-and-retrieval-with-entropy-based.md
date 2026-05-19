@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/l-rag-balancing-context-and-retrieval-with-entropy-based.pdf
 urls:
   - "https://arxiv.org/abs/2601.06551"
   - "https://arxiv.org/abs/2601.06551v1"

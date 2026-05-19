@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: pdfs/memoria-a-scalable-agentic-memory-framework-for.pdf
 urls:
   - "https://arxiv.org/abs/2512.12686"
 ---

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/stackplanner-a-centralized-hierarchical-multi-agent-system.pdf
 urls:
   - "https://arxiv.org/abs/2601.05890"
   - "https://arxiv.org/abs/2601.05890v1"

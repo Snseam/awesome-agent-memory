@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/controlled-self-evolution-for-algorithmic-code-optimization.pdf
 urls:
   - "https://arxiv.org/abs/2601.07348"
 ---

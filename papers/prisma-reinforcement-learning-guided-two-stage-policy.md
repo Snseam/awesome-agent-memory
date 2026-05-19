@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/prisma-reinforcement-learning-guided-two-stage-policy.pdf
 urls:
   - "https://arxiv.org/abs/2601.05465"
   - "https://arxiv.org/abs/2601.05465v1"

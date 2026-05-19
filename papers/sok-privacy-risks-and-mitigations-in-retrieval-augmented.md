@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/sok-privacy-risks-and-mitigations-in-retrieval-augmented.pdf
 urls:
   - "https://arxiv.org/abs/2601.03979"
   - "https://arxiv.org/abs/2601.03979v1"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/language-model-memory-and-memory-models-for-language.pdf
 urls:
   - "https://arxiv.org/abs/2602.13466"
 ---

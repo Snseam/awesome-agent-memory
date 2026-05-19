@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/backdooragent-a-unified-framework-for-backdoor-attacks-on.pdf
 urls:
   - "https://arxiv.org/abs/2601.04566"
   - "https://arxiv.org/abs/2601.04566v2"

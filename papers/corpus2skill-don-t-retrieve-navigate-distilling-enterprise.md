@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/corpus2skill-don-t-retrieve-navigate-distilling-enterprise.pdf
 urls:
   - "https://arxiv.org/abs/2604.14572"
   - "https://arxiv.org/pdf/2604.14572"

@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/active-context-compression-autonomous-memory-management-in.pdf
 urls:
   - "https://arxiv.org/abs/2601.07190"
   - "https://arxiv.org/abs/2601.07190v1"
@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-12 Active Context Compression: Autonomous Memory Management in LLM Agents

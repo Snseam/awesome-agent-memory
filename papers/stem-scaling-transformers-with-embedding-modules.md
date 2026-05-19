@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/stem-scaling-transformers-with-embedding-modules.pdf
 urls:
   - "https://arxiv.org/abs/2601.10639"
 ---

@@ -1,19 +1,17 @@
 ---
 title: "RazorAttention: Efficient KV Cache Compression Through Retrieval Heads"
-arxiv_id: "2511.11007"
-date: 2025
+arxiv_id: null
+date: null
 domain: unclassified
 status: stub
 sources:
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: none
 urls:
-  - "https://arxiv.org/abs/2511.11007"
-  - "https://aclanthology.org/2025.acl-long.1137"
-  - "https://aclanthology.org/2025.acl-long.1137/"
+  - "https://openreview.net/forum?id=tkiZQlL04w"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
 
-[2025/11] VisMem: Latent Vision Memory Unlocks Potential of Vision-Language Models [paper]
+[2025/05] RazorAttention: Efficient KV Cache Compression Through Retrieval Heads. [paper]

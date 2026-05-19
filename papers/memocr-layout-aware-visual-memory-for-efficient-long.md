@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/memocr-layout-aware-visual-memory-for-efficient-long.pdf
 urls:
   - "https://arxiv.org/abs/2601.21468"
 ---

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/architecting-agentops-needs-change.pdf
 urls:
   - "https://arxiv.org/abs/2601.06456"
   - "https://arxiv.org/abs/2601.06456v1"

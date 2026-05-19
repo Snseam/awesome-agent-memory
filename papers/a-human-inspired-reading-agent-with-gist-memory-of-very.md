@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - IAAR-Shanghai
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2402.09727"
   - "https://arxiv.org/pdf/2402.09727"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2024-07-22 A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts

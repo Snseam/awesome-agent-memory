@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/beyond-static-tools-test-time-tool-evolution-for-scientific.pdf
 urls:
   - "https://arxiv.org/abs/2601.07641"
 ---

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/completing-missing-annotation-multi-agent-debate-for.pdf
 urls:
   - "https://arxiv.org/abs/2602.06526"
   - "https://arxiv.org/abs/2602.06526v1"

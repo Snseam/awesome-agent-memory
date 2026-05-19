@@ -18,3 +18,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-12-11 Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution

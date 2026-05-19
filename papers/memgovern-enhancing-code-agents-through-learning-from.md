@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/memgovern-enhancing-code-agents-through-learning-from.pdf
 urls:
   - "https://arxiv.org/abs/2601.06789"
 ---

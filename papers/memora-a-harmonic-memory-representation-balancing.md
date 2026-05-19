@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/memora-a-harmonic-memory-representation-balancing.pdf
 urls:
   - "https://arxiv.org/abs/2602.03315"
 ---

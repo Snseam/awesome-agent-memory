@@ -1,5 +1,5 @@
 ---
-title: "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents"
+title: "AriGraph: Learning knowledge graph world models with episodic memory for LLM agents"
 arxiv_id: "2407.04363"
 date: 2024
 domain: unclassified

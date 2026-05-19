@@ -1,0 +1,17 @@
+---
+title: "Toward Multi-Session Personalized Conversation: A Large-Scale Dataset and Hierarchical Tree Framework for Implicit Reasoning"
+arxiv_id: null
+date: null
+domain: unclassified
+status: stub
+sources:
+  - IAAR-Shanghai
+local_pdf: none
+urls:
+  - "https://aclanthology.org/2025.emnlp-main.580.pdf"
+---
+
+> **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
+> ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-11-04 Toward Multi-Session Personalized Conversation: A Large-Scale Dataset and Hierarchical Tree Framework for Implicit Reasoning

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/atod-an-evaluation-framework-and-benchmark-for-agentic-task.pdf
 urls:
   - "http://arxiv.org/abs/2601.11854v2"
   - "https://arxiv.org/abs/2601.11854"

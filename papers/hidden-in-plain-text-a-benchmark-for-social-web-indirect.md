@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/hidden-in-plain-text-a-benchmark-for-social-web-indirect.pdf
 urls:
   - "http://arxiv.org/abs/2601.10923v2"
   - "https://arxiv.org/abs/2601.10923"

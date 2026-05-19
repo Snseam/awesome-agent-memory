@@ -6,6 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - IAAR-Shanghai
+  - Shichun-Liu
   - TeleAI-UAGI
 local_pdf: none
 urls:
@@ -15,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-05-11 In Prospect and Retrospect: Reflective Memory Management for Long-term Personalized Dialogue Agents

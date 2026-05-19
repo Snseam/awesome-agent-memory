@@ -8,7 +8,7 @@ sources:
   - AgentMemoryWorld
   - DEEP-PolyU
   - IAAR-Shanghai
-local_pdf: pdfs/babilong-testing-the-limits-of-llms-with-long-context.pdf
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2406.10149"
   - "https://arxiv.org/pdf/2406.10149"

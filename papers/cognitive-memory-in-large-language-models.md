@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/cognitive-memory-in-large-language-models.pdf
 urls:
   - "https://arxiv.org/abs/2504.02441"
   - "https://arxiv.org/pdf/2504.02441"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-04-24 Cognitive Memory in Large Language Models

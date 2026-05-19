@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/soprag-multi-view-graph-experts-retrieval-for-industrial.pdf
 urls:
   - "https://arxiv.org/abs/2602.01858"
   - "https://arxiv.org/abs/2602.01858v1"

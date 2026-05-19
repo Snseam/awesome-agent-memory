@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/lstm-mas-a-long-short-term-memory-inspired-multi-agent.pdf
 urls:
   - "http://arxiv.org/abs/2601.11913v1"
   - "https://arxiv.org/abs/2601.11913"

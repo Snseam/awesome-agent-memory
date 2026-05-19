@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2107.07567"
 ---

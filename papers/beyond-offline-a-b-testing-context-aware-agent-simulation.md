@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/beyond-offline-a-b-testing-context-aware-agent-simulation.pdf
 urls:
   - "https://arxiv.org/abs/2604.09549"
 ---

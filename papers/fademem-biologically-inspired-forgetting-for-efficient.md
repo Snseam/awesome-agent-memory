@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/fademem-biologically-inspired-forgetting-for-efficient.pdf
 urls:
   - "http://arxiv.org/abs/2601.18642v2"
   - "https://arxiv.org/abs/2601.18642"
@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-26 FadeMem: Biologically-Inspired Forgetting for Efficient Agent Memory

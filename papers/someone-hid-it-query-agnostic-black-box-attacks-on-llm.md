@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/someone-hid-it-query-agnostic-black-box-attacks-on-llm.pdf
 urls:
   - "http://arxiv.org/abs/2602.00364v2"
   - "https://arxiv.org/abs/2602.00364"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/darwinian-memory-a-training-free-self-regulating-memory.pdf
 urls:
   - "https://arxiv.org/abs/2601.22528"
 ---

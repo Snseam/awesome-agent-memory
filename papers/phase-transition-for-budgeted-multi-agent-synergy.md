@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/phase-transition-for-budgeted-multi-agent-synergy.pdf
 urls:
   - "http://arxiv.org/abs/2601.17311v1"
   - "https://arxiv.org/abs/2601.17311"

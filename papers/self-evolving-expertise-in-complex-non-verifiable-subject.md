@@ -9,8 +9,6 @@ sources:
 local_pdf: deferred
 urls:
   - "https://arxiv.org/abs/2510.15772"
-  - "https://openreview.net/forum?id=UESTP6dR1K"
-  - "https://openreview.net/forum?id=UOzxviKVFO"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full

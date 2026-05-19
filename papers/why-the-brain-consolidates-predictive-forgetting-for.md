@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/why-the-brain-consolidates-predictive-forgetting-for.pdf
 urls:
   - "https://arxiv.org/abs/2603.04688"
 ---

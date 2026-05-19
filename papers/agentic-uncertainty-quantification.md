@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/agentic-uncertainty-quantification.pdf
 urls:
   - "http://arxiv.org/abs/2601.15703v1"
   - "https://arxiv.org/abs/2601.15703"

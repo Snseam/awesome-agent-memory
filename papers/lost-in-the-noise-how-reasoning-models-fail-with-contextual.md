@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/lost-in-the-noise-how-reasoning-models-fail-with-contextual.pdf
 urls:
   - "https://arxiv.org/abs/2601.07226"
   - "https://arxiv.org/abs/2601.07226v1"

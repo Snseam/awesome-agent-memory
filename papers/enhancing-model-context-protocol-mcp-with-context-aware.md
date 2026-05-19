@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/enhancing-model-context-protocol-mcp-with-context-aware.pdf
 urls:
   - "https://arxiv.org/abs/2601.11595"
   - "https://arxiv.org/abs/2601.11595v2"

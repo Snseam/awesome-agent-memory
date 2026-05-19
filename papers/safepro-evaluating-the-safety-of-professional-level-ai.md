@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/safepro-evaluating-the-safety-of-professional-level-ai.pdf
 urls:
   - "https://arxiv.org/abs/2601.06663"
   - "https://arxiv.org/abs/2601.06663v2"

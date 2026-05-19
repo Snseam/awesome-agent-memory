@@ -1,5 +1,5 @@
 ---
-title: "Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models"
+title: "Recursively summarizing enables long-term dialogue memory in large language models"
 arxiv_id: "2308.15022"
 date: 2023
 domain: unclassified
@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2308.15022"
   - "https://arxiv.org/abs/2308.15022v3"

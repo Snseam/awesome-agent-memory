@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/deepera-a-deep-evidence-reranking-agent-for-scientific.pdf
 urls:
   - "http://arxiv.org/abs/2601.16478v1"
   - "https://arxiv.org/abs/2601.16478"

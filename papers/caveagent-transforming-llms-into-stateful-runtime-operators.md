@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/caveagent-transforming-llms-into-stateful-runtime-operators.pdf
 urls:
   - "https://arxiv.org/abs/2601.01569"
   - "https://arxiv.org/abs/2601.01569v3"

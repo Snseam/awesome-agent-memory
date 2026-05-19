@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/code-a-contradiction-based-deliberation-extension-framework.pdf
 urls:
   - "http://arxiv.org/abs/2601.13112v1"
   - "https://arxiv.org/abs/2601.13112"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/agentguardian-learning-access-control-policies-to-govern-ai.pdf
 urls:
   - "http://arxiv.org/abs/2601.10440v1"
   - "https://arxiv.org/abs/2601.10440"

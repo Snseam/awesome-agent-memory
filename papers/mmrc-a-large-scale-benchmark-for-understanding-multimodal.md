@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/mmrc-a-large-scale-benchmark-for-understanding-multimodal.pdf
 urls:
   - "https://arxiv.org/abs/2502.11903"
 ---

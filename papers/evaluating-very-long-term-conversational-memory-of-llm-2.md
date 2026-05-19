@@ -1,0 +1,17 @@
+---
+title: "Evaluating Very Long-Term Conversational Memory of LLM Agents"
+arxiv_id: null
+date: null
+domain: unclassified
+status: stub
+sources:
+  - IAAR-Shanghai
+local_pdf: none
+urls:
+  - "https://aclanthology.org/2024.acl-long.747.pdf"
+---
+
+> **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
+> ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2024-08-11 Evaluating Very Long-Term Conversational Memory of LLM Agents

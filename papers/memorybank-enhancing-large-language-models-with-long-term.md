@@ -1,5 +1,5 @@
 ---
-title: "MemoryBank: Enhancing Large Language Models with Long-Term Memory"
+title: "MemoryBank: Enhancing large language models with long-term memory"
 arxiv_id: "2305.10250"
 date: 2023
 domain: unclassified

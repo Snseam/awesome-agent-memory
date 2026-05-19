@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - qianlima-lab
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2408.11869"
   - "https://arxiv.org/pdf/2408.11869"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2024-08-19 ELDER: Enhancing Lifelong Model Editing with Mixture-of-LoRA

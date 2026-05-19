@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/beyond-single-shot-multi-step-tool-retrieval-via-query.pdf
 urls:
   - "https://arxiv.org/abs/2601.07782"
   - "https://arxiv.org/abs/2601.07782v1"

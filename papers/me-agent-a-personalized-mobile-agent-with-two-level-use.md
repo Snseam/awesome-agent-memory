@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/me-agent-a-personalized-mobile-agent-with-two-level-use.pdf
 urls:
   - "https://arxiv.org/abs/2601.20162"
 ---

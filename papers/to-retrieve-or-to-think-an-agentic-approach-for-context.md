@@ -7,7 +7,7 @@ status: stub
 sources:
   - TsinghuaC3I
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/to-retrieve-or-to-think-an-agentic-approach-for-context.pdf
 urls:
   - "https://arxiv.org/abs/2601.08747"
   - "https://arxiv.org/abs/2601.08747v2"

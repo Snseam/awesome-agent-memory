@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/smcp-secure-model-context-protocol.pdf
 urls:
   - "http://arxiv.org/abs/2602.01129v1"
   - "https://arxiv.org/abs/2602.01129"

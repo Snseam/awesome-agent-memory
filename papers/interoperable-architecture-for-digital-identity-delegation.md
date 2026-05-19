@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/interoperable-architecture-for-digital-identity-delegation.pdf
 urls:
   - "http://arxiv.org/abs/2601.14982v1"
   - "https://arxiv.org/abs/2601.14982"

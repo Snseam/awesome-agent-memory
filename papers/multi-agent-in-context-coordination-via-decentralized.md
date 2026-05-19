@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/multi-agent-in-context-coordination-via-decentralized.pdf
 urls:
   - "https://arxiv.org/abs/2511.10030"
 ---

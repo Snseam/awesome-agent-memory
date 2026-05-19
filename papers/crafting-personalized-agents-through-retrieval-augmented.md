@@ -11,7 +11,6 @@ sources:
 local_pdf: pdfs/crafting-personalized-agents-through-retrieval-augmented.pdf
 urls:
   - "https://arxiv.org/abs/2409.19401"
-  - "https://openreview.net/forum?id=BI2int5SAC"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full

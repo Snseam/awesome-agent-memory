@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/mga-memory-driven-gui-agent-for-observation-centric.pdf
 urls:
   - "https://arxiv.org/abs/2510.24168"
 ---

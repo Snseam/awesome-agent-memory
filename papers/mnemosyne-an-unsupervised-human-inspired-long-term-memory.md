@@ -7,7 +7,7 @@ status: stub
 sources:
   - DEEP-PolyU
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/mnemosyne-an-unsupervised-human-inspired-long-term-memory.pdf
 urls:
   - "https://arxiv.org/abs/2510.08601"
 ---

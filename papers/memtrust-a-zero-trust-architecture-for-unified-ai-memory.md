@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/memtrust-a-zero-trust-architecture-for-unified-ai-memory.pdf
 urls:
   - "https://arxiv.org/abs/2601.07004"
   - "https://arxiv.org/abs/2601.07004v1"

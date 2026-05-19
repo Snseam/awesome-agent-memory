@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/when-iterative-rag-beats-ideal-evidence-a-diagnostic-study.pdf
 urls:
   - "http://arxiv.org/abs/2601.19827v2"
   - "https://arxiv.org/abs/2601.19827"

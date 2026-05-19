@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - qianlima-lab
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2310.10158"
   - "https://arxiv.org/pdf/2310.10158"

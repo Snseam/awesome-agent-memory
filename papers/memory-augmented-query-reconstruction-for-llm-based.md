@@ -7,7 +7,7 @@ status: stub
 sources:
   - DEEP-PolyU
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: pdfs/memory-augmented-query-reconstruction-for-llm-based.pdf
 urls:
   - "https://arxiv.org/abs/2503.05193"
 ---

@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/lightsearcher-efficient-deepsearch-via-experiential-memory.pdf
 urls:
   - "https://arxiv.org/abs/2512.06653"
   - "https://www.arxiv.org/abs/2512.06653"

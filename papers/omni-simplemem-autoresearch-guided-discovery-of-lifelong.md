@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/omni-simplemem-autoresearch-guided-discovery-of-lifelong.pdf
 urls:
   - "https://arxiv.org/abs/2604.01007"
 ---

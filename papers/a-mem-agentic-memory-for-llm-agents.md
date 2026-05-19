@@ -1,5 +1,5 @@
 ---
-title: "A-Mem: Agentic Memory for LLM Agents"
+title: "A-MEM: Agentic Memory for LLM Agents"
 arxiv_id: "2502.12110"
 date: 2025
 domain: unclassified
@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-10-08 A-MEM: Agentic Memory for LLM Agents

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/eventmemagent-hierarchical-event-centric-memory-for-online.pdf
 urls:
   - "https://arxiv.org/abs/2602.15329"
 ---

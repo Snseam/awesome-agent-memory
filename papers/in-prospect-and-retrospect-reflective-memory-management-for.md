@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/in-prospect-and-retrospect-reflective-memory-management-for.pdf
 urls:
   - "https://arxiv.org/abs/2503.08026"
 ---

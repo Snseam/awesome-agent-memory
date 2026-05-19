@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/investigating-tool-memory-conflicts-in-tool-augmented-llms.pdf
 urls:
   - "https://arxiv.org/abs/2601.09760"
   - "https://arxiv.org/abs/2601.09760v1"

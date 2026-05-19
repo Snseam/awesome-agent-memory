@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/jitrl-just-in-time-reinforcement-learning-for-continual.pdf
 urls:
   - "http://arxiv.org/abs/2601.18510v1"
   - "https://arxiv.org/abs/2601.18510"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/star-scalable-task-conditioned-retrieval-for-long-horizon.pdf
 urls:
   - "https://arxiv.org/abs/2602.09255"
 ---

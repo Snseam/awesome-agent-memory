@@ -1,5 +1,5 @@
 ---
-title: "**Graph-based Agent Memory: Taxonomy, Techniques, and Applications**"
+title: "Graph-based Agent Memory: Taxonomy, Techniques, and Applications"
 arxiv_id: "2602.05665"
 date: 2026
 domain: unclassified
@@ -7,7 +7,7 @@ status: stub
 sources:
   - DEEP-PolyU
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/graph-based-agent-memory-taxonomy-techniques-and.pdf
 urls:
   - "https://arxiv.org/abs/2602.05665"
   - "https://arxiv.org/abs/2602.05665v1"

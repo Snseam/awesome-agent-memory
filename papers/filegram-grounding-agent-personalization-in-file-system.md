@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/filegram-grounding-agent-personalization-in-file-system.pdf
 urls:
   - "https://arxiv.org/abs/2604.04901"
 ---

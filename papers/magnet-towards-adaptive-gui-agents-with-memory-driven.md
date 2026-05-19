@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/magnet-towards-adaptive-gui-agents-with-memory-driven.pdf
 urls:
   - "https://arxiv.org/abs/2601.19199"
 ---

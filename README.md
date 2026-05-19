@@ -7,8 +7,8 @@
 [中文](README_cn.md) · **English**
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Papers](https://img.shields.io/badge/papers-980-brightgreen.svg)](papers/index.md)
-[![PDFs](https://img.shields.io/badge/local_PDFs-125-orange.svg)](papers/pdfs/)
+[![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
+[![PDFs](https://img.shields.io/badge/local_PDFs-529-orange.svg)](papers/pdfs/)
 [![Products](https://img.shields.io/badge/products-10-purple.svg)](products/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](signals.md)
@@ -45,8 +45,8 @@ or consolidates** information.
 ## At a glance
 
 ```text
-980 unique papers   ← scraped from 9 sibling awesome-lists, deduped
-125 local PDFs      ← arXiv open-license, gated by >=3 cross-list refs
+989 unique papers   ← scraped from 9 sibling awesome-lists, deduped
+529 local PDFs      ← arXiv open-license, gated by (>=2 cross-list refs) OR (year=2026) OR (has GitHub link)
  10 product notes   ← Mem0, Letta, Zep, Graphiti, Cognee, LangMem, ...
   9 archive pages   ← markdown snapshots for auditability
   7 deep notes      ← full ResearchItem template, grounded in PDFs read
@@ -81,8 +81,8 @@ or consolidates** information.
 
 | Path | Contents |
 |---|---|
-| [`papers/`](papers/) | ~990 paper notes (stubs + full). Master index in [`papers/index.md`](papers/index.md). |
-| [`papers/pdfs/`](papers/pdfs/) | 125 archived PDFs (~500 MB). See archival policy. |
+| [`papers/`](papers/) | ~998 paper notes (stubs + full). Master index in [`papers/index.md`](papers/index.md). |
+| [`papers/pdfs/`](papers/pdfs/) | 529 archived PDFs (~1.8 GB). See archival policy. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script + dedup JSON. |
 | [`products/`](products/) | 10 product notes (Mem0, Letta, Zep, Graphiti, …). |
 | [`products/archives/`](products/archives/) | Markdown snapshots of canonical product pages. |

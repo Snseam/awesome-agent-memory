@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/augmenting-question-answering-with-a-hybrid-rag-approach.pdf
 urls:
   - "http://arxiv.org/abs/2601.12658v2"
   - "https://arxiv.org/abs/2601.12658"

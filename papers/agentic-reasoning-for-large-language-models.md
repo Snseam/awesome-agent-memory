@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/agentic-reasoning-for-large-language-models.pdf
 urls:
   - "http://arxiv.org/abs/2601.12538v1"
   - "https://arxiv.org/abs/2601.12538"

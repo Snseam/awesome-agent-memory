@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/sparc-rag-adaptive-sequential-parallel-scaling-with-context.pdf
 urls:
   - "http://arxiv.org/abs/2602.00083v1"
   - "https://arxiv.org/abs/2602.00083"

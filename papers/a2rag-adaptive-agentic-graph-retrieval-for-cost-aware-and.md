@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/a2rag-adaptive-agentic-graph-retrieval-for-cost-aware-and.pdf
 urls:
   - "http://arxiv.org/abs/2601.21162v1"
   - "https://arxiv.org/abs/2601.21162"

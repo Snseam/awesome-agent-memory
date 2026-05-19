@@ -1,5 +1,5 @@
 ---
-title: "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control"
+title: "Synapse: Trajectory-as-exemplar prompting with memory for computer control"
 arxiv_id: "2306.07863"
 date: 2023
 domain: unclassified
@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2306.07863"
 ---

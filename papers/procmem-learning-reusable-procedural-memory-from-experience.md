@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/procmem-learning-reusable-procedural-memory-from-experience.pdf
 urls:
   - "https://arxiv.org/abs/2602.01869"
   - "https://arxiv.org/abs/2602.01869v1"

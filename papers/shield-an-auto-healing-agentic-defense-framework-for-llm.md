@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/shield-an-auto-healing-agentic-defense-framework-for-llm.pdf
 urls:
   - "http://arxiv.org/abs/2601.19174v1"
   - "https://arxiv.org/abs/2601.19174"

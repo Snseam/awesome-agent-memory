@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/context-as-memory-scene-consistent-interactive-long-video.pdf
 urls:
   - "http://arxiv.org/abs/2506.03141"
   - "https://arxiv.org/abs/2506.03141"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-08-12 Context as Memory Scene-Consistent Interactive Long Video Generation with Memory Retrieval

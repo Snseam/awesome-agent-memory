@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/dep-search-learning-dependency-aware-reasoning-traces-with.pdf
 urls:
   - "http://arxiv.org/abs/2601.18771v1"
   - "https://arxiv.org/abs/2601.18771"

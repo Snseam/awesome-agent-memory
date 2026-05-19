@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/deepagent-a-general-reasoning-agent-with-scalable-toolsets.pdf
 urls:
   - "https://arxiv.org/abs/2510.21618"
 ---

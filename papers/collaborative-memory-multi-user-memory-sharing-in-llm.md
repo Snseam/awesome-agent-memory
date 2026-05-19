@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/collaborative-memory-multi-user-memory-sharing-in-llm.pdf
 urls:
   - "https://arxiv.org/abs/2505.18279"
 ---

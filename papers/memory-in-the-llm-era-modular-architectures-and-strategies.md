@@ -1,0 +1,17 @@
+---
+title: "Memory in the LLM Era: Modular Architectures and Strategies in a Unified Framework"
+arxiv_id: "2604.01707"
+date: 2026
+domain: unclassified
+status: stub
+sources:
+  - IAAR-Shanghai
+local_pdf: pdfs/memory-in-the-llm-era-modular-architectures-and-strategies.pdf
+urls:
+  - "https://arxiv.org/abs/2604.01707"
+---
+
+> **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
+> ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-04-02 Memory in the LLM Era: Modular Architectures and Strategies in a Unified Framework

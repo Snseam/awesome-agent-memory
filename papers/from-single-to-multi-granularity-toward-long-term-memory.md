@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/from-single-to-multi-granularity-toward-long-term-memory.pdf
 urls:
   - "https://arxiv.org/abs/2505.19549"
 ---

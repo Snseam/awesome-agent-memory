@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/breaking-the-protocol-security-analysis-of-the-model.pdf
 urls:
   - "http://arxiv.org/abs/2601.17549v1"
   - "https://arxiv.org/abs/2601.17549"

@@ -11,8 +11,11 @@ sources:
 local_pdf: pdfs/memtool-optimizing-short-term-memory-management-for-dynamic.pdf
 urls:
   - "https://arxiv.org/abs/2507.21428"
+  - "https://aclanthology.org/2025.findings-acl.1048.pdf"
   - "https://arxiv.org/pdf/2507.21428"
 ---
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-07-29 SynapticRAG:Enhancing temporal memory retrieval in large language models through synaptic mechanisms

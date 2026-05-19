@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2411.00489"
   - "https://arxiv.org/pdf/2411.00489"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-01-12 Human-inspired Perspectives: A Survey on AI Long-term Memory

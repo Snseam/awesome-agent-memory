@@ -1,5 +1,5 @@
 ---
-title: "Retroformer: Retrospective Large Language Agents with Policy Gradient Optimization"
+title: "Retroformer: Retrospective large language agents with policy gradient optimization"
 arxiv_id: "2308.02151"
 date: 2023
 domain: unclassified

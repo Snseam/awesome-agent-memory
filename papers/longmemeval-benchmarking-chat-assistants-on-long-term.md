@@ -1,5 +1,5 @@
 ---
-title: "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory"
+title: "LongMemEval: Benchmarking chat assistants on long-term interactive memory"
 arxiv_id: "2410.10813"
 date: 2024
 domain: unclassified
@@ -18,3 +18,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2022-03-04 LongMemEval: Benchmarking chat assistants on long-term interactive memory

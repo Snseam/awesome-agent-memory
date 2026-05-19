@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/structured-context-engineering-for-file-native-agentic.pdf
 urls:
   - "https://arxiv.org/abs/2602.05447"
   - "https://arxiv.org/abs/2602.05447v1"

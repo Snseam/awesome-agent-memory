@@ -1,5 +1,5 @@
 ---
-title: "From Isolated Conversations to Hierarchical Schemas: Dynamic Tree Memory Representation for LLMs"
+title: "From isolated conversations to hierarchical schemas: Dynamic tree memory representation for LLMs"
 arxiv_id: "2410.14052"
 date: 2024
 domain: unclassified

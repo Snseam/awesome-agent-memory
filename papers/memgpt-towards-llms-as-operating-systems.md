@@ -1,5 +1,5 @@
 ---
-title: "MemGPT: Towards LLMs as Operating Systems"
+title: "MemGPT: Towards LLMs as operating systems"
 arxiv_id: "2310.08560"
 date: 2023
 domain: unclassified

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/deepimagesearch-benchmarking-multimodal-agents-for-context.pdf
 urls:
   - "https://arxiv.org/abs/2602.10809"
 ---

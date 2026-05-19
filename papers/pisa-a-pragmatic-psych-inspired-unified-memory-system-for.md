@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/pisa-a-pragmatic-psych-inspired-unified-memory-system-for.pdf
 urls:
   - "https://arxiv.org/abs/2510.15966"
 ---

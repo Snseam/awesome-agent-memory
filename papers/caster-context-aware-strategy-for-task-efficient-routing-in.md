@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/caster-context-aware-strategy-for-task-efficient-routing-in.pdf
 urls:
   - "http://arxiv.org/abs/2601.19793v1"
   - "https://arxiv.org/abs/2601.19793"

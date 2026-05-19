@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/infiagent-an-infinite-horizon-framework-for-general-purpose.pdf
 urls:
   - "https://arxiv.org/abs/2601.03204"
   - "https://arxiv.org/abs/2601.03204v1"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/reliable-graph-rag-for-codebases-ast-derived-graphs-vs-llm.pdf
 urls:
   - "https://arxiv.org/abs/2601.08773"
   - "https://arxiv.org/abs/2601.08773v1"

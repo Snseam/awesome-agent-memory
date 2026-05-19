@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/connect-the-dots-knowledge-graph-guided-crawler-attack-on.pdf
 urls:
   - "http://arxiv.org/abs/2601.15678v2"
   - "https://arxiv.org/abs/2601.15678"

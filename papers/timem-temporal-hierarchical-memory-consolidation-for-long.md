@@ -7,7 +7,7 @@ status: stub
 sources:
   - IAAR-Shanghai
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/timem-temporal-hierarchical-memory-consolidation-for-long.pdf
 urls:
   - "https://arxiv.org/abs/2601.02845"
   - "https://arxiv.org/pdf/2601.02845"
@@ -15,3 +15,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-06 TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents

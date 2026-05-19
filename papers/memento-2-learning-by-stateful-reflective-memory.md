@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/memento-2-learning-by-stateful-reflective-memory.pdf
 urls:
   - "https://arxiv.org/abs/2512.22716"
 ---

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/interpreting-agentic-systems-beyond-model-explanations-to.pdf
 urls:
   - "http://arxiv.org/abs/2601.17168v1"
   - "https://arxiv.org/abs/2601.17168"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/ai-agent-systems-for-supply-chains-structured-decision.pdf
 urls:
   - "https://arxiv.org/abs/2602.05524"
   - "https://arxiv.org/abs/2602.05524v1"

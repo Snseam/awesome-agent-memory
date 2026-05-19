@@ -7,7 +7,7 @@ status: stub
 sources:
   - TeleAI-UAGI
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/swe-pruner-self-adaptive-context-pruning-for-coding-agents.pdf
 urls:
   - "http://arxiv.org/abs/2601.16746v2"
   - "https://arxiv.org/abs/2601.16746"

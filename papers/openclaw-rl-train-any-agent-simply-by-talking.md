@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/openclaw-rl-train-any-agent-simply-by-talking.pdf
 urls:
   - "https://arxiv.org/abs/2603.10165"
 ---

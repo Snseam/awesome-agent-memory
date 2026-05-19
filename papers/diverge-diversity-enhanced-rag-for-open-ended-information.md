@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/diverge-diversity-enhanced-rag-for-open-ended-information.pdf
 urls:
   - "http://arxiv.org/abs/2602.00238v1"
   - "https://arxiv.org/abs/2602.00238"

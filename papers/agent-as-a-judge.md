@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/agent-as-a-judge.pdf
 urls:
   - "https://arxiv.org/abs/2601.05111"
   - "https://arxiv.org/abs/2601.05111v1"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TeleAI-UAGI
-local_pdf: deferred
+local_pdf: pdfs/gradmem-learning-to-write-context-into-memory-with-test.pdf
 urls:
   - "https://arxiv.org/abs/2603.13875"
 ---

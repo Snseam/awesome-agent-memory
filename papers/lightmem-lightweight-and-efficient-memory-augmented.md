@@ -1,5 +1,5 @@
 ---
-title: "LightMem: Lightweight and Efficient Memory-Augmented Generation"
+title: "LIGHTMEM: LIGHTWEIGHT AND EFFICIENT MEMORY-AUGMENTED GENERATION"
 arxiv_id: "2510.18866"
 date: 2025
 domain: unclassified
@@ -17,3 +17,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-10-21 LIGHTMEM: LIGHTWEIGHT AND EFFICIENT MEMORY-AUGMENTED GENERATION

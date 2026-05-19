@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/ai-agent-for-reverse-engineering-legacy-finite-difference.pdf
 urls:
   - "http://arxiv.org/abs/2601.18381v1"
   - "https://arxiv.org/abs/2601.18381"

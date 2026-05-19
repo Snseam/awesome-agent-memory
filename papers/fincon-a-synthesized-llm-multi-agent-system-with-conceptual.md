@@ -1,5 +1,5 @@
 ---
-title: "FinCon: A Synthesized LLM Multi-Agent System with Conceptual Verbal Reinforcement for Enhanced Financial Decision Making"
+title: "Fincon: A synthesized llm multi-agent system with conceptual verbal reinforcement for enhanced financial decision making"
 arxiv_id: "2407.06567"
 date: 2024
 domain: unclassified
@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - Shichun-Liu
-local_pdf: deferred
+local_pdf: deferred-size-cap
 urls:
   - "https://arxiv.org/abs/2407.06567"
 ---

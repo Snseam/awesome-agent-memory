@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/when-should-i-search-more-adaptive-complex-query.pdf
 urls:
   - "http://arxiv.org/abs/2601.21208v1"
   - "https://arxiv.org/abs/2601.21208"

@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - IAAR-Shanghai
-local_pdf: deferred
+local_pdf: pdfs/enabling-personalized-long-term-interactions-in-llm-based.pdf
 urls:
   - "https://arxiv.org/abs/2510.07925"
   - "https://www.arxiv.org/abs/2510.07925"
@@ -16,3 +16,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-10-09 Enabling Personalized Long-term Interactions in LLM-based Agents through Persistent Memory and User Profiles

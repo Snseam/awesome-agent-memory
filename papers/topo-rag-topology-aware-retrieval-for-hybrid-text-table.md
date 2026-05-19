@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/topo-rag-topology-aware-retrieval-for-hybrid-text-table.pdf
 urls:
   - "http://arxiv.org/abs/2601.10215v1"
   - "https://arxiv.org/abs/2601.10215"

@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
-local_pdf: deferred
+local_pdf: pdfs/interpersonal-memory-matters-a-new-task-for-proactive.pdf
 urls:
   - "https://arxiv.org/abs/2503.05150"
 ---

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/cirag-construction-integration-retrieval-and-adaptive.pdf
 urls:
   - "https://arxiv.org/abs/2601.06799"
   - "https://arxiv.org/abs/2601.06799v1"

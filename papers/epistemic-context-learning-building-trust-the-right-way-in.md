@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/epistemic-context-learning-building-trust-the-right-way-in.pdf
 urls:
   - "http://arxiv.org/abs/2601.21742v1"
   - "https://arxiv.org/abs/2601.21742"

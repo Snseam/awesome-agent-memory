@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/distilling-feedback-into-memory-as-a-tool.pdf
 urls:
   - "https://arxiv.org/abs/2601.05960"
 ---

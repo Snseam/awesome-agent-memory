@@ -7,7 +7,7 @@ status: stub
 sources:
   - Shichun-Liu
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/browseragent-building-web-agents-with-human-inspired-web.pdf
 urls:
   - "http://arxiv.org/abs/2510.10666"
   - "https://arxiv.org/abs/2510.10666"

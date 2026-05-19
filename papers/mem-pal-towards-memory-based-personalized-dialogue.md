@@ -7,7 +7,7 @@ status: stub
 sources:
   - AgentMemoryWorld
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/mem-pal-towards-memory-based-personalized-dialogue.pdf
 urls:
   - "https://arxiv.org/abs/2511.13410"
 ---

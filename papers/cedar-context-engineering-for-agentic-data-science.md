@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/cedar-context-engineering-for-agentic-data-science.pdf
 urls:
   - "https://arxiv.org/abs/2601.06606"
   - "https://arxiv.org/abs/2601.06606v1"

@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/the-path-ahead-for-agentic-ai-challenges-and-opportunities.pdf
 urls:
   - "https://arxiv.org/abs/2601.02749"
   - "https://arxiv.org/abs/2601.02749v1"

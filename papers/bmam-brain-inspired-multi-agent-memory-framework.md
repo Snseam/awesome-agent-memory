@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - AgentMemoryWorld
-local_pdf: deferred
+local_pdf: pdfs/bmam-brain-inspired-multi-agent-memory-framework.pdf
 urls:
   - "https://arxiv.org/abs/2601.20465"
 ---

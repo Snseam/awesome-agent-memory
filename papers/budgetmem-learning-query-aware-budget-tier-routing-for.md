@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/budgetmem-learning-query-aware-budget-tier-routing-for.pdf
 urls:
   - "https://arxiv.org/abs/2602.06025"
   - "https://arxiv.org/abs/2602.06025v1"

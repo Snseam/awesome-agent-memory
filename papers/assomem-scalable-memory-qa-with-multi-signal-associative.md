@@ -7,7 +7,7 @@ status: stub
 sources:
   - DEEP-PolyU
   - TsinghuaC3I
-local_pdf: deferred
+local_pdf: pdfs/assomem-scalable-memory-qa-with-multi-signal-associative.pdf
 urls:
   - "https://arxiv.org/abs/2510.10397"
 ---

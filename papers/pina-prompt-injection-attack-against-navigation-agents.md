@@ -6,7 +6,7 @@ domain: unclassified
 status: stub
 sources:
   - VoltAgent
-local_pdf: deferred
+local_pdf: pdfs/pina-prompt-injection-attack-against-navigation-agents.pdf
 urls:
   - "http://arxiv.org/abs/2601.13612v1"
   - "https://arxiv.org/abs/2601.13612"

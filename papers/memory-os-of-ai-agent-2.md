@@ -5,7 +5,6 @@ date: null
 domain: unclassified
 status: stub
 sources:
-  - DEEP-PolyU
   - IAAR-Shanghai
 local_pdf: none
 urls:
@@ -14,3 +13,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2025-05-30 Memory OS of AI Agent

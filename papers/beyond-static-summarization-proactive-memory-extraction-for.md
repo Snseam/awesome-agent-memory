@@ -18,3 +18,5 @@ urls:
 
 > **Stub**. Auto-generated from cross-list scrape on 2026-05-19. Upgrade to a full
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
+
+2026-01-08 Beyond Static Summarization: Proactive Memory Extraction for LLM Agents
