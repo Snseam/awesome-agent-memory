@@ -183,6 +183,10 @@ header.
 
 ---
 
+> *Notes are authored by the maintainer. Some stubs and first drafts were
+> accelerated with LLM tooling; every full note is grounded in the actual
+> PDF or product page that was read, not in unverified secondary summaries.*
+
 <div align="center">
 
 **[Survey](survey/agent-memory-survey.md)** ·
