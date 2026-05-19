@@ -2,7 +2,7 @@
 
 # awesome-agent-memory
 
-**面向 AI agent 记忆研究的精选阅读清单、综述与决策面。**
+**面向 AI agent 记忆研究的精选阅读清单、综述与决策依据。**
 
 **中文** · [English](README.md)
 
@@ -20,8 +20,8 @@
 > 服务于 [Ymem](https://github.com/Snseam/Ymem)(一个 agent 记忆 kernel)的
 > 算法迭代,同时作为公开资源开放给所有正在为 AI agent 构建记忆系统的人。
 
-本仓库**有意保持窄域**:不是通用 AI/ML 阅读清单。每一条目都应当对
-"agent 怎样**记忆、遗忘、检索、整合**信息"有可解释的影响。
+本仓库**有意保持窄域**:不是通用 AI/ML 阅读清单。每一条目都应当能合理说明
+agent 如何**记忆、遗忘、检索、整合**信息。
 
 ## 与同类 awesome-list 的不同
 
