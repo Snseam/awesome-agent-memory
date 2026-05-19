@@ -1,5 +1,7 @@
 # awesome-agent-memory
 
+[中文](README_cn.md) | **English**
+
 A curated, continuously updated reading list and survey for **agent memory**
 research and engineering. Maintained primarily to support
 [Ymem](https://github.com/Snseam/Ymem) algorithm iteration, but published as a
