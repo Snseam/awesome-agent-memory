@@ -59,4 +59,4 @@ last_revised: 2026-05-19
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*

@@ -10,7 +10,7 @@ language: zh-CN
 回答用户的具体提问:**基于 agent memory 的产品有哪些?分属于哪些领域?为哪些
 人或单位服务?**
 
-这页是横切视角:每个产品在 `products/<slug>.md` 里都有自己的笔记,这里只做
+这页是横切视角:每个产品在 `../products/<slug>.md` 里都有自己的笔记,这里只做
 分类与对照。条目可能与 [`related-work.md`](related-work.md) 的论文交叉(产品的
 原始论文也在 papers/ 里),不重复。
 
@@ -29,28 +29,28 @@ language: zh-CN
 
 | 名称 | 笔记 | Mode | Audience | 一句话 |
 |---|---|---|---|---|
-| Mem0 | [`products/mem0.md`](products/mem0.md) | OSS+SaaS | 个人开发者 / SaaS 团队 / 企业 | 业内被引最多的 memory layer;2026-04 出 v2 算法 |
-| Zep | [`products/zep.md`](products/zep.md) | OSS+SaaS | SaaS 团队 / 企业 | 时间感知 KG;hosted 与 self-host 并存 |
-| Graphiti | [`products/graphiti.md`](products/graphiti.md) | OSS | 个人开发者 / 研究者 | Zep 的开源底座,纯库形态 |
-| Cognee | [`products/cognee.md`](products/cognee.md) | OSS+SaaS | 个人开发者 / 中小团队 | 记忆 + ontology + KG;偏 PKM/研究方向 |
-| Letta(原 MemGPT)| [`products/letta.md`](products/letta.md) | OSS+SaaS | 研究者 / 个人开发者 | agent runtime 内置分层记忆 |
-| LangMem | [`products/langmem.md`](products/langmem.md) | OSS | LangChain 用户 | LangChain/LangGraph 系的 memory primitive |
+| Mem0 | [`../products/mem0.md`](../products/mem0.md) | OSS+SaaS | 个人开发者 / SaaS 团队 / 企业 | 业内被引最多的 memory layer;2026-04 出 v2 算法 |
+| Zep | [`../products/zep.md`](../products/zep.md) | OSS+SaaS | SaaS 团队 / 企业 | 时间感知 KG;hosted 与 self-host 并存 |
+| Graphiti | [`../products/graphiti.md`](../products/graphiti.md) | OSS | 个人开发者 / 研究者 | Zep 的开源底座,纯库形态 |
+| Cognee | [`../products/cognee.md`](../products/cognee.md) | OSS+SaaS | 个人开发者 / 中小团队 | 记忆 + ontology + KG;偏 PKM/研究方向 |
+| Letta(原 MemGPT)| [`../products/letta.md`](../products/letta.md) | OSS+SaaS | 研究者 / 个人开发者 | agent runtime 内置分层记忆 |
+| LangMem | [`../products/langmem.md`](../products/langmem.md) | OSS | LangChain 用户 | LangChain/LangGraph 系的 memory primitive |
 
 ### A2. Agent runtime / 平台(memory 内嵌)
 
 | 名称 | 笔记 | Mode | Audience |
 |---|---|---|---|
-| LangGraph + LangMem | [`products/langmem.md`](products/langmem.md) | OSS | 框架用户 |
+| LangGraph + LangMem | [`../products/langmem.md`](../products/langmem.md) | OSS | 框架用户 |
 | LlamaIndex memory | — | OSS | 框架用户 |
 | AutoGen / CrewAI | — | OSS | 框架用户 |
-| MemGPT(论文)| [`products/memgpt.md`](products/memgpt.md) | OSS(已演化为 Letta)| 研究者 |
+| MemGPT(论文)| [`../products/memgpt.md`](../products/memgpt.md) | OSS(已演化为 Letta)| 研究者 |
 
 ### A3. LLM 厂商内建 memory
 
 | 名称 | 笔记 | Mode | Audience |
 |---|---|---|---|
-| ChatGPT memory + Assistants memory | [`products/openai-memory.md`](products/openai-memory.md) | Big-tech-builtin | C 端 + SaaS 团队 |
-| Claude memory / Claude Dreams | [`products/claude-dreams.md`](products/claude-dreams.md) | Big-tech-builtin | C 端 + 企业 |
+| ChatGPT memory + Assistants memory | [`../products/openai-memory.md`](../products/openai-memory.md) | Big-tech-builtin | C 端 + SaaS 团队 |
+| Claude memory / Claude Dreams | [`../products/claude-dreams.md`](../products/claude-dreams.md) | Big-tech-builtin | C 端 + 企业 |
 | Gemini personal context | — | Big-tech-builtin | C 端(Google 账号生态)|
 
 ### A4. Coding & Dev agents(memory 用于代码上下文)
@@ -83,7 +83,7 @@ language: zh-CN
 
 这一类对**长程一致性**与**身份持久**要求高,与 `dream-consolidator` /
 `memorydiff-generator` 类模块的设计有间接借鉴价值;但其 ethical/safety
-模型与 [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md)
+模型与 [`../papers/mnemonic-sovereignty.md`](../papers/mnemonic-sovereignty.md)
 的关注点冲突,落地需要谨慎对待。
 
 ### A7. 客服 / 销售 / 业务对话 agent

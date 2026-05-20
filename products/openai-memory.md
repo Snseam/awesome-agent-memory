@@ -96,4 +96,4 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*

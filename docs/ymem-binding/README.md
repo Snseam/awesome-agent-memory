@@ -8,8 +8,8 @@ language: zh-CN
 # `ymem-binding/` — 这个子目录是什么
 
 awesome-agent-memory 是一个**公开的** agent memory 阅读清单、综述和 Radar
-工作流模板。它的根目录(`taxonomy.md` / `research-radar-spec.md` /
-`survey/agent-memory-survey.md` 等)对任何在做 agent memory 系统的人都应该
+工作流模板。它的概念文档(`docs/taxonomy.md` / `docs/research-radar.md` /
+`docs/agent-memory-survey.md` 等)对任何在做 agent memory 系统的人都应该
 有用,**不绑定任何具体产品**。
 
 但本仓的发起方是 **[Ymem](https://github.com/Snseam/Ymem)** —— 一个我们自己
@@ -32,8 +32,9 @@ ymem-binding/
 
 ## 与公开仓的契约
 
-- 根目录文档**不引用**本目录的术语。你完全可以无视 `ymem-binding/` 把
-  awesome-agent-memory 当作通用 agent memory 阅读清单使用。
+- `docs/` 顶层概念文档**不引用**本目录的术语。你完全可以无视
+  `docs/ymem-binding/` 把 awesome-agent-memory 当作通用 agent memory 阅读
+  清单使用。
 - 深读笔记(`papers/*.md` 与 `products/*.md`)中的 "决策相关性 / Decision
   relevance" 章节,讨论的是**通用** memory kernel 视角,模块名称
   (`ingest-adapter`、`retriever-reranker`、`dream-consolidator` 等)本身也
@@ -46,7 +47,7 @@ ymem-binding/
 
 短期看,把 Ymem 绑定和公开 awesome-list 放同一个仓便于一处更新、一处审核。
 未来如果 awesome-agent-memory 成熟到需要独立社区运作,会评估把
-`ymem-binding/` 抽成 Ymem 主仓的子目录。当前 v0.3 版本是中间形态。
+`docs/ymem-binding/` 抽成 Ymem 主仓的子目录。当前 v0.5 版本是中间形态。
 
 ## 贡献到本目录
 

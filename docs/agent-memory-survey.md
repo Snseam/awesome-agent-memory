@@ -19,7 +19,7 @@ language: zh-CN
 - 每个章节末尾应当回答一个具体问题:**这对正在做 memory kernel 的人意味着
   什么?**
 - 本仓发起者(Ymem 项目)对部分章节有具体立场与 P0/P1/P2 排序,见
-  [`../ymem-binding/survey-stance.md`](../ymem-binding/survey-stance.md)。
+  [`ymem-binding/survey-stance.md`](ymem-binding/survey-stance.md)。
 
 ## 1. 问题陈述:为什么 agent 需要 memory
 
@@ -52,7 +52,7 @@ language: zh-CN
   no review | post-hoc audit | human-in-the-loop diff | full provenance + valid-time
 ```
 
-更结构化的对照见 [`../taxonomy.md`](../taxonomy.md)。
+更结构化的对照见 [`taxonomy.md`](taxonomy.md)。
 
 ## 3. 评测体系
 
@@ -138,7 +138,7 @@ verbs。
 
 具体论文清单见 [`papers/index.md`](../papers/index.md);本节只跟踪
 "已经具备 ImpactReport 潜力"的方向。具体项目优先级(以 Ymem 为例)见
-[`../ymem-binding/survey-stance.md`](../ymem-binding/survey-stance.md)。
+[`ymem-binding/survey-stance.md`](ymem-binding/survey-stance.md)。
 
 ## 6. 工作流
 

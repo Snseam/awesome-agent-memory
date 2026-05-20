@@ -69,7 +69,7 @@ healthcare 等行业的预置 entity schema 模板。
 
 ## 5. 适用 / 不适用场景
 
-参照 [`products-landscape.md`](../products-landscape.md)(若存在)的
+参照 [`products-landscape.md`](../docs/products-landscape.md)(若存在)的
 domain × audience 表:
 
 - **适用**:对话型 agent(客服、销售、私人助理)、需要可追溯 fact 演化的
@@ -99,4 +99,4 @@ domain × audience 表:
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*

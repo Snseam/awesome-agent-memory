@@ -7,10 +7,10 @@ language: zh-CN
 
 # Meta-surveys
 
-agent memory 领域的"综述的综述"。**deep note 已经写在 `papers/` 里**;本页只
+agent memory 领域的"综述的综述"。**deep note 已经写在 `../papers/` 里**;本页只
 是单页索引,方便快速比对每篇 survey 的切入角度。
 
-`survey/agent-memory-survey.md` 是维护者自己维护的活综述,与本页列出的外部
+`agent-memory-survey.md` 是维护者自己维护的活综述,与本页列出的外部
 survey 互补:外部 survey 求覆盖,本仓 survey 求"对正在落地 memory kernel
 的人有用"。
 
@@ -18,10 +18,10 @@ survey 互补:外部 survey 求覆盖,本仓 survey 求"对正在落地 memory k
 
 | Survey | 出处 | 日期 | 一句话核心 | Deep note |
 |---|---|---|---|---|
-| **Memory in the Age of AI Agents** | arXiv 2512.13564 | 2025-12 → 2026-01 v2 | Forms × Functions × Dynamics 三轴 taxonomy | [`papers/memory-in-the-age-of-ai-agents.md`](papers/memory-in-the-age-of-ai-agents.md) |
-| **Memory for Autonomous LLM Agents** | arXiv 2603.07670 | 2026-03 | write–manage–read 循环 + temporal-scope × substrate × control-policy 三维分类 | [`papers/memory-for-autonomous-llm-agents-survey.md`](papers/memory-for-autonomous-llm-agents-survey.md) |
-| **From Storage to Experience** | arXiv 2605.06716 | 2026-05 | Storage → Reflection → Experience 三阶段记忆演化 | [`papers/from-storage-to-experience.md`](papers/from-storage-to-experience.md) |
-| **Toward Mnemonic Sovereignty** | arXiv 2604.16548 | 2026-04 | cross-session poisoning / 越权访问 / 状态污染的威胁模型 | [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md) |
+| **Memory in the Age of AI Agents** | arXiv 2512.13564 | 2025-12 → 2026-01 v2 | Forms × Functions × Dynamics 三轴 taxonomy | [`../papers/memory-in-the-age-of-ai-agents.md`](../papers/memory-in-the-age-of-ai-agents.md) |
+| **Memory for Autonomous LLM Agents** | arXiv 2603.07670 | 2026-03 | write–manage–read 循环 + temporal-scope × substrate × control-policy 三维分类 | [`../papers/memory-for-autonomous-llm-agents-survey.md`](../papers/memory-for-autonomous-llm-agents-survey.md) |
+| **From Storage to Experience** | arXiv 2605.06716 | 2026-05 | Storage → Reflection → Experience 三阶段记忆演化 | [`../papers/from-storage-to-experience.md`](../papers/from-storage-to-experience.md) |
+| **Toward Mnemonic Sovereignty** | arXiv 2604.16548 | 2026-04 | cross-session poisoning / 越权访问 / 状态污染的威胁模型 | [`../papers/mnemonic-sovereignty.md`](../papers/mnemonic-sovereignty.md) |
 | **A Survey on Lifelong LLM Agents** | qianlima-lab(TPAMI 2026 配套)| 2026 H1 | 终身学习 + agent 的交叉视角;catastrophic forgetting 与 dream consolidation | (待写 stub → 升级)|
 | **LLM Agent Memory: A Unified Representation–Management Perspective** | OpenReview | 2025 H2 | 表达层 vs 管理层的二分法 | (待写 stub → 升级)|
 

@@ -13,8 +13,8 @@ agent memory 领域 2026 H1 同时出现了**三套**主流分类轴。它们不
 
 这页是一份**对照速查表**,让三套术语能彼此翻译,并把"记忆怎么变"这个核心
 难题在三套里的位置标清楚。每套 taxonomy 的完整介绍见
-[`surveys.md`](surveys.md);相关的活综述见
-[`survey/agent-memory-survey.md`](survey/agent-memory-survey.md)。
+[`meta-surveys.md`](meta-surveys.md);相关的活综述见
+[`agent-memory-survey.md`](agent-memory-survey.md)。
 
 > **想给自己的 memory kernel 起模块名?** 本页给的是分类**轴**,不是具名
 > 模块清单。如果你需要一份具体到 `ingest-adapter` / `retriever-reranker` /
@@ -90,7 +90,7 @@ agent memory 领域 2026 H1 同时出现了**三套**主流分类轴。它们不
 | **security / privacy** | (各家都未覆盖)| provenance、tool-poisoning 防护 |
 
 最后一行是个**显著空洞**:三套主流 taxonomy 都没把"安全 / 隐私 / 反污染"
-当作一等公民。但 [`papers/mnemonic-sovereignty.md`](papers/mnemonic-sovereignty.md)
+当作一等公民。但 [`../papers/mnemonic-sovereignty.md`](../papers/mnemonic-sovereignty.md)
 说明这是个真问题。任何想真正落地的 memory kernel 都应当把它作为独立模块
 对待。
 

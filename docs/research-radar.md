@@ -61,8 +61,8 @@ ResearchItem
 
 存放约定:
 
-- 论文 → `papers/<short-slug>.md`
-- 产品/工程文章 → `products/<short-slug>.md`
+- 论文 → `../papers/<short-slug>.md`
+- 产品/工程文章 → `../products/<short-slug>.md`
 - slug 用 kebab-case,论文以一作姓或工作名为主(`longmemeval`、
   `memoryagentbench`)
 

@@ -128,4 +128,4 @@ write 路径。
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*

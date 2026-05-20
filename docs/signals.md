@@ -21,7 +21,7 @@ Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
 |---|---|---|---|---|
 | 2026-05 | mem0.ai/blog "State of AI Agent Memory 2026" | comparison | 6 大主流 memory layer 横评,Mem0 自家算法在 LoCoMo / LongMemEval 都报 SOTA | `archive-only`(自评,需交叉验证) |
 | 2026-05 | arXiv 2605.06716 "From Storage to Experience" | paper | Storage → Reflection → Experience 三阶段记忆演进框架 | `deep-note` ✅ |
-| 2026-04 | mem0.ai blog | release | Mem0 算法 v2:single-pass hierarchical extraction + multi-signal retrieval,声称 temporal +29.6 / multi-hop +23.1 | `deep-note` ✅(更新 [`products/mem0.md`](products/mem0.md))|
+| 2026-04 | mem0.ai blog | release | Mem0 算法 v2:single-pass hierarchical extraction + multi-signal retrieval,声称 temporal +29.6 / multi-hop +23.1 | `deep-note` ✅(更新 [`../products/mem0.md`](../products/mem0.md))|
 | 2026-04 | arXiv 2604.16548 "Toward Mnemonic Sovereignty" | paper | cross-session poisoning / 越权访问 / 状态污染的威胁模型 | `deep-note` ✅(驱动 `security-privacy` 模块设计)|
 | 2026-04 | atlan.com / blog.devgenius.io / explore.n1n.ai 多篇 | comparison | 同一周内多个产品横评,把 Letta / Mem0 / Zep / Cognee 摆在一起评 | `archive-only` |
 | 2026-04 | fountaincity.tech blog | comparison | "agent memory in 2026":偏 PKM 视角的横评,讨论隐私与本地化 | `archive-only` |
@@ -47,7 +47,7 @@ Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
 ## 跟踪中(待定型)
 
 - **Anthropic Claude Dreams 公开度**:目前来源仍是早期 docs + 二手讨论,等
-  Anthropic 出官方技术博客后升级 [`products/claude-dreams.md`](products/claude-dreams.md)
+  Anthropic 出官方技术博客后升级 [`../products/claude-dreams.md`](../products/claude-dreams.md)
 - **OpenAI Memory 形态演进**:从 ChatGPT memory(2024)→ Agents SDK + memory hooks
   (2025)→ ???(2026 H2 预期),目前只有产品页面快照,等更深技术披露
 - **Cursor / Windsurf 等 IDE agent 的 memory 形态**:无官方技术资料,

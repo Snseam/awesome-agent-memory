@@ -21,8 +21,8 @@ awesome-agent-memory 与下面 9 个 list 都不一样的地方:
    kernel 模块**。别家是论文清单,我们是"决策驱动的输入面"。
 2. **从知识 → ImpactReport → ADR → kernel 主线** 是 awesome-list 的反操作。
    别家追求覆盖,我们追求"能进入设计 ADR"。
-3. **PDF 与 markdown 快照都本地存档**(`papers/pdfs/` 与
-   `products/archives/`)。别家通常只留链接,链接坏掉就丢了。
+3. **PDF 与 markdown 快照都本地存档**(`../papers/pdfs/` 与
+   `../products/archives/`)。别家通常只留链接,链接坏掉就丢了。
 4. **zh-CN 友好**:笔记和 schema 用中文,但 PDF / 引用 / 源元数据保持原始
    英文。**不复制** IAAR-Shanghai 的 zh-CN 笔记体例。
 
@@ -42,10 +42,10 @@ awesome-agent-memory 与下面 9 个 list 都不一样的地方:
 
 ## 入库流程
 
-新条目入库前用 [`papers/_scrape/scrape.py`](papers/_scrape/scrape.py) 跑一遍交叉对照:
+新条目入库前用 [`../papers/_scrape/scrape.py`](../papers/_scrape/scrape.py) 跑一遍交叉对照:
 某条目是否已经被 ≥ N 个 list 引用,可以作为"成熟度"启发式
 (N≥3 → 强 candidate 深读;N=1 → stub 即可)。
-跨仓引用次数 top-N 见 [`papers/index.md`](papers/index.md) 顶部统计。
+跨仓引用次数 top-N 见 [`../papers/index.md`](../papers/index.md) 顶部统计。
 
 ## 不收录什么
 

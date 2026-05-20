@@ -120,4 +120,4 @@ PDF 在 §8 提到 LongMemEval、MemBench 都不足以衡量 experience-level �
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*

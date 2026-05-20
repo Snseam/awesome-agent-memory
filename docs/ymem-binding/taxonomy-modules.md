@@ -121,7 +121,7 @@ Persistence 类还是 Curation 类,再决定深读优先级。
 | `dream-consolidator` | Dynamics | manage 阶段 + control-policy | Curation 离线 |
 | `memorydiff-generator` | Dynamics | control-policy | Curation 产物 |
 | `evaluator-benchmark` | (元层)| (元层)| (元层)|
-| `security-privacy` | (未覆盖)| (未覆盖)| (未覆盖)— 由 [`../papers/mnemonic-sovereignty.md`](../papers/mnemonic-sovereignty.md) 单独覆盖 |
+| `security-privacy` | (未覆盖)| (未覆盖)| (未覆盖)— 由 [`../../papers/mnemonic-sovereignty.md`](../../papers/mnemonic-sovereignty.md) 单独覆盖 |
 
 最后一行解释了为什么我们必须**独立追踪 `mnemonic-sovereignty`**:主流三套
 taxonomy 都不把"安全 / 隐私 / 反污染"作为一等公民,但 Ymem 把它列为 kernel

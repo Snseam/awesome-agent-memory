@@ -10,8 +10,8 @@
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-529-orange.svg)](papers/pdfs/)
 [![Products](https://img.shields.io/badge/products-10-purple.svg)](products/)
-[![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](surveys.md)
-[![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](signals.md)
+[![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
+[![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](docs/signals.md)
 
 </div>
 
@@ -28,7 +28,7 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 | 单篇笔记 | 标题 + 链接 | 七节 ResearchItem 模板 |
 | PDF | 只留链接,链接坏掉就丢 | 本地存档(`papers/pdfs/`)|
 | 跨仓信号 | 无 | 每个 stub 记录 9 个同生态 list 中哪些引用了它 |
-| 模块映射 | 无 | 每个 full 笔记必须映射到通用 memory kernel 模块([`taxonomy.md`](taxonomy.md))|
+| 模块映射 | 无 | 每个 full 笔记必须映射到通用 memory kernel 模块([`docs/taxonomy.md`](docs/taxonomy.md))|
 | 工作流 | 读 | 读 → ImpactReport → 沙盒实验 → ADR |
 
 ## 目录
@@ -50,44 +50,46 @@ agent 如何**记忆、遗忘、检索、整合**信息。
  10 个产品笔记     ← Mem0、Letta、Zep、Graphiti、Cognee、LangMem、…
   9 个页面快照     ← markdown 形式,便于审计
   7 个深读笔记     ← 七节模板,基于实际读过的 PDF
-  6 个 meta-survey ← 2025-12 ~ 2026-05,见 surveys.md
-  1 份活综述       ← survey/agent-memory-survey.md
+  6 个 meta-survey ← 2025-12 ~ 2026-05,见 docs/meta-surveys.md
+  1 份活综述       ← docs/agent-memory-survey.md
 ```
 
 **跨 9 仓引用 top-6**(每篇均被 6 / 9 个同生态 list 引用):
-[MAGMA](papers/magma-a-multi-graph-based-agentic-memory-architecture-for.md) ·
+[MAGMA](papers/stubs/magma-a-multi-graph-based-agentic-memory-architecture-for.md) ·
 [Mem0](papers/mem0-paper.md) ·
-[MemGen](papers/memgen-weaving-generative-latent-memory-for-self-evolving.md) ·
-[Memory-R1](papers/memory-r1-enhancing-large-language-model-agents-to-manage.md) ·
-[MIRIX](papers/mirix-multi-agent-memory-system-for-llm-based-agents.md) ·
-[O-Mem](papers/o-mem-omni-memory-system-for-personalized-long-horizon-self.md)
+[MemGen](papers/stubs/memgen-weaving-generative-latent-memory-for-self-evolving.md) ·
+[Memory-R1](papers/stubs/memory-r1-enhancing-large-language-model-agents-to-manage.md) ·
+[MIRIX](papers/stubs/mirix-multi-agent-memory-system-for-llm-based-agents.md) ·
+[O-Mem](papers/stubs/o-mem-omni-memory-system-for-personalized-long-horizon-self.md)
 
 ## 仓库结构
 
 ### 顶层概念文档
 
+所有概念文档现已收纳到 [`docs/`](docs/) 子目录。
+
 | 文件 | 用途 |
 |---|---|
-| [`survey/agent-memory-survey.md`](survey/agent-memory-survey.md) | 维护者的活综述。首选入口。 |
-| [`surveys.md`](surveys.md) | **外部** meta-survey 索引(2025-12 ~ 2026-05)。 |
-| [`taxonomy.md`](taxonomy.md) | 通用 agent memory taxonomy:三套外部分类轴对照。 |
-| [`research-radar-spec.md`](research-radar-spec.md) | 通用 Radar workflow:论文 → ResearchItem → ImpactReport → 沙盒 → ADR。 |
-| [`information-sources.md`](information-sources.md) | 10 类信息源 catalog,含 zh-CN 独立节。 |
-| [`related-work.md`](related-work.md) | 9 个同生态 awesome-list 与我们的差异。 |
-| [`products-landscape.md`](products-landscape.md) | agent memory 产品按**领域 × 服务对象**全景。 |
-| [`signals.md`](signals.md) | 2026 H1 反时序日志(release / comparison / blog)。 |
+| [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) | 维护者的活综述。首选入口。 |
+| [`docs/meta-surveys.md`](docs/meta-surveys.md) | **外部** meta-survey 索引(2025-12 ~ 2026-05)。 |
+| [`docs/taxonomy.md`](docs/taxonomy.md) | 通用 agent memory taxonomy:三套外部分类轴对照。 |
+| [`docs/research-radar.md`](docs/research-radar.md) | 通用 Radar workflow:论文 → ResearchItem → ImpactReport → 沙盒 → ADR。 |
+| [`docs/information-sources.md`](docs/information-sources.md) | 10 类信息源 catalog,含 zh-CN 独立节。 |
+| [`docs/related-work.md`](docs/related-work.md) | 9 个同生态 awesome-list 与我们的差异。 |
+| [`docs/products-landscape.md`](docs/products-landscape.md) | agent memory 产品按**领域 × 服务对象**全景。 |
+| [`docs/signals.md`](docs/signals.md) | 2026 H1 反时序日志(release / comparison / blog)。 |
 
 ### 逐条笔记
 
 | 路径 | 内容 |
 |---|---|
-| [`papers/`](papers/) | ~998 篇笔记(stub + full)。主索引 [`papers/index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 9 篇深读笔记 + 主索引 [`index.md`](papers/index.md)。 |
+| [`papers/stubs/`](papers/stubs/) | ~988 个自动生成的 stub(跨仓抓取产物)。 |
 | [`papers/pdfs/`](papers/pdfs/) | 529 个本地 PDF(~1.8 GB)。详见存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物:抓取脚本 + dedup JSON。 |
 | [`products/`](products/) | 10 个产品笔记。 |
 | [`products/archives/`](products/archives/) | 产品页面的 markdown 快照。 |
-| [`impact-reports/`](impact-reports/) | `ArchitectureImpactReport` 草稿(当前为空)。 |
-| [`ymem-binding/`](ymem-binding/) | 维护者所在的 [Ymem](https://github.com/Snseam/Ymem) 项目特定绑定;如果你不维护 Ymem,可以跳过。 |
+| [`docs/ymem-binding/`](docs/ymem-binding/) | 维护者所在的 [Ymem](https://github.com/Snseam/Ymem) 项目特定绑定;如果你不维护 Ymem,可以跳过。 |
 
 ## 工作流
 
@@ -96,9 +98,9 @@ agent 如何**记忆、遗忘、检索、整合**信息。
     ↓
 ResearchItem 笔记(papers/ 或 products/)
     ↓
-对照 taxonomy.md 归类
+对照 docs/taxonomy.md 归类
     ↓
-ArchitectureImpactReport(impact-reports/)
+ArchitectureImpactReport
     ↓
 沙盒实验(在你自己的 kernel 仓内)
     ↓
@@ -140,9 +142,9 @@ stub 在有人通读论文后填完七节模板,升级为 **full** 笔记:
 - core claim · method summary · required assumptions · benchmarks used
 - evidence level(`weak | medium | strong`)
 - code available(yes/no + 链接)· license · cost/complexity 估算
-- **decision relevance** —— 影响的 memory kernel 模块(见 [`taxonomy.md`](taxonomy.md))
+- **decision relevance** —— 影响的 memory kernel 模块(见 [`docs/taxonomy.md`](docs/taxonomy.md))
 
-完整 schema 与命名约定见 [`research-radar-spec.md`](research-radar-spec.md)。
+完整 schema 与命名约定见 [`docs/research-radar.md`](docs/research-radar.md)。
 
 ## License 与存档策略
 
@@ -164,18 +166,18 @@ arXiv perpetual non-exclusive license、ACL Anthology 的 CC-BY、OpenReview
 本仓由 [**Ymem**](https://github.com/Snseam/Ymem)(一个 agent memory
 kernel)项目发起和维护。**项目特定绑定** —— 笔记 frontmatter 引用的模块
 名、维护者对单篇论文的具体立场、内部 benchmark 选择 —— 都收纳到
-[`ymem-binding/`](ymem-binding/) 子目录,以确保顶层文档对外完全中性。如果你
-不维护 Ymem 可以忽略该子目录。
+[`docs/ymem-binding/`](docs/ymem-binding/) 子目录,以确保顶层文档对外完全
+中性。如果你不维护 Ymem 可以忽略该子目录。
 
 ## 与中文同行的关系
 
 - [IAAR-Shanghai/Awesome-AI-Memory](https://github.com/IAAR-Shanghai/Awesome-AI-Memory)
   是中文社区目前 agent memory 覆盖最全的双语 awesome-list。我们引用它的条目
-  作为 cross-list 信号源(详见 [`related-work.md`](related-work.md))。
+  作为 cross-list 信号源(详见 [`docs/related-work.md`](docs/related-work.md))。
   **差异**:我们的每条 ResearchItem 都标注 memory kernel 模块映射,并且围绕
   "决策驱动"组织,不追求百科式覆盖。
 - 完整中文社区信息源(知乎 / B 站 / 公众号 / 小红书 / 中文 awesome 仓)单独
-  成节,见 [`information-sources.md`](information-sources.md) §6。
+  成节,见 [`docs/information-sources.md`](docs/information-sources.md) §6。
 
 ## 贡献
 
@@ -184,19 +186,19 @@ kernel)项目发起和维护。**项目特定绑定** —— 笔记 frontmatter 
 - **新论文** → 先在 `papers/` 加 stub(或升级已有 stub 到 full),然后看是否
   值得写 ImpactReport。
 - **新产品** → 在 `products/` 加笔记并存档页面到 `products/archives/`,再
-  决定是否需要进入 [`products-landscape.md`](products-landscape.md)。
-- **新信息源** → 加进 [`information-sources.md`](information-sources.md)
+  决定是否需要进入 [`docs/products-landscape.md`](docs/products-landscape.md)。
+- **新信息源** → 加进 [`docs/information-sources.md`](docs/information-sources.md)
   对应的类目。
-- **新 awesome-list** → 加进 [`related-work.md`](related-work.md) 并讨论差异。
+- **新 awesome-list** → 加进 [`docs/related-work.md`](docs/related-work.md) 并讨论差异。
 
 ---
 
 <div align="center">
 
-**[活综述](survey/agent-memory-survey.md)** ·
+**[活综述](docs/agent-memory-survey.md)** ·
 **[Papers 索引](papers/index.md)** ·
-**[产品全景](products-landscape.md)** ·
-**[信号日志](signals.md)** ·
+**[产品全景](docs/products-landscape.md)** ·
+**[信号日志](docs/signals.md)** ·
 **[English](README.md)**
 
 </div>

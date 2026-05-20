@@ -11,12 +11,12 @@ origin: |
   algorithm iteration (in Ymem) and product iteration (in zhione) can both
   consume from a shared, public knowledge base.
   On 2026-05-19 the generic Radar workflow moved to the root-level
-  `research-radar-spec.md`; this file is the Ymem-specific binding.
+  `research-radar.md`; this file is the Ymem-specific binding.
 ---
 
 # Ymem-specific Research Radar binding
 
-通用 Radar 工作流在 [`../research-radar-spec.md`](../research-radar-spec.md);
+通用 Radar 工作流在 [`../research-radar.md`](../research-radar.md);
 本页只补充 Ymem 项目本身在跑这套 Radar 时的**额外契约**。
 
 ## 0. 在 Ymem 项目里 Radar 的定位
@@ -46,7 +46,7 @@ ResearchItem、ImpactReport 和实验提案。
 
 ## 2. Ymem-specific ImpactReport 字段约定
 
-通用 ResearchItem schema(见 [`../research-radar-spec.md`](../research-radar-spec.md)
+通用 ResearchItem schema(见 [`../research-radar.md`](../research-radar.md)
 §3)的 `decision_relevance` 字段,在 Ymem 项目中**实际上**映射为
 `relevance_to_ymem`(旧名)/ `memory_modules`(新字段名)二元组:
 
@@ -79,9 +79,9 @@ candidate plugin / module
 ```
 
 EvalCase suite 当前来自:
-- LongMemEval([`../papers/longmemeval.md`](../papers/longmemeval.md))
-- MemoryAgentBench([`../papers/memoryagentbench.md`](../papers/memoryagentbench.md))
-- LoCoMo([`../papers/locomo.md`](../papers/locomo.md))
+- LongMemEval([`../../papers/longmemeval.md`](../../papers/longmemeval.md))
+- MemoryAgentBench([`../../papers/memoryagentbench.md`](../../papers/memoryagentbench.md))
+- LoCoMo([`../../papers/locomo.md`](../../papers/locomo.md))
 - 自有的 EvalCase(在 Ymem 仓内维护)
 
 ## 4. Ymem ADR 模板

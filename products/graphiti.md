@@ -98,4 +98,4 @@ FalkorDB 1.1.2+,Kuzu 0.11.2+,Amazon Neptune(配合 OpenSearch Serverless)。
 ---
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
-> [`../ymem-binding/relevance-index.md`](../ymem-binding/relevance-index.md)。*
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
