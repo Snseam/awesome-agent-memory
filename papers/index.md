@@ -1,9 +1,17 @@
 # Papers index
 
-Cross-list deduped catalog (989 entries) of agent-memory papers, scraped from 9
-awesome-list repos on 2026-05-19. See [`_scrape/`](_scrape/) for the source script
-and raw dedup. Stub-quality unless linked to a deep note in `papers/<slug>.md` with
-`status: stub` removed.
+Comprehensive cross-list index of papers on **long-term memory for LLM agents** —
+989 unique entries scraped and deduped from 9 sibling agent-memory awesome-lists
+on 2026-05-19. Each entry's cross-list reference count serves as a maturity
+signal: a paper cited by 4+ of the 9 sister lists is far more likely to influence
+practice than one cited by a single list. Topics covered include episodic and
+semantic memory, retrieval-augmented generation, memory consolidation and
+forgetting, graph-based agent memory, evaluation benchmarks, and production
+memory architectures.
+
+See [`_scrape/`](_scrape/) for the source script and raw dedup. Entries are
+stub-quality unless linked to a deep note at `papers/<slug>.md` with `status: stub`
+removed.
 
 **Stats:**
 - Total unique papers: 989

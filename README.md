@@ -2,7 +2,7 @@
 
 # awesome-agent-memory
 
-**A curated reading list, survey, and decision-aiding base for AI agent memory research.**
+**Long-term memory for LLM agents — a decision-driven reading list, 989-paper cross-list index, and living survey covering memory architectures, retrieval, consolidation, and forgetting.**
 
 [中文](README_cn.md) · **English**
 

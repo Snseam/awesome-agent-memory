@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: awesome-agent-memory
+message: "If you reference this curated list in academic work, please cite it as below."
+type: dataset
+authors:
+  - name: "Snseam"
+    alias: "Snseam"
+repository-code: "https://github.com/Snseam/awesome-agent-memory"
+url: "https://github.com/Snseam/awesome-agent-memory"
+abstract: >-
+  A curated, decision-driven reading list and living survey of research on
+  long-term memory for LLM agents. Indexes 989 unique papers from 9
+  cross-referenced sibling awesome-lists, with 529 locally archived PDFs and
+  deep notes mapped to a generic agent-memory-kernel module taxonomy.
+  Maintained as the public knowledge base for the Ymem agent memory kernel.
+keywords:
+  - agent-memory
+  - long-term-memory
+  - llm-agents
+  - memory-systems
+  - retrieval-augmented-generation
+  - agentic-ai
+  - episodic-memory
+  - awesome-list
+  - survey
+license: Apache-2.0
+date-released: "2026-05-20"
+version: "0.5"
