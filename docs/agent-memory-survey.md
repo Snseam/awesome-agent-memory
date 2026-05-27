@@ -145,7 +145,8 @@ verbs。
 每次更新本综述时:
 
 1. 在 `papers/` 或 `products/` 新增/更新对应笔记;
-2. 如果对你 kernel 有结构性影响,起一份 `impact-reports/<slug>.md`;
+2. 如果对你 kernel 有结构性影响,在 [`../impact-reports/`](../impact-reports/)
+   起一份 ImpactReport;
 3. 回到本文档,更新相关章节,标记新的 last_revised 日期。
 
 ---

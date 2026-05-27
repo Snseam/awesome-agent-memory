@@ -79,7 +79,7 @@ memory_modules:
 
 (从根 [`../products-landscape.md`](../products-landscape.md) v0.2 §C 抽出。)
 
-Ymem **不是产品**,是给 host-app(如 ZhiOne)用的 memory kernel。它最直接
+Ymem **不是产品**,是给 host-app 用的 memory kernel。它最直接
 对照根 landscape A1 中的 **Mem0 OSS / Letta / Graphiti** —— 这三者都把自己
 定位为"被 host 嵌入"。
 

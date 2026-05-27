@@ -59,7 +59,7 @@ ImpactReport 必须使用本文档列出的模块名;若发现新模块概念,�
 ## host-side vs kernel-side
 
 并非所有模块都属于 Ymem kernel。`context-packer` / `publisher` / `interface` /
-`audit-ui` 都是 host-app(目前是 ZhiOne)的责任。但 radar 仍然追踪这些模块的
+`audit-ui` 都是 host-app 的责任。但 radar 仍然追踪这些模块的
 研究,因为:
 
 1. host 侧的需求会反推 Ymem 输出的形状(例如 `MemoryResult` 需要带 omitted /

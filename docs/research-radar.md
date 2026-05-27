@@ -77,7 +77,7 @@ ResearchItem
 ## 5. ArchitectureImpactReport
 
 候选改进进入沙盒实验前,需要写一份 impact report,放在
-`impact-reports/<short-slug>.md`:
+[`../impact-reports/`](../impact-reports/) 目录下:
 
 ```text
 ImpactReport

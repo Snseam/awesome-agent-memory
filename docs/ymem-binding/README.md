@@ -66,6 +66,6 @@ ymem-binding/
 | Repo | 角色 | 与本目录的接口 |
 |---|---|---|
 | [Ymem](https://github.com/Snseam/Ymem) | agent 记忆 kernel | 消费本仓 deep notes 的"决策相关性"小节;`taxonomy-modules.md` 在 Ymem 主仓 ADR 里被反向 cite |
-| [ZhiOne](https://github.com/Snseam/zhione) | 首个基于 Ymem 的 host app | 只关心 Ymem 的 API,不直接消费本仓 |
+| Ymem host apps | 基于 Ymem 的产品层 | 只关心 Ymem 的 API,不直接消费本仓 |
 
-ZhiOne 不直接读 awesome-agent-memory;它通过 Ymem 间接受益于这里整理的研究。
+Host apps 不直接读 awesome-agent-memory;它们通过 Ymem 间接受益于这里整理的研究。

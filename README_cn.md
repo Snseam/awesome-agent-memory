@@ -8,7 +8,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
-[![PDFs](https://img.shields.io/badge/local_PDFs-529-orange.svg)](papers/pdfs/)
+[![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
 [![Products](https://img.shields.io/badge/products-10-purple.svg)](products/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](docs/signals.md)
@@ -34,22 +34,24 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 ## 目录
 
 1. [一眼总览](#一眼总览)
-2. [仓库结构](#仓库结构)
-3. [工作流](#工作流)
-4. [Stub 与 Full 笔记](#stub-与-full-笔记)
-5. [新增 full 笔记的字段要求](#新增-full-笔记的字段要求)
-6. [License 与存档策略](#license-与存档策略)
-7. [发起方与维护](#发起方与维护)
-8. [贡献](#贡献)
+2. [先读这里](#先读这里)
+3. [仓库结构](#仓库结构)
+4. [工作流](#工作流)
+5. [笔记状态](#笔记状态)
+6. [新增 full 笔记的字段要求](#新增-full-笔记的字段要求)
+7. [License 与存档策略](#license-与存档策略)
+8. [发起方与维护](#发起方与维护)
+9. [贡献](#贡献)
 
 ## 一眼总览
 
 ```text
 989 篇唯一论文     ← 9 个同生态 awesome-list 抓取去重
-529 个本地 PDF     ← arXiv 开放协议;跨仓引用 ≥2 或 2026 新作 或 有 GitHub 链接 才入库
+988 个论文 stub    ← papers/stubs/ 下的自动生成跨仓覆盖
+534 个本地 PDF     ← 开放再分发来源;按信号 / 年份 / 代码链接筛选入库
  10 个产品笔记     ← Mem0、Letta、Zep、Graphiti、Cognee、LangMem、…
   9 个页面快照     ← markdown 形式,便于审计
-  7 个深读笔记     ← 七节模板,基于实际读过的 PDF
+  7 个 full 论文笔记 + 2 个 seed 论文笔记
   6 个 meta-survey ← 2025-12 ~ 2026-05,见 docs/meta-surveys.md
   1 份活综述       ← docs/agent-memory-survey.md
 ```
@@ -62,15 +64,27 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 [MIRIX](papers/stubs/mirix-multi-agent-memory-system-for-llm-based-agents.md) ·
 [O-Mem](papers/stubs/o-mem-omni-memory-system-for-personalized-long-horizon-self.md)
 
+## 先读这里
+
+第一次打开本仓,建议按这个顺序读:
+
+1. [`docs/README.md`](docs/README.md) —— 文档地图,快速判断每份文档负责什么。
+2. [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) —— 活综述与当前维护者综合判断。
+3. [`docs/taxonomy.md`](docs/taxonomy.md) —— forms / functions / dynamics / persistence / curation 的共享词表。
+4. [`papers/index.md`](papers/index.md) —— 989 篇跨仓论文索引,按成熟度信号排序。
+5. [`docs/products-landscape.md`](docs/products-landscape.md) —— 按领域和服务对象整理的产品全景。
+
 ## 仓库结构
 
 ### 顶层概念文档
 
-所有概念文档现已收纳到 [`docs/`](docs/) 子目录。
+所有概念文档现已收纳到 [`docs/`](docs/) 子目录。如果只想先看地图,从
+[`docs/README.md`](docs/README.md) 开始。
 
 | 文件 | 用途 |
 |---|---|
-| [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) | 维护者的活综述。首选入口。 |
+| [`docs/README.md`](docs/README.md) | 文档地图:先读什么、每份概念文档放在哪里。 |
+| [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) | 维护者的活综述。 |
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | **外部** meta-survey 索引(2025-12 ~ 2026-05)。 |
 | [`docs/taxonomy.md`](docs/taxonomy.md) | 通用 agent memory taxonomy:三套外部分类轴对照。 |
 | [`docs/research-radar.md`](docs/research-radar.md) | 通用 Radar workflow:论文 → ResearchItem → ImpactReport → 沙盒 → ADR。 |
@@ -83,9 +97,9 @@ agent 如何**记忆、遗忘、检索、整合**信息。
 
 | 路径 | 内容 |
 |---|---|
-| [`papers/`](papers/) | 9 篇深读笔记 + 主索引 [`index.md`](papers/index.md)。 |
-| [`papers/stubs/`](papers/stubs/) | ~988 个自动生成的 stub(跨仓抓取产物)。 |
-| [`papers/pdfs/`](papers/pdfs/) | 529 个本地 PDF(~1.8 GB)。详见存档策略。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、2 个 seed 笔记 + 主索引 [`index.md`](papers/index.md)。 |
+| [`papers/stubs/`](papers/stubs/) | 988 个自动生成的 stub(跨仓抓取产物)。 |
+| [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF(~1.8 GB)。详见存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物:抓取脚本 + dedup JSON。 |
 | [`products/`](products/) | 10 个产品笔记。 |
 | [`products/archives/`](products/archives/) | 产品页面的 markdown 快照。 |
@@ -100,7 +114,7 @@ ResearchItem 笔记(papers/ 或 products/)
     ↓
 对照 docs/taxonomy.md 归类
     ↓
-ArchitectureImpactReport
+ArchitectureImpactReport (impact-reports/)
     ↓
 沙盒实验(在你自己的 kernel 仓内)
     ↓
@@ -112,7 +126,7 @@ ADR(在你自己的 kernel 仓内)
 外部 survey 索引和活综述反映当前理解面;逐条笔记是原材料;ImpactReport
 是评估通道;最终 ADR(在你的 kernel 仓)记录决策。
 
-## Stub 与 Full 笔记
+## 笔记状态
 
 大多数论文笔记是 **stub**:只有 frontmatter(标题、arXiv ID、年份、source 仓
 列表、可选本地 PDF 链接、`status: stub`)加一行上下文,由跨仓抓取自动产出。
@@ -120,6 +134,15 @@ ADR(在你自己的 kernel 仓内)
 
 1. 让 Radar 对 9 个同生态 list 追踪的内容做到 100% 覆盖;
 2. 跨仓引用次数提供"成熟度"信号,告诉我们 stub 升级的优先级。
+
+状态含义:
+
+| Status | 含义 |
+|---|---|
+| `stub` | 自动生成或轻量生成的覆盖条目。适合发现线索,不适合直接作为架构判断依据。 |
+| `seed` | 人工开始整理的笔记,结构已经建立,但还没有完成全文精读或证据补齐。 |
+| `full` | 已完成七节 ResearchItem 模板和 memory-module 映射的人工深读笔记。 |
+| `working-notes` | 产品或文章的探索性记录,暂时不强行规范成 full ResearchItem。 |
 
 stub 在有人通读论文后填完七节模板,升级为 **full** 笔记:
 
@@ -133,7 +156,7 @@ stub 在有人通读论文后填完七节模板,升级为 **full** 笔记:
 7. 待跟进
 ```
 
-**只有 full 笔记可以在 ArchitectureImpactReport 中被引用。**
+**只有 full 笔记应该作为证据写进 ArchitectureImpactReport。**
 
 ## 新增 full 笔记的字段要求
 
@@ -164,10 +187,9 @@ arXiv perpetual non-exclusive license、ACL Anthology 的 CC-BY、OpenReview
 ## 发起方与维护
 
 本仓由 [**Ymem**](https://github.com/Snseam/Ymem)(一个 agent memory
-kernel)项目发起和维护。**项目特定绑定** —— 笔记 frontmatter 引用的模块
-名、维护者对单篇论文的具体立场、内部 benchmark 选择 —— 都收纳到
-[`docs/ymem-binding/`](docs/ymem-binding/) 子目录,以确保顶层文档对外完全
-中性。如果你不维护 Ymem 可以忽略该子目录。
+kernel)项目发起,但顶层文档应当对任何 agent-memory kernel 都有用。
+**Ymem 特定绑定** —— 模块名、维护者立场、内部 benchmark 选择 —— 收纳到
+[`docs/ymem-binding/`](docs/ymem-binding/) 子目录,以确保公开入口保持产品中性。
 
 ## 与中文同行的关系
 
@@ -196,6 +218,7 @@ kernel)项目发起和维护。**项目特定绑定** —— 笔记 frontmatter 
 <div align="center">
 
 **[活综述](docs/agent-memory-survey.md)** ·
+**[文档地图](docs/README.md)** ·
 **[Papers 索引](papers/index.md)** ·
 **[产品全景](docs/products-landscape.md)** ·
 **[信号日志](docs/signals.md)** ·
