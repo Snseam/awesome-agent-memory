@@ -76,8 +76,7 @@ David Soria Parra 的 MCP 分享对 Ymem API 的启示:不要暴露
   lifecycle。
 - **不是 long-context inference 加速**:Ymem 假设 LLM 上下文有限;长上下文
   是另一条产品线。
-- **不是 agent runtime**:Ymem 只管记忆,不管 agent loop。host app
-  (ZhiOne)负责。
+- **不是 agent runtime**:Ymem 只管记忆,不管 agent loop。host app 负责。
 - **不是 vector DB**:vector store 是 substrate;Ymem 复用它们而不取代。
 - **不是 persona / 个性化 prompt 框架**:persona ≠ memory。
 

@@ -5,11 +5,11 @@ revised: 2026-05-19
 status: working-spec
 language: zh-CN
 origin: |
-  Originally drafted as §12 of zhione/docs/design/context-evolution-2026-05-08.md
-  when the Radar was scoped as a ZhiOne v1+ feature. On 2026-05-18 the Radar
-  was promoted to an independent repository, awesome-agent-memory, so that
-  algorithm iteration (in Ymem) and product iteration (in zhione) can both
-  consume from a shared, public knowledge base.
+  Originally drafted as part of an internal host-app design note when the Radar
+  was scoped as a host-app v1+ feature. On 2026-05-18 the Radar was promoted to
+  an independent repository, awesome-agent-memory, so that algorithm iteration
+  in Ymem and product iteration in host apps can both consume from a shared,
+  public knowledge base.
   On 2026-05-19 the generic Radar workflow moved to the root-level
   `research-radar.md`; this file is the Ymem-specific binding.
 ---
@@ -26,7 +26,7 @@ ResearchItem、ImpactReport 和实验提案。
 
 具体输出路径:
 - ResearchItem → `papers/<slug>.md` 或 `products/<slug>.md`(本仓)
-- ImpactReport → `impact-reports/<slug>.md`(本仓)
+- ImpactReport → [`../../impact-reports/`](../../impact-reports/)(本仓)
 - 沙盒实验 → 在 [Ymem](https://github.com/Snseam/Ymem) 仓内,见其
   `experiments/`(暂未公开)
 - ADR → 在 Ymem 仓内,见其 `docs/adr/`(暂未公开)
@@ -133,10 +133,10 @@ v2:
 > Ymem 不只管理记忆,也管理记忆系统自己的进化 —— 而 awesome-agent-memory
 > 是这套进化机制的输入面。
 
-## 7. 与 ZhiOne(host app)的契约
+## 7. 与 host app 的契约
 
 - host-side 模块(`context-packer`、`publisher`、`interface`、`audit-ui` ——
-  见 [`taxonomy-modules.md`](taxonomy-modules.md))由 ZhiOne 负责实现;
+  见 [`taxonomy-modules.md`](taxonomy-modules.md))由 host app 负责实现;
   Radar 仍追踪这些模块的研究,但 ImpactReport 应标注 `affected_modules` 是
   kernel-side 还是 host-side,避免把 host 侧改造硬推进 Ymem。
-- ZhiOne 不直接消费本仓;它通过 Ymem 的 API 间接获益。
+- Host app 不直接消费本仓;它通过 Ymem 的 API 间接获益。
