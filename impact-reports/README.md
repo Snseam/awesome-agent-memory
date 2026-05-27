@@ -23,7 +23,9 @@ source note to `full` first.
 ## Affected modules
 - ingest-adapter | parser-chunker | semantic-dedup | retriever-reranker |
   context-packer | dream-consolidator | memorydiff-generator |
-  evaluator-benchmark | security-privacy
+  evaluator-benchmark | publisher | interface | audit-ui | security-privacy
+- If this list drifts, use ../docs/ymem-binding/taxonomy-modules.md as the
+  source of truth.
 
 ## Evidence
 - Benchmark, product behavior, implementation detail, or source-page evidence.
