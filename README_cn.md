@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![记忆产品](https://img.shields.io/badge/memory_products-10-purple.svg)](products/)
+[![记忆产品](https://img.shields.io/badge/memory%20products-10-purple.svg)](products/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](docs/signals.md)
 
