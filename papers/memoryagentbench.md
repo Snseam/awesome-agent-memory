@@ -30,6 +30,10 @@ selective forgetting
 每个维度独立可评估,可帮助定位 memory 系统的真实瓶颈,而不是混在端到端 QA
 分数里。
 
+> Benchmark record:
+> [`../benchmarks/memoryagentbench.md`](../benchmarks/memoryagentbench.md);
+> usage ledger: [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 ## Method summary
 
 (待精读后填充)

@@ -42,6 +42,9 @@ last_revised: 2026-05-19
   需要保留时间序列
 - LoCoMo 可作为 `evaluator-benchmark` 中"事实+时间+因果"维度的标准
 
+> Benchmark record: [`../benchmarks/locomo.md`](../benchmarks/locomo.md);
+> usage ledger: [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 ## 与 LongMemEval / MemoryAgentBench 对比
 
 (待写)

@@ -1,12 +1,15 @@
 # Impact reports
 
-Impact reports are the bridge between a full ResearchItem and a concrete
-memory-kernel decision. They should be written only when a paper or product note
-is strong enough to affect architecture, experiments, or an ADR.
+Impact reports are the bridge between a full ResearchItem or BenchmarkItem and a
+concrete memory-kernel decision. They should be written only when a paper,
+product, or benchmark note is strong enough to affect architecture,
+experiments, or an ADR.
 
 This directory is intentionally empty except for this guide until the first
 candidate needs review. Do not cite `stub` notes as evidence here; upgrade the
-source note to `full` first.
+source note to `full` first. Benchmark score claims also need a matching event
+in `../benchmarks/claims/claims.yaml`, so vendor claims and independent
+reproductions do not get mixed.
 
 ## Minimal template
 
@@ -14,8 +17,11 @@ source note to `full` first.
 # <short title>
 
 ## Source
-- ResearchItem: ../papers/<slug>.md or ../products/<slug>.md
+- ResearchItem or BenchmarkItem: ../papers/<slug>.md, ../products/<slug>.md,
+  or ../benchmarks/<slug>.md
 - Status: full
+- Claims ledger refs: ../benchmarks/claims/claims.yaml#<event_id> when benchmark
+  usage or score claims are part of the evidence.
 
 ## Problem
 - What memory-kernel problem this candidate addresses.
@@ -29,6 +35,8 @@ source note to `full` first.
 
 ## Evidence
 - Benchmark, product behavior, implementation detail, or source-page evidence.
+- Keep vendor self-report, affiliated evaluation, critique, and independent
+  reproduction in separate bullets.
 
 ## Costs and risks
 - Implementation cost:

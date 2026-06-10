@@ -89,6 +89,9 @@ answer),在某些场景下甚至**比 long-context 还高**(70.8% vs 63.5%),且
 - 评测 protocol 完全开源,且声称已经把 LongMemEval 与 LoCoMo 也都迁入此框
   架(可统一回归)。
 
+> Benchmark record: [`../benchmarks/convomem.md`](../benchmarks/convomem.md);
+> usage ledger: [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 ## 决策相关性 / Decision relevance
 
 - **直接进入 `evaluator-benchmark` v0 的金牌评测三件套**:LongMemEval +

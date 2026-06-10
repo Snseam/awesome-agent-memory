@@ -1,0 +1,516 @@
+events:
+  - event_id: longmemeval-origin-2024
+    benchmark_id: longmemeval
+    source_kind: paper
+    source_id: papers/longmemeval.md
+    source_date: 2024-10
+    actor: LongMemEval authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "500 human-annotated QA; LongMemEval_S and LongMemEval_M; LLM-as-judge."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol; not counted as reuse."
+    evidence_refs:
+      - papers/longmemeval.md
+    extract_confidence: high
+  - event_id: locomo-origin-2024
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: papers/locomo.md
+    source_date: 2024
+    actor: LoCoMo authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Very long-term conversational memory QA with temporal and causal dimensions."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol; local note is seed quality."
+    evidence_refs:
+      - papers/locomo.md
+    extract_confidence: medium
+  - event_id: convomem-origin-2025
+    benchmark_id: convomem
+    source_kind: paper
+    source_id: papers/convomem.md
+    source_date: 2025-11
+    actor: ConvoMem authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "75,336 QA; six evidence categories; conversation lengths 2-300."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Synthetic data; strong for protocol, not product-independent by itself."
+    evidence_refs:
+      - papers/convomem.md
+    extract_confidence: high
+  - event_id: memoryagentbench-origin-2026
+    benchmark_id: memoryagentbench
+    source_kind: paper
+    source_id: papers/memoryagentbench.md
+    source_date: 2026
+    actor: MemoryAgentBench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Four memory-agent ability dimensions."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Local note is seed quality."
+    evidence_refs:
+      - papers/memoryagentbench.md
+    extract_confidence: medium
+  - event_id: mem0-paper-locomo-2025
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: papers/mem0-paper.md
+    source_date: 2025-04
+    actor: Mem0
+    actor_type: paper_authors
+    usage_type: baseline_comparison
+    claim_direction: positive_result
+    compared_systems:
+      - Mem0
+      - Mem0g
+      - OpenAI memory
+      - RAG
+      - full-context
+      - Zep
+      - LangMem
+    reported_metrics:
+      - metric: llm_as_judge
+        value: "reported by category in source note"
+        unit: score
+      - metric: token_cost
+        value: "reported in source note"
+        unit: tokens
+    experimental_setup: "LoCoMo with GPT-4o-mini extraction/update/judge according to local note."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "Mem0 authors evaluate their own system; LoCoMo sample size is small."
+    evidence_refs:
+      - papers/mem0-paper.md
+    extract_confidence: high
+  - event_id: mem0-blog-locomo-2026
+    benchmark_id: locomo
+    source_kind: product_note
+    source_id: products/mem0.md
+    source_date: 2026-04
+    actor: Mem0
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Mem0 algorithm v2
+    reported_metrics:
+      - metric: score
+        value: 91.6
+        unit: score
+      - metric: tokens_per_query
+        value: 6956
+        unit: tokens
+    experimental_setup: "Mem0 blog self-report; exact setup not independently reproduced in repo."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Do not mix with independent evaluations."
+    evidence_refs:
+      - products/mem0.md
+      - products/archives/mem0-blog-state-of-2026.md
+    extract_confidence: medium
+  - event_id: mem0-blog-longmemeval-2026
+    benchmark_id: longmemeval
+    source_kind: product_note
+    source_id: products/mem0.md
+    source_date: 2026-04
+    actor: Mem0
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Mem0 algorithm v2
+    reported_metrics:
+      - metric: score
+        value: 93.4
+        unit: score
+      - metric: tokens_per_query
+        value: 6787
+        unit: tokens
+    experimental_setup: "Mem0 blog self-report."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "LongMemEval subset and judge setup need source verification."
+    evidence_refs:
+      - products/mem0.md
+      - products/archives/mem0-blog-state-of-2026.md
+    extract_confidence: medium
+  - event_id: mem0-blog-beam-1m-2026
+    benchmark_id: beam
+    source_kind: product_note
+    source_id: products/mem0.md
+    source_date: 2026-04
+    actor: Mem0
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: mixed
+    compared_systems:
+      - Mem0 algorithm v2
+    reported_metrics:
+      - metric: score
+        value: 64.1
+        unit: score
+      - metric: tokens_per_query
+        value: 6719
+        unit: tokens
+    experimental_setup: "BEAM 1M self-report in Mem0 blog."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "BEAM source note is candidate quality."
+    evidence_refs:
+      - products/mem0.md
+      - products/archives/mem0-blog-state-of-2026.md
+    extract_confidence: medium
+  - event_id: mem0-blog-beam-10m-2026
+    benchmark_id: beam
+    source_kind: product_note
+    source_id: products/mem0.md
+    source_date: 2026-04
+    actor: Mem0
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: mixed
+    compared_systems:
+      - Mem0 algorithm v2
+    reported_metrics:
+      - metric: score
+        value: 48.6
+        unit: score
+      - metric: tokens_per_query
+        value: 6914
+        unit: tokens
+    experimental_setup: "BEAM 10M self-report in Mem0 blog."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Mem0 note interprets this as scale degradation; not independently reproduced."
+    evidence_refs:
+      - products/mem0.md
+      - products/archives/mem0-blog-state-of-2026.md
+    extract_confidence: medium
+  - event_id: convomem-critiques-longmemeval-2025
+    benchmark_id: longmemeval
+    source_kind: paper
+    source_id: papers/convomem.md
+    source_date: 2025-11
+    actor: ConvoMem authors
+    actor_type: paper_authors
+    usage_type: critique
+    claim_direction: negative_result
+    compared_systems: []
+    reported_metrics:
+      - metric: preference_subgroup_size
+        value: 30
+        unit: questions
+      - metric: estimated_error_bar
+        value: "+/-18%"
+        unit: percentage_points
+    experimental_setup: "Methodological critique of LongMemEval sample size and filler conversation source."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: independent_eval
+    comparability_notes: "Critique only; do not count as an independent reproduction score."
+    evidence_refs:
+      - papers/convomem.md
+    extract_confidence: high
+  - event_id: convomem-critiques-locomo-2025
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: papers/convomem.md
+    source_date: 2025-11
+    actor: ConvoMem authors
+    actor_type: paper_authors
+    usage_type: critique
+    claim_direction: negative_result
+    compared_systems: []
+    reported_metrics:
+      - metric: conversation_count
+        value: 10
+        unit: conversations
+    experimental_setup: "Methodological critique of LoCoMo sample size."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: independent_eval
+    comparability_notes: "Critique only; do not count as independent reproduction."
+    evidence_refs:
+      - papers/convomem.md
+    extract_confidence: high
+  - event_id: convomem-uses-mem0-baseline-2025
+    benchmark_id: convomem
+    source_kind: paper
+    source_id: papers/convomem.md
+    source_date: 2025-11
+    actor: ConvoMem authors
+    actor_type: paper_authors
+    usage_type: baseline_comparison
+    claim_direction: mixed
+    compared_systems:
+      - long-context
+      - Mem0
+      - block-based extraction
+    reported_metrics:
+      - metric: accuracy
+        value: "70-82 long-context; 30-45 Mem0 range in local note"
+        unit: percent
+      - metric: cost
+        value: "Mem0 about 1/95 full context at 300 conversations"
+        unit: relative
+    experimental_setup: "ConvoMem benchmark over variable conversation length and evidence categories."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "Only Mem0 is the RAG baseline; do not generalize to all memory layers."
+    evidence_refs:
+      - papers/convomem.md
+    extract_confidence: high
+  - event_id: hindsight-longmemeval-2026
+    benchmark_id: longmemeval
+    source_kind: product_note
+    source_id: products/hindsight.md
+    source_date: 2026-05-31
+    actor: Hindsight
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Hindsight
+    reported_metrics:
+      - metric: benchmark_performance
+        value: "claimed; exact score not normalized in local note"
+        unit: claim
+    experimental_setup: "Vendor README/product claim; local note says external collaborator reproduction is claimed."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "External reproduction claim needs independent source before reclassification."
+    evidence_refs:
+      - products/hindsight.md
+      - products/archives/hindsight-overview.md
+    extract_confidence: medium
+  - event_id: zep-locomo-2026
+    benchmark_id: locomo
+    source_kind: product_note
+    source_id: products/zep.md
+    source_date: 2026-05
+    actor: Zep
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Zep
+    reported_metrics:
+      - metric: locomo_retrieval
+        value: 80.32
+        unit: percent
+    experimental_setup: "Product-page claim; setup not normalized in repo."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Zep note warns comparability with Mem0/LangMem is unclear."
+    evidence_refs:
+      - products/zep.md
+    extract_confidence: medium
+  - event_id: graphiti-locomo-zep-foundation-2026
+    benchmark_id: locomo
+    source_kind: product_note
+    source_id: products/graphiti.md
+    source_date: 2026-05
+    actor: Graphiti
+    actor_type: vendor
+    usage_type: survey_mention
+    claim_direction: methodological_only
+    compared_systems:
+      - Zep
+      - Graphiti
+    reported_metrics: []
+    experimental_setup: "Graphiti appears as the foundation for Zep's LoCoMo number; Graphiti standalone benchmark data is sparse."
+    reproduction_status: not_reproduced
+    evidence_level: primary_product_page
+    independence_class: survey_only
+    comparability_notes: "Not a standalone Graphiti LoCoMo score."
+    evidence_refs:
+      - products/graphiti.md
+    extract_confidence: medium
+  - event_id: memoryos-locomo-2026
+    benchmark_id: locomo
+    source_kind: product_note
+    source_id: products/memoryos.md
+    source_date: 2026-05-31
+    actor: MemoryOS
+    actor_type: paper_authors
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - MemoryOS
+    reported_metrics:
+      - metric: locomo_related_improvement
+        value: "claimed; exact value not normalized in local note"
+        unit: claim
+    experimental_setup: "Research/product README style claim."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Treat as official project claim until source protocol is normalized."
+    evidence_refs:
+      - products/memoryos.md
+      - products/archives/memoryos-overview.md
+    extract_confidence: medium
+  - event_id: hy-memory-longmemeval-2026
+    benchmark_id: longmemeval
+    source_kind: product_note
+    source_id: products/hy-memory.md
+    source_date: 2026-05-31
+    actor: Hy-Memory
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Hy-Memory
+    reported_metrics:
+      - metric: longmemeval_claim
+        value: "claimed; exact score not normalized in local note"
+        unit: claim
+    experimental_setup: "Official site/product claim."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Hy-Memory note warns benchmark numbers are not independently verified."
+    evidence_refs:
+      - products/hy-memory.md
+      - products/archives/hy-memory-overview.md
+    extract_confidence: medium
+  - event_id: hy-memory-personamem-2026
+    benchmark_id: personamem-v2
+    source_kind: product_note
+    source_id: products/hy-memory.md
+    source_date: 2026-05-31
+    actor: Hy-Memory
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - Hy-Memory
+    reported_metrics:
+      - metric: personamem_claim
+        value: "claimed; exact score not normalized in local note"
+        unit: claim
+    experimental_setup: "Official site/product claim."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Benchmark id remains candidate until PersonaMem-v2 note is full."
+    evidence_refs:
+      - products/hy-memory.md
+      - products/archives/hy-memory-overview.md
+    extract_confidence: medium
+  - event_id: tencentdb-personamem-2026
+    benchmark_id: personamem-v2
+    source_kind: product_note
+    source_id: products/tencentdb-agent-memory.md
+    source_date: 2026-05-31
+    actor: TencentDB Agent Memory
+    actor_type: vendor
+    usage_type: vendor_claim
+    claim_direction: positive_result
+    compared_systems:
+      - TencentDB Agent Memory
+    reported_metrics:
+      - metric: personamem_claim
+        value: "claimed; exact score not normalized in local note"
+        unit: claim
+      - metric: token_reduction
+        value: "claimed; exact value not normalized in local note"
+        unit: claim
+    experimental_setup: "Official product-page claim."
+    reproduction_status: vendor_self_report
+    evidence_level: primary_product_page
+    independence_class: self_claim
+    comparability_notes: "Official self-test only in current repo evidence."
+    evidence_refs:
+      - products/tencentdb-agent-memory.md
+      - products/archives/tencentdb-agent-memory-overview.md
+    extract_confidence: medium
+  - event_id: survey-memoryagentbench-2026
+    benchmark_id: memoryagentbench
+    source_kind: paper
+    source_id: papers/memory-for-autonomous-llm-agents-survey.md
+    source_date: 2026-03
+    actor: Memory for Autonomous LLM Agents survey
+    actor_type: paper_authors
+    usage_type: survey_mention
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Survey classifies MemoryAgentBench in the evaluation landscape."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Survey mention only."
+    evidence_refs:
+      - papers/memory-for-autonomous-llm-agents-survey.md
+    extract_confidence: high
+  - event_id: survey-membench-2026
+    benchmark_id: membench
+    source_kind: paper
+    source_id: papers/memory-for-autonomous-llm-agents-survey.md
+    source_date: 2026-03
+    actor: Memory for Autonomous LLM Agents survey
+    actor_type: paper_authors
+    usage_type: survey_mention
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Survey names MemBench as write-stage candidate extraction/dedup evaluation."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Survey mention only; benchmark note remains candidate."
+    evidence_refs:
+      - papers/memory-for-autonomous-llm-agents-survey.md
+    extract_confidence: high
+  - event_id: survey-memoryarena-2026
+    benchmark_id: memoryarena
+    source_kind: paper
+    source_id: papers/memory-for-autonomous-llm-agents-survey.md
+    source_date: 2026-03
+    actor: Memory for Autonomous LLM Agents survey
+    actor_type: paper_authors
+    usage_type: survey_mention
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Survey names MemoryArena as manage/conflict evaluation."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Survey note says original MemoryArena source should be checked."
+    evidence_refs:
+      - papers/memory-for-autonomous-llm-agents-survey.md
+    extract_confidence: medium

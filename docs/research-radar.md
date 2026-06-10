@@ -19,7 +19,7 @@ agent memory 领域的论文和产品在不断更新。**Radar** 是一套机制
 
 ```text
 定期获取前沿信息
-  → 结构化理解论文/产品更新
+  → 结构化理解论文/产品/benchmark 更新
   → 映射到 memory kernel 能力模块
   → 评估证据强度和适配度
   → 生成 ArchitectureImpactReport
@@ -63,8 +63,44 @@ ResearchItem
 
 - 论文 → `../papers/<short-slug>.md`
 - 产品/工程文章 → `../products/<short-slug>.md`
+- benchmark 协议 → `../benchmarks/<short-slug>.md`
+- benchmark 使用事件 → `../benchmarks/claims/claims.yaml`
 - slug 用 kebab-case,论文以一作姓或工作名为主(`longmemeval`、
   `memoryagentbench`)
+
+## 3.1 BenchmarkItem schema
+
+Benchmark 不是论文 note 的附属字段,而是一等实体。每个 benchmark note 至少记录:
+
+```text
+BenchmarkItem
+- benchmark_id
+- name
+- aliases
+- status              # candidate | seed | full
+- origin_type         # paper_origin | product_origin | community_origin | unknown
+- origin_source
+- first_public_date
+- domain
+- modality
+- task_grain
+- capability_axes
+- dataset_size
+- data_nature
+- metrics
+- judge_type
+- code_available
+- data_available
+- license
+- known_limitations
+- canonical_sources
+- confidence
+```
+
+任何带分数、排名或"最强"判断的 benchmark 使用,都必须进入
+`../benchmarks/claims/claims.yaml`,并拆分 `usage_type`、`reproduction_status`
+和 `independence_class`。厂商博客和产品页只能支持 `vendor_claim`;独立复现
+必须来自非关联第三方并给出足够实验设置。
 
 ## 4. 模块 taxonomy
 
@@ -126,7 +162,7 @@ ADR
 - migration path
 - rollout flag
 - rollback condition
-- benchmark evidence (link back to impact-reports/ here)
+- benchmark evidence (link back to impact-reports/ and benchmarks/claims here)
 ```
 
 ## 8. 演进规划
@@ -135,7 +171,7 @@ ADR
 
 ```text
 v0 (当前):
-- 手动维护 papers/ 和 products/
+- 手动维护 papers/、products/ 和 benchmarks/
 - 不做自动 radar,不做自动 ingest
 
 v0.5:

@@ -78,6 +78,10 @@ extraction 流程图。关键设计:
 - 局限:Full-context 仍是 J 最高(72.90),Mem0 / Mem0g 都没追平,只能在
   cost / latency 上赢。
 
+> Benchmark record: [`../benchmarks/locomo.md`](../benchmarks/locomo.md);
+> event ledger row: `mem0-paper-locomo-2025` in
+> [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 ## 决策相关性 / Decision relevance
 
 - **ADD / UPDATE / DELETE / NOOP 四 op** 是 memory kernel `memorydiff-generator` 的

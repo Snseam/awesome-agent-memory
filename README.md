@@ -9,11 +9,13 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![Memory products](https://img.shields.io/badge/memory%20products-10-purple.svg)](products/)
+[![Memory products](https://img.shields.io/badge/memory%20products-34-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-12-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
-[![Updated](https://img.shields.io/badge/updated-2026--05-lightgrey.svg)](docs/signals.md)
+[![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
 
 </div>
+
 
 ---
 
@@ -34,8 +36,9 @@
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Lightweight coverage records for papers not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Archived PDFs for stable reading and audit. |
 | Full / seed notes | 7 full + 2 seed | [`papers/`](papers/) | Human-read paper notes and notes in progress. |
-| Memory product notes | 10 notes | [`products/`](products/) | Notes on existing memory infrastructure and agent-memory products. |
-| Page archives | 9 snapshots | [`products/archives/`](products/archives/) | Markdown snapshots for memory-product page auditability. |
+| Memory product notes | 34 notes | [`products/`](products/) | Notes on existing memory infrastructure and agent-memory products. |
+| Page archives | 33 snapshots | [`products/archives/`](products/archives/) | Markdown snapshots for memory-product page auditability. |
+| Benchmark catalog | 12 seed entries | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records and usage-claim ledger. |
 | Survey docs | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Maintainer synthesis and survey tracking. |
 
 ## Repository map
@@ -45,9 +48,11 @@ flowchart LR
   R["README"] --> D["Docs map<br/>survey + taxonomy"]
   R --> P["Papers<br/>index + stubs + PDFs"]
   R --> PL["Memory products<br/>notes + page archives"]
+  R --> B["Benchmarks<br/>protocols + claims ledger"]
   D --> IR["Impact reports<br/>evaluation template"]
   P --> IR
   PL --> IR
+  B --> IR
   IR --> KD["Kernel decisions<br/>sandbox + ADR"]
   D -. "optional" .-> YB["Ymem binding"]
 ```
@@ -60,7 +65,9 @@ If this is your first visit, use these entry points in order:
 2. [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) — the living survey and current maintainer synthesis.
 3. [`docs/taxonomy.md`](docs/taxonomy.md) — the shared vocabulary for forms, functions, dynamics, persistence, and curation.
 4. [`papers/index.md`](papers/index.md) — the 989-paper index, organized for discovery and follow-up reading.
-5. [`docs/products-landscape.md`](docs/products-landscape.md) — memory product notes grouped by domain and audience.
+5. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) — benchmark usage, evidence class, and cross-source statistics.
+6. [`docs/products-landscape.md`](docs/products-landscape.md) — memory product notes grouped by domain and audience.
+7. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) — cross-product architecture patterns and diagrams.
 
 ## Repository layout
 
@@ -79,6 +86,10 @@ All concept docs now live under [`docs/`](docs/). Start with
 | [`docs/information-sources.md`](docs/information-sources.md) | 10-category source catalog with a dedicated zh-CN section. |
 | [`docs/related-work.md`](docs/related-work.md) | Discovery-input attribution and scrape provenance. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Memory products by **domain × audience**. |
+| [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A / Tier B / reject decisions. |
+| [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product memory architecture patterns and comparison diagrams. |
+| [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) | Per-product Mermaid architecture diagrams for public product patterns. |
+| [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |
 | [`docs/signals.md`](docs/signals.md) | Reverse-chrono 2026 H1 release / memory product / blog log. |
 
 ### Per-item notes
@@ -89,8 +100,11 @@ All concept docs now live under [`docs/`](docs/). Start with
 | [`papers/stubs/`](papers/stubs/) | 988 auto-generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs (~1.8 GB). See archival policy. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script + dedup JSON. |
-| [`products/`](products/) | 10 memory product notes (Mem0, Letta, Zep, Graphiti, …). |
-| [`products/archives/`](products/archives/) | Markdown snapshots of canonical memory product pages. |
+| [`products/`](products/) | 34 memory product notes (Mem0, Letta, Zep, Graphiti, EverOS, Redis Agent Memory Server, …). |
+| [`products/archives/`](products/archives/) | 33 Markdown snapshots of canonical memory product pages. |
+| [`benchmarks/`](benchmarks/) | 12 benchmark seed entries and first-class protocol notes. |
+| [`benchmarks/claims/`](benchmarks/claims/) | Event ledger for benchmark usage, vendor claims, critiques, and reproductions. |
+| [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repos, or dataset cards. |
 | [`docs/ymem-binding/`](docs/ymem-binding/) | Project-specific bindings from the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel; safe to ignore if you don't use Ymem. |
 
 ## License / archival policy
@@ -139,7 +153,9 @@ notes, survey synthesis, and maintainer judgments are maintained here.
 **[Survey](docs/agent-memory-survey.md)** ·
 **[Docs map](docs/README.md)** ·
 **[Papers index](papers/index.md)** ·
+**[Benchmarks](benchmarks/index.md)** ·
 **[Memory products landscape](docs/products-landscape.md)** ·
+**[Product architectures](docs/product-memory-architectures.md)** ·
 **[Signals](docs/signals.md)** ·
 **[中文版](README_cn.md)**
 

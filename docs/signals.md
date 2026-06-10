@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-05-19
+date: 2026-06-11
 status: living-log
 language: zh-CN
 ---
@@ -10,7 +10,7 @@ language: zh-CN
 行业信号反时序日志。比"survey"更轻、比"twitter feed"更结构化。
 每条:**日期 / 来源 URL / 类型 / 一句话摘要 / Radar 动作**。
 
-类型 enum:`release` `comparison` `blog` `paper` `talk` `incident` `funding`
+类型 enum:`release` `comparison` `blog` `paper` `talk` `incident` `funding` `product`
 
 Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
 (`archive-only` 表示有趣但不进入 ResearchItem 流程)
@@ -19,6 +19,19 @@ Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-06-11 | [EverOS](https://evermind.ai/everos) / [`EverMind-AI/EverOS`](https://github.com/EverMind-AI/EverOS) | product | EverMind/EverOS/EverMemOS 明确以 Profile/Episodic/Skill、self-evolving skills 和 Markdown export 切入 memory OS | `deep-note` ✅([`../products/everos.md`](../products/everos.md)) |
+| 2026-06-11 | [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) | release | MemOS 作为独立 self-evolving memory OS 出现,需与已有 MemoryOS/EverMemOS 区分 | `deep-note` ✅([`../products/memos.md`](../products/memos.md)) |
+| 2026-06-11 | [AWS AgentCore Memory](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory.html) / [Google Memory Bank](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank) / [Microsoft Foundry Memory](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory) | product | hyperscaler agent platforms 同时把 managed long-term memory 做成 scope/TTL/strategy/CRUD 能力 | `deep-note` ✅(见 `products/`) |
+| 2026-06-11 | [Cloudflare Agent Memory](https://blog.cloudflare.com/introducing-agent-memory/) / [Oracle AI Agent Memory](https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html) / [Alibaba Bailian Memory](https://help.aliyun.com/zh/model-studio/memory-library) | product | platform-managed memory 从 edge runtime、enterprise DB 到中文云平台三路扩散 | `deep-note` ✅(见 `products/`) |
+| 2026-06-11 | [Redis Agent Memory Server](https://redis.github.io/agent-memory-server/) / [OpenViking](https://volcengine-openviking.mintlify.app/) / [PowerMem](https://github.com/oceanbase/powermem) | release | OSS/DB 厂商路线开始提供 memory API server、context DB 和 Experience+Skill distillation | `deep-note` ✅(见 `products/`) |
+| 2026-06-11 | [Basic Memory](https://docs.basicmemory.com/) / [ByteRover](https://www.byterover.dev/) / [Honcho](https://github.com/plastic-labs/honcho) | product | coding-agent memory 形成 local-first Markdown、portable context tree、peer-centric memory 三条路线 | `deep-note` ✅(见 `products/`) |
+| 2026-06-11 | 多子 agent discovery log | product | 本轮把核心 memory 产品深度入库、相邻产品轻量索引,并新增整体产品架构文档 | `deep-note` ✅([`product-discovery-log.md`](product-discovery-log.md), [`product-memory-architectures.md`](product-memory-architectures.md)) |
+| 2026-05-31 | [`supermemory.ai`](https://supermemory.ai/) / [`supermemoryai/supermemory`](https://github.com/supermemoryai/supermemory) | release | Supermemory 把 memory、RAG、profiles、connectors 和 MCP/插件整合成 context cloud | `deep-note` ✅([`../products/supermemory.md`](../products/supermemory.md)) |
+| 2026-05-31 | [`Tencent/TencentDB-Agent-Memory`](https://github.com/Tencent/TencentDB-Agent-Memory) | release | TencentDB Agent Memory 开源 L0-L3 分层记忆与 Mermaid context offloading,最新 release `v0.3.6` | `deep-note` ✅([`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md)) |
+| 2026-05-31 | [`hy-memory.com`](https://hy-memory.com/) | release | 腾讯混元 Hy-Memory 作为 OpenClaw shared memory plugin 出现,主打 6-layer cognitive memory | `deep-note` ✅([`../products/hy-memory.md`](../products/hy-memory.md)) |
+| 2026-05-31 | [`vectorize-io/hindsight`](https://github.com/vectorize-io/hindsight) | release | Hindsight 以 "Agent Memory That Learns" 切入,提供 retain / recall / reflect 与 LLM wrapper | `deep-note` ✅([`../products/hindsight.md`](../products/hindsight.md)) |
+| 2026-05-31 | [Anuma](https://www.anuma.ai/ai-memory) / [Personal AI](https://www.personal.ai/products) / [Kinic](https://www.kinic.io/) | product | C 端 memory ownership 路线升温:跨模型、可编辑、可携带或可验证的个人 memory | `deep-note` ✅(见 `products/`) |
+| 2026-05-31 | [MemoryOS](https://github.com/BAI-LAB/MemoryOS) / [A-MEM](https://github.com/agiresearch/A-mem) / [MemX](https://memx.me/) | release | 开源框架侧出现 OS-style、agentic organization、local-first single-file 三条不同 memory 路线 | `deep-note` ✅(见 `products/`) |
 | 2026-05 | mem0.ai/blog "State of AI Agent Memory 2026" | comparison | 6 大主流 memory layer 横评,Mem0 自家算法在 LoCoMo / LongMemEval 都报 SOTA | `archive-only`(自评,需交叉验证) |
 | 2026-05 | arXiv 2605.06716 "From Storage to Experience" | paper | Storage → Reflection → Experience 三阶段记忆演进框架 | `deep-note` ✅ |
 | 2026-04 | mem0.ai blog | release | Mem0 算法 v2:single-pass hierarchical extraction + multi-signal retrieval,声称 temporal +29.6 / multi-hop +23.1 | `deep-note` ✅(更新 [`../products/mem0.md`](../products/mem0.md))|
@@ -54,6 +67,9 @@ Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
   靠用户使用反推
 - **LangMem 与 LangGraph checkpoint 的关系**:LangChain 的 memory 故事 2026
   又重写了一遍,等 LangGraph v1 稳定后建笔记
+- **小型 OSS/MCP memory servers 的证据补齐**:MemMachine、mem9、Memstate、ClawMem、
+  agentmemory、SimpleMem 等先留在 discovery log,等 license/release health 与
+  canonical docs 查清再决定是否 deep-note
 
 ## 维护说明
 

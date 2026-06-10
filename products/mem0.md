@@ -87,6 +87,12 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 | BEAM (1M) | 64.1 | 6,719 |
 | BEAM (10M) | 48.6 | 6,914 |
 
+> Benchmark records: [`LoCoMo`](../benchmarks/locomo.md),
+> [`LongMemEval`](../benchmarks/longmemeval.md),
+> [`BEAM`](../benchmarks/beam.md). These rows are vendor self-reports in
+> [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml), not
+> independent reproductions.
+
 ### 对 memory kernel 的启发
 
 - **agent fact 与 user fact 等权**这个选择,直接挑战了 kernel 现在的默认
