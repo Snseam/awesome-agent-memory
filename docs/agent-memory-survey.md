@@ -56,7 +56,9 @@ language: zh-CN
 
 ## 3. 评测体系
 
-(占位 — 待写)
+规范化 benchmark 记录见 [`../benchmarks/index.md`](../benchmarks/index.md);
+跨论文/产品使用事件和证据等级见
+[`benchmarks-landscape.md`](benchmarks-landscape.md)。
 
 四类能力(借用 MemoryAgentBench 的划分):
 
@@ -69,10 +71,10 @@ language: zh-CN
 
 | Benchmark | 笔记 | 覆盖能力 | 备注 |
 |---|---|---|---|
-| LongMemEval | [`papers/longmemeval.md`](../papers/longmemeval.md) | accurate retrieval / long-range | 经典基线 |
-| MemoryAgentBench | [`papers/memoryagentbench.md`](../papers/memoryagentbench.md) | 四种能力划分的来源 | 同上 |
-| LoCoMo | [`papers/locomo.md`](../papers/locomo.md) | 长对话记忆 | Mem0 ECAI 2025 横评的主要 benchmark |
-| ConvoMem | (papers/index)| 对话记忆 | 2025-12 新增 |
+| LongMemEval | [`benchmarks/longmemeval.md`](../benchmarks/longmemeval.md) | accurate retrieval / long-range | 经典基线 |
+| MemoryAgentBench | [`benchmarks/memoryagentbench.md`](../benchmarks/memoryagentbench.md) | 四种能力划分的来源 | 同上 |
+| LoCoMo | [`benchmarks/locomo.md`](../benchmarks/locomo.md) | 长对话记忆 | Mem0 ECAI 2025 横评的主要 benchmark |
+| ConvoMem | [`benchmarks/convomem.md`](../benchmarks/convomem.md) | 对话记忆 | 2025-12 新增 |
 | CloneMem | (papers/index)| AI clone / 长程一致性 | 2025-12 |
 | KnowMe-Bench | (papers/index)| digital companion | 2025-12 |
 | RealMem | (papers/index)| real-world 多模态交互 | 2025-12,arXiv 2601.06966 |
@@ -144,7 +146,7 @@ verbs。
 
 每次更新本综述时:
 
-1. 在 `papers/` 或 `products/` 新增/更新对应笔记;
+1. 在 `papers/`、`products/` 或 `benchmarks/` 新增/更新对应笔记;
 2. 如果对你 kernel 有结构性影响,在 [`../impact-reports/`](../impact-reports/)
    起一份 ImpactReport;
 3. 回到本文档,更新相关章节,标记新的 last_revised 日期。

@@ -1,6 +1,6 @@
 ---
 title: Information sources for the agent-memory Research Radar
-date: 2026-05-19
+date: 2026-06-11
 status: working-spec
 language: zh-CN
 ---
@@ -43,6 +43,24 @@ language: zh-CN
 | memory 专门 | Mem0 / Letta / Zep / Cognee / Graphiti 博客与 changelog | 直接对标 memory kernel |
 | 上下文协议 | MCP spec 与官方 server 列表 | memory 与 tool / prompt 的边界 |
 | IDE/Agent host | Cursor / Windsurf / Replit / Devin / Claude Code blog | memory 在真实 agent 工作流里的露出形态 |
+
+### 3.1 Memory 产品搜索专用源(2026-06 补充)
+
+2026-06-11 的产品补漏发现,单靠传统 "Mem0 / Zep / Letta" 视角会漏掉平台 managed
+memory、coding-agent memory、MCP memory server 和国内云平台。后续产品搜索要把
+这些源作为固定 lane:
+
+| Lane | 主源 | 关注点 |
+|---|---|---|
+| Official/vendor | EverMind/EverOS、Mem0、Zep、Supermemory、Hindsight、LangMem、Letta、Cognee 官网/docs/release | 一等 memory 能力、release 状态、官方 benchmark 是否自报 |
+| Hyperscaler/platform | AWS Bedrock AgentCore、Google Agent Platform Memory Bank、Microsoft Foundry、Cloudflare Agents、Oracle AI Agent Memory、Alibaba Bailian | scope、TTL、CRUD、strategy、IAM/RBAC、preview/private beta 标签 |
+| GitHub/OSS | GitHub topics/trending + MemOS、Redis AMS、OpenViking、PowerMem、Basic Memory、Honcho、ByteRover | license、stars 只是弱信号;优先看 README/API/docs 是否定义 memory lifecycle |
+| MCP/catalog | Glama、MCP Market、LobeHub、mcpservers、Claude/Cursor/Codex memory server lists | catalog 只能做发现入口,必须回到 canonical repo/docs 验证 |
+| Academic-to-product | `papers/index.md`、arXiv、OpenReview、论文作者 GitHub | 找"论文已有但产品未入库"的 EverMemOS、MemOS、MIRIX、HippoRAG-like 条目 |
+| Domestic | 腾讯云、混元 Hy-Memory、OceanBase PowerMem、火山 OpenViking、阿里百炼、百度千帆、智谱/Kimi/豆包 | 官方中文文档优先,媒体报道只做补充 |
+| Adjacent product | PKM、企业知识库、数字伴侣、客服/销售、coding agents | 只在显式暴露 durable/editable memory 时进入轻量索引 |
+
+产品入库和拒绝理由记录到 [`product-discovery-log.md`](product-discovery-log.md)。
 
 ## 4. 同生态 awesome-list
 

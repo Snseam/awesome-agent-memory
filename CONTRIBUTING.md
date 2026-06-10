@@ -26,6 +26,8 @@ decisions.
   reading the source paper.
 - Add or refresh a product note in `products/` and, when appropriate, a
   markdown snapshot in `products/archives/`.
+- Add or refresh a benchmark note in `benchmarks/` and record observed usage in
+  `benchmarks/claims/claims.yaml`.
 - Improve `docs/information-sources.md`, `docs/related-work.md`, or
   `docs/products-landscape.md` with sourced entries.
 - Draft an `impact-reports/` entry for a full note that materially affects
@@ -44,6 +46,12 @@ Full paper and product notes should preserve the ResearchItem shape described in
 - separate direct evidence from maintainer inference;
 - keep unverified claims marked as `check`, `seed`, or follow-up work instead of
   presenting them as settled.
+
+Benchmark notes should preserve the BenchmarkItem shape in
+`docs/research-radar.md`, and every score, product comparison, critique, or
+reproduction claim should have a ledger event in
+`benchmarks/claims/claims.yaml`. Do not reclassify a vendor blog, product page,
+or affiliated paper result as independent reproduction.
 
 ## Commit Messages
 

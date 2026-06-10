@@ -52,6 +52,10 @@ healthcare 等行业的预置 entity schema 模板。
 - **性能**:产品页声称 P95 < 200ms,LoCoMo 单次检索 80.32%
 - **合规**:SOC 2 Type II / HIPAA(hosted 版)
 
+> Benchmark record: [`../benchmarks/locomo.md`](../benchmarks/locomo.md);
+> event ledger row: `zep-locomo-2026` in
+> [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它

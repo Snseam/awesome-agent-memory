@@ -70,6 +70,9 @@ TR 两类上仍显著落后于人类(差距 20+ 点),其中 ABS 几乎全员 50%
 - 按能力分层报告,而非单一 overall。
 - 给出 stratified subset 以便快速回归(适合 CI)。
 
+> Benchmark record: [`../benchmarks/longmemeval.md`](../benchmarks/longmemeval.md);
+> usage ledger: [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
 但 ConvoMem(papers/convomem.md)在 2025 年 11 月发文挑战 LongMemEval 的统计
 学有效性:Preferences 类别只有 30 题,误差棒接近 ±18%;且 filler conversations
 来自其他 benchmark,可能引入风格泄漏。`evaluator-benchmark` 在采用

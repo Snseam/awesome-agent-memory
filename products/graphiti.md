@@ -88,6 +88,9 @@ FalkorDB 1.1.2+,Kuzu 0.11.2+,Amazon Neptune(配合 OpenSearch Serverless)。
   商业化策略
 - **benchmark**:作为 Zep 80.32% LoCoMo 数字的底座出现,但 Graphiti 单独的
   公开 benchmark 数据相对稀疏
+- **benchmark ledger**:Graphiti 只作为 Zep LoCoMo 数字的 foundation mention
+  记录在 [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml),
+  不计为 standalone Graphiti score。
 
 ## 7. 进一步阅读
 

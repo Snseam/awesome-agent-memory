@@ -1,0 +1,67 @@
+---
+title: Microsoft Foundry Agent Service Memory
+type: product
+source: https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory
+date_first_seen: 2026-06
+domain: platform-managed-memory
+business_model: Azure / Microsoft Foundry managed service
+license: Proprietary cloud service
+memory_modules:
+  - ingest-adapter
+  - semantic-dedup
+  - dream-consolidator
+  - retriever-reranker
+  - policy-privacy
+status: seed
+last_revised: 2026-06-11
+archive: archives/microsoft-foundry-memory-overview.md
+---
+
+# Microsoft Foundry Agent Service Memory
+
+## 1. 一句话定位
+
+Microsoft Foundry Agent Service Memory 是 Azure Foundry agents 的托管 memory
+store,通过 scope、TTL、CRUD 和 memory tools 支持 user profile、chat summaries 与
+procedural memory。
+
+## 2. 是什么 / 做什么
+
+Microsoft Learn 的 memory 文档把记忆描述为 public preview capability。开发者可以
+让 agent remember/forget,也可以直接管理 memory items。公开概念包括 item store、
+scope、default TTL、user profile memory、chat summaries 和 procedural memory。
+
+## 3. 关键技术选择
+
+- **Scoped store**:每次请求/工具调用显式带 scope。
+- **Item lifecycle**:记忆项支持 CRUD、默认 TTL 和 forget。
+- **Memory types**:profile、summary、procedure 被作为不同用途的 memory。
+- **Agent tools**:通过工具让 agent 直接操作记忆。
+
+## 4. 决策相关性 / Decision relevance
+
+- **对照点**:Microsoft 路线比纯自动抽取更强调 developer-visible item lifecycle。
+- **借鉴点**:scope + TTL + CRUD 是 managed memory 最低治理基线。
+- **差异点**:底层提取/merge/conflict 机制仍是平台实现细节。
+
+## 5. 适用 / 不适用场景
+
+- **适用**:Azure Foundry 上的客服、销售、企业流程 agent;需要 Azure 账号、权限和
+  生命周期控制的团队。
+- **不适用**:本地优先、文件优先、跨平台 agent memory。
+
+## 6. 注意事项 / 风险
+
+- **可用性标签**:官方文档标注 preview/public preview,不能按 GA 稳定能力处理。
+- **平台绑定**:与 Azure Foundry Agent Service 强绑定。
+- **claim 边界**:本笔记只记录 Microsoft 官方概念,不外推内部算法。
+
+## 7. 进一步阅读
+
+- archive: [`archives/microsoft-foundry-memory-overview.md`](archives/microsoft-foundry-memory-overview.md)
+- Docs:https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory
+
+---
+
+> *Ymem 项目对本笔记决策相关性的具体绑定见
+> [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
