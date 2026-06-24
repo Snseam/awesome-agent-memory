@@ -1,15 +1,17 @@
 ---
 title: Memory product architecture diagrams
-date: 2026-06-11
+date: 2026-06-24
 status: working-note
 language: zh-CN
 ---
 
 # Memory 产品架构图
 
-范围:本页覆盖当前 `products/` 下的 34 个产品/模式笔记。图是基于公开页面、
-GitHub README、论文摘要与本仓快照的**架构归纳**;闭源 SaaS 与厂商内建记忆没有
-底层实现披露时,图只表达可观察产品边界和合理推断,不当作内部实现事实。
+范围:本页的证据索引覆盖当前 `products/` 下的 38 个产品/模式笔记;逐产品
+Mermaid 图当前覆盖 34 个产品/模式。2026-06-24 新增的 agentmemory、Memori、memU、
+memsearch 只进入证据索引和 pending-diagram 队列,尚无逐产品 Mermaid 图。图是基于
+公开页面、GitHub README、论文摘要与本仓快照的**架构归纳**;闭源 SaaS 与厂商内建
+记忆没有底层实现披露时,图只表达可观察产品边界和合理推断,不当作内部实现事实。
 
 跨产品架构模式的总览与对比表见
 [`product-memory-architectures.md`](product-memory-architectures.md);本页保留
@@ -823,6 +825,10 @@ flowchart LR
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | <https://docs.basicmemory.com/> |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | <https://www.byterover.dev/> |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | <https://github.com/plastic-labs/honcho> |
+| agentmemory (pending diagram) | [`../products/agentmemory.md`](../products/agentmemory.md) | <https://github.com/rohitg00/agentmemory> |
+| Memori (pending diagram) | [`../products/memori.md`](../products/memori.md) | <https://github.com/MemoriLabs/Memori> |
+| memU (pending diagram) | [`../products/memu.md`](../products/memu.md) | <https://github.com/NevaMind-AI/memU> |
+| memsearch (pending diagram) | [`../products/memsearch.md`](../products/memsearch.md) | <https://github.com/zilliztech/memsearch> |
 | OpenViking | [`../products/openviking.md`](../products/openviking.md) | <https://volcengine-openviking.mintlify.app/> |
 | Hy-Memory | [`../products/hy-memory.md`](../products/hy-memory.md) | <https://hy-memory.com/> |
 | MemoryOS | [`../products/memoryos.md`](../products/memoryos.md) | <https://github.com/BAI-LAB/MemoryOS> |

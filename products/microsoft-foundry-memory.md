@@ -13,7 +13,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-24
 archive: archives/microsoft-foundry-memory-overview.md
 ---
 
@@ -38,6 +38,13 @@ scope、default TTL、user profile memory、chat summaries 和 procedural memory
 - **Memory types**:profile、summary、procedure 被作为不同用途的 memory。
 - **Agent tools**:通过工具让 agent 直接操作记忆。
 
+## 3.1 2026-06 refresh
+
+Build 2026 后,Microsoft 官方博客和 Learn 文档把 Foundry memory 进一步拆成
+user memory、session memory 和 procedural memory。how-to 文档显示 memory store
+与 memory items 支持 create/update/list/delete/search,且 Python/C#/JavaScript/
+Java/REST 均有接口覆盖。当前仍是 public preview。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Microsoft 路线比纯自动抽取更强调 developer-visible item lifecycle。
@@ -60,6 +67,8 @@ scope、default TTL、user profile memory、chat summaries 和 procedural memory
 
 - archive: [`archives/microsoft-foundry-memory-overview.md`](archives/microsoft-foundry-memory-overview.md)
 - Docs:https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory
+- How-to:https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/memory-usage
+- Build 2026:https://devblogs.microsoft.com/foundry/agent-service-build2026/
 
 ---
 

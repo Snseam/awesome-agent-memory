@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-06-11
+date: 2026-06-24
 status: seed
 language: zh-CN
 ---
@@ -23,6 +23,7 @@ language: zh-CN
 | 长程对话记忆 | [`LoCoMo`](../benchmarks/locomo.md) | factual recall / temporal / causal / multi-session | seed,产品横评最常见 |
 | 对话记忆规模曲线 | [`ConvoMem`](../benchmarks/convomem.md) | long-context vs block extraction vs RAG crossover | full,同时批评 LongMemEval/LoCoMo |
 | agent 记忆能力维度 | [`MemoryAgentBench`](../benchmarks/memoryagentbench.md) | retrieval / test-time learning / long-range / forgetting | seed,适合定义能力轴 |
+| shared-memory governance | [`GateMem`](../benchmarks/gatemem.md) | utility / access control / active forgetting | seed,6 月新增治理 benchmark |
 | 百万 token 规模 | [`BEAM`](../benchmarks/beam.md) | 1M/10M 长尺度记忆退化 | candidate,目前主要来自 Mem0 自报 |
 | 真实交互 / persona | RealMem / CloneMem / KnowMe-Bench / PersonaMem-v2 | real-world memory, identity continuity, companion personalization | candidate,先列入 backlog |
 | agent 任务 / 多 agent | LoCoBench-Agent / MemoryArena / MemBench | coding agent, shared memory conflict, write/manage 评测 | candidate,需升级 source note |
@@ -40,6 +41,7 @@ language: zh-CN
 | ConvoMem | 2 | origin + baseline comparison |
 | BEAM | 2 | Mem0 BEAM 1M / 10M vendor claims |
 | MemoryAgentBench | 2 | origin + survey mention |
+| GateMem | 1 | origin paper logged; metrics/results not yet normalized |
 | PersonaMem-v2 | 2 | Hy-Memory + TencentDB Agent Memory self-claims |
 | MemBench | 1 | survey mention |
 | MemoryArena | 1 | survey mention |
@@ -113,7 +115,9 @@ language: zh-CN
    PersonaMem-style claims.
 4. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
    evaluation becomes a kernel priority.
-5. Add independent reproduction rows only when the source gives enough setup
+5. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
+   a kernel priority.
+6. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## E. Maintenance Contract

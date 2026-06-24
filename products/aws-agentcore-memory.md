@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-24
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -35,6 +35,16 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
 - **Session events**:通过 `sessionId` 等范围保存会话历史。
 - **Strategies**:长期记忆由 strategy 决定抽取什么;可用内建、覆盖或自管策略。
 - **Managed lifecycle**:云服务负责存储、检索和跨会话召回。
+
+## 3.1 2026-06 refresh
+
+- 2026-03-12 AWS 发布 LTM record streaming:memory record create/update/delete 可
+  通过 Kinesis stream 触发事件,减少 polling。What’s New 页面只概述 created/modified,
+  record-streaming developer guide 进一步列出 delete event type。
+- 2026-05-06 AWS 发布 long-term memory metadata:memory record 可带 structured
+  indexed keys,用于 tag/filter/retrieve。
+- 这使 AgentCore Memory 从"托管 LTM"进一步接近 evented memory lifecycle infra,
+  对 Ymem 的 `memorydiff-generator` 和审计流水线有对照价值。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -60,6 +70,9 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
 - archive: [`archives/aws-agentcore-memory-overview.md`](archives/aws-agentcore-memory-overview.md)
 - Docs:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory.html
 - Strategies:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-strategies.html
+- Streaming announcement:https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-memory-streaming-ltm/
+- Streaming developer guide:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-record-streaming.html
+- Metadata:https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata/
 
 ---
 

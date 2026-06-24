@@ -10,7 +10,7 @@ evidence_level: medium (production product, no public benchmark numbers)
 code_available: no (proprietary)
 license: proprietary
 status: seed
-last_revised: 2026-05-19
+last_revised: 2026-06-24
 ---
 
 # Claude Dreams
@@ -20,6 +20,20 @@ last_revised: 2026-05-19
 Agent 工作时写 memory 是局部和增量的。长期会积累重复、矛盾、过期条目。Dreams
 作为离线 job,读取 memory store 和过去 sessions,**生成一个新的整理后 memory
 store**。原输入 store 不被直接修改,便于审核和丢弃。
+
+## 2026-06 product note
+
+Anthropic/Claude 侧需要分开看两条线:
+
+- **Claude Code memory**:官方 docs 将 `CLAUDE.md`、repo-local `MEMORY.md` 和 auto
+  memory 文档化,并给出 Claude Code v2.1.59+ 的 auto memory 要求。它是 coding-agent
+  host memory,对本仓产品全景的 Coding & Dev agents 类更直接。
+- **Claude app memory**:release notes 显示 consumer/team app memory 扩展到更多 plan,
+  但它更像 chat-app vendor memory,不等同于 agent memory platform。
+
+本文件继续保留 Dreams/offline consolidation 的 architecture signal;Claude Code memory
+后续可单独拆成产品 note,如果公开 docs 稳定且与 `CLAUDE.md`/`MEMORY.md` 形成清晰
+agent-memory lifecycle。
 
 ## Architectural takeaways
 

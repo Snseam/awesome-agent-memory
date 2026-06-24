@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-24
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -36,6 +36,13 @@ multimodal inputs、TTL/configuration、revisions 和 IAM conditions。
 - **Async generation**:对话进入后异步生成可检索的 memories。
 - **Governance**:TTL、revision、IAM condition 和 memory poisoning 指南是文档重点。
 - **ADK integration**:面向 Google ADK/Agent Platform 的开发者入口。
+
+## 3.1 2026-06 refresh
+
+2026-06-23 版本的官方 docs 将 Memory Bank 描述为从 user-agent conversations
+动态生成 long-term memories,并强调 scoped identity isolation、event ingestion、
+similarity retrieval、TTL、revisions 与 IAM conditions。相较 2025 Vertex AI Memory
+Bank preview,当前入口已明确归入 Gemini Enterprise Agent Platform。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -61,6 +68,7 @@ multimodal inputs、TTL/configuration、revisions 和 IAM conditions。
 
 - archive: [`archives/google-memory-bank-overview.md`](archives/google-memory-bank-overview.md)
 - Docs:https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank
+- Setup:https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank/setup
 
 ---
 

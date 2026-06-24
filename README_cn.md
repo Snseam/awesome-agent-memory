@@ -2,15 +2,15 @@
 
 # awesome-agent-memory
 
-**面向 LLM agent 长程记忆的决策级证据库：论文、产品笔记、benchmark 协议、架构图谱，以及从研究到 ADR 的工作流。**
+**面向 LLM agent 长程记忆的决策级证据库：抓取论文索引、当前来源 radar、产品笔记、benchmark 协议、架构图谱，以及从研究到 ADR 的工作流。**
 
 **中文** · [English](README.md)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![记忆产品](https://img.shields.io/badge/memory%20products-34-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-12-blueviolet.svg)](benchmarks/)
+[![记忆产品](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-13-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
 
@@ -53,13 +53,13 @@
 
 | 板块 | 当前覆盖 | 入口 | 适合用来 |
 |---|---:|---|---|
-| 论文索引 | 989 篇论文 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索。 |
+| 论文索引 | 989 篇抓取论文 + 2026-06 手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
-| full / seed 论文笔记 | 7 个 full + 2 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
-| 记忆产品笔记 | 34 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
-| 产品页面快照 | 33 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
-| Benchmark 目录 | 12 个 catalog 条目 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark 及其 claims 来源。 |
+| full / seed 论文笔记 | 7 个 full + 7 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
+| 记忆产品笔记 | 38 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
+| 产品页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
+| Benchmark 目录 | 13 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
 | Claims ledger | 结构化 YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | 区分厂商自报、论文评测、方法批评和独立复现。 |
 | 综述与 taxonomy | 1 份活综述 + 6 条 meta-survey 记录 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | 在选型或设计前建立领域视角。 |
 | Impact reports | 目前只有模板 | [`impact-reports/README.md`](impact-reports/README.md) | 把强证据提升为 memory-kernel 架构建议。 |
@@ -71,6 +71,7 @@
 | 目标 | 先读这些 |
 |---|---|
 | 快速理解领域 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md)，再读 [`docs/taxonomy.md`](docs/taxonomy.md) |
+| 阅读最新来源刷新 | [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md)，再看 [`docs/signals.md`](docs/signals.md) |
 | 找相关论文 | [`papers/index.md`](papers/index.md)，再看 [`papers/`](papers/) 下的 full note |
 | 比较记忆产品 | [`docs/products-landscape.md`](docs/products-landscape.md)、[`docs/product-memory-architectures.md`](docs/product-memory-architectures.md)、[`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | 查看产品为什么入库或被拒绝 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
@@ -119,6 +120,7 @@ flowchart LR
 | [`docs/taxonomy.md`](docs/taxonomy.md) | 分类 agent-memory 系统和 memory-kernel 职责的共享词表。 |
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | 2025 年末到 2026 H1 的外部 meta-survey 索引。 |
 | [`docs/research-radar.md`](docs/research-radar.md) | 把论文、产品、benchmark 证据转成 ImpactReport 和 ADR 输入的工作流。 |
+| [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 当前来源刷新，覆盖论文、产品、GitHub 项目和 reviewer 分流结论。 |
 | [`docs/information-sources.md`](docs/information-sources.md) | 论文、产品、社区和中文信息源 catalog。 |
 | [`docs/related-work.md`](docs/related-work.md) | 发现线索归因和抓取来源记录。 |
 | [`docs/signals.md`](docs/signals.md) | release、对比文章和博客信号的反时序日志。 |
@@ -127,8 +129,8 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`products/`](products/) | 34 个记忆产品笔记，包括 Mem0、Letta、Zep、Graphiti、EverOS、MemOS、Redis Agent Memory Server、Supermemory、TencentDB Agent Memory 和平台 managed memory 等。 |
-| [`products/archives/`](products/archives/) | 33 个记忆产品 canonical 页面 markdown 快照。 |
+| [`products/`](products/) | 38 个记忆产品笔记，包括 Mem0、Letta、Zep、Graphiti、EverOS、MemOS、Redis Agent Memory Server、Supermemory、TencentDB Agent Memory、agentmemory、Memori、memU、memsearch 和平台 managed memory 等。 |
+| [`products/archives/`](products/archives/) | 37 个记忆产品 canonical 页面 markdown 快照。 |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | 按领域和服务对象整理的产品全景。 |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | 多子 agent 产品搜索日志，记录 Tier A、Tier B、拒绝和 alias 决策。 |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | 跨产品架构模式：Memory OS、graph/temporal memory、MCP/local-first memory、云厂商 managed memory 和个人记忆。 |
@@ -138,11 +140,11 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`papers/`](papers/) | 7 个 full 论文笔记、2 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、7 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
 | [`papers/stubs/`](papers/stubs/) | 988 个尚未 full 阅读论文的生成 stub。 |
 | [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF，约 1.8 GB。详见下方存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物：抓取脚本和 dedup JSON。 |
-| [`benchmarks/`](benchmarks/) | benchmark catalog、协议笔记和笔记模板。 |
+| [`benchmarks/`](benchmarks/) | 13 个 benchmark catalog 行，包含协议笔记、stub-backed 候选行和笔记模板。 |
 | [`benchmarks/claims/`](benchmarks/claims/) | benchmark 提及、厂商自报、方法批评和复现的 usage-event ledger。 |
 | [`benchmarks/archives/`](benchmarks/archives/) | benchmark 页面、repo 或 dataset card 的可选审计快照。 |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | 按能力、使用方式和证据独立性整理的 benchmark 全景。 |

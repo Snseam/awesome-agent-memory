@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-06-11
+date: 2026-06-24
 status: working-spec
 language: zh-CN
 ---
@@ -88,6 +88,10 @@ language: zh-CN
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | OSS+SaaS | 个人开发者 / 团队 / Markdown 用户 | local-first Markdown memory + knowledge graph + MCP |
 | ByteRover(原 Cipher) | [`../products/byterover.md`](../products/byterover.md) | Source-available | coding agent 用户 / 团队 | autonomous coding agents 的 portable memory layer |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | OSS+SaaS | agent builder / multi-agent 产品 | peer-centric stateful agent memory infrastructure |
+| agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | OSS | coding agent 用户 | multi-client persistent memory for Claude Code / Codex / Cursor / OpenClaw |
+| Memori | [`../products/memori.md`](../products/memori.md) | OSS / productizing | agent builder / production agent 团队 | agent execution + conversation -> structured persistent state |
+| memU | [`../products/memu.md`](../products/memu.md) | OSS / productizing | workspace agent / OpenClaw / MCP 用户 | workspace context -> durable agent memory layers |
+| memsearch | [`../products/memsearch.md`](../products/memsearch.md) | OSS | coding agent 用户 / Zilliz-Milvus 生态 | Markdown + Milvus 的 cross-agent coding memory |
 | OpenViking | [`../products/openviking.md`](../products/openviking.md) | OSS | coding agent 用户 / OpenClaw 用户 / agent builder | context database:filesystem 管理 memory、resources、skills |
 | MemoryOS | [`../products/memoryos.md`](../products/memoryos.md) | OSS / Research | 研究者 / 个人开发者 | personalized agent 的 memory operating system |
 | A-MEM | [`../products/a-mem.md`](../products/a-mem.md) | OSS / Research | 研究者 | Zettelkasten 式 agentic memory organization |
@@ -136,6 +140,9 @@ language: zh-CN
 | PowerMem | OSS | Claude Code / Codex / Cursor / OpenClaw 用户 | CLI/HTTP/MCP/插件共用后端 memory |
 | Redis Agent Memory Server | OSS | 任意 MCP/REST agent | Redis-backed memory server,支持 working/long-term memory |
 | Honcho | OSS+SaaS | Claude Code / OpenCode / OpenClaw / Hermes 用户 | peer-centric memory + MCP/SDK |
+| agentmemory | OSS | Claude Code / Codex / Cursor / OpenClaw / MCP 用户 | coding-agent persistent memory server |
+| memU | OSS / productizing | workspace agents / OpenClaw / MCP 用户 | workspace runtime 编译多模态 context 为 memory |
+| memsearch | OSS | Claude Code / Codex / OpenCode / OpenClaw 用户 | Markdown + Milvus semantic memory |
 | OpenViking | OSS | OpenClaw / OpenCode / Claude Desktop 用户 | context DB + MCP,统一 memory/resources/skills |
 
 ### A5. 个人知识管理(PKM)与记忆增强
@@ -215,13 +222,14 @@ memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取
 Letta self-host / Mem0 self-host / Zep self-host / Graphiti / Cognee /
 Obsidian + 插件 / LangMem / Hindsight / TencentDB Agent Memory /
 EverOS / MemOS / Redis Agent Memory Server / PowerMem / Basic Memory /
-ByteRover / Honcho / OpenViking / MemoryOS / A-MEM / MemX /
+ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
+OpenViking / MemoryOS / A-MEM / MemX /
 Supermemory self-host。
 
 ### B2. 中小团队 / SaaS startup
 Mem0 cloud / Zep cloud / Supermemory API / Hindsight cloud / Basic Memory
-Cloud / Honcho API / Redis Agent Memory Server / OpenAI Assistants /
-Pinecone / Cursor for Teams。
+Cloud / Honcho API / Redis Agent Memory Server / agentmemory / Memori / memU /
+memsearch / OpenAI Assistants / Pinecone / Cursor for Teams。
 
 ### B3. 大企业
 Glean / Mem0 Enterprise / Notion / Slack AI / Anthropic for Enterprise /

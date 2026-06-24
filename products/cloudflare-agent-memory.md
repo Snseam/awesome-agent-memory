@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-24
 archive: archives/cloudflare-agent-memory-overview.md
 ---
 
@@ -37,6 +37,13 @@ Cloudflare docs 把 agent memory 分成 conversation history 与 context memory:
   Skills 四类公开抽象。
 - **Provider abstraction**:默认可用 SQLite / Durable Object,search provider 可替换。
 - **平台托管**:Agent Memory 是 Cloudflare 平台服务,与 Workers/Agents 生态绑定。
+
+## 3.1 2026-06 refresh
+
+2026-06-02 官方 Agent Memory docs 标注 beta/private beta,并将 API 面拆为
+conversation ingestion、`remember`、`recall`、profiles/namespaces,以及 facts、
+events、instructions、tasks 等 memory 类型。它比早期 Agents session/context
+memory 更接近专门托管的 memory service。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -65,6 +72,7 @@ Cloudflare docs 把 agent memory 分成 conversation history 与 context memory:
 - archive: [`archives/cloudflare-agent-memory-overview.md`](archives/cloudflare-agent-memory-overview.md)
 - Blog:https://blog.cloudflare.com/introducing-agent-memory/
 - Docs:https://developers.cloudflare.com/agents/concepts/conversation-state-and-memory/
+- Agent Memory docs:https://developers.cloudflare.com/agent-memory/
 
 ---
 

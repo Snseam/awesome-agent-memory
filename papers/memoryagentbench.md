@@ -1,6 +1,6 @@
 ---
 title: MemoryAgentBench — Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions
-source: ICLR 2026 (https://iclr.cc/virtual/2026/poster/10010781) / OpenReview pdf
+source: ICLR 2026 Poster / OpenReview
 date: 2026
 domain: eval
 memory_modules:
@@ -11,7 +11,10 @@ evidence_level: strong
 code_available: check
 license: check
 status: seed
-last_revised: 2026-05-19
+last_revised: 2026-06-24
+urls:
+  - https://openreview.net/forum?id=DT7JyQC3MR
+  - https://arxiv.org/abs/2507.05257
 ---
 
 # MemoryAgentBench
@@ -61,7 +64,9 @@ selective forgetting
 
 ## Notes
 
-(随精读迭代)
+2026-06 refresh:OpenReview page lists this as ICLR 2026 Poster. The local
+benchmark note remains seed quality until protocol and artifact details are
+normalized.
 
 ---
 
