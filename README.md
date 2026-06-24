@@ -10,7 +10,7 @@
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
 [![Memory products](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-13-blueviolet.svg)](benchmarks/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-16-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
 
@@ -61,7 +61,7 @@ separate buckets.
 | Full / seed paper notes | 7 full + 7 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
 | Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
 | Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
-| Benchmark catalog | 13 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
+| Benchmark catalog | 16 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
 | Impact reports | Template only for now | [`impact-reports/README.md`](impact-reports/README.md) | Promote strong evidence into kernel-design recommendations. |
@@ -146,7 +146,7 @@ flowchart LR
 | [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs, about 1.8 GB. See the archival policy below. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |
-| [`benchmarks/`](benchmarks/) | 13 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
+| [`benchmarks/`](benchmarks/) | 16 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
 | [`benchmarks/claims/`](benchmarks/claims/) | Usage-event ledger for benchmark mentions, vendor claims, critiques, and reproductions. |
 | [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repositories, or dataset cards. |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |

@@ -24,7 +24,10 @@ language: zh-CN
 | 对话记忆规模曲线 | [`ConvoMem`](../benchmarks/convomem.md) | long-context vs block extraction vs RAG crossover | full,同时批评 LongMemEval/LoCoMo |
 | agent 记忆能力维度 | [`MemoryAgentBench`](../benchmarks/memoryagentbench.md) | retrieval / test-time learning / long-range / forgetting | seed,适合定义能力轴 |
 | shared-memory governance | [`GateMem`](../benchmarks/gatemem.md) | utility / access control / active forgetting | seed,6 月新增治理 benchmark |
+| 结构化记忆组织 | [`StructMemEval`](../benchmarks/structmemeval.md) | structure selection / state tracking / task-specific organization | seed,FeishuLuo survey 查漏后新增;primary arXiv + working-paper repo |
 | 百万 token 规模 | [`BEAM`](../benchmarks/beam.md) | 1M/10M 长尺度记忆退化 | candidate,目前主要来自 Mem0 自报 |
+| memory evaluator | [`MemoryRewardBench`](../benchmarks/memoryrewardbench.md) | reward model judging for long-term memory management | candidate,评估 reward models 而非 end-agent memory |
+| memory vs long-context economics | [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md) | cost / accuracy / break-even turns | candidate,meta-protocol/成本分析,不是独立新数据集 |
 | 真实交互 / persona | RealMem / CloneMem / KnowMe-Bench / PersonaMem-v2 | real-world memory, identity continuity, companion personalization | candidate,先列入 backlog |
 | agent 任务 / 多 agent | LoCoBench-Agent / MemoryArena / MemBench | coding agent, shared memory conflict, write/manage 评测 | candidate,需升级 source note |
 
@@ -42,6 +45,9 @@ language: zh-CN
 | BEAM | 2 | Mem0 BEAM 1M / 10M vendor claims |
 | MemoryAgentBench | 2 | origin + survey mention |
 | GateMem | 1 | origin paper logged; metrics/results not yet normalized |
+| StructMemEval | 1 | origin paper logged; protocol/results not yet normalized |
+| MemoryRewardBench | 1 | origin paper logged; evaluator benchmark only |
+| Fact-based memory vs long-context | 1 | source-paper cost analysis over existing benchmarks |
 | PersonaMem-v2 | 2 | Hy-Memory + TencentDB Agent Memory self-claims |
 | MemBench | 1 | survey mention |
 | MemoryArena | 1 | survey mention |
@@ -52,6 +58,7 @@ language: zh-CN
 |---|---:|---|
 | LoCoMo | 1 | Mem0 paper affiliated evaluation; useful for paper analysis, not independent reproduction |
 | ConvoMem | 1 | Origin paper baseline comparison against Mem0-style RAG; useful for protocol/crossover analysis |
+| Fact-based memory vs long-context | 1 | Source-paper comparison of fact-based memory against long-context inference; useful for cost/accuracy trade-off analysis, not independent reproduction |
 
 ### B3. Vendor claims
 
@@ -106,21 +113,41 @@ language: zh-CN
 | `independent_report` | Needed before a claim becomes independent reproduction. |
 | `survey_mention` | Useful for discovery and prioritization, not score/ranking evidence. |
 
-## D. Next Upgrade Queue
+## D. FeishuLuo Survey Intake (2026-06-24)
 
-1. Upgrade LoCoMo from seed to full because it is the most product-used
+The [FeishuLuo companion list](https://github.com/FeishuLuo/Evolving-LLM-Agent-Memory-Survey)
+for **From Storage to Experience** is useful as a discovery source, but it is not
+primary evidence. This intake keeps source classes explicit before any row
+enters the catalog.
+
+| Decision | Candidate | Handling | Caveat |
+|---|---|---|---|
+| add | [`StructMemEval`](../benchmarks/structmemeval.md) | Core structured-memory benchmark candidate. | Primary source is arXiv 2602.11243; supplementary repo calls it a working paper. |
+| add | [`MemoryRewardBench`](../benchmarks/memoryrewardbench.md) | Evaluator benchmark for memory-management reward models. | Not direct end-agent memory quality. |
+| add | [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md) | Meta-protocol for cost/accuracy comparison against long-context inference. | Not a standalone new dataset; pricing assumptions drift. |
+| adjacent | HELMET(arXiv 2410.02694) | Keep out of core catalog unless a memory paper/product uses it as a baseline. | General long-context benchmark. |
+| watchlist | arXiv 2510.17132 | Track only under the primary title, "Do LLMs Recognize Your Latent Preferences?" | Feishu row title is mismatched; do not import as "LLM Self-Awareness via Internal Circuits." |
+| reject label | "LLM Self-Awareness via Internal Circuits" / 2510.17132 | Reject the title/link pairing as-is. | Likely intended self-awareness paper is a different arXiv ID. |
+
+## E. Next Upgrade Queue
+
+1. Upgrade StructMemEval because it is the most direct new benchmark for memory
+   structure selection and organization.
+2. Upgrade LoCoMo from seed to full because it is the most product-used
    benchmark in current notes.
-2. Upgrade BEAM source before using Mem0's 1M/10M claims in any decision.
-3. Upgrade PersonaMem-v2 because TencentDB Agent Memory and Hy-Memory both cite
+3. Upgrade BEAM source before using Mem0's 1M/10M claims in any decision.
+4. Upgrade PersonaMem-v2 because TencentDB Agent Memory and Hy-Memory both cite
    PersonaMem-style claims.
-4. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
+5. Upgrade MemoryRewardBench only when reward-model judging becomes an evaluator
+   priority.
+6. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
    evaluation becomes a kernel priority.
-5. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
+7. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-6. Add independent reproduction rows only when the source gives enough setup
+8. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
-## E. Maintenance Contract
+## F. Maintenance Contract
 
 - New benchmark protocol -> add or update `../benchmarks/<slug>.md`.
 - New product score -> add a `vendor_claim` event, not a leaderboard row.

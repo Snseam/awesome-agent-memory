@@ -94,6 +94,76 @@ events:
     evidence_refs:
       - benchmarks/gatemem.md
     extract_confidence: medium
+  - event_id: structmemeval-origin-2026
+    benchmark_id: structmemeval
+    source_kind: paper
+    source_id: https://arxiv.org/abs/2602.11243
+    source_date: 2026-02
+    actor: StructMemEval authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Preprint introduces structured memory organization tasks beyond factual recall; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Core benchmark candidate; arXiv is the primary preprint, while the supplementary repo calls it a working paper; protocol/results still need full normalization."
+    evidence_refs:
+      - benchmarks/structmemeval.md
+      - https://arxiv.org/abs/2602.11243
+    extract_confidence: medium
+  - event_id: memoryrewardbench-origin-2026
+    benchmark_id: memoryrewardbench
+    source_kind: paper
+    source_id: papers/stubs/memoryrewardbench-benchmarking-reward-models-for-long-term.md
+    source_date: 2026-01
+    actor: MemoryRewardBench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Benchmark for reward models judging long-term memory management across 10 settings and 8K-128K contexts; source note is stub quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Evaluator benchmark only; do not treat as direct end-agent memory quality evidence."
+    evidence_refs:
+      - benchmarks/memoryrewardbench.md
+      - papers/stubs/memoryrewardbench-benchmarking-reward-models-for-long-term.md
+      - https://arxiv.org/abs/2601.11969
+    extract_confidence: medium
+  - event_id: fact-memory-vs-long-context-baseline-2026
+    benchmark_id: fact-memory-vs-long-context
+    source_kind: paper
+    source_id: papers/stubs/beyond-the-context-window-a-cost-performance-analysis-of.md
+    source_date: 2026-03
+    actor: Beyond the Context Window authors
+    actor_type: paper_authors
+    usage_type: baseline_comparison
+    claim_direction: mixed
+    compared_systems:
+      - fact-based memory
+      - long-context LLM
+    reported_metrics:
+      - metric: accuracy
+        value: "reported across LongMemEval, LoCoMo, PersonaMem-v2 in source paper"
+        unit: source_claim
+      - metric: cumulative_api_cost
+        value: "reported as cost-performance and break-even analysis"
+        unit: source_claim
+    experimental_setup: "Meta-protocol comparing fact-based memory with long-context inference on existing memory benchmarks; source note is stub quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "Cost-performance analysis, not a standalone new dataset; API-pricing assumptions are time-sensitive."
+    evidence_refs:
+      - benchmarks/fact-based-memory-vs-long-context.md
+      - papers/stubs/beyond-the-context-window-a-cost-performance-analysis-of.md
+      - https://arxiv.org/abs/2603.04814
+    extract_confidence: medium
   - event_id: mem0-paper-locomo-2025
     benchmark_id: locomo
     source_kind: paper
