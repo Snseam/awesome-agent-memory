@@ -2,7 +2,7 @@
 
 # awesome-agent-memory
 
-**Long-term memory for LLM agents — a decision-driven reading list, 989 scraped-paper index, current-source radar, and living survey covering memory architectures, retrieval, consolidation, and forgetting.**
+**Decision-grade evidence base for long-term memory in LLM agents: scraped-paper index, current-source radar, product notes, benchmark protocols, architecture maps, and a research-to-ADR workflow.**
 
 [中文](README_cn.md) · **English**
 
@@ -16,139 +16,221 @@
 
 </div>
 
-
 ---
 
-## Table of contents
+## Table Of Contents
 
-1. [At a glance](#at-a-glance)
-2. [Repository map](#repository-map)
-3. [Read first](#read-first)
-4. [Repository layout](#repository-layout)
-5. [License / archival policy](#license--archival-policy)
-6. [Origin / maintenance](#origin--maintenance)
+1. [What This Repository Is](#what-this-repository-is)
+2. [At A Glance](#at-a-glance)
+3. [How To Use It](#how-to-use-it)
+4. [Evidence Model](#evidence-model)
+5. [Repository Map](#repository-map)
+6. [Repository Layout](#repository-layout)
+7. [Scope Boundaries](#scope-boundaries)
+8. [License And Archival Policy](#license-and-archival-policy)
+9. [Origin And Maintenance](#origin-and-maintenance)
+10. [Contributing](#contributing)
 
-## At a glance
+## What This Repository Is
 
-| Area | Count | Entry point | What it is for |
+`awesome-agent-memory` is not only an awesome list. It is a structured evidence
+base for deciding how long-term memory should be designed, evaluated, and
+operated in LLM agent systems.
+
+The repository separates five evidence layers:
+
+| Layer | What it owns | Main entry point |
+|---|---|---|
+| Papers | Scholarly claims, methods, and local reading notes | [`papers/index.md`](papers/index.md) |
+| Products | Public behavior of memory products and memory-enabled platforms | [`docs/products-landscape.md`](docs/products-landscape.md) |
+| Benchmarks | Evaluation protocols, usage events, vendor claims, and critique records | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) |
+| Synthesis | Taxonomy, living survey, architecture patterns, source maps, and signal logs | [`docs/README.md`](docs/README.md) |
+| Decision workflow | How evidence becomes ImpactReports, experiments, and ADR inputs | [`docs/research-radar.md`](docs/research-radar.md) |
+
+The core maintenance rule is simple: keep direct evidence, maintainer inference,
+vendor self-claims, affiliated evaluations, and independent reproductions in
+separate buckets.
+
+## At A Glance
+
+| Area | Current coverage | Entry point | Use it when you need to |
 |---|---:|---|---|
 | Paper index | 989 scraped papers + 2026-06 manual radar additions | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
-| Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Lightweight coverage records for papers not yet fully read. |
-| Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Archived PDFs for stable reading and audit. |
-| Full / seed notes | 7 full + 7 seed | [`papers/`](papers/) | Human-read paper notes and notes in progress. |
-| Memory product notes | 38 notes | [`products/`](products/) | Notes on existing memory infrastructure and agent-memory products. |
-| Page archives | 37 snapshots | [`products/archives/`](products/archives/) | Markdown snapshots for memory-product page auditability. |
+| Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
+| Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
+| Full / seed paper notes | 7 full + 7 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
+| Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
+| Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
 | Benchmark catalog | 13 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
-| Survey docs | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Maintainer synthesis and survey tracking. |
+| Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
+| Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
+| Impact reports | Template only for now | [`impact-reports/README.md`](impact-reports/README.md) | Promote strong evidence into kernel-design recommendations. |
 
-## Repository map
+## How To Use It
+
+Start with the path that matches your question:
+
+| Goal | Read these first |
+|---|---|
+| Get the field overview | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md), then [`docs/taxonomy.md`](docs/taxonomy.md) |
+| Read the latest source refresh | [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md), then [`docs/signals.md`](docs/signals.md) |
+| Find relevant papers | [`papers/index.md`](papers/index.md), then full notes under [`papers/`](papers/) |
+| Compare memory products | [`docs/products-landscape.md`](docs/products-landscape.md), [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md), [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
+| Check why a product was included or rejected | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
+| Evaluate benchmark claims | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md), [`benchmarks/index.md`](benchmarks/index.md), [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) |
+| Track new releases and source channels | [`docs/signals.md`](docs/signals.md), [`docs/information-sources.md`](docs/information-sources.md) |
+| Turn research into a memory-kernel decision | [`docs/research-radar.md`](docs/research-radar.md), then [`impact-reports/README.md`](impact-reports/README.md) |
+| See Ymem-specific bindings | [`docs/ymem-binding/README.md`](docs/ymem-binding/README.md) |
+
+## Evidence Model
+
+The repository is organized so claims can be traced back to their source type.
+
+| Evidence class | Where it belongs | How to read it |
+|---|---|---|
+| Primary paper evidence | Full notes in [`papers/`](papers/) and canonical links in [`papers/index.md`](papers/index.md) | Can support method and benchmark-protocol claims when the note is full. |
+| Paper stubs | [`papers/stubs/`](papers/stubs/) | Discovery coverage only; upgrade before using in an ImpactReport. |
+| Product behavior | Product notes in [`products/`](products/) and archives in [`products/archives/`](products/archives/) | Supports "the vendor says/offers X", not independent performance conclusions. |
+| Vendor benchmark claims | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Must stay labeled as vendor or affiliated evidence unless independently reproduced. |
+| Independent reproductions | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Require enough third-party setup detail to compare against the original claim. |
+| Maintainer synthesis | [`docs/`](docs/) | Useful for prioritization and design judgment; should not be confused with direct evidence. |
+
+## Repository Map
 
 ```mermaid
 flowchart LR
-  R["README"] --> D["Docs map<br/>survey + taxonomy"]
-  R --> P["Papers<br/>index + stubs + PDFs"]
-  R --> PL["Memory products<br/>notes + page archives"]
-  R --> B["Benchmarks<br/>protocols + claims ledger"]
-  D --> IR["Impact reports<br/>evaluation template"]
-  P --> IR
-  PL --> IR
+  R["README"] --> D["docs/<br/>survey, taxonomy, sources, signals"]
+  R --> P["papers/<br/>index, full notes, stubs, PDFs"]
+  R --> PR["products/<br/>notes and page archives"]
+  R --> B["benchmarks/<br/>protocol notes and claims ledger"]
+  D --> A["architecture maps<br/>product patterns and diagrams"]
+  P --> IR["impact-reports/<br/>decision template"]
+  PR --> IR
   B --> IR
-  IR --> KD["Kernel decisions<br/>sandbox + ADR"]
-  D -. "optional" .-> YB["Ymem binding"]
+  IR --> ADR["kernel decisions<br/>experiments and ADRs outside this repo"]
+  D -. "optional project binding" .-> Y["docs/ymem-binding/"]
 ```
 
-## Read first
+## Repository Layout
 
-If this is your first visit, use these entry points in order:
+### Concept And Synthesis Docs
 
-1. [`docs/README.md`](docs/README.md) — map of the documentation set.
-2. [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) — the living survey and current maintainer synthesis.
-3. [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) — latest current-source refresh across papers, products, GitHub projects, and reviewer decisions.
-4. [`docs/taxonomy.md`](docs/taxonomy.md) — the shared vocabulary for forms, functions, dynamics, persistence, and curation.
-5. [`papers/index.md`](papers/index.md) — the paper index, organized for scrape-baseline discovery and manual radar additions.
-6. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) — benchmark usage, evidence class, and cross-source statistics.
-7. [`docs/products-landscape.md`](docs/products-landscape.md) — memory product notes grouped by domain and audience.
-8. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) — cross-product architecture patterns and diagrams.
-
-## Repository layout
-
-### Concept files (top level)
-
-All concept docs now live under [`docs/`](docs/). Start with
-[`docs/README.md`](docs/README.md) if you want the shortest map.
-
-| File | Purpose |
+| Path | Purpose |
 |---|---|
-| [`docs/README.md`](docs/README.md) | Documentation map: what to read first and where each concept lives. |
-| [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) | A living literature review by the maintainer. |
-| [`docs/meta-surveys.md`](docs/meta-surveys.md) | Index of **external** meta-surveys (2025-12 ~ 2026-05). |
-| [`docs/taxonomy.md`](docs/taxonomy.md) | Generic agent-memory taxonomy: cross-walk of 3 external frameworks. |
-| [`docs/research-radar.md`](docs/research-radar.md) | Generic Radar schema for ResearchItem and ImpactReport notes. |
+| [`docs/README.md`](docs/README.md) | Documentation map and recommended reading order. |
+| [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) | Living survey of memory architectures, retrieval, consolidation, forgetting, and evaluation. |
+| [`docs/taxonomy.md`](docs/taxonomy.md) | Shared vocabulary for classifying agent-memory systems and memory-kernel responsibilities. |
+| [`docs/meta-surveys.md`](docs/meta-surveys.md) | External meta-survey index from late 2025 through 2026 H1. |
+| [`docs/research-radar.md`](docs/research-radar.md) | Workflow for turning papers, products, and benchmark evidence into ImpactReports and ADR inputs. |
 | [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 current-source refresh across papers, products, GitHub projects, and reviewer decisions. |
-| [`docs/information-sources.md`](docs/information-sources.md) | 10-category source catalog with a dedicated zh-CN section. |
+| [`docs/information-sources.md`](docs/information-sources.md) | Source catalog for papers, products, communities, and zh-CN information channels. |
 | [`docs/related-work.md`](docs/related-work.md) | Discovery-input attribution and scrape provenance. |
-| [`docs/products-landscape.md`](docs/products-landscape.md) | Memory products by **domain × audience**. |
-| [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A / Tier B / reject decisions. |
-| [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product memory architecture patterns and comparison diagrams. |
-| [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) | Per-product Mermaid architecture diagrams for public product patterns. |
-| [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |
-| [`docs/signals.md`](docs/signals.md) | Reverse-chrono 2026 H1 release / memory product / blog log. |
+| [`docs/signals.md`](docs/signals.md) | Reverse-chronological release, comparison, and blog signal log. |
 
-### Per-item notes
+### Products And Architectures
 
-| Path | Contents |
+| Path | Purpose |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 7 seed notes, and master [`index.md`](papers/index.md). |
-| [`papers/stubs/`](papers/stubs/) | 988 auto-generated stubs for papers not yet fully read. |
-| [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs (~1.8 GB). See archival policy. |
-| [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script + dedup JSON. |
-| [`products/`](products/) | 38 memory product notes (Mem0, Letta, Zep, Graphiti, EverOS, Redis Agent Memory Server, agentmemory, memsearch, …). |
-| [`products/archives/`](products/archives/) | 37 Markdown snapshots of canonical memory product pages. |
-| [`benchmarks/`](benchmarks/) | 13 benchmark catalog rows, including protocol notes and stub-backed candidate rows. |
-| [`benchmarks/claims/`](benchmarks/claims/) | Event ledger for benchmark usage, vendor claims, critiques, and reproductions. |
-| [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repos, or dataset cards. |
-| [`docs/ymem-binding/`](docs/ymem-binding/) | Project-specific bindings from the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel; safe to ignore if you don't use Ymem. |
+| [`products/`](products/) | 38 memory product notes, including Mem0, Letta, Zep, Graphiti, EverOS, MemOS, Redis Agent Memory Server, Supermemory, TencentDB Agent Memory, agentmemory, Memori, memU, memsearch, and platform-managed memory offerings. |
+| [`products/archives/`](products/archives/) | 37 markdown snapshots of canonical memory product pages. |
+| [`docs/products-landscape.md`](docs/products-landscape.md) | Product landscape by domain and audience. |
+| [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A, Tier B, reject, and alias decisions. |
+| [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product architecture patterns: memory OS, graph/temporal memory, MCP/local-first memory, managed cloud memory, and personal memory. |
+| [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) | Per-product Mermaid diagrams based on public product patterns. |
 
-## License / archival policy
+### Papers, Benchmarks, And Decision Workflow
+
+| Path | Purpose |
+|---|---|
+| [`papers/`](papers/) | 7 full paper notes, 7 seed notes, and the master [`index.md`](papers/index.md). |
+| [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
+| [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs, about 1.8 GB. See the archival policy below. |
+| [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |
+| [`benchmarks/`](benchmarks/) | 13 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
+| [`benchmarks/claims/`](benchmarks/claims/) | Usage-event ledger for benchmark mentions, vendor claims, critiques, and reproductions. |
+| [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repositories, or dataset cards. |
+| [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |
+| [`impact-reports/README.md`](impact-reports/README.md) | Template for promoting strong evidence into architecture recommendations. |
+
+### Governance And Project Binding
+
+| Path | Purpose |
+|---|---|
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution rules for papers, products, benchmarks, and evidence ledgers. |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Community conduct policy. |
+| [`SECURITY.md`](SECURITY.md) | Security reporting guidance. |
+| [`CITATION.cff`](CITATION.cff) | Citation metadata. |
+| [`docs/ymem-binding/`](docs/ymem-binding/) | Project-specific bindings for the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel. Safe to skip if you only need the generic evidence base. |
+
+## Scope Boundaries
+
+Included:
+
+- long-term and multi-session memory for LLM agents;
+- memory writing, retrieval, consolidation, forgetting, personalization,
+  provenance, governance, and auditability;
+- products that expose memory as a first-class capability;
+- benchmarks used to evaluate memory behavior, personalization, temporal
+  reasoning, forgetting, or memory-layer trade-offs.
+
+Excluded or kept only as adjacent context:
+
+- pure vector databases with no memory lifecycle;
+- plain RAG middleware that does not model update, consolidation, or forgetting;
+- general agent frameworks where memory is not a first-class surface;
+- long-context inference or prompt-cache systems by themselves;
+- vendor performance claims presented as independent evidence.
+
+## License And Archival Policy
 
 Notes and survey content are released under the [Apache License 2.0](LICENSE).
-Quoted excerpts from external papers and articles remain the property of
-their respective authors and are used under fair use / fair dealing for
-commentary and research purposes.
+Quoted excerpts from external papers and articles remain the property of their
+authors and are used for commentary and research.
 
-**Locally archived PDFs** (`papers/pdfs/`) come from sources that explicitly
-permit redistribution — arXiv perpetual non-exclusive license, CC-BY at ACL
-Anthology, open OpenReview submissions, etc. If you find a PDF here whose
-source restricts redistribution, please open an issue; we will remove it.
-The canonical URL in the corresponding note's `urls` field remains the
+Locally archived PDFs in [`papers/pdfs/`](papers/pdfs/) come from sources that
+permit redistribution, such as arXiv, ACL Anthology, and open OpenReview
+submissions. If a PDF source restricts redistribution, open an issue and it
+will be removed. The canonical URL in the corresponding note remains the
 authoritative source.
 
-**Memory product page snapshots** (`products/archives/`) are research backups,
-captured so that this repo's reasoning stays auditable when source pages
-change or disappear. They are **not** re-published material; commercial
-citation should always use the original URL in the snapshot's `source_url`
-header.
+Product and benchmark page snapshots are audit backups. They are not
+republished commercial material. Cite the original URL from the snapshot header
+for external or commercial use.
 
-## Origin / maintenance
+## Origin And Maintenance
 
-This repo was started by the
-[**Ymem**](https://github.com/Snseam/Ymem) project, but the top-level
-documentation is intended to stay useful for any agent-memory kernel. Ymem
-specific bindings — module names, maintainer stance, and internal benchmark
-choices — live in [`docs/ymem-binding/`](docs/ymem-binding/) so the public
-entry points remain project-neutral.
+This repo was started by the [Ymem](https://github.com/Snseam/Ymem) project,
+but the public entry points are intended to remain useful for any agent-memory
+kernel. Ymem-specific module names, maintainer stance, and internal benchmark
+choices live under [`docs/ymem-binding/`](docs/ymem-binding/).
 
-The paper index also uses a small set of public awesome-list repositories as
-discovery inputs. Source attribution and scrape artifacts live in
-[`docs/related-work.md`](docs/related-work.md) and
-[`papers/_scrape/`](papers/_scrape/). These inputs are used for discovery only;
-notes, survey synthesis, and maintainer judgments are maintained here.
+The paper index also uses public awesome-list repositories as discovery inputs.
+Attribution and scrape artifacts live in [`docs/related-work.md`](docs/related-work.md)
+and [`papers/_scrape/`](papers/_scrape/). Those inputs are discovery sources;
+notes, synthesis, and maintainer judgments are maintained here.
+
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) and
+[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). In short:
+
+- New paper: add or upgrade a note under [`papers/`](papers/), and use a full
+  note before citing it in an ImpactReport.
+- New product: add a note under [`products/`](products/), archive the source
+  page when appropriate, and update the product landscape if it is core.
+- New benchmark: add or update a benchmark note, then record usage events in
+  [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml).
+- New product or benchmark claim: label the source as vendor, affiliated,
+  critique, or independent reproduction.
+- New information source: update [`docs/information-sources.md`](docs/information-sources.md)
+  or [`docs/related-work.md`](docs/related-work.md).
 
 ---
 
-> *Notes are authored by the maintainer. Some stubs and first drafts were
-> accelerated with LLM tooling; every full note is grounded in the actual
-> PDF or memory product page that was read, not in unverified secondary summaries.*
+> Notes are authored by the maintainer. Some stubs and first drafts were
+> accelerated with LLM tooling; full notes should be grounded in the actual PDF,
+> product page, benchmark source, or archived snapshot rather than unverified
+> secondary summaries.
 
 <div align="center">
 
@@ -156,7 +238,7 @@ notes, survey synthesis, and maintainer judgments are maintained here.
 **[Docs map](docs/README.md)** ·
 **[Papers index](papers/index.md)** ·
 **[Benchmarks](benchmarks/index.md)** ·
-**[Memory products landscape](docs/products-landscape.md)** ·
+**[Memory products](docs/products-landscape.md)** ·
 **[Product architectures](docs/product-memory-architectures.md)** ·
 **[Signals](docs/signals.md)** ·
 **[中文版](README_cn.md)**
