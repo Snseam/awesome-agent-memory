@@ -187,6 +187,7 @@ v1:
 - 定期 radar:每周/每月扫描论文和产品更新
 - 自动归类到 taxonomy
 - 半自动生成 ImpactReport 草稿
+- 每周 Codex 执行契约见 [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md)
 
 v2:
 - 自动 benchmark / shadow run
