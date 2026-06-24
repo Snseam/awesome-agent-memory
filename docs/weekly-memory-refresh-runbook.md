@@ -22,6 +22,10 @@ The Codex App owns the schedule:
 - base ref: fetch and start from the latest `origin/main`;
 - output gate: create a PR only when verified changes exist.
 
+Only the reusable behavior contract belongs in this repository. Local Codex
+automation IDs, cron registration details, machine-specific paths, and
+credentials stay in the local Codex automation store or private environment.
+
 Each weekly run should refresh `awesome-agent-memory` across four evidence
 surfaces:
 
@@ -139,6 +143,11 @@ Always run:
 ruby scripts/verify_memory_refresh.rb
 git diff --check
 ```
+
+Run the final structural verifier against the staged or PR tree, not against a
+loose scratch workspace. The verifier intentionally derives counts and duplicate
+checks from Git-tracked files so temporary local artifacts do not affect public
+catalog counts.
 
 Also run a targeted source reachability check for canonical URLs added or
 changed in the weekly run. This can be `curl -L -s -o /dev/null -w ...` or an

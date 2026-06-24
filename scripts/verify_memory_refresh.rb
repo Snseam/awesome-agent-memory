@@ -3,6 +3,7 @@
 
 require "yaml"
 require "English"
+require "set"
 require "shellwords"
 
 ROOT = File.expand_path("..", __dir__)
@@ -27,10 +28,56 @@ def badge_count(markdown, label)
 end
 
 def tracked_files(pattern)
-  output = `git -C #{Shellwords.escape(ROOT)} ls-files #{Shellwords.escape(pattern)}`
+  output = `git -C #{Shellwords.escape(ROOT)} ls-files -- #{Shellwords.escape(pattern)}`
   fail_check("git ls-files failed for #{pattern}") unless $CHILD_STATUS.success?
 
   output.lines.map(&:strip).reject(&:empty?).map { |path| File.join(ROOT, path) }
+end
+
+def all_tracked_files
+  output = `git -C #{Shellwords.escape(ROOT)} ls-files`
+  fail_check("git ls-files failed") unless $CHILD_STATUS.success?
+
+  output.lines.map(&:strip).reject(&:empty?).map { |path| File.join(ROOT, path) }
+end
+
+def repo_files(*patterns)
+  patterns.flat_map { |pattern| tracked_files(pattern) }
+          .uniq
+          .select { |path| File.file?(path) }
+end
+
+def tracked_file_index
+  @tracked_file_index ||= all_tracked_files
+                          .select { |path| File.file?(path) }
+                          .map { |path| File.expand_path(path) }
+                          .to_set
+end
+
+def tracked_directory_index
+  @tracked_directory_index ||= begin
+    dirs = Set.new
+    tracked_file_index.each do |path|
+      dir = File.dirname(path)
+      while dir.start_with?(ROOT)
+        dirs << dir
+        break if dir == ROOT
+
+        dir = File.dirname(dir)
+      end
+    end
+    dirs
+  end
+end
+
+def tracked_repo_target?(path)
+  normalized = File.expand_path(path)
+  tracked_file_index.include?(normalized) || tracked_directory_index.include?(normalized)
+end
+
+def files_in_dir(relative_dir, pattern)
+  dir = File.join(ROOT, relative_dir)
+  repo_files(pattern).select { |path| File.dirname(path) == dir }
 end
 
 def count_benchmark_rows
@@ -42,24 +89,49 @@ def count_benchmark_rows
 end
 
 def count_product_notes
-  Dir[File.join(ROOT, "products", "*.md")].count do |path|
+  files_in_dir("products", "products/*.md").count do |path|
     base = File.basename(path)
     base != "README.md" && !base.start_with?("_")
   end
 end
 
 def count_product_archives
-  Dir[File.join(ROOT, "products", "archives", "*.md")].count do |path|
+  files_in_dir("products/archives", "products/archives/*.md").count do |path|
     File.basename(path) != "README.md"
   end
 end
 
 def count_pdfs
-  Dir[File.join(ROOT, "papers", "pdfs", "*")].count { |path| File.file?(path) }
+  files_in_dir("papers/pdfs", "papers/pdfs/*").count
 end
 
 def count_stubs
-  Dir[File.join(ROOT, "papers", "stubs", "*.md")].count
+  files_in_dir("papers/stubs", "papers/stubs/*.md").count
+end
+
+def paper_note_files
+  files_in_dir("papers", "papers/*.md").select do |path|
+    File.basename(path) != "index.md" &&
+      !File.basename(path).start_with?("_")
+  end
+end
+
+def paper_status_counts
+  paper_note_files.each_with_object(Hash.new(0)) do |path, counts|
+    status = extract_front_matter_value(path, "status")
+    counts[status] += 1 if %w[full seed].include?(status)
+  end
+end
+
+def check_paper_note_statuses
+  invalid = paper_note_files.each_with_object([]) do |path, rows|
+    status = extract_front_matter_value(path, "status")
+    next if %w[full seed].include?(status)
+
+    rows << "#{path.delete_prefix("#{ROOT}/")}: #{status || "(missing)"}"
+  end
+
+  assert(invalid.empty?, "paper notes with invalid status values:\n#{invalid.join("\n")}")
 end
 
 def paper_total_from_index
@@ -67,10 +139,25 @@ def paper_total_from_index
 end
 
 def scan_conflict_markers
-  files = Dir[
-    File.join(ROOT, "{README.md,README_cn.md}"),
-    File.join(ROOT, "{docs,benchmarks,products,papers,impact-reports}", "**", "*.{md,yml,yaml}")
-  ]
+  files = repo_files(
+    "README.md",
+    "README_cn.md",
+    "docs/**/*.md",
+    "docs/**/*.yml",
+    "docs/**/*.yaml",
+    "benchmarks/**/*.md",
+    "benchmarks/**/*.yml",
+    "benchmarks/**/*.yaml",
+    "products/**/*.md",
+    "products/**/*.yml",
+    "products/**/*.yaml",
+    "papers/**/*.md",
+    "papers/**/*.yml",
+    "papers/**/*.yaml",
+    "impact-reports/**/*.md",
+    "impact-reports/**/*.yml",
+    "impact-reports/**/*.yaml"
+  )
 
   offenders = files.select do |path|
     body = File.read(path)
@@ -87,6 +174,9 @@ end
 def check_counts
   readme = read("README.md")
   readme_cn = read("README_cn.md")
+  status_counts = paper_status_counts
+  full_notes = status_counts.fetch("full", 0)
+  seed_notes = status_counts.fetch("seed", 0)
 
   expected = {
     "papers" => paper_total_from_index,
@@ -103,25 +193,29 @@ def check_counts
 
   checks = {
     "README.md" => [
-      "#{count_stubs} stubs",
-      "#{count_product_notes} notes",
-      "#{count_product_archives} snapshots",
-      "#{count_benchmark_rows} catalog rows",
-      "#{count_benchmark_rows} benchmark catalog rows"
+      ["paper note status counts", /#{full_notes}\s+full\s+\+\s+#{seed_notes}\s+seed/],
+      ["paper tree status counts", /#{full_notes}\s+full paper notes,\s+#{seed_notes}\s+seed notes/],
+      ["paper stub count", /#{count_stubs}\s+stubs\b/],
+      ["product note count", /#{count_product_notes}\s+notes\b/],
+      ["product archive count", /#{count_product_archives}\s+snapshots\b/],
+      ["benchmark catalog row count", /#{count_benchmark_rows}\s+catalog rows\b/],
+      ["benchmark tree row count", /#{count_benchmark_rows}\s+benchmark catalog rows\b/]
     ],
     "README_cn.md" => [
-      "#{count_stubs} 个 stub",
-      "#{count_product_notes} 个笔记",
-      "#{count_product_archives} 个快照",
-      "#{count_benchmark_rows} 个 catalog 行",
-      "#{count_benchmark_rows} 个 benchmark catalog 行"
+      ["paper note status counts", /#{full_notes}\s+个 full\s+\+\s+#{seed_notes}\s+个 seed/],
+      ["paper tree status counts", /#{full_notes}\s+个 full 论文笔记、#{seed_notes}\s+个 seed 笔记/],
+      ["paper stub count", /#{count_stubs}\s+个 stub\b/],
+      ["product note count", /#{count_product_notes}\s+个笔记/],
+      ["product archive count", /#{count_product_archives}\s+个快照/],
+      ["benchmark catalog row count", /#{count_benchmark_rows}\s+个 catalog 行/],
+      ["benchmark tree row count", /#{count_benchmark_rows}\s+个 benchmark catalog 行/]
     ]
   }
 
-  checks.each do |file, tokens|
+  checks.each do |file, expectations|
     body = read(file)
-    tokens.each do |token|
-      assert(body.include?(token), "#{file} missing synchronized count token #{token.inspect}")
+    expectations.each do |description, pattern|
+      assert(body.match?(pattern), "#{file} missing synchronized #{description}")
     end
   end
 end
@@ -137,34 +231,36 @@ def check_duplicates
   dup_events = event_ids.group_by(&:itself).select { |_id, rows| rows.size > 1 }
   assert(dup_events.empty?, "duplicate benchmark claim event_ids: #{dup_events.keys.join(", ")}")
 
-  benchmark_ids = Dir[File.join(ROOT, "benchmarks", "*.md")]
+  benchmark_files = files_in_dir("benchmarks", "benchmarks/*.md")
+                    .reject { |path| File.basename(path) == "_template.md" }
+  product_files = files_in_dir("products", "products/*.md")
+
+  benchmark_ids = benchmark_files
                   .reject { |path| File.basename(path) == "_template.md" }
                   .map { |path| [extract_front_matter_value(path, "benchmark_id"), path] }
                   .reject { |value, _path| value.nil? || value.empty? }
   dup_benchmarks = benchmark_ids.group_by(&:first).select { |_id, rows| rows.size > 1 }
   assert(dup_benchmarks.empty?, "duplicate benchmark_ids: #{dup_benchmarks.keys.join(", ")}")
 
-  benchmark_titles = Dir[File.join(ROOT, "benchmarks", "*.md")]
-                     .reject { |path| File.basename(path) == "_template.md" }
+  benchmark_titles = benchmark_files
                      .map { |path| [extract_front_matter_value(path, "title"), path] }
                      .reject { |value, _path| value.nil? || value.empty? }
   dup_benchmark_titles = benchmark_titles.group_by { |value, _path| value.downcase }.select { |_value, rows| rows.size > 1 }
   assert(dup_benchmark_titles.empty?, "duplicate benchmark titles: #{dup_benchmark_titles.keys.join(", ")}")
 
-  benchmark_names = Dir[File.join(ROOT, "benchmarks", "*.md")]
-                    .reject { |path| File.basename(path) == "_template.md" }
+  benchmark_names = benchmark_files
                     .map { |path| [extract_front_matter_value(path, "name"), path] }
                     .reject { |value, _path| value.nil? || value.empty? }
   dup_benchmark_names = benchmark_names.group_by { |value, _path| value.downcase }.select { |_value, rows| rows.size > 1 }
   assert(dup_benchmark_names.empty?, "duplicate benchmark names: #{dup_benchmark_names.keys.join(", ")}")
 
-  product_titles = Dir[File.join(ROOT, "products", "*.md")]
+  product_titles = product_files
                    .map { |path| [extract_front_matter_value(path, "title"), path] }
                    .reject { |value, _path| value.nil? || value.empty? }
   dup_product_titles = product_titles.group_by { |value, _path| value.downcase }.select { |_value, rows| rows.size > 1 }
   assert(dup_product_titles.empty?, "duplicate product titles: #{dup_product_titles.keys.join(", ")}")
 
-  product_ids = Dir[File.join(ROOT, "products", "*.md")].map do |path|
+  product_ids = product_files.map do |path|
     explicit_id = extract_front_matter_value(path, "product_id")
     [explicit_id || File.basename(path, ".md"), path]
   end.reject { |value, _path| value.nil? || value.empty? }
@@ -173,13 +269,14 @@ def check_duplicates
 end
 
 def check_local_markdown_links
-  files = tracked_files("*.md") +
-          tracked_files("docs/**/*.md") +
-          tracked_files("benchmarks/**/*.md") +
-          tracked_files("products/**/*.md") +
-          tracked_files("papers/**/*.md") +
-          tracked_files("impact-reports/**/*.md")
-  files = files.uniq.select { |path| File.exist?(path) }
+  files = repo_files(
+    "*.md",
+    "docs/**/*.md",
+    "benchmarks/**/*.md",
+    "products/**/*.md",
+    "papers/**/*.md",
+    "impact-reports/**/*.md"
+  )
 
   missing = []
   files.each do |path|
@@ -190,7 +287,7 @@ def check_local_markdown_links
       next if target.match?(/\A(?:https?:|mailto:|#)/)
 
       candidate = File.expand_path(target, File.dirname(path))
-      missing << "#{path.delete_prefix("#{ROOT}/")}: #{raw_target}" unless File.exist?(candidate)
+      missing << "#{path.delete_prefix("#{ROOT}/")}: #{raw_target}" unless tracked_repo_target?(candidate)
     end
   end
 
@@ -199,9 +296,11 @@ end
 
 scan_conflict_markers
 check_yaml
+check_paper_note_statuses
 check_counts
 check_duplicates
 check_local_markdown_links
 
 puts "verify_memory_refresh passed"
-puts "papers=#{paper_total_from_index} pdfs=#{count_pdfs} stubs=#{count_stubs} products=#{count_product_notes} product_archives=#{count_product_archives} benchmarks=#{count_benchmark_rows}"
+status_counts = paper_status_counts
+puts "papers=#{paper_total_from_index} pdfs=#{count_pdfs} stubs=#{count_stubs} full_notes=#{status_counts.fetch("full", 0)} seed_notes=#{status_counts.fetch("seed", 0)} products=#{count_product_notes} product_archives=#{count_product_archives} benchmarks=#{count_benchmark_rows}"
