@@ -33,7 +33,10 @@ official repository, dataset card, or independent reproduction.
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
+| StructMemEval | seed | paper-origin | structured memory organization | structure selection / state tracking / task-specific organization | [`structmemeval.md`](structmemeval.md) | yes |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
+| MemoryRewardBench | candidate | paper-origin | reward models for memory management | memory-quality judging / reward-model calibration | [`memoryrewardbench.md`](memoryrewardbench.md) | yes |
+| Fact-based memory vs long-context | candidate | paper-origin | memory-vs-context cost analysis | cost / accuracy / break-even turns | [`fact-based-memory-vs-long-context.md`](fact-based-memory-vs-long-context.md) | yes |
 | RealMem | candidate | paper-origin | real-world memory-driven interaction | multi-source / real-world interaction | [`../papers/stubs/realmem-benchmarking-llms-in-real-world-memory-driven.md`](../papers/stubs/realmem-benchmarking-llms-in-real-world-memory-driven.md) | backlog |
 | CloneMem | candidate | paper-origin | AI clone memory | identity continuity / personalization | [`../papers/stubs/clonemem-benchmarking-long-term-memory-for-ai-clones.md`](../papers/stubs/clonemem-benchmarking-long-term-memory-for-ai-clones.md) | backlog |
 | KnowMe-Bench | candidate | paper-origin | lifelong digital companion memory | person understanding / personalization | [`../papers/stubs/knowme-bench-benchmarking-person-understanding-for-lifelong.md`](../papers/stubs/knowme-bench-benchmarking-person-understanding-for-lifelong.md) | backlog |

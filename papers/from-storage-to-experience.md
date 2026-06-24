@@ -19,7 +19,7 @@ memory_modules:
   - retriever-reranker
   - evaluator-benchmark
 status: full
-last_revised: 2026-05-19
+last_revised: 2026-06-24
 ---
 
 # From Storage to Experience(arXiv 2605.06716)
@@ -116,6 +116,10 @@ PDF 在 §8 提到 LongMemEval、MemBench 都不足以衡量 experience-level �
 - §5.4 active exploration 章节列举的论文(本 radar 未一一抄录)值得补 stub。
 - 评估 K(rule set)的 transferability 没有现成 benchmark,`evaluator-
   benchmark` 模块可以把这个空白作为 v2 自研方向。
+- 配套 GitHub list
+  ([FeishuLuo/Evolving-LLM-Agent-Memory-Survey](https://github.com/FeishuLuo/Evolving-LLM-Agent-Memory-Survey))
+  可作为 benchmark discovery source,但进入本仓 catalog 前必须回到 arXiv /
+  OpenReview / ACL / 官方 repo 等 primary source 核验。
 
 ---
 
