@@ -15,9 +15,9 @@ accepted item must still be grounded in primary evidence.
 
 The Codex App owns the schedule:
 
-- automation id: `awesome-agent-memory-weekly-radar-refresh`;
+- recommended local automation name: `awesome-agent-memory weekly radar refresh`;
 - cadence: weekly cron, Monday 09:00 in the user's local timezone;
-- workspace: `/Users/yyl-macbookpro/Program/awesome-agent-memory`;
+- workspace: `<repo-root>`;
 - execution environment: isolated Codex worktree;
 - base ref: fetch and start from the latest `origin/main`;
 - output gate: create a PR only when verified changes exist.
