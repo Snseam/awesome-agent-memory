@@ -1,7 +1,7 @@
 ---
 title: Ymem-specific Research Radar binding
 date: 2026-05-08
-revised: 2026-05-19
+revised: 2026-06-24
 status: working-spec
 language: zh-CN
 origin: |
@@ -105,6 +105,8 @@ ADR
 v0 (当前):
 - 手动维护 papers/ 和 products/
 - 不做自动 radar,不做自动 ingest
+- 2026-06 开始把并行子 agent current-source refresh 作为人工 radar run 的标准记录
+  形态,见 [`../memory-radar-2026-06.md`](../memory-radar-2026-06.md)
 
 v0.5:
 - 把每周/双周阅读整理成 ResearchItem

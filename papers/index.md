@@ -19,6 +19,18 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-06 manual radar additions
+
+These entries were added by the 2026-06-24 current-source radar refresh. They
+are not part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](agent-memory-systems-characterization.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.06448)
+- [RaMem: Contextual Reinstatement for Long-term Agentic Memory](ramem.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.22844)
+- [AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents](adamem-learning-what-to-remember.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.21144)
+- [AtomMem: Building Simple and Effective Memory System for LLM Agents via Atomic Facts](atommem-atomic-facts.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.19847)
+- [Lightweight LLM Agent Memory with Small Language Models](lightmem-agent-memory.md) — ACL 2026 — seed — [acl](https://aclanthology.org/2026.acl-long.588/) / [arxiv](https://arxiv.org/abs/2604.07798)
+- [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](../benchmarks/gatemem.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.18829)
+
 **Top by cross-list reference count (>=4 sources):**
 - [MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents](stubs/magma-a-multi-graph-based-agentic-memory-architecture-for.md) — 2026 — 6 sources [DEEP,IAAR,Shi,Tele,C3I,Volt]
 - [Mem0: Building production-ready ai agents with scalable long-term memory](stubs/mem0-building-production-ready-ai-agents-with-scalable-long.md) — 2025 — 6 sources [AMW,DEEP,IAAR,Shi,Tele,C3I]
@@ -599,8 +611,8 @@ removed.
 - [User personalization](stubs/user-personalization.md) — 2025 — sources: [DEEP,IAAR] — _deferred-size-cap_ — [arxiv](https://arxiv.org/abs/2508.13250)
 - [WebCoach: Self-Evolving Web Agents with Cross-Session Memory Guidance](stubs/webcoach-self-evolving-web-agents-with-cross-session-memory.md) — 2025 — sources: [AMW,C3I] — _deferred-size-cap_ — [arxiv](https://arxiv.org/abs/2511.12997)
 - [WebWeaver: Structuring Web-Scale Evidence with Dynamic Outlines for Open-Ended Deep Research](stubs/webweaver-structuring-web-scale-evidence-with-dynamic.md) — 2025 — sources: [IAAR,C3I] — _deferred-size-cap_ — [arxiv](https://arxiv.org/abs/2509.13312)
-- [arxiv-2503.08102](arxiv-2503.08102.md) — 2025 — sources: [Tele] — _deferred_ — [arxiv](https://arxiv.org/abs/2503.08102)
-- [arxiv-2512.14142](arxiv-2512.14142.md) — 2025 — sources: [AMW] — _deferred_ — [arxiv](https://arxiv.org/abs/2512.14142)
+- [arxiv-2503.08102](stubs/arxiv-2503.08102.md) — 2025 — sources: [Tele] — _deferred_ — [arxiv](https://arxiv.org/abs/2503.08102)
+- [arxiv-2512.14142](stubs/arxiv-2512.14142.md) — 2025 — sources: [AMW] — _deferred_ — [arxiv](https://arxiv.org/abs/2512.14142)
 - [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](stubs/a-comprehensive-survey-of-self-evolving-ai-agents-a-new.md) — 2025 — sources: [C3I] — _deferred_ — [arxiv](https://arxiv.org/abs/2508.07407)
 - [A Survey of Context Engineering for Large Language Models](stubs/a-survey-of-context-engineering-for-large-language-models.md) — 2025 — sources: [C3I] — _deferred_ — [arxiv](https://arxiv.org/abs/2507.13334)
 - [A Survey of Machine Unlearning in Large Language Models: Methods, Challenges and Future Directions](stubs/a-survey-of-machine-unlearning-in-large-language-models.md) — 2025 — sources: [IAAR] — _deferred_ — [arxiv](https://arxiv.org/abs/2503.01854)

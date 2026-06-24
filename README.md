@@ -2,15 +2,15 @@
 
 # awesome-agent-memory
 
-**Long-term memory for LLM agents — a decision-driven reading list, 989-paper index, and living survey covering memory architectures, retrieval, consolidation, and forgetting.**
+**Long-term memory for LLM agents — a decision-driven reading list, 989 scraped-paper index, current-source radar, and living survey covering memory architectures, retrieval, consolidation, and forgetting.**
 
 [中文](README_cn.md) · **English**
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![Memory products](https://img.shields.io/badge/memory%20products-34-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-12-blueviolet.svg)](benchmarks/)
+[![Memory products](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-13-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
 
@@ -32,13 +32,13 @@
 
 | Area | Count | Entry point | What it is for |
 |---|---:|---|---|
-| Paper index | 989 papers | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers. |
+| Paper index | 989 scraped papers + 2026-06 manual radar additions | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Lightweight coverage records for papers not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Archived PDFs for stable reading and audit. |
-| Full / seed notes | 7 full + 2 seed | [`papers/`](papers/) | Human-read paper notes and notes in progress. |
-| Memory product notes | 34 notes | [`products/`](products/) | Notes on existing memory infrastructure and agent-memory products. |
-| Page archives | 33 snapshots | [`products/archives/`](products/archives/) | Markdown snapshots for memory-product page auditability. |
-| Benchmark catalog | 12 seed entries | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records and usage-claim ledger. |
+| Full / seed notes | 7 full + 7 seed | [`papers/`](papers/) | Human-read paper notes and notes in progress. |
+| Memory product notes | 38 notes | [`products/`](products/) | Notes on existing memory infrastructure and agent-memory products. |
+| Page archives | 37 snapshots | [`products/archives/`](products/archives/) | Markdown snapshots for memory-product page auditability. |
+| Benchmark catalog | 13 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Survey docs | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Maintainer synthesis and survey tracking. |
 
 ## Repository map
@@ -63,11 +63,12 @@ If this is your first visit, use these entry points in order:
 
 1. [`docs/README.md`](docs/README.md) — map of the documentation set.
 2. [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) — the living survey and current maintainer synthesis.
-3. [`docs/taxonomy.md`](docs/taxonomy.md) — the shared vocabulary for forms, functions, dynamics, persistence, and curation.
-4. [`papers/index.md`](papers/index.md) — the 989-paper index, organized for discovery and follow-up reading.
-5. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) — benchmark usage, evidence class, and cross-source statistics.
-6. [`docs/products-landscape.md`](docs/products-landscape.md) — memory product notes grouped by domain and audience.
-7. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) — cross-product architecture patterns and diagrams.
+3. [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) — latest current-source refresh across papers, products, GitHub projects, and reviewer decisions.
+4. [`docs/taxonomy.md`](docs/taxonomy.md) — the shared vocabulary for forms, functions, dynamics, persistence, and curation.
+5. [`papers/index.md`](papers/index.md) — the paper index, organized for scrape-baseline discovery and manual radar additions.
+6. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) — benchmark usage, evidence class, and cross-source statistics.
+7. [`docs/products-landscape.md`](docs/products-landscape.md) — memory product notes grouped by domain and audience.
+8. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) — cross-product architecture patterns and diagrams.
 
 ## Repository layout
 
@@ -83,6 +84,7 @@ All concept docs now live under [`docs/`](docs/). Start with
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | Index of **external** meta-surveys (2025-12 ~ 2026-05). |
 | [`docs/taxonomy.md`](docs/taxonomy.md) | Generic agent-memory taxonomy: cross-walk of 3 external frameworks. |
 | [`docs/research-radar.md`](docs/research-radar.md) | Generic Radar schema for ResearchItem and ImpactReport notes. |
+| [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 current-source refresh across papers, products, GitHub projects, and reviewer decisions. |
 | [`docs/information-sources.md`](docs/information-sources.md) | 10-category source catalog with a dedicated zh-CN section. |
 | [`docs/related-work.md`](docs/related-work.md) | Discovery-input attribution and scrape provenance. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Memory products by **domain × audience**. |
@@ -96,13 +98,13 @@ All concept docs now live under [`docs/`](docs/). Start with
 
 | Path | Contents |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 2 seed notes, and master [`index.md`](papers/index.md). |
+| [`papers/`](papers/) | 7 full paper notes, 7 seed notes, and master [`index.md`](papers/index.md). |
 | [`papers/stubs/`](papers/stubs/) | 988 auto-generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs (~1.8 GB). See archival policy. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script + dedup JSON. |
-| [`products/`](products/) | 34 memory product notes (Mem0, Letta, Zep, Graphiti, EverOS, Redis Agent Memory Server, …). |
-| [`products/archives/`](products/archives/) | 33 Markdown snapshots of canonical memory product pages. |
-| [`benchmarks/`](benchmarks/) | 12 benchmark seed entries and first-class protocol notes. |
+| [`products/`](products/) | 38 memory product notes (Mem0, Letta, Zep, Graphiti, EverOS, Redis Agent Memory Server, agentmemory, memsearch, …). |
+| [`products/archives/`](products/archives/) | 37 Markdown snapshots of canonical memory product pages. |
+| [`benchmarks/`](benchmarks/) | 13 benchmark catalog rows, including protocol notes and stub-backed candidate rows. |
 | [`benchmarks/claims/`](benchmarks/claims/) | Event ledger for benchmark usage, vendor claims, critiques, and reproductions. |
 | [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repos, or dataset cards. |
 | [`docs/ymem-binding/`](docs/ymem-binding/) | Project-specific bindings from the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel; safe to ignore if you don't use Ymem. |

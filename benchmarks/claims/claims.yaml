@@ -75,6 +75,25 @@ events:
     evidence_refs:
       - papers/memoryagentbench.md
     extract_confidence: medium
+  - event_id: gatemem-origin-2026
+    benchmark_id: gatemem
+    source_kind: paper
+    source_id: benchmarks/gatemem.md
+    source_date: 2026-06
+    actor: GateMem authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Shared-memory agent benchmark for utility, access control, and active forgetting; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; normalized metrics, leaderboard scores, dataset license, and reported results are not yet mapped."
+    evidence_refs:
+      - benchmarks/gatemem.md
+    extract_confidence: medium
   - event_id: mem0-paper-locomo-2025
     benchmark_id: locomo
     source_kind: paper

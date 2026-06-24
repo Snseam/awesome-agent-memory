@@ -2,15 +2,15 @@
 
 # awesome-agent-memory
 
-**面向 LLM agent 长程记忆的研究入口 —— 决策驱动的阅读清单、989 篇论文索引、活综述,涵盖记忆架构、检索、整合与遗忘。**
+**面向 LLM agent 长程记忆的研究入口 —— 决策驱动的阅读清单、989 篇抓取论文索引、当前来源 radar、活综述,涵盖记忆架构、检索、整合与遗忘。**
 
 **中文** · [English](README.md)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![记忆产品](https://img.shields.io/badge/memory%20products-34-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-12-blueviolet.svg)](benchmarks/)
+[![记忆产品](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-13-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
 
@@ -32,13 +32,13 @@
 
 | 板块 | 数量 | 入口 | 用途 |
 |---|---:|---|---|
-| 论文索引 | 989 篇论文 | [`papers/index.md`](papers/index.md) | 检索 agent memory 论文的主入口。 |
+| 论文索引 | 989 篇抓取论文 + 2026-06 手工 radar 新增 | [`papers/index.md`](papers/index.md) | 检索 agent memory 论文的主入口;989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 尚未 full 阅读论文的轻量覆盖记录。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 稳定阅读和审计用的 PDF 存档。 |
-| full / seed 笔记 | 7 个 full + 2 个 seed | [`papers/`](papers/) | 已人工阅读或正在推进的论文笔记。 |
-| 记忆产品笔记 | 34 个笔记 | [`products/`](products/) | 市面上已有的记忆基础设施和 agent-memory 产品记录。 |
-| 页面快照 | 33 个快照 | [`products/archives/`](products/archives/) | 用于审计的记忆产品页面 markdown 快照。 |
-| Benchmark 目录 | 12 个 seed 条目 | [`benchmarks/index.md`](benchmarks/index.md) | 与论文、产品并列的评测协议和使用 claims ledger。 |
+| full / seed 笔记 | 7 个 full + 7 个 seed | [`papers/`](papers/) | 已人工阅读或正在推进的论文笔记。 |
+| 记忆产品笔记 | 38 个笔记 | [`products/`](products/) | 市面上已有的记忆基础设施和 agent-memory 产品记录。 |
+| 页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 用于审计的记忆产品页面 markdown 快照。 |
+| Benchmark 目录 | 13 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 与论文、产品并列的评测协议、stub-backed 候选行和使用 claims ledger。 |
 | 综述文档 | 1 份活综述 + 6 条 meta-survey 记录 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | 维护者综合判断与综述追踪。 |
 
 ## 仓库地图
@@ -63,11 +63,12 @@ flowchart LR
 
 1. [`docs/README.md`](docs/README.md) —— 文档地图,快速判断每份文档负责什么。
 2. [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) —— 活综述与当前维护者综合判断。
-3. [`docs/taxonomy.md`](docs/taxonomy.md) —— forms / functions / dynamics / persistence / curation 的共享词表。
-4. [`papers/index.md`](papers/index.md) —— 989 篇论文索引,用于发现线索和后续阅读。
-5. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) —— benchmark 使用、证据等级和跨来源统计。
-6. [`docs/products-landscape.md`](docs/products-landscape.md) —— 按领域和服务对象整理的记忆产品全景。
-7. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) —— 跨产品 memory 架构模式与图谱。
+3. [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) —— 最新当前来源刷新,覆盖论文、产品、GitHub 项目和 reviewer 分流结论。
+4. [`docs/taxonomy.md`](docs/taxonomy.md) —— forms / functions / dynamics / persistence / curation 的共享词表。
+5. [`papers/index.md`](papers/index.md) —— 论文索引,同时承接抓取基线和手工 radar 新增。
+6. [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) —— benchmark 使用、证据等级和跨来源统计。
+7. [`docs/products-landscape.md`](docs/products-landscape.md) —— 按领域和服务对象整理的记忆产品全景。
+8. [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) —— 跨产品 memory 架构模式与图谱。
 
 ## 仓库结构
 
@@ -83,6 +84,7 @@ flowchart LR
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | **外部** meta-survey 索引(2025-12 ~ 2026-05)。 |
 | [`docs/taxonomy.md`](docs/taxonomy.md) | 通用 agent memory taxonomy:三套外部分类轴对照。 |
 | [`docs/research-radar.md`](docs/research-radar.md) | ResearchItem 与 ImpactReport 笔记的通用 Radar schema。 |
+| [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 当前来源刷新,覆盖论文、产品、GitHub 项目和 reviewer 分流结论。 |
 | [`docs/information-sources.md`](docs/information-sources.md) | 10 类信息源 catalog,含 zh-CN 独立节。 |
 | [`docs/related-work.md`](docs/related-work.md) | 发现线索归因与抓取来源记录。 |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | 记忆产品按**领域 × 服务对象**全景。 |
@@ -96,13 +98,13 @@ flowchart LR
 
 | 路径 | 内容 |
 |---|---|
-| [`papers/`](papers/) | 7 个 full 论文笔记、2 个 seed 笔记 + 主索引 [`index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、7 个 seed 笔记 + 主索引 [`index.md`](papers/index.md)。 |
 | [`papers/stubs/`](papers/stubs/) | 988 个尚未 full 阅读论文的自动生成 stub。 |
 | [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF(~1.8 GB)。详见存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物:抓取脚本 + dedup JSON。 |
-| [`products/`](products/) | 34 个记忆产品笔记。 |
-| [`products/archives/`](products/archives/) | 33 个记忆产品页面的 markdown 快照。 |
-| [`benchmarks/`](benchmarks/) | 12 个 benchmark seed 条目和一等评测协议笔记。 |
+| [`products/`](products/) | 38 个记忆产品笔记。 |
+| [`products/archives/`](products/archives/) | 37 个记忆产品页面的 markdown 快照。 |
+| [`benchmarks/`](benchmarks/) | 13 个 benchmark catalog 行,包含协议笔记和 stub-backed 候选行。 |
 | [`benchmarks/claims/`](benchmarks/claims/) | benchmark 使用、厂商自报、批评和复现的事件 ledger。 |
 | [`benchmarks/archives/`](benchmarks/archives/) | benchmark 页面、repo、dataset card 的可选审计快照。 |
 | [`docs/ymem-binding/`](docs/ymem-binding/) | 维护者所在的 [Ymem](https://github.com/Snseam/Ymem) 项目特定绑定;如果你不维护 Ymem,可以跳过。 |

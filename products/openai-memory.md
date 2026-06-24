@@ -10,7 +10,7 @@ memory_modules:
   - ingest-adapter
   - retriever-reranker
 status: full
-last_revised: 2026-05-19
+last_revised: 2026-06-24
 archive: archives/openai-memory-overview.md
 ---
 
@@ -52,6 +52,13 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
   不开放
 - **runtime**:与 OpenAI 模型强绑定
 
+## 3.1 2026-06 refresh
+
+OpenAI 2026-06 公布 ChatGPT Memory Dreaming,把 memory 改进描述为后台综合过去
+对话、memory source/summary、减少 stale 或 contradictory memory 的能力。ChatGPT
+release notes 同期写到 memory 会更及时地保持更新。对本仓而言,这属于已有
+vendor-managed memory 的 UX/治理升级,不是新的开放 memory kernel。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:它定义了 "vendor-managed memory" 的对照基线 — 用户/开发者
@@ -90,8 +97,10 @@ Memory 中查看 / 编辑 / 删除任意一条,或整体关闭;"Temporary Chat" 
 
 - archive: [`archives/openai-memory-overview.md`](archives/openai-memory-overview.md)
 - 帮助中心:https://help.openai.com/en/articles/8983136-what-is-the-memory-feature
+- Memory FAQ:https://help.openai.com/articles/8590148-memory-faq
 - Assistants API:https://platform.openai.com/docs/assistants/how-it-works
 - 公告:https://openai.com/index/memory-and-new-controls-for-chatgpt/
+- Dreaming:https://openai.com/index/chatgpt-memory-dreaming/
 
 ---
 

@@ -4,6 +4,7 @@ arxiv_id: "2509.24704"
 date: 2025
 domain: unclassified
 status: stub
+venue: ICLR 2026 Poster
 sources:
   - AgentMemoryWorld
   - DEEP-PolyU
@@ -20,3 +21,6 @@ urls:
 > ResearchItem when this paper becomes a candidate for Ymem evaluation.
 
 2025-10-12 MemGen Weaving Generative Latent Memory for Self-Evolving Agents
+
+2026-06-24 radar refresh:OpenReview lists MemGen as an ICLR 2026 Poster. Keep as
+stub until the paper is upgraded to a seed/full ResearchItem.

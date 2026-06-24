@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-06-11
+date: 2026-06-24
 status: living-log
 language: zh-CN
 ---
@@ -12,13 +12,19 @@ language: zh-CN
 
 类型 enum:`release` `comparison` `blog` `paper` `talk` `incident` `funding` `product`
 
-Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
-(`archive-only` 表示有趣但不进入 ResearchItem 流程)
+Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
+(`deep-note` 表示已落地产品/聚合笔记,不等同于 frontmatter `status: full`;
+`archive-only` 表示有趣但不进入 ResearchItem 流程)
 
 ## 2026 Q2
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-06-24 | [2026-06 Memory Radar refresh](memory-radar-2026-06.md) | paper/product | 本轮用并行子 agent 搜索 + source/relevance review,把论文、官方产品和 GitHub 项目分成 must-add / update-existing / watchlist / reject | `deep-note` ✅([`memory-radar-2026-06.md`](memory-radar-2026-06.md)) |
+| 2026-06-24 | [Agent Memory](https://arxiv.org/abs/2606.06448) / [RaMem](https://arxiv.org/abs/2606.22844) / [AdaMem](https://arxiv.org/abs/2606.21144) / [LightMem](https://aclanthology.org/2026.acl-long.588/) | paper | 6 月论文把 memory 生命周期推进到 systems profiling、context-valid retrieval、personalized write policy 和 bounded-cost SLM memory | `seed-note` ✅(见 `papers/`) |
+| 2026-06-24 | [GateMem](https://arxiv.org/abs/2606.18829) | paper | shared-memory agent benchmark 开始把 utility、access control、active forgetting 联合评估 | `stub` ✅([`../benchmarks/gatemem.md`](../benchmarks/gatemem.md)) |
+| 2026-06-24 | [`rohitg00/agentmemory`](https://github.com/rohitg00/agentmemory) / [`MemoriLabs/Memori`](https://github.com/MemoriLabs/Memori) / [`NevaMind-AI/memU`](https://github.com/NevaMind-AI/memU) / [`zilliztech/memsearch`](https://github.com/zilliztech/memsearch) | release | coding-agent / workspace-agent memory 继续产品化,但 GitHub stars 只作为 discovery signal | `deep-note` ✅(见 `products/`) |
+| 2026-06-24 | [AWS AgentCore Memory streaming](https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-memory-streaming-ltm/) / [AWS LTM metadata](https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata/) / [Google Memory Bank](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank) / [Microsoft Foundry Memory](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory) / [Cloudflare Agent Memory](https://developers.cloudflare.com/agent-memory/) | product | managed memory 平台从"有 LTM"推进到 record streaming、metadata filtering、scope/TTL/revisions、CRUD/search 和 beta/private-beta 治理面 | `deep-note` ✅(更新 `products/`) |
 | 2026-06-11 | [EverOS](https://evermind.ai/everos) / [`EverMind-AI/EverOS`](https://github.com/EverMind-AI/EverOS) | product | EverMind/EverOS/EverMemOS 明确以 Profile/Episodic/Skill、self-evolving skills 和 Markdown export 切入 memory OS | `deep-note` ✅([`../products/everos.md`](../products/everos.md)) |
 | 2026-06-11 | [`MemTensor/MemOS`](https://github.com/MemTensor/MemOS) | release | MemOS 作为独立 self-evolving memory OS 出现,需与已有 MemoryOS/EverMemOS 区分 | `deep-note` ✅([`../products/memos.md`](../products/memos.md)) |
 | 2026-06-11 | [AWS AgentCore Memory](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory.html) / [Google Memory Bank](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank) / [Microsoft Foundry Memory](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory) | product | hyperscaler agent platforms 同时把 managed long-term memory 做成 scope/TTL/strategy/CRUD 能力 | `deep-note` ✅(见 `products/`) |
@@ -68,8 +74,9 @@ Radar 动作 enum:`stub` `deep-note` `impact-report` `archive-only`
 - **LangMem 与 LangGraph checkpoint 的关系**:LangChain 的 memory 故事 2026
   又重写了一遍,等 LangGraph v1 稳定后建笔记
 - **小型 OSS/MCP memory servers 的证据补齐**:MemMachine、mem9、Memstate、ClawMem、
-  agentmemory、SimpleMem 等先留在 discovery log,等 license/release health 与
-  canonical docs 查清再决定是否 deep-note
+  SimpleMem、memforks、remnic、nram、MemoryCloud、Universal Memory Protocol、
+  memanto、LycheeMem、Parcle Memory、Neo4j Agent Memory 等先留在 discovery log 或
+  radar watchlist,等 license/release health 与 canonical docs 查清再决定是否 deep-note
 
 ## 维护说明
 

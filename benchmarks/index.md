@@ -1,6 +1,6 @@
 ---
 title: Benchmark catalog — agent-memory evaluation protocols
-date: 2026-06-11
+date: 2026-06-24
 status: seed
 language: zh-CN
 ---
@@ -32,6 +32,7 @@ official repository, dataset card, or independent reproduction.
 | LoCoMo | seed | paper-origin | very long-term conversational memory | retrieval / temporal / causal | [`locomo.md`](locomo.md) | yes |
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
+| GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
 | RealMem | candidate | paper-origin | real-world memory-driven interaction | multi-source / real-world interaction | [`../papers/stubs/realmem-benchmarking-llms-in-real-world-memory-driven.md`](../papers/stubs/realmem-benchmarking-llms-in-real-world-memory-driven.md) | backlog |
 | CloneMem | candidate | paper-origin | AI clone memory | identity continuity / personalization | [`../papers/stubs/clonemem-benchmarking-long-term-memory-for-ai-clones.md`](../papers/stubs/clonemem-benchmarking-long-term-memory-for-ai-clones.md) | backlog |

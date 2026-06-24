@@ -1,13 +1,13 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-06-11
+date: 2026-06-24
 status: working-log
 language: zh-CN
 ---
 
 # Product discovery log
 
-本日志记录 2026-06-11 的多子 agent 产品搜索、证据审查和最终入库决定。它不是
+本日志记录 2026-06-11 与 2026-06-24 的多子 agent 产品搜索、证据审查和最终入库决定。它不是
 产品介绍页,而是解释**为什么某个候选被深度入库、只进入轻量索引、或被拒绝**。
 
 ## 1. 执行模型
@@ -60,6 +60,10 @@ language: zh-CN
 | Basic Memory | https://docs.basicmemory.com/ | https://github.com/basicmachines-co/basic-memory | local-first memory | docs + repo | Tier A | Markdown source of truth, knowledge graph, MCP-native, cloud/local | PKM crossover and AGPL | MCP, OSS |
 | ByteRover (Cipher) | https://www.byterover.dev/ | https://github.com/campfirein/byterover-cli | coding-agent memory | site + repo + docs | Tier A | portable memory layer for autonomous coding agents, CLI/MCP/context tree | ELv2/source-available; maturity needs follow-up | MCP, OSS |
 | Honcho | https://github.com/plastic-labs/honcho | https://docs.honcho.dev/ | memory infrastructure | repo + docs | Tier A | peer-centric memory, async reasoning, representations, MCP/SDK/self-host | eval claims vendor-side, AGPL | OSS, MCP |
+| agentmemory | https://github.com/rohitg00/agentmemory | https://agent-memory.dev | coding-agent memory | repo + GitHub API spot-check | Tier A | persistent memory for Claude Code/Codex/Cursor/OpenClaw/MCP; Apache-2.0; active 2026-06 | benchmark claims need independent review | OSS, GitHub |
+| Memori | https://github.com/MemoriLabs/Memori | https://memorilabs.ai | agent-native memory infrastructure | repo + product site | Tier A | LLM-agnostic layer for agent execution/conversation -> structured persistent state | license API returned NOASSERTION | OSS, GitHub |
+| memU | https://github.com/NevaMind-AI/memU | https://memu.pro | workspace-to-agent memory | repo + product site | Tier A | workspace runtime compiles conversations/docs/code/media/tool traces into memory | license API returned NOASSERTION; fast-changing | OSS, GitHub |
+| memsearch | https://github.com/zilliztech/memsearch | https://zilliztech.github.io/memsearch/ | coding-agent memory | repo + docs | Tier A | Markdown + Milvus memory layer for Claude Code/Codex/OpenClaw; MIT; vendor-backed | coding-agent/project memory, not generic governance layer | OSS, GitHub |
 
 ## 5. Tier B / lightweight index
 
@@ -74,7 +78,14 @@ language: zh-CN
 | mem9 | n/a | memory SDK | OSS lane signal | Tier B | memory-focused candidate | source quality incomplete | OSS |
 | Memstate AI | n/a | memory server | MCP lane signal | Tier B | memory-focused candidate | canonical evidence incomplete | MCP |
 | ClawMem | https://github.com/yoloshii/ClawMem | local memory vault | repo | Tier B | on-device coding-agent memory | release/license maturity not reviewed | MCP |
-| agentmemory | https://github.com/rohitg00/agentmemory | coding-agent memory | repo | Tier B | shared memory server signal | reviewers split; kept lightweight until source health check | OSS |
+| memforks | https://github.com/memforks-dev/memforks | versioned memory | repo | Tier B | "Git for AI agent memory" concept | early project, custom/unclear license | OSS |
+| remnic | https://github.com/joshuaswarren/remnic | scoped memory/context | repo | Tier B | provenance, correction, evals, MCP/HTTP surface | small ecosystem signal; implementation depth not reviewed | OSS |
+| nram | https://github.com/nram-ai/nram | self-hosted memory | repo | Tier B | MCP/REST continuity, graph, consolidation signal | extremely new/low activity signal | OSS |
+| Universal Memory Protocol | https://github.com/edihasaj/universal-memory-protocol | protocol proposal | repo | Tier B | interop idea adjacent to MCP/A2A | not established as standard | OSS |
+| memanto | https://github.com/moorcheh-ai/memanto | coding-agent memory | repo | Tier B | local memory agent for Claude Code/Cursor/Codex | needs source/eval review before core note | OSS |
+| LycheeMem | https://github.com/LycheeMem/LycheeMem | long-term memory framework | repo | Tier B | MCP/plugin/Python integration signal | release/activity maturity unclear | OSS |
+| Parcle Memory | https://github.com/Parcle-AI/parcle-memory | per-user agent memory | repo | Tier B | conversations/files with cited answers | product/API boundary and self-host story need review | OSS |
+| Neo4j Agent Memory | https://github.com/neo4j-labs/agent-memory | graph-native agent memory | repo | Tier B | graph-backed memory/context graph | labs project; API stability unclear | OSS |
 | SimpleMem | n/a | coding-agent memory | OSS lane signal | Tier B | memory candidate | evidence/maturity weaker than Tier A set | OSS |
 | SuperLocalMemory | arXiv | research architecture | paper | Tier B | local-first architecture pressure | not productized enough | Academic |
 | Decagon / Sierra | vendor sites | customer-service memory | product signals | Tier B | embedded user/customer memory in vertical agents | not standalone memory infrastructure | Adjacent |
@@ -120,12 +131,17 @@ language: zh-CN
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | [`../products/archives/basic-memory-overview.md`](../products/archives/basic-memory-overview.md) | docs + repo; AGPL/local-first |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | [`../products/archives/byterover-overview.md`](../products/archives/byterover-overview.md) | site + repo/docs; alias Cipher |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | [`../products/archives/honcho-overview.md`](../products/archives/honcho-overview.md) | repo + docs; vendor eval claims labeled |
+| agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | [`../products/archives/agentmemory-overview.md`](../products/archives/agentmemory-overview.md) | GitHub repo/API; benchmark claims not independently verified |
+| Memori | [`../products/memori.md`](../products/memori.md) | [`../products/archives/memori-overview.md`](../products/archives/memori-overview.md) | GitHub repo + homepage; license unresolved |
+| memU | [`../products/memu.md`](../products/memu.md) | [`../products/archives/memu-overview.md`](../products/archives/memu-overview.md) | GitHub repo + homepage; license unresolved |
+| memsearch | [`../products/memsearch.md`](../products/memsearch.md) | [`../products/archives/memsearch-overview.md`](../products/archives/memsearch-overview.md) | GitHub repo + docs; MIT; Zilliz/Milvus substrate |
 
 ## 9. Coordinator notes
 
 - EverMind/EverOS/EverMemOS 已深度入库为 Tier A,满足本轮 spot-check 要求。
 - Google/Microsoft/Alibaba 在 reviewer 间有分歧,最终以官方 developer docs 为准纳入
   Tier A,但保留 preview/cloud black-box 风险。
-- MIRIX、Pieces LTM、MemMachine、mem9、Memstate、ClawMem、agentmemory、SimpleMem
-  等不删除,但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
+- MIRIX、Pieces LTM、MemMachine、mem9、Memstate、ClawMem、SimpleMem、memforks、
+  remnic、nram、memanto、LycheeMem、Parcle Memory、Neo4j Agent Memory 等不删除,
+  但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
 - 所有 vendor benchmark 或性能 claim 都按 vendor-claimed / 自报处理,不写成独立实证。

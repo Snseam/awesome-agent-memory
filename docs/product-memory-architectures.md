@@ -1,6 +1,6 @@
 ---
 title: Product memory architectures — cross-product patterns
-date: 2026-06-11
+date: 2026-06-24
 status: working-note
 language: zh-CN
 ---
@@ -144,7 +144,7 @@ flowchart TB
 | Field | Synthesis |
 |---|---|
 | architecture pattern | sidecar memory substrate: IDE/agent hooks capture work, MCP exposes recall/write/delete/export tools, local files or DB store state |
-| products mapped | Basic Memory、ByteRover、Redis Agent Memory Server、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory |
+| products mapped | Basic Memory、ByteRover、Redis Agent Memory Server、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory、memsearch、memU、Memori |
 | common data flow | IDE/session hooks -> extraction -> Markdown/context tree/local DB -> hybrid index -> MCP recall -> session briefing/context injection |
 | memory types | project decisions、file history、debug episodes、preferences、skills、timeline、audit trail |
 | retrieval/consolidation strategy | vector + BM25 + graph/timeline;session stop 或 compaction 前做总结,重复模式提升为 skills |
