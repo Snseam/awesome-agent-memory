@@ -12,15 +12,18 @@ decide what to read before opening the paper index or the product notes.
 3. [`research-radar.md`](research-radar.md) — workflow for turning papers,
    products, and benchmark evidence into ResearchItems, ImpactReports,
    experiments, and ADRs.
-4. [`memory-radar-2026-06.md`](memory-radar-2026-06.md) — latest current-source
+4. [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) —
+   Codex weekly refresh runbook for papers, products, GitHub discovery, and
+   benchmarks.
+5. [`memory-radar-2026-06.md`](memory-radar-2026-06.md) — latest current-source
    refresh across papers, products, GitHub projects, and reviewer decisions.
-5. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
+6. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
    capability, usage type, and evidence independence.
-6. [`products-landscape.md`](products-landscape.md) — product map by domain and
+7. [`products-landscape.md`](products-landscape.md) — product map by domain and
    audience.
-7. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
+8. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
    architecture diagrams for the current memory product notes.
-8. [`product-memory-architectures.md`](product-memory-architectures.md) —
+9. [`product-memory-architectures.md`](product-memory-architectures.md) —
    cross-product memory architecture patterns and comparison tables.
 
 ## Concept docs
@@ -41,6 +44,7 @@ decide what to read before opening the paper index or the product notes.
 | File | Purpose |
 |---|---|
 | [`research-radar.md`](research-radar.md) | Generic Radar loop: paper/product/benchmark -> ResearchItem or BenchmarkItem -> ImpactReport -> sandbox -> ADR. |
+| [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) | Weekly Codex automation contract for source search, subagent review, verification, and PR output. |
 | [`memory-radar-2026-06.md`](memory-radar-2026-06.md) | 2026-06 current-source refresh with must-add, update-existing, watchlist, and reject decisions. |
 | [`information-sources.md`](information-sources.md) | Source catalog for papers, products, communities, and zh-CN information channels. |
 | [`related-work.md`](related-work.md) | Positioning against sibling agent-memory awesome-lists. |
