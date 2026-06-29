@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-29
 archive: archives/redis-agent-memory-server-overview.md
 ---
 
@@ -38,6 +38,13 @@ search,并通过 REST API、MCP server 和 Python client 暴露。
   deduplication、memory editing。
 - **Ops surface**:authentication、multi-tenancy、background processing、多后端向量库。
 
+## 3.1 2026-06 refresh
+
+Redis 2026-06-17 官方博客继续把 agent memory 定位为 persistence infrastructure,
+并用 short-term interaction history + persistent long-term preferences/prior
+sessions 解释两层设计。该博客是 vendor positioning,可用于产品架构定位,不能用来
+支持独立性能结论。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Redis 把 memory server 包装为可运维 API,区别于纯库或纯 SaaS。
@@ -62,6 +69,7 @@ search,并通过 REST API、MCP server 和 Python client 暴露。
 - Docs:https://redis.github.io/agent-memory-server/
 - MCP:https://redis.github.io/agent-memory-server/mcp/
 - GitHub:https://github.com/redis/agent-memory-server
+- Blog:https://redis.io/blog/why-bigger-context-window-wont-fix-agent-memory/
 
 ---
 

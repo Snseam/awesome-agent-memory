@@ -30,6 +30,8 @@ language: zh-CN
 | memory vs long-context economics | [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md) | cost / accuracy / break-even turns | candidate,meta-protocol/成本分析,不是独立新数据集 |
 | 真实交互 / persona | RealMem / CloneMem / KnowMe-Bench / PersonaMem-v2 | real-world memory, identity continuity, companion personalization | candidate,先列入 backlog |
 | agent 任务 / 多 agent | LoCoBench-Agent / MemoryArena / MemBench | coding agent, shared memory conflict, write/manage 评测 | candidate,需升级 source note |
+| evolving profile memory | [`DynamicMem`](../benchmarks/dynamicmem.md) | 15-month multi-app histories / profile reconstruction / temporal update | seed,origin paper logged; protocol/results not normalized |
+| auditable memory artifact | [`MEMPROBE`](../benchmarks/memprobe.md) | hidden user-state recovery from memory stores / full-store vs top-k probing | seed,origin paper logged; protocol/results not normalized |
 
 ## B. 初始交叉统计
 
@@ -51,6 +53,8 @@ language: zh-CN
 | PersonaMem-v2 | 2 | Hy-Memory + TencentDB Agent Memory self-claims |
 | MemBench | 1 | survey mention |
 | MemoryArena | 1 | survey mention |
+| DynamicMem | 1 | origin paper logged; metrics/results not yet normalized |
+| MEMPROBE | 1 | origin paper logged; metrics/results not yet normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -94,6 +98,8 @@ language: zh-CN
 | BEAM | 2 | Mem0 vendor claims, source note still candidate |
 | PersonaMem-v2 | 2 | Hy-Memory and TencentDB Agent Memory vendor claims |
 | MemoryAgentBench | 1 | Survey mention only |
+| DynamicMem | 0 | Origin protocol only |
+| MEMPROBE | 0 | Origin protocol only |
 
 ### B7. Independent or methodological pressure
 
@@ -142,9 +148,13 @@ enters the catalog.
    priority.
 6. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
    evaluation becomes a kernel priority.
-7. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
+7. Upgrade DynamicMem if evolving user-profile memory becomes a product or kernel
+   evaluation priority.
+8. Upgrade MEMPROBE if auditable memory artifact quality or over-retention
+   becomes a kernel evaluation priority.
+9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-8. Add independent reproduction rows only when the source gives enough setup
+10. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

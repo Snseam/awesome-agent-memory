@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-29
 archive: archives/oracle-ai-agent-memory-overview.md
 ---
 
@@ -37,6 +37,12 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 - **MCP integration**:文档提到可通过 MCP Server 与 Oracle Private Agent Factory
   或外部框架集成。
 
+## 3.1 2026-06 refresh
+
+2026-06-29 复核时,Oracle 26.4 文档索引可访问,确认 Agent Memory 已作为 26.4
+官方文档集存在。Oracle developer blog 的 Claude / Oracle / LangChain 组合文章在
+本环境返回 403,因此不把该 blog 的架构定位升级为本仓强证据;后续可人工复核后再补。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Oracle 代表 "enterprise database becomes memory substrate" 路线。
@@ -60,6 +66,7 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 
 - archive: [`archives/oracle-ai-agent-memory-overview.md`](archives/oracle-ai-agent-memory-overview.md)
 - Docs:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
+- Docs index:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/index.html
 
 ---
 

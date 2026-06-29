@@ -15,7 +15,7 @@ removed.
 
 **Stats:**
 - Total unique papers: 989
-- With local PDF: 529
+- With local PDF: 534
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
@@ -25,6 +25,13 @@ These entries were added by the 2026-06-24 current-source radar refresh. They
 are not part of the 2026-05-19 nine-list scrape statistics above.
 
 - [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](agent-memory-systems-characterization.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.06448)
+- [Are We Ready For An Agent-Native Memory System?](agent-native-memory-readiness.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.24775)
+- [DynamicMem: A Long-Horizon Memory Benchmark in Real-World Settings](../benchmarks/dynamicmem.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.22877)
+- [MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery](../benchmarks/memprobe.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.24595)
+- [TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory](trustmem-memory-consolidation.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.25161)
+- [Securing LLM-Agent Long-Term Memory Against Poisoning](securing-llm-agent-long-term-memory-poisoning.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.24322)
+- [Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory](infini-memory-topic-documents.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.10677)
+- [What Deserves Memory: Adaptive Memory Distillation for LLM Agents](what-deserves-memory-adaptive-memory-distillation.md) — ACL 2026 — seed — [acl](https://aclanthology.org/2026.acl-long.1607/)
 - [RaMem: Contextual Reinstatement for Long-term Agentic Memory](ramem.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.22844)
 - [AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents](adamem-learning-what-to-remember.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.21144)
 - [AtomMem: Building Simple and Effective Memory System for LLM Agents via Atomic Facts](atommem-atomic-facts.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.19847)

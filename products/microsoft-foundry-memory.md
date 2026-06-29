@@ -13,7 +13,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-06-29
 archive: archives/microsoft-foundry-memory-overview.md
 ---
 
@@ -45,6 +45,10 @@ user memory、session memory 和 procedural memory。how-to 文档显示 memory 
 与 memory items 支持 create/update/list/delete/search,且 Python/C#/JavaScript/
 Java/REST 均有接口覆盖。当前仍是 public preview。
 
+2026-06-29 复核时,Build 2026 recap 仍把 Foundry Agent Service Memory 标为 public
+preview,并明确三类 memory:procedural memory、user memory、session memory。博客中
+Tau-bench 成功率提升是 Microsoft vendor claim,本仓只作为 vendor evidence 记录。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Microsoft 路线比纯自动抽取更强调 developer-visible item lifecycle。
@@ -69,6 +73,7 @@ Java/REST 均有接口覆盖。当前仍是 public preview。
 - Docs:https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory
 - How-to:https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/memory-usage
 - Build 2026:https://devblogs.microsoft.com/foundry/agent-service-build2026/
+- Build 2026 recap:https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-build-2026/
 
 ---
 

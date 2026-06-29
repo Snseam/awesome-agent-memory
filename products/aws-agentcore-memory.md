@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-06-29
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -43,6 +43,11 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
   record-streaming developer guide 进一步列出 delete event type。
 - 2026-05-06 AWS 发布 long-term memory metadata:memory record 可带 structured
   indexed keys,用于 tag/filter/retrieve。
+- 2026-06-18 AWS 宣布 Bedrock AgentCore Harness GA。官方博客写明 Harness 会在
+  未显式配置 memory 时自动创建 customer-owned AgentCore Memory resource,默认
+  `SEMANTIC` + `SUMMARIZATION` strategies、30-day event expiry、AWS-owned
+  encryption 和按 `actorId` namespace template 的 multi-tenant isolation;也支持
+  BYO memory ARN 或显式关闭 memory。
 - 这使 AgentCore Memory 从"托管 LTM"进一步接近 evented memory lifecycle infra,
   对 Ymem 的 `memorydiff-generator` 和审计流水线有对照价值。
 
@@ -73,6 +78,8 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
 - Streaming announcement:https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-memory-streaming-ltm/
 - Streaming developer guide:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-record-streaming.html
 - Metadata:https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-longterm-memory-metadata/
+- Harness GA:https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-is-now-generally-available-go-from-idea-to-production-grade-agent-in-minutes/
+- Release notes:https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html
 
 ---
 
