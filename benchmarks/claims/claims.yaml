@@ -603,3 +603,43 @@ events:
     evidence_refs:
       - papers/memory-for-autonomous-llm-agents-survey.md
     extract_confidence: medium
+  - event_id: dynamicmem-origin-2026
+    benchmark_id: dynamicmem
+    source_kind: paper
+    source_id: benchmarks/dynamicmem.md
+    source_date: 2026-06
+    actor: DynamicMem authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Synthetic 15-month multi-app user histories; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; reported system comparisons are not normalized in this ledger."
+    evidence_refs:
+      - benchmarks/dynamicmem.md
+      - https://arxiv.org/abs/2606.22877
+    extract_confidence: medium
+  - event_id: memprobe-origin-2026
+    benchmark_id: memprobe
+    source_kind: paper
+    source_id: benchmarks/memprobe.md
+    source_date: 2026-06
+    actor: MEMPROBE authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Hidden user-state recovery from memory artifacts; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; full-store and top-k recovery scores need full normalization before use."
+    evidence_refs:
+      - benchmarks/memprobe.md
+      - https://arxiv.org/abs/2606.24595
+    extract_confidence: medium

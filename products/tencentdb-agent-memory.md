@@ -1,7 +1,7 @@
 ---
 title: TencentDB Agent Memory
 type: product
-source: https://github.com/Tencent/TencentDB-Agent-Memory
+source: https://github.com/TencentCloud/TencentDB-Agent-Memory
 date_first_seen: 2026-04
 domain: agent-memory
 business_model: OSS + Tencent Cloud service
@@ -14,7 +14,7 @@ memory_modules:
   - dream-consolidator
   - audit-ui
 status: seed
-last_revised: 2026-05-31
+last_revised: 2026-06-29
 archive: archives/tencentdb-agent-memory-overview.md
 ---
 
@@ -32,7 +32,8 @@ context offloading。
 提供自动写入、分层沉淀、按需召回、治理增强和全局资源管理。底层云产品基于
 Tencent Cloud VectorDB。
 
-开源仓库 `Tencent/TencentDB-Agent-Memory` 把重点放在本地可 inspect 的
+开源仓库当前 canonical GitHub URL 为 `TencentCloud/TencentDB-Agent-Memory`;
+早期笔记中的 `Tencent/TencentDB-Agent-Memory` 应作为历史/别名处理。仓库把重点放在本地可 inspect 的
 记忆流水线:
 
 - **L0 Conversation**:原始会话与引用
@@ -41,8 +42,8 @@ Tencent Cloud VectorDB。
 - **L3 Persona**:可追溯到 scenario 的用户画像
 - **Context offloading**:用 Mermaid task canvas 压缩短期任务状态
 
-截至 2026-05-31 查询,GitHub metadata 约 4.4k stars / 370 forks,最新 release
-为 `v0.3.6`(2026-05-28),仓库仍在活跃更新。
+截至 2026-06-29 查询,GitHub canonical repo 可访问为 `TencentCloud/TencentDB-Agent-Memory`。
+活跃度、release 和 license 仍按 GitHub/vendor source 处理,不作为质量结论。
 
 ## 3. 关键技术选择
 
@@ -90,8 +91,8 @@ Tencent Cloud VectorDB。
 
 - archive: [`archives/tencentdb-agent-memory-overview.md`](archives/tencentdb-agent-memory-overview.md)
 - 腾讯云产品页:https://cloud.tencent.com/product/agm
-- GitHub:https://github.com/Tencent/TencentDB-Agent-Memory
-- Release:https://github.com/Tencent/TencentDB-Agent-Memory/releases/tag/v0.3.6
+- GitHub:https://github.com/TencentCloud/TencentDB-Agent-Memory
+- Historical GitHub alias:https://github.com/Tencent/TencentDB-Agent-Memory
 
 ---
 

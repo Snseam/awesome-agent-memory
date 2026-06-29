@@ -44,6 +44,8 @@ official repository, dataset card, or independent reproduction.
 | LoCoBench-Agent | candidate | paper-origin | long-context coding agents | software task memory / long-horizon context | [`../papers/stubs/locobench-agent-an-interactive-benchmark-for-llm-agents-in.md`](../papers/stubs/locobench-agent-an-interactive-benchmark-for-llm-agents-in.md) | backlog |
 | MemoryArena | candidate | paper-origin | interdependent multi-session agent tasks | conflict resolution / shared memory | [`../papers/stubs/memoryarena-benchmarking-agent-memory-in-interdependent.md`](../papers/stubs/memoryarena-benchmarking-agent-memory-in-interdependent.md) | yes |
 | MemBench | candidate | paper-origin | memory of LLM-based agents | write / manage / memory mechanism | [`../papers/stubs/membench-towards-more-comprehensive-evaluation-on-the.md`](../papers/stubs/membench-towards-more-comprehensive-evaluation-on-the.md) | yes |
+| DynamicMem | seed | paper-origin | evolving multi-app user profile memory | profile reconstruction / temporal update / retrieval at scale | [`dynamicmem.md`](dynamicmem.md) | yes |
+| MEMPROBE | seed | paper-origin | hidden user-state memory artifact audit | hidden-state recovery / full-store vs top-k probing | [`memprobe.md`](memprobe.md) | yes |
 
 ## Evidence Ledgers
 

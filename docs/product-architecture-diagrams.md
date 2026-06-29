@@ -817,7 +817,7 @@ flowchart LR
 | LangMem | [`../products/langmem.md`](../products/langmem.md) | <https://langchain-ai.github.io/langmem/> |
 | Supermemory | [`../products/supermemory.md`](../products/supermemory.md) | <https://supermemory.ai/> |
 | Hindsight | [`../products/hindsight.md`](../products/hindsight.md) | <https://github.com/vectorize-io/hindsight> |
-| TencentDB Agent Memory | [`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md) | <https://github.com/Tencent/TencentDB-Agent-Memory> |
+| TencentDB Agent Memory | [`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md) | <https://github.com/TencentCloud/TencentDB-Agent-Memory> |
 | EverOS | [`../products/everos.md`](../products/everos.md) | <https://evermind.ai/everos> |
 | MemOS | [`../products/memos.md`](../products/memos.md) | <https://github.com/MemTensor/MemOS> |
 | Redis Agent Memory Server | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | <https://redis.github.io/agent-memory-server/> |

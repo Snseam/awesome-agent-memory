@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-06-29
 archive: archives/alibaba-bailian-memory-overview.md
 ---
 
@@ -35,6 +35,15 @@ archive: archives/alibaba-bailian-memory-overview.md
 - **Add/Search flow**:`AddMemory` 写入,`SearchMemory` 检索。
 - **结构化抽取**:偏好、事实、画像等从对话中自动抽取。
 - **跨应用共享**:官方文档强调开放 API 和共享记忆库。
+
+## 3.1 2026-06 refresh
+
+2026-06-24 Alibaba Cloud AgentLoop docs 将 Memory 描述为面向 AI agents 的核心
+memory layer,并列出 Facts、Episodic、Summary、Custom 四类 memory policies。
+AgentLoop 更像 enterprise agent observability / optimization platform,而不只是
+百炼 Memory Library 的改名;本轮先作为同一阿里云 managed-memory 家族更新,不新建
+产品条目,避免与 Bailian Memory Library / long-term memory API / OpenClaw memory
+plugin 混淆。
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -60,6 +69,8 @@ archive: archives/alibaba-bailian-memory-overview.md
 - archive: [`archives/alibaba-bailian-memory-overview.md`](archives/alibaba-bailian-memory-overview.md)
 - 记忆库:https://help.aliyun.com/zh/model-studio/memory-library
 - 长期记忆 API:https://help.aliyun.com/zh/model-studio/long-term-memory-2-0
+- AgentLoop:https://help.aliyun.com/en/document_detail/3033860.html
+- OpenClaw memory plugin:https://help.aliyun.com/en/model-studio/modelstudio-memory-for-openclaw
 
 ---
 

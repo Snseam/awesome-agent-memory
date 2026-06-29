@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-06-29
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -44,6 +44,10 @@ multimodal inputs、TTL/configuration、revisions 和 IAM conditions。
 similarity retrieval、TTL、revisions 与 IAM conditions。相较 2025 Vertex AI Memory
 Bank preview,当前入口已明确归入 Gemini Enterprise Agent Platform。
 
+2026-06-17 release notes 又把 Memory Bank and Sessions 的 multi-regional/global
+endpoint support 标为 GA,并注明 global endpoint 不能使用 CMEK。该更新改变的是
+部署位置与企业治理边界,不代表底层 memory extraction / ranking 机制公开。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Memory Bank 是 hyperscaler 级 scoped memory store 的典型样本。
@@ -69,6 +73,7 @@ Bank preview,当前入口已明确归入 Gemini Enterprise Agent Platform。
 - archive: [`archives/google-memory-bank-overview.md`](archives/google-memory-bank-overview.md)
 - Docs:https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank
 - Setup:https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank/setup
+- Release notes:https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes
 
 ---
 
