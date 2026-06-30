@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Memory Fit Review"
+  short_description: "Compare projects with agent-memory evidence"
+  default_prompt: "Use $awesome-agent-memory to compare my project, code, algorithm, or product as TARGET_ROOT against the awesome-agent-memory evidence base as AAM_ROOT. Ask for either path if missing, then give source-backed guidance."

@@ -82,6 +82,41 @@ Start with the path that matches your question:
 | Turn research into a memory-kernel decision | [`docs/research-radar.md`](docs/research-radar.md), then [`impact-reports/README.md`](impact-reports/README.md) |
 | See Ymem-specific bindings | [`docs/ymem-binding/README.md`](docs/ymem-binding/README.md) |
 
+### Use It With The Repo-Local Skill
+
+Users of skill-enabled agent tools can also invoke the repo-local skill
+`$awesome-agent-memory` to use this repository as an evidence-backed review tool.
+
+Prerequisite: open this repository in an agent tool that loads
+`.codex/skills/*/SKILL.md`, or install or enable this skill in your agent
+environment. If `$awesome-agent-memory` is not available, use
+`.codex/skills/awesome-agent-memory/SKILL.md` as the instruction and pass this
+checkout as `AAM_ROOT`.
+
+Use it when you want to compare your own project, codebase, algorithm, product,
+startup idea, or research direction against the papers, product notes, benchmark
+records, and synthesis docs in this repository.
+
+Typical entry modes:
+
+| Where you are | What to ask |
+|---|---|
+| Inside this repository | Treat this checkout as `AAM_ROOT` and compare `/path/to/my-project` as `TARGET_ROOT`. |
+| Inside your own project, with this skill installed or enabled | Treat the current project as `TARGET_ROOT` and point the skill to `/path/to/awesome-agent-memory` as `AAM_ROOT`; otherwise start from this repository and pass your project path as `TARGET_ROOT`. |
+
+Example:
+
+```text
+Use $awesome-agent-memory to compare /path/to/my-project as TARGET_ROOT
+against this checkout as AAM_ROOT.
+Focus on architecture fit, product analogs, benchmark plan, and risky claims.
+```
+
+The skill expects a concrete target artifact such as a path, URL, README, design
+note, product page, or code file. It separates `TARGET_ROOT` from `AAM_ROOT`,
+then returns a fit map, comparable references, gaps and risks, and source-backed
+recommendations with evidence class and confidence.
+
 ## Evidence Model
 
 The repository is organized so claims can be traced back to their source type.
@@ -160,6 +195,7 @@ flowchart LR
 | [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Community conduct policy. |
 | [`SECURITY.md`](SECURITY.md) | Security reporting guidance. |
 | [`CITATION.cff`](CITATION.cff) | Citation metadata. |
+| [`.codex/skills/awesome-agent-memory/`](.codex/skills/awesome-agent-memory/) | Repo-local skill for comparing external projects, code, algorithms, or products against this evidence base. |
 | [`docs/ymem-binding/`](docs/ymem-binding/) | Project-specific bindings for the maintainer's [Ymem](https://github.com/Snseam/Ymem) kernel. Safe to skip if you only need the generic evidence base. |
 
 ## Scope Boundaries
