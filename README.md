@@ -63,6 +63,7 @@ separate buckets.
 | Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
 | Benchmark catalog | 18 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
+| Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
 | Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
 | Impact reports | Template only for now | [`impact-reports/README.md`](impact-reports/README.md) | Promote strong evidence into kernel-design recommendations. |
 
@@ -77,6 +78,7 @@ Start with the path that matches your question:
 | Find relevant papers | [`papers/index.md`](papers/index.md), then full notes under [`papers/`](papers/) |
 | Compare memory products | [`docs/products-landscape.md`](docs/products-landscape.md), [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md), [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | Check why a product was included or rejected | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
+| Explore cost-saving memory approaches | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md), then [`benchmarks/fact-based-memory-vs-long-context.md`](benchmarks/fact-based-memory-vs-long-context.md) and [`papers/mem0-paper.md`](papers/mem0-paper.md) |
 | Evaluate benchmark claims | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md), [`benchmarks/index.md`](benchmarks/index.md), [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) |
 | Track new releases and source channels | [`docs/signals.md`](docs/signals.md), [`docs/information-sources.md`](docs/information-sources.md) |
 | Turn research into a memory-kernel decision | [`docs/research-radar.md`](docs/research-radar.md), then [`impact-reports/README.md`](impact-reports/README.md) |
@@ -123,6 +125,7 @@ flowchart LR
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | External meta-survey index from late 2025 through 2026 H1. |
 | [`docs/research-radar.md`](docs/research-radar.md) | Workflow for turning papers, products, and benchmark evidence into ImpactReports and ADR inputs. |
 | [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 current-source refresh across papers, products, GitHub projects, and reviewer decisions. |
+| [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Focused lane for agent-memory token reduction, budgeted retrieval, runtime-cost methods, code paths, and product practice signals. |
 | [`docs/information-sources.md`](docs/information-sources.md) | Source catalog for papers, products, communities, and zh-CN information channels. |
 | [`docs/related-work.md`](docs/related-work.md) | Discovery-input attribution and scrape provenance. |
 | [`docs/signals.md`](docs/signals.md) | Reverse-chronological release, comparison, and blog signal log. |

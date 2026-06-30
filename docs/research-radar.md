@@ -41,6 +41,11 @@ catalog,中文社区单独成节。该文档是 Radar 信息面的 single source
 并行子 agent 搜索、主 agent 整合、source/relevance review 后的 must-add /
 update-existing / watchlist / reject 决策,避免把快照判断散落到单条笔记里。
 
+如果问题聚焦 token reduction、runtime cost、budgeted retrieval、SLM/offline
+consolidation 或产品化 context offloading,先看成本专题入口
+[`cost-savings-landscape.md`](cost-savings-landscape.md),再决定是否升级单篇
+ResearchItem、BenchmarkItem 或 ImpactReport。
+
 ## 3. ResearchItem schema
 
 每篇论文/产品笔记的最小字段:
@@ -153,6 +158,10 @@ candidate plugin / module
      - latency/cost
      - regression rate
 ```
+
+成本驱动实验要回链到 [`cost-savings-landscape.md`](cost-savings-landscape.md) 中的
+成本维度和证据边界,避免只报告"省 token"而不报告质量、延迟、写路径成本或 vendor
+self-report 边界。
 
 ## 7. 架构决策(ADR)
 
