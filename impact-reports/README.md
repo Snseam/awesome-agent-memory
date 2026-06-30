@@ -37,12 +37,20 @@ reproductions do not get mixed.
 - Benchmark, product behavior, implementation detail, or source-page evidence.
 - Keep vendor self-report, affiliated evaluation, critique, and independent
   reproduction in separate bullets.
+- Cost-saving claims must cite a full local note or an explicitly labeled
+  candidate from `../docs/cost-savings-landscape.md`; stub-only and external-only
+  rows are allowed only as upgrade gaps, not as decision evidence.
 
 ## Costs and risks
 - Implementation cost:
 - Runtime cost:
 - Privacy/provenance risk:
 - Maintenance risk:
+- Cost-saving evidence quality:
+  - cost metric reported:
+  - quality metric reported:
+  - pricing/model/date assumptions:
+  - reproduction class:
 
 ## Recommendation
 - ignore | monitor | prototype | adopt_as_plugin | consider_core_change

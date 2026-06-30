@@ -17,13 +17,16 @@ decide what to read before opening the paper index or the product notes.
    benchmarks.
 5. [`memory-radar-2026-06.md`](memory-radar-2026-06.md) — latest current-source
    refresh across papers, products, GitHub projects, and reviewer decisions.
-6. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
+6. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
+   agent-memory papers, algorithms, code paths, and products that reduce token,
+   latency, or runtime cost.
+7. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
    capability, usage type, and evidence independence.
-7. [`products-landscape.md`](products-landscape.md) — product map by domain and
+8. [`products-landscape.md`](products-landscape.md) — product map by domain and
    audience.
-8. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
+9. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
    architecture diagrams for the current memory product notes.
-9. [`product-memory-architectures.md`](product-memory-architectures.md) —
+10. [`product-memory-architectures.md`](product-memory-architectures.md) —
    cross-product memory architecture patterns and comparison tables.
 
 ## Concept docs
@@ -34,6 +37,7 @@ decide what to read before opening the paper index or the product notes.
 | [`taxonomy.md`](taxonomy.md) | Cross-walk of external taxonomies and common memory-kernel responsibilities. |
 | [`meta-surveys.md`](meta-surveys.md) | External survey index from late 2025 through 2026 H1. |
 | [`signals.md`](signals.md) | Reverse-chronological release, comparison, and blog signal log. |
+| [`cost-savings-landscape.md`](cost-savings-landscape.md) | Dedicated cost-savings lane for token reduction, budgeted retrieval, SLM/offline consolidation, and product practice signals. |
 | [`benchmarks-landscape.md`](benchmarks-landscape.md) | Benchmark usage landscape split by raw mentions, eval uses, vendor claims, and independent evidence. |
 | [`product-discovery-log.md`](product-discovery-log.md) | Multi-agent product discovery log with Tier A / Tier B / reject decisions. |
 | [`product-memory-architectures.md`](product-memory-architectures.md) | Cross-product architecture patterns across memory OS, graph, MCP/local, platform-managed, and personal memory. |

@@ -61,6 +61,7 @@
 | 产品页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
 | Benchmark 目录 | 18 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
 | Claims ledger | 结构化 YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | 区分厂商自报、论文评测、方法批评和独立复现。 |
+| 成本节省专题 | seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | 查找能减少 token、延迟或运行成本的 agent-memory 论文、方法、代码和产品。 |
 | 综述与 taxonomy | 1 份活综述 + 6 条 meta-survey 记录 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | 在选型或设计前建立领域视角。 |
 | Impact reports | 目前只有模板 | [`impact-reports/README.md`](impact-reports/README.md) | 把强证据提升为 memory-kernel 架构建议。 |
 
@@ -75,6 +76,7 @@
 | 找相关论文 | [`papers/index.md`](papers/index.md)，再看 [`papers/`](papers/) 下的 full note |
 | 比较记忆产品 | [`docs/products-landscape.md`](docs/products-landscape.md)、[`docs/product-memory-architectures.md`](docs/product-memory-architectures.md)、[`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | 查看产品为什么入库或被拒绝 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
+| 探索 agent memory 如何节省成本 | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md)，再读 [`benchmarks/fact-based-memory-vs-long-context.md`](benchmarks/fact-based-memory-vs-long-context.md) 和 [`papers/mem0-paper.md`](papers/mem0-paper.md) |
 | 评估 benchmark claims | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md)、[`benchmarks/index.md`](benchmarks/index.md)、[`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) |
 | 跟踪新发布和信息源 | [`docs/signals.md`](docs/signals.md)、[`docs/information-sources.md`](docs/information-sources.md) |
 | 把研究转成 kernel 决策 | [`docs/research-radar.md`](docs/research-radar.md)，再用 [`impact-reports/README.md`](impact-reports/README.md) |
@@ -121,6 +123,7 @@ flowchart LR
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | 2025 年末到 2026 H1 的外部 meta-survey 索引。 |
 | [`docs/research-radar.md`](docs/research-radar.md) | 把论文、产品、benchmark 证据转成 ImpactReport 和 ADR 输入的工作流。 |
 | [`docs/memory-radar-2026-06.md`](docs/memory-radar-2026-06.md) | 2026-06 当前来源刷新，覆盖论文、产品、GitHub 项目和 reviewer 分流结论。 |
+| [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | agent-memory token reduction、预算检索、运行成本方法、代码路径和产品实践信号专题。 |
 | [`docs/information-sources.md`](docs/information-sources.md) | 论文、产品、社区和中文信息源 catalog。 |
 | [`docs/related-work.md`](docs/related-work.md) | 发现线索归因和抓取来源记录。 |
 | [`docs/signals.md`](docs/signals.md) | release、对比文章和博客信号的反时序日志。 |

@@ -62,6 +62,10 @@ decision_relevance: |
 [`taxonomy-modules.md`](taxonomy-modules.md);若发现新模块概念,先在那里 PR
 增加,再写笔记。
 
+如果候选项的主要价值是降低 token、latency、LLM call 或运行成本,先从通用成本专题
+[`../cost-savings-landscape.md`](../cost-savings-landscape.md) 读取证据边界,再决定
+是否进入 Ymem ImpactReport 或沙盒实验。
+
 ## 3. Ymem 沙盒实验细节
 
 ```text
@@ -77,6 +81,9 @@ candidate plugin / module
      - latency/cost
      - regression rate
 ```
+
+成本类实验必须同时记录 quality regression 与 runtime/cost profile,并把 vendor
+self-report、affiliated evaluation 和 independent reproduction 分开引用。
 
 EvalCase suite 当前来自:
 - LongMemEval([`../../papers/longmemeval.md`](../../papers/longmemeval.md))
