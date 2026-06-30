@@ -82,6 +82,38 @@
 | 把研究转成 kernel 决策 | [`docs/research-radar.md`](docs/research-radar.md)，再用 [`impact-reports/README.md`](impact-reports/README.md) |
 | 查看 Ymem 特定绑定 | [`docs/ymem-binding/README.md`](docs/ymem-binding/README.md) |
 
+### 用 repo-local Skill 使用本仓
+
+使用支持 repo-local skill 的 agent 工具时，也可以调用
+`$awesome-agent-memory`，把本仓作为一个有证据支撑的评审工具使用。
+
+前提：在能加载 `.codex/skills/*/SKILL.md` 的 agent 工具中打开本仓，或先把这个
+skill 安装或启用到你的 agent 环境。如果 `$awesome-agent-memory` 不可用，就直接
+使用 `.codex/skills/awesome-agent-memory/SKILL.md` 里的指令，并把当前 checkout
+作为 `AAM_ROOT`。
+
+适用场景：你想把自己的项目、代码库、算法、产品、创业方向或研究方向，与本仓的
+论文、产品笔记、benchmark 记录和综合文档进行对比。
+
+常见入口：
+
+| 你在哪里 | 怎么说 |
+|---|---|
+| 在本仓 | 把当前 checkout 作为 `AAM_ROOT`，把 `/path/to/my-project` 作为 `TARGET_ROOT`。 |
+| 在自己的项目仓库，且 skill 已安装或启用 | 把当前项目作为 `TARGET_ROOT`，并指定 `/path/to/awesome-agent-memory` 作为 `AAM_ROOT`；否则先从本仓启动，再把你的项目路径作为 `TARGET_ROOT`。 |
+
+示例：
+
+```text
+使用 $awesome-agent-memory，把 /path/to/my-project 作为 TARGET_ROOT，
+与当前 checkout 这个 AAM_ROOT 对比。
+重点看架构适配、相似产品、benchmark 方案和不能随便宣称的风险点。
+```
+
+这个 skill 需要一个具体目标材料，例如路径、URL、README、设计文档、产品页面或
+代码文件。它会区分 `TARGET_ROOT` 和 `AAM_ROOT`，然后输出适配图、可比参考、
+差距与风险，以及带证据类别和置信度的建议。
+
 ## 证据模型
 
 仓库按来源类型组织 claims，方便追溯：
@@ -161,6 +193,7 @@ flowchart LR
 | [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | 社区行为准则。 |
 | [`SECURITY.md`](SECURITY.md) | 安全问题报告方式。 |
 | [`CITATION.cff`](CITATION.cff) | 引用元数据。 |
+| [`.codex/skills/awesome-agent-memory/`](.codex/skills/awesome-agent-memory/) | repo-local skill，用来把外部项目、代码、算法或产品与本仓证据库进行对比。 |
 | [`docs/ymem-binding/`](docs/ymem-binding/) | 维护者的 [Ymem](https://github.com/Snseam/Ymem) kernel 项目绑定；如果只需要通用证据库，可以跳过。 |
 
 ## 范围边界
