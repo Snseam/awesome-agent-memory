@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-06
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -47,6 +47,13 @@ Bank preview,当前入口已明确归入 Gemini Enterprise Agent Platform。
 2026-06-17 release notes 又把 Memory Bank and Sessions 的 multi-regional/global
 endpoint support 标为 GA,并注明 global endpoint 不能使用 CMEK。该更新改变的是
 部署位置与企业治理边界,不代表底层 memory extraction / ranking 机制公开。
+
+## 3.2 2026-07 refresh
+
+Google 2026-06-29 Gemini Enterprise Agent Platform release notes 将 Memory Bank
+generation 的默认模型从 Gemini 2.5 Flash 改为 Gemini 3.5 Flash。该更新说明托管
+memory extraction / generation 仍会随平台模型配置变化;它是产品行为证据,不代表
+memory ranking 机制或质量有独立复现。
 
 ## 4. 决策相关性 / Decision relevance
 

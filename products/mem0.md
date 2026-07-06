@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-05-19
+last_revised: 2026-07-06
 ---
 
 # Mem0
@@ -113,6 +113,15 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 > 来源:https://mem0.ai/blog/state-of-ai-agent-memory-2026
 > archive:[`archives/mem0-blog-state-of-2026.md`](archives/mem0-blog-state-of-2026.md)、
 > [`archives/mem0-april-2026-release.md`](archives/mem0-april-2026-release.md)
+
+## 2026-06/07 SDK expiration controls
+
+Mem0 changelog highlights around 2026-06-27 added first-class expiration
+controls for memory writes, updates, and reads in Python / TypeScript SDKs. This
+is product-behavior evidence that Mem0 is moving memory lifecycle beyond add /
+search toward retention policy. It should not be mixed with benchmark claims.
+
+> 来源:https://docs.mem0.ai/changelog/highlights
 
 ## Notes
 

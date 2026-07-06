@@ -46,6 +46,9 @@ official repository, dataset card, or independent reproduction.
 | MemBench | candidate | paper-origin | memory of LLM-based agents | write / manage / memory mechanism | [`../papers/stubs/membench-towards-more-comprehensive-evaluation-on-the.md`](../papers/stubs/membench-towards-more-comprehensive-evaluation-on-the.md) | yes |
 | DynamicMem | seed | paper-origin | evolving multi-app user profile memory | profile reconstruction / temporal update / retrieval at scale | [`dynamicmem.md`](dynamicmem.md) | yes |
 | MEMPROBE | seed | paper-origin | hidden user-state memory artifact audit | hidden-state recovery / full-store vs top-k probing | [`memprobe.md`](memprobe.md) | yes |
+| MemSyco-Bench | seed | paper-origin | memory-induced sycophancy | scope / conflict resolution / update / valid personalization | [`memsyco-bench.md`](memsyco-bench.md) | yes |
+| MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
+| MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
 
 ## Evidence Ledgers
 

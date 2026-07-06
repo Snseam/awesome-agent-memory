@@ -19,6 +19,18 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-07 manual radar additions
+
+These entries were added by the 2026-07-06 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [A-TMA: Decoupling State-Aware Memory Failures in Long-Term Agent Memory](atma-state-aware-memory-failures.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.01935)
+- [MemSyco-Bench: Benchmarking Sycophancy in Agent Memory](../benchmarks/memsyco-bench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.01071)
+- [MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory](../benchmarks/memleak.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29788)
+- [MemDelta: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation](../benchmarks/memdelta.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29914)
+- [Mandol: An Agglomerative Agent Memory System for Long-Term Conversations](mandol-agglomerative-agent-memory.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.29778)
+- [Forensic Trajectory Signatures for Agent Memory Poisoning Detection](forensic-trajectory-memory-poisoning.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.30566)
+
 ## 2026-06 manual radar additions
 
 These entries were added by the 2026-06-24 current-source radar refresh. They
