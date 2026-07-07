@@ -9,6 +9,7 @@ language: zh-CN
 
 本日志记录 2026-06-11 与 2026-06-24 的多子 agent 产品搜索、证据审查和最终入库决定。它不是
 产品介绍页,而是解释**为什么某个候选被深度入库、只进入轻量索引、或被拒绝**。
+2026-07-07 增量记录补充 Tree Ring Memory。
 
 ## 1. 执行模型
 
@@ -58,6 +59,7 @@ language: zh-CN
 | PowerMem | https://github.com/oceanbase/powermem | https://www.powermem.ai/ | memory API/plugin | repo + site | Tier A | Experience + Skill distillation, hybrid retrieval, MCP/HTTP/CLI/plugins | benchmark self-reported | OSS, domestic |
 | Alibaba Bailian Memory Library | https://help.aliyun.com/zh/model-studio/memory-library | https://help.aliyun.com/en/document_detail/3033860.html | platform-managed memory | official docs | Tier A | automatic extraction, memory fragments, user profile, Add/Search APIs;AgentLoop memory policies(Facts/Episodic/Summary/Custom) | cloud black box;AgentLoop split/merge needs later review | Domestic, personal/platform |
 | Basic Memory | https://docs.basicmemory.com/ | https://github.com/basicmachines-co/basic-memory | local-first memory | docs + repo | Tier A | Markdown source of truth, knowledge graph, MCP-native, cloud/local | PKM crossover and AGPL | MCP, OSS |
+| Tree Ring Memory | https://github.com/TerminallyLazy/Tree-Ring-Memory | https://terminallylazy.github.io/Tree-Ring-Memory/press-kit.md | local-first coding-agent memory | official repo + press kit + GitHub API spot-check | Tier A | Rust CLI + SQLite/FTS, explicit recall/forget/audit/consolidation, DOX/Revolve adapters, agent bridge guidance | protocol-preview;no independent benchmark;not MCP server yet | OSS, GitHub |
 | ByteRover (Cipher) | https://www.byterover.dev/ | https://github.com/campfirein/byterover-cli | coding-agent memory | site + repo + docs | Tier A | portable memory layer for autonomous coding agents, CLI/MCP/context tree | ELv2/source-available; maturity needs follow-up | MCP, OSS |
 | Honcho | https://github.com/plastic-labs/honcho | https://docs.honcho.dev/ | memory infrastructure | repo + docs | Tier A | peer-centric memory, async reasoning, representations, MCP/SDK/self-host | eval claims vendor-side, AGPL | OSS, MCP |
 | agentmemory | https://github.com/rohitg00/agentmemory | https://agent-memory.dev | coding-agent memory | repo + GitHub API spot-check | Tier A | persistent memory for Claude Code/Codex/Cursor/OpenClaw/MCP; Apache-2.0; active 2026-06 | benchmark claims need independent review | OSS, GitHub |
@@ -129,6 +131,7 @@ language: zh-CN
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | [`../products/archives/powermem-overview.md`](../products/archives/powermem-overview.md) | repo + site; benchmark claims labeled |
 | Alibaba Bailian Memory | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | [`../products/archives/alibaba-bailian-memory-overview.md`](../products/archives/alibaba-bailian-memory-overview.md) | official Aliyun docs |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | [`../products/archives/basic-memory-overview.md`](../products/archives/basic-memory-overview.md) | docs + repo; AGPL/local-first |
+| Tree Ring Memory | [`../products/tree-ring-memory.md`](../products/tree-ring-memory.md) | [`../products/archives/tree-ring-memory-overview.md`](../products/archives/tree-ring-memory-overview.md) | official repo + press kit; protocol-preview; no benchmark claims |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | [`../products/archives/byterover-overview.md`](../products/archives/byterover-overview.md) | site + repo/docs; alias Cipher |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | [`../products/archives/honcho-overview.md`](../products/archives/honcho-overview.md) | repo + docs; vendor eval claims labeled |
 | agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | [`../products/archives/agentmemory-overview.md`](../products/archives/agentmemory-overview.md) | GitHub repo/API; benchmark claims not independently verified |

@@ -36,7 +36,7 @@ memory_modules:
 **对 Ymem**:笔记里只要列了 `retriever-reranker`,Ymem 的 retrieve 路径就
 应该在下一次 ImpactReport 评审里考虑这篇论文。
 
-## 2. 19 篇 deep note 速查
+## 2. 20 篇 deep note 速查
 
 ### Papers
 
@@ -64,6 +64,7 @@ memory_modules:
 | [`graphiti`](../../products/graphiti.md) | (KG 相关) | Zep 的开源底座;`MemoryRecord` 是否能映射到 Graphiti 的 entity/edge 是兼容性测试 |
 | [`cognee`](../../products/cognee.md) | (KG + ontology) | ontology-first 路线;Ymem 暂不走这条 |
 | [`langmem`](../../products/langmem.md) | retriever-reranker | LangChain 系的 memory primitive;host-app 集成参考 |
+| [`tree-ring-memory`](../../products/tree-ring-memory.md) | ingest-adapter / retriever-reranker / dream-consolidator / policy-privacy | lifecycle-first 的 local CLI 对照面;ring/scar/heartwood 语言可启发 Ymem retention/promotion/forget UX,但不应把 CLI bridge 当成 server API |
 | [`memgpt`](../../products/memgpt.md) | dream-consolidator (forerunner) | Letta 的前身论文;`dream-consolidator` 的早期形态启发 |
 | [`openai-memory`](../../products/openai-memory.md) | (多) | 大厂内建对照面;Ymem 必须能在不依赖 OpenAI 服务的前提下达到类似 UX |
 
