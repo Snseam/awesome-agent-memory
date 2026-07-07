@@ -7,9 +7,10 @@ language: zh-CN
 
 # Memory 产品架构图
 
-范围:本页的证据索引覆盖当前 `products/` 下的 38 个产品/模式笔记;逐产品
+范围:本页的证据索引覆盖当前 `products/` 下的 39 个产品/模式笔记;逐产品
 Mermaid 图当前覆盖 34 个产品/模式。2026-06-24 新增的 agentmemory、Memori、memU、
-memsearch 只进入证据索引和 pending-diagram 队列,尚无逐产品 Mermaid 图。图是基于
+memsearch 与 2026-07-07 新增的 Tree Ring Memory 只进入证据索引和
+pending-diagram 队列,尚无逐产品 Mermaid 图。图是基于
 公开页面、GitHub README、论文摘要与本仓快照的**架构归纳**;闭源 SaaS 与厂商内建
 记忆没有底层实现披露时,图只表达可观察产品边界和合理推断,不当作内部实现事实。
 
@@ -75,6 +76,7 @@ flowchart TB
     Vendor --> Alibaba["Alibaba Bailian Memory"]
     Wiki --> KarpathyWiki["Karpathy LLM Wiki"]
     Coding --> BasicMemory["Basic Memory"]
+    Coding --> TreeRing["Tree Ring Memory"]
     Coding --> ByteRover["ByteRover"]
     DBMemory --> RedisAMS
     DBMemory --> Oracle

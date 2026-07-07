@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![记忆产品](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
+[![记忆产品](https://img.shields.io/badge/memory%20products-39-purple.svg)](products/)
 [![Benchmarks](https://img.shields.io/badge/benchmarks-18-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--06-lightgrey.svg)](docs/signals.md)
@@ -57,8 +57,8 @@
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
 | full / seed 论文笔记 | 7 个 full + 12 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
-| 记忆产品笔记 | 38 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
-| 产品页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
+| 记忆产品笔记 | 39 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
+| 产品页面快照 | 38 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
 | Benchmark 目录 | 18 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
 | Claims ledger | 结构化 YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | 区分厂商自报、论文评测、方法批评和独立复现。 |
 | 成本节省专题 | seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | 查找能减少 token、延迟或运行成本的 agent-memory 论文、方法、代码和产品。 |
@@ -164,8 +164,8 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`products/`](products/) | 38 个记忆产品笔记，包括 Mem0、Letta、Zep、Graphiti、EverOS、MemOS、Redis Agent Memory Server、Supermemory、TencentDB Agent Memory、agentmemory、Memori、memU、memsearch 和平台 managed memory 等。 |
-| [`products/archives/`](products/archives/) | 37 个记忆产品 canonical 页面 markdown 快照。 |
+| [`products/`](products/) | 39 个记忆产品笔记，包括 Mem0、Letta、Zep、Graphiti、EverOS、MemOS、Redis Agent Memory Server、Supermemory、TencentDB Agent Memory、agentmemory、Memori、memU、memsearch、Tree Ring Memory 和平台 managed memory 等。 |
+| [`products/archives/`](products/archives/) | 38 个记忆产品 canonical 页面 markdown 快照。 |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | 按领域和服务对象整理的产品全景。 |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | 多子 agent 产品搜索日志，记录 Tier A、Tier B、拒绝和 alias 决策。 |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | 跨产品架构模式：Memory OS、graph/temporal memory、MCP/local-first memory、云厂商 managed memory 和个人记忆。 |

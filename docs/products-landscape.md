@@ -86,6 +86,7 @@ language: zh-CN
 | Redis Agent Memory Server | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | OSS | Redis 用户 / agent builder | working + long-term 双层 memory API server,提供 REST 与 MCP |
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | OSS | coding agent 用户 / agent builder / OceanBase 生态 | Experience + Skill distillation,多接口 memory plugin/API server |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | OSS+SaaS | 个人开发者 / 团队 / Markdown 用户 | local-first Markdown memory + knowledge graph + MCP |
+| Tree Ring Memory | [`../products/tree-ring-memory.md`](../products/tree-ring-memory.md) | OSS | coding agent 用户 / 本地优先开发者 | Rust CLI + SQLite/FTS 的 memory lifecycle layer,强调 recall/forget/audit/consolidation |
 | ByteRover(原 Cipher) | [`../products/byterover.md`](../products/byterover.md) | Source-available | coding agent 用户 / 团队 | autonomous coding agents 的 portable memory layer |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | OSS+SaaS | agent builder / multi-agent 产品 | peer-centric stateful agent memory infrastructure |
 | agentmemory | [`../products/agentmemory.md`](../products/agentmemory.md) | OSS | coding agent 用户 | multi-client persistent memory for Claude Code / Codex / Cursor / OpenClaw |
@@ -136,6 +137,7 @@ language: zh-CN
 | TencentDB Agent Memory OpenClaw plugin | OSS+SaaS | OpenClaw 用户 | 自动 capture / recall,并保留 Mermaid task canvas |
 | Hy-Memory OpenClaw plugin | Plugin | OpenClaw 用户 | 多 agent 共享 userId namespace 的长期记忆 |
 | Basic Memory | OSS+SaaS | Claude / Codex / Cursor / VS Code 用户 | Markdown files + MCP,人和 agent 共用 memory |
+| Tree Ring Memory | OSS | Claude Code / Codex / OpenCode / DOX/Revolve 用户 | Rust CLI + `.tree-ring` guidance,项目级 recall/forget/audit/consolidation |
 | ByteRover | Source-available | autonomous coding agent 用户 | CLI/MCP/context tree 跨 agent 共享项目 memory |
 | PowerMem | OSS | Claude Code / Codex / Cursor / OpenClaw 用户 | CLI/HTTP/MCP/插件共用后端 memory |
 | Redis Agent Memory Server | OSS | 任意 MCP/REST agent | Redis-backed memory server,支持 working/long-term memory |
@@ -222,13 +224,13 @@ memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取
 Letta self-host / Mem0 self-host / Zep self-host / Graphiti / Cognee /
 Obsidian + 插件 / LangMem / Hindsight / TencentDB Agent Memory /
 EverOS / MemOS / Redis Agent Memory Server / PowerMem / Basic Memory /
-ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
+Tree Ring Memory / ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
 OpenViking / MemoryOS / A-MEM / MemX /
 Supermemory self-host。
 
 ### B2. 中小团队 / SaaS startup
 Mem0 cloud / Zep cloud / Supermemory API / Hindsight cloud / Basic Memory
-Cloud / Honcho API / Redis Agent Memory Server / agentmemory / Memori / memU /
+Cloud / Honcho API / Redis Agent Memory Server / Tree Ring Memory / agentmemory / Memori / memU /
 memsearch / OpenAI Assistants / Pinecone / Cursor for Teams。
 
 ### B3. 大企业

@@ -40,6 +40,7 @@ flowchart TB
     Graph --> Cognee["Cognee"]
     Graph --> OpenViking["OpenViking"]
     MCP --> BasicMemory["Basic Memory"]
+    MCP --> TreeRing["Tree Ring Memory"]
     MCP --> ByteRover["ByteRover"]
     MCP --> RedisAMS["Redis AMS"]
     MCP --> PowerMem["PowerMem"]
@@ -144,12 +145,12 @@ flowchart TB
 | Field | Synthesis |
 |---|---|
 | architecture pattern | sidecar memory substrate: IDE/agent hooks capture work, MCP exposes recall/write/delete/export tools, local files or DB store state |
-| products mapped | Basic Memory、ByteRover、Redis Agent Memory Server、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory、memsearch、memU、Memori |
+| products mapped | Basic Memory、Tree Ring Memory、ByteRover、Redis Agent Memory Server、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory、memsearch、memU、Memori |
 | common data flow | IDE/session hooks -> extraction -> Markdown/context tree/local DB -> hybrid index -> MCP recall -> session briefing/context injection |
 | memory types | project decisions、file history、debug episodes、preferences、skills、timeline、audit trail |
 | retrieval/consolidation strategy | vector + BM25 + graph/timeline;session stop 或 compaction 前做总结,重复模式提升为 skills |
 | governance/inspectability | 最强模式是 artifact-first:Markdown/context tree/git diff。DB-first 需要 export/audit/delete trail。 |
-| confidence/unknowns | Basic Memory/Redis/PowerMem/Honcho 证据强;小型 MCP servers 需要补 license/release/source health。 |
+| confidence/unknowns | Basic Memory/Redis/PowerMem/Honcho 证据强;Tree Ring Memory 证据来自官方 repo/press kit,但仍是 protocol-preview;小型 MCP servers 需要补 license/release/source health。 |
 
 ```mermaid
 flowchart LR
