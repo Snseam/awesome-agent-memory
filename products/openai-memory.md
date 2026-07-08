@@ -10,7 +10,7 @@ memory_modules:
   - ingest-adapter
   - retriever-reranker
 status: full
-last_revised: 2026-06-24
+last_revised: 2026-07-06
 archive: archives/openai-memory-overview.md
 ---
 
@@ -59,6 +59,12 @@ OpenAI 2026-06 公布 ChatGPT Memory Dreaming,把 memory 改进描述为后台�
 release notes 同期写到 memory 会更及时地保持更新。对本仓而言,这属于已有
 vendor-managed memory 的 UX/治理升级,不是新的开放 memory kernel。
 
+2026-06-25 ChatGPT Business / Enterprise / Edu release notes 又把改进版 memory
+扩展到组织计划:可使用相关历史对话上下文,并提供 memory summary、source、纠错、
+删除、标记 not relevant 以及 legacy saved memories 控制。OpenAI 同时说明 Codex
+memory 不受该 ChatGPT 产品 memory 变更影响。该更新继续归类为 vendor-managed
+product behavior,不作为开放 agent-memory API 或独立质量证据。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:它定义了 "vendor-managed memory" 的对照基线 — 用户/开发者
@@ -101,6 +107,8 @@ vendor-managed memory 的 UX/治理升级,不是新的开放 memory kernel。
 - Assistants API:https://platform.openai.com/docs/assistants/how-it-works
 - 公告:https://openai.com/index/memory-and-new-controls-for-chatgpt/
 - Dreaming:https://openai.com/index/chatgpt-memory-dreaming/
+- Business release notes:https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes
+- Enterprise/Edu release notes:https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes
 
 ---
 

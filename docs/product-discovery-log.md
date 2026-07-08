@@ -145,3 +145,14 @@ language: zh-CN
   remnic、nram、memanto、LycheeMem、Parcle Memory、Neo4j Agent Memory 等不删除,
   但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
 - 所有 vendor benchmark 或性能 claim 都按 vendor-claimed / 自报处理,不写成独立实证。
+
+## 10. 2026-07-06 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | AWS AgentCore Memory | release notes / memory record streaming docs | 更新 `products/aws-agentcore-memory.md`;evented lifecycle 是产品行为证据 |
+| update-existing | Google Agent Platform Memory Bank | Gemini Enterprise Agent Platform release notes 2026-06-29 | 更新 `products/google-memory-bank.md`;默认 generation model 变化不等于独立质量证据 |
+| update-existing | OpenAI ChatGPT Memory | Business / Enterprise / Edu release notes 2026-06-25 | 更新 `products/openai-memory.md`;组织计划 memory controls 仍为 vendor-managed memory |
+| update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
+| update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
+| watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |

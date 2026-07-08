@@ -135,6 +135,66 @@ events:
       - papers/stubs/memoryrewardbench-benchmarking-reward-models-for-long-term.md
       - https://arxiv.org/abs/2601.11969
     extract_confidence: medium
+  - event_id: memsyco-bench-origin-2026
+    benchmark_id: memsyco-bench
+    source_kind: paper
+    source_id: benchmarks/memsyco-bench.md
+    source_date: 2026-07
+    actor: MemSyco-Bench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Benchmark for memory-induced sycophancy across scope, conflict, update, and personalization tasks; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; author-reported results and released resources need full normalization before use."
+    evidence_refs:
+      - benchmarks/memsyco-bench.md
+      - https://arxiv.org/abs/2607.01071
+    extract_confidence: medium
+  - event_id: memleak-origin-2026
+    benchmark_id: memleak
+    source_kind: paper
+    source_id: benchmarks/memleak.md
+    source_date: 2026-06
+    actor: MemLeak authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Benchmark for residual information recovery after deletion in multimodal memory systems; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; image sources, production-memory setup, and reported recovery rates need full read."
+    evidence_refs:
+      - benchmarks/memleak.md
+      - https://arxiv.org/abs/2606.29788
+    extract_confidence: medium
+  - event_id: memdelta-methodology-2026
+    benchmark_id: memdelta
+    source_kind: paper
+    source_id: benchmarks/memdelta.md
+    source_date: 2026-06
+    actor: MemDelta author
+    actor_type: paper_authors
+    usage_type: baseline_comparison
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Controlled evaluation protocol over LongMemEval-S for memory-vs-RAG/full-context comparisons; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Use as a methodology checklist; do not treat source comparisons as independent product evidence."
+    evidence_refs:
+      - benchmarks/memdelta.md
+      - https://arxiv.org/abs/2606.29914
+    extract_confidence: medium
   - event_id: fact-memory-vs-long-context-baseline-2026
     benchmark_id: fact-memory-vs-long-context
     source_kind: paper

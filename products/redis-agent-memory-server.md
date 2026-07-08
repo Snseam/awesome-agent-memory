@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-06
 archive: archives/redis-agent-memory-server-overview.md
 ---
 
@@ -45,6 +45,13 @@ Redis 2026-06-17 官方博客继续把 agent memory 定位为 persistence infras
 sessions 解释两层设计。该博客是 vendor positioning,可用于产品架构定位,不能用来
 支持独立性能结论。
 
+## 3.2 2026-07 refresh
+
+Redis 2026-07-01 官方博客继续以 short-term state + long-term vector memory 解释
+agent memory,并把 semantic retrieval、TTL / decay、RedisVL / vector search 等能力
+放进统一实践指南。该来源更新产品定位和实现建议;它不是 Redis Agent Memory Server
+的新独立 benchmark,也不能支持质量优于其他 memory server 的结论。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Redis 把 memory server 包装为可运维 API,区别于纯库或纯 SaaS。
@@ -70,6 +77,7 @@ sessions 解释两层设计。该博客是 vendor positioning,可用于产品架
 - MCP:https://redis.github.io/agent-memory-server/mcp/
 - GitHub:https://github.com/redis/agent-memory-server
 - Blog:https://redis.io/blog/why-bigger-context-window-wont-fix-agent-memory/
+- July guide:https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/
 
 ---
 

@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-06
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -50,6 +50,13 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
   BYO memory ARN 或显式关闭 memory。
 - 这使 AgentCore Memory 从"托管 LTM"进一步接近 evented memory lifecycle infra,
   对 Ymem 的 `memorydiff-generator` 和审计流水线有对照价值。
+
+## 3.2 2026-07 refresh
+
+2026-07-06 复核时,AWS AgentCore release notes / developer guide 继续把 memory
+record streaming 作为当前能力面:memory record create / update / delete 事件可流向
+Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证据,可支持"AgentCore Memory
+暴露 evented memory lifecycle"这一判断,但不支持任何独立性能结论。
 
 ## 4. 决策相关性 / Decision relevance
 

@@ -32,6 +32,9 @@ language: zh-CN
 | agent 任务 / 多 agent | LoCoBench-Agent / MemoryArena / MemBench | coding agent, shared memory conflict, write/manage 评测 | candidate,需升级 source note |
 | evolving profile memory | [`DynamicMem`](../benchmarks/dynamicmem.md) | 15-month multi-app histories / profile reconstruction / temporal update | seed,origin paper logged; protocol/results not normalized |
 | auditable memory artifact | [`MEMPROBE`](../benchmarks/memprobe.md) | hidden user-state recovery from memory stores / full-store vs top-k probing | seed,origin paper logged; protocol/results not normalized |
+| memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
+| multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
+| baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 
 ## B. 初始交叉统计
 
@@ -55,6 +58,9 @@ language: zh-CN
 | MemoryArena | 1 | survey mention |
 | DynamicMem | 1 | origin paper logged; metrics/results not yet normalized |
 | MEMPROBE | 1 | origin paper logged; metrics/results not yet normalized |
+| MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
+| MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
+| MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 
 ### B2. Evaluation uses / baseline comparisons
 
