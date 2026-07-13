@@ -1,16 +1,17 @@
 ---
 title: 2026-07 Memory Radar refresh
-date: 2026-07-06
+date: 2026-07-13
 status: current-source-refresh
 language: zh-CN
 ---
 
 # 2026-07 Memory Radar refresh
 
-本页记录 2026-07-06 的 weekly radar refresh。主 agent 从最新 `origin/main`
-创建 `codex/weekly-memory-radar-2026-07-06`,并用 paper/product/GitHub discovery
-子 agent 做候选检索。所有 GitHub/list/catalog 信号只作为 discovery;最终收录只依赖
-primary paper/product sources。
+本页记录 2026-07 的 weekly radar refresh。2026-07-06 主 agent 从最新
+`origin/main` 创建 `codex/weekly-memory-radar-2026-07-06`;2026-07-13 主 agent
+创建 `codex/weekly-memory-radar-2026-07-13`。两轮都用 paper/product/GitHub
+discovery 子 agent 做候选检索。所有 GitHub/list/catalog 信号只作为 discovery;
+最终收录只依赖 primary paper/product sources。
 
 ## 执行模型
 
@@ -23,6 +24,21 @@ primary paper/product sources。
 | source/relevance review | main agent + later reviewer | must-add / update-existing / watchlist / adjacent / reject |
 
 ## Must-add / update-existing
+
+### 2026-07-13 delta
+
+| Action | Item | Why it matters | Local anchor |
+|---|---|---|---|
+| must-add | Learning User-Aware Recall | profile-guided personalized retrieval + query rewriting 把 user-aware ranking 作为 long-term conversational memory 的显式控制面 | [`../papers/learning-user-aware-recall.md`](../papers/learning-user-aware-recall.md) |
+| must-add | From Passive Retrieval to Active Memory Navigation | NapMem 把 long-term user memory 变成 structured action space,强调 granularity navigation 和 provenance-linked pyramid | [`../papers/active-memory-navigation.md`](../papers/active-memory-navigation.md) |
+| must-add | Forged Reasoning Attacks | 把 memory poisoning 从事实记忆扩展到 remembered reasoning histories,要求保护 rationale/provenance integrity | [`../papers/forged-reasoning-memory-attacks.md`](../papers/forged-reasoning-memory-attacks.md) |
+| must-add | Remember When It Matters | separate memory agent selectively injects reminders,把 memory 从 passive bank 变成 long-horizon decision intervention | [`../papers/proactive-memory-agent.md`](../papers/proactive-memory-agent.md) |
+| must-add | Memory in the Loop | in-process retrieval 让 memory 进入每个 observe-reason-act step,补 latency/placement 对 memory design 的系统压力 | [`../papers/memory-in-the-loop.md`](../papers/memory-in-the-loop.md) |
+| update-existing | Google Agent Platform Memory Bank | 2026-07-08 release notes 将 `IngestEvents` 标为 GA,并支持 Gemini Embedding 2 similarity search configuration;说明 managed memory ingestion/retrieval 产品面继续前移 | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) |
+| update-existing | Oracle AI Agent Memory | 26.6 blogs 补 hybrid search、custom extraction、context cards、metadata filters、TTL、update APIs;性能评测表述本轮不收录,后续需先按 claims ledger 规范归档 | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) |
+| update-existing | Zep | ABAC blog 补 action-level key policies 和 source-metadata scoped graph access,强化 agent memory governance surface | [`../products/zep.md`](../products/zep.md) |
+| update-existing | TencentDB Agent Memory | 2026-07-07 billing docs 补 memory storage / model-call credits 计费和 whitelist 免费期,说明商业化边界 | [`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md) |
+| update-existing | Alibaba Bailian Memory Library | English API reference 明确 Add/Search/List/Delete/Update/Profile APIs,但页面日期不稳定,只作为 current official API surface | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) |
 
 ### Papers and benchmarks
 
@@ -50,6 +66,11 @@ primary paper/product sources。
 
 | Decision | Item | Reason |
 |---|---|---|
+| watchlist | Anthropic API memory-store beta header | 官方 release notes 暴露 memory-store endpoint behavior change,但日期为 2026-07-22,晚于本轮 2026-07-13 run date;下周再复核 |
+| watchlist | AgenticSTS | bounded-memory long-horizon testbed 很相关,但提交日期为 2026-07-02 且应进入 benchmark layer;本轮先不新增 benchmark count |
+| watchlist | MRAgent / WorldMemArena | GitHub activity surfaced primary papers,但 arXiv dates 分别为 2026-06 和 2026-05/06;下轮做 benchmark/paper integration,不作为本周 must-add |
+| watchlist | SAGE-Mem / OWASP Agent Memory Guard / agent-memory-integrity | GitHub/repo activity 是 discovery signal;需 primary paper/protocol 或 independent reproduction 后再升级 |
+| update-existing only | How Memory Management Impacts / Preference-Aware Memory Update / PersonaAgent / From Storage to Experience ACL pages | ACL 2026 official pages 可验证 venue metadata,但本仓已有 scrape stubs or existing notes;本轮不重复建 note |
 | watchlist | AutoMem | memory as cognitive skill 方向相关,但本轮未完成 project/code/data verification |
 | watchlist | Governed Shared Memory / Forget to Improve | post-window awesome-list commits surfaced pre-window papers;先等 full source read 后再决定是否升级 |
 | watchlist | Cloudflare Think harness | Cloudflare agent harness 暴露 persistent memory/context patterns,但与 Cloudflare Agent Memory 产品边界重叠 |
@@ -87,5 +108,6 @@ primary paper/product sources。
   notes / changelog / blog。
 - GitHub stars、README 性能数字、MCP catalog 和 awesome-list placement 只作 discovery。
 - Author-reported benchmark results are paper-origin claims;vendor numbers are vendor claims。
-- 本轮 benchmark catalog 从 18 行增至 21 行;paper seed notes 从 12 增至 15;product
-  note count 不变。
+- 2026-07-06 benchmark catalog 从 18 行增至 21 行;paper seed notes 从 12 增至
+  15;product note count 不变。
+- 2026-07-13 paper seed notes 从 15 增至 20;product / benchmark counts 不变。

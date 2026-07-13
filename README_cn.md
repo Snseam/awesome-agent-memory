@@ -56,7 +56,7 @@
 | 论文索引 | 989 篇抓取论文 + 截至 2026-07 的手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
-| full / seed 论文笔记 | 7 个 full + 15 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
+| full / seed 论文笔记 | 7 个 full + 20 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
 | 记忆产品笔记 | 38 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
 | 产品页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
 | Benchmark 目录 | 21 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
@@ -175,7 +175,7 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`papers/`](papers/) | 7 个 full 论文笔记、15 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、20 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
 | [`papers/stubs/`](papers/stubs/) | 988 个尚未 full 阅读论文的生成 stub。 |
 | [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF，约 1.8 GB。详见下方存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物：抓取脚本和 dedup JSON。 |

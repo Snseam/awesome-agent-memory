@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-05-19
+last_revised: 2026-07-13
 archive: archives/zep-overview.md
 ---
 
@@ -51,6 +51,9 @@ healthcare 等行业的预置 entity schema 模板。
   "为什么这条曾经成立"的审计链
 - **性能**:产品页声称 P95 < 200ms,LoCoMo 单次检索 80.32%
 - **合规**:SOC 2 Type II / HIPAA(hosted 版)
+- **ABAC**:2026-07 Zep blog describes attribute-based access control for API
+  keys, including action-level policies and source-based graph-artifact access
+  based on effective metadata projected from source episodes.
 
 > Benchmark record: [`../benchmarks/locomo.md`](../benchmarks/locomo.md);
 > event ledger row: `zep-locomo-2026` in
@@ -91,6 +94,8 @@ domain × audience 表:
   vector store 那样无状态
 - **benchmark 自报**:LoCoMo 80.32% 是产品页声明,与 Mem0 / LangMem 的可比性
   需要独立复现
+- **ABAC 证据类别**:Zep ABAC 是官方产品治理能力,可支持 access-control surface
+  判断,但不支持 memory quality 或 benchmark superiority claims。
 - **温度计**:Zep 把"知识图谱 + LLM extraction"的复杂度藏在 API 后面,出
   问题时排错路径长
 
@@ -99,6 +104,7 @@ domain × audience 表:
 - archive: [`archives/zep-overview.md`](archives/zep-overview.md)
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
+- ABAC blog:https://blog.getzep.com/attribute-based-access-control/
 
 ---
 

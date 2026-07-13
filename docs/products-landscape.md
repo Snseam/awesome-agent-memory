@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-06-24
+date: 2026-07-13
 status: working-spec
 language: zh-CN
 ---
@@ -122,6 +122,18 @@ language: zh-CN
 | Cloudflare Agent Memory | [`../products/cloudflare-agent-memory.md`](../products/cloudflare-agent-memory.md) | Big-tech-builtin / Private beta | Cloudflare Agents 用户 |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Cloud Bailian Memory Library | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | Cloud platform | 百炼 / Model Studio 开发者 |
+
+2026-07-13 refresh note:Google Memory Bank 的 2026-07-08 release notes 把
+`IngestEvents` 标为 GA,并加入 Gemini Embedding 2 similarity-search configuration。
+这加强了其 event ingestion / memory generation 解耦的 managed memory 产品面;
+证据类别仍是官方产品行为,不代表独立 benchmark 复现。
+
+同轮产品复核还更新 Oracle AI Agent Memory 26.6、Zep ABAC、TencentDB Agent
+Memory 计费页和 Alibaba long-term memory API reference。Oracle / Zep / Tencent /
+Alibaba 的更新分别对应 enterprise DB memory lifecycle controls、API-key
+metadata-scoped governance、商业化计费边界和 Add/Search/Profile API surface。性能
+或 benchmark table claims 本轮不进入 accepted refresh;后续使用前需先按 claims
+ledger 规范归档。
 
 ### A4. Coding & Dev agents(memory 用于代码上下文)
 

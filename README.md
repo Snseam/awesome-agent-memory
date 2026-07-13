@@ -58,7 +58,7 @@ separate buckets.
 | Paper index | 989 scraped papers + manual radar additions through 2026-07 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
-| Full / seed paper notes | 7 full + 15 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
+| Full / seed paper notes | 7 full + 20 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
 | Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
 | Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
 | Benchmark catalog | 21 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
@@ -180,7 +180,7 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 15 seed notes, and the master [`index.md`](papers/index.md). |
+| [`papers/`](papers/) | 7 full paper notes, 20 seed notes, and the master [`index.md`](papers/index.md). |
 | [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs, about 1.8 GB. See the archival policy below. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |

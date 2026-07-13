@@ -14,7 +14,7 @@ memory_modules:
   - dream-consolidator
   - audit-ui
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-13
 archive: archives/tencentdb-agent-memory-overview.md
 ---
 
@@ -55,6 +55,14 @@ Tencent Cloud VectorDB。
 - **接入**:OpenClaw plugin、Hermes Gateway adapter、agent tools
   `tdai_memory_search` / `tdai_conversation_search`
 
+## 3.1 2026-07 commercial signal
+
+Tencent Cloud 2026-07-07 billing documentation makes Agent Memory a commercial
+cloud service surface rather than only an OSS/research signal. The billing page
+describes pay-as-you-go charging by memory storage and model-call credits, while
+the public beta / whitelist period remains free until 2026-08-15. This is a
+productization and procurement signal, not evidence of memory quality.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:它把"可调试记忆"作为核心卖点,不像纯 vector DB 只返回相似度列表。
@@ -91,6 +99,7 @@ Tencent Cloud VectorDB。
 
 - archive: [`archives/tencentdb-agent-memory-overview.md`](archives/tencentdb-agent-memory-overview.md)
 - 腾讯云产品页:https://cloud.tencent.com/product/agm
+- 计费概述:https://cloud.tencent.com/document/product/1813/133512
 - GitHub:https://github.com/TencentCloud/TencentDB-Agent-Memory
 - Historical GitHub alias:https://github.com/Tencent/TencentDB-Agent-Memory
 
