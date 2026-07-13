@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-13
 archive: archives/alibaba-bailian-memory-overview.md
 ---
 
@@ -45,6 +45,18 @@ AgentLoop 更像 enterprise agent observability / optimization platform,而不�
 产品条目,避免与 Bailian Memory Library / long-term memory API / OpenClaw memory
 plugin 混淆。
 
+## 3.2 2026-07 refresh
+
+The English long-term memory API reference is now explicit about the API
+surface: `AddMemory`, `SearchMemory`, `ListMemory`, `DeleteMemory`,
+`UpdateMemory`, profile-schema CRUD, and `GetUserProfile`. It also documents
+account-level throttling and says generated memory fragments and user profiles
+do not expire by default.
+
+The visible page body did not expose a stable update date during the
+2026-07-13 refresh, so this note treats the API reference as official current
+product behavior and keeps the date caveat out of any freshness claim.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:百炼代表国内云平台把 long-term memory API 产品化的路线。
@@ -69,6 +81,7 @@ plugin 混淆。
 - archive: [`archives/alibaba-bailian-memory-overview.md`](archives/alibaba-bailian-memory-overview.md)
 - 记忆库:https://help.aliyun.com/zh/model-studio/memory-library
 - 长期记忆 API:https://help.aliyun.com/zh/model-studio/long-term-memory-2-0
+- Long-term memory API reference:https://help.aliyun.com/en/model-studio/long-term-memory-api-reference
 - AgentLoop:https://help.aliyun.com/en/document_detail/3033860.html
 - OpenClaw memory plugin:https://help.aliyun.com/en/model-studio/modelstudio-memory-for-openclaw
 

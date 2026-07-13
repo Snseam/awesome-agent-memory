@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-13
 archive: archives/oracle-ai-agent-memory-overview.md
 ---
 
@@ -43,6 +43,19 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 官方文档集存在。Oracle developer blog 的 Claude / Oracle / LangChain 组合文章在
 本环境返回 403,因此不把该 blog 的架构定位升级为本仓强证据;后续可人工复核后再补。
 
+## 3.2 2026-07 refresh
+
+Oracle 2026-07-07 developer blog 将 26.6 更新描述为更面向开发者控制面的版本:
+background extraction、hybrid vector + text search、custom extraction
+instructions、context cards、metadata filtering、update APIs、TTL、OracleDBEmbedder
+和 chunked semantic indexing。2026-07-10 database blog 进一步把 26.6 定位为
+"memory with receipts"。
+
+这些更新强化了 Oracle 路线的核心特征:memory 不是独立黑箱服务,而是数据库内的
+可过滤、可更新、可保留期限管理的 enterprise substrate。本轮只收录产品行为和
+治理面变化;博客中的性能评测表述不进入 benchmark claims ledger,后续若要使用需先
+按 claims ledger 规范单独归档。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Oracle 代表 "enterprise database becomes memory substrate" 路线。
@@ -67,6 +80,8 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 - archive: [`archives/oracle-ai-agent-memory-overview.md`](archives/oracle-ai-agent-memory-overview.md)
 - Docs:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
 - Docs index:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/index.html
+- 26.6 developer blog:https://blogs.oracle.com/developers/whats-new-in-oracle-ai-agent-memory-custom-extraction-hybrid-search-and-more-control
+- 26.6 database blog:https://blogs.oracle.com/database/oracle-ai-agent-memory-26-6
 
 ---
 

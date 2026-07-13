@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-06-24
+date: 2026-07-13
 status: working-log
 language: zh-CN
 ---
@@ -156,3 +156,14 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-07-13 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Google Agent Platform Memory Bank | Gemini Enterprise Agent Platform release notes 2026-07-08 | 更新 `products/google-memory-bank.md`;IngestEvents GA 和 Gemini Embedding 2 support 是 managed memory ingestion / retrieval 产品行为证据,不是独立质量结论 |
+| update-existing | Oracle AI Agent Memory | Oracle developer/database blogs 2026-07-07 / 2026-07-10 | 更新 `products/oracle-ai-agent-memory.md`;26.6 hybrid search、context cards、TTL、metadata filters、update APIs 是 vendor product behavior;性能评测表述本轮不入 claims ledger |
+| update-existing | Zep | Zep ABAC blog 2026-07-09 | 更新 `products/zep.md`;API-key action policies and metadata-scoped graph access 是 governance surface,不是 quality claim |
+| update-existing | TencentDB Agent Memory | Tencent Cloud billing docs 2026-07-07 | 更新 `products/tencentdb-agent-memory.md`;商业计费和白名单免费期是 productization/procurement signal |
+| update-existing | Alibaba Bailian Memory Library | Alibaba Cloud long-term memory API reference | 更新 `products/alibaba-bailian-memory.md`;Add/Search/List/Delete/Update/Profile APIs 是 official API surface,但页面日期不可稳定确认 |
+| watchlist | Anthropic API memory-store beta header | Claude API release notes surfaced a dated-after-run memory-store change | 当前 run date 为 2026-07-13;不收录 2026-07-22 future-dated release-note item,下周复核 |

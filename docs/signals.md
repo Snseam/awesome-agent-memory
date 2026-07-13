@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-06-24
+date: 2026-07-13
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,8 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-07-13 | [Learning User-Aware Recall](https://arxiv.org/abs/2607.00017) / [Active Memory Navigation](https://arxiv.org/abs/2607.05794) / [Forged Reasoning Attacks](https://arxiv.org/abs/2607.05029) / [Remember When It Matters](https://arxiv.org/abs/2607.08716) / [Memory in the Loop](https://arxiv.org/abs/2607.05690) | paper | 周更 radar 追加 user-aware recall、memory-as-action-space、reasoning-history poisoning、selective memory intervention、in-process working memory 五条 seed note | `seed-note` ✅(见 `papers/`) |
+| 2026-07-13 | [Google Agent Platform release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes) / [Oracle 26.6 blog](https://blogs.oracle.com/developers/whats-new-in-oracle-ai-agent-memory-custom-extraction-hybrid-search-and-more-control) / [Zep ABAC](https://blog.getzep.com/attribute-based-access-control/) / [Tencent billing](https://cloud.tencent.com/document/product/1813/133512) / [Alibaba API reference](https://help.aliyun.com/en/model-studio/long-term-memory-api-reference) | product | 官方产品源补充 Memory Bank IngestEvents GA、Oracle 26.6 controls、Zep metadata-scoped ABAC、Tencent 商业计费和 Alibaba memory API surface | `deep-note` ✅(更新 `products/`) |
 | 2026-07-06 | [A-TMA](https://arxiv.org/abs/2607.01935) / [Mandol](https://arxiv.org/abs/2606.29778) / [Forensic Trajectory Signatures](https://arxiv.org/abs/2606.30566) | paper | 周更 radar 追加 state-aware ghost memory、agglomerative memory-native storage、memory-poisoning trajectory forensics 三条 seed note | `seed-note` ✅(见 `papers/`) |
 | 2026-07-06 | [MemSyco-Bench](https://arxiv.org/abs/2607.01071) / [MemLeak](https://arxiv.org/abs/2606.29788) / [MemDelta](https://arxiv.org/abs/2606.29914) | paper | benchmark catalog 新增 memory-induced sycophancy、多模态删除泄漏、controlled baseline methodology | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-07-06 | [AWS AgentCore release notes](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html) / [Google release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes) / [OpenAI Business release notes](https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes) / [Mem0 changelog](https://docs.mem0.ai/changelog/highlights) / [Redis guide](https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/) | product | 官方产品源补充 AgentCore streaming、Memory Bank model default、ChatGPT org memory controls、Mem0 expiration 和 Redis two-tier guidance | `deep-note` ✅(更新 `products/`) |
