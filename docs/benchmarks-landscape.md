@@ -23,6 +23,8 @@ language: zh-CN
 | 长程对话记忆 | [`LoCoMo`](../benchmarks/locomo.md) | factual recall / temporal / causal / multi-session | seed,产品横评最常见 |
 | 对话记忆规模曲线 | [`ConvoMem`](../benchmarks/convomem.md) | long-context vs block extraction vs RAG crossover | full,同时批评 LongMemEval/LoCoMo |
 | agent 记忆能力维度 | [`MemoryAgentBench`](../benchmarks/memoryagentbench.md) | retrieval / test-time learning / long-range / forgetting | seed,适合定义能力轴 |
+| prospective memory | [`PM-Bench`](../benchmarks/pm-bench.md) | delayed intention execution / cue monitoring / ongoing activity | seed,origin paper logged; protocol/results not normalized |
+| memory-operation routing | [`MemOps`](../benchmarks/memops.md) | remember / forget / update / reflect / no-op operation selection | seed,origin paper logged; operation labels/results not normalized |
 | shared-memory governance | [`GateMem`](../benchmarks/gatemem.md) | utility / access control / active forgetting | seed,6 月新增治理 benchmark |
 | 结构化记忆组织 | [`StructMemEval`](../benchmarks/structmemeval.md) | structure selection / state tracking / task-specific organization | seed,FeishuLuo survey 查漏后新增;primary arXiv + working-paper repo |
 | 百万 token 规模 | [`BEAM`](../benchmarks/beam.md) | 1M/10M 长尺度记忆退化 | candidate,目前主要来自 Mem0 自报 |
@@ -35,6 +37,8 @@ language: zh-CN
 | memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
 | multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
+| persistent prompt injection | [`Bad Memory`](../benchmarks/bad-memory-prompt-injection.md) | memory-file / preference-store / KB poisoning and mitigation | seed,origin paper logged; setups/results not normalized |
+| persistent memory poisoning | [`MemPoison`](../benchmarks/mempoison.md) | direct / compositional / dormant corruption and defense blind spots | seed,origin paper logged; cases/resources not normalized |
 
 ## B. 初始交叉统计
 
@@ -49,6 +53,8 @@ language: zh-CN
 | ConvoMem | 2 | origin + baseline comparison |
 | BEAM | 2 | Mem0 BEAM 1M / 10M vendor claims |
 | MemoryAgentBench | 2 | origin + survey mention |
+| PM-Bench | 1 | origin paper logged; prospective-memory protocol not yet normalized |
+| MemOps | 1 | origin paper logged; operation-selection protocol not yet normalized |
 | GateMem | 1 | origin paper logged; metrics/results not yet normalized |
 | StructMemEval | 1 | origin paper logged; protocol/results not yet normalized |
 | MemoryRewardBench | 1 | origin paper logged; evaluator benchmark only |
@@ -61,6 +67,8 @@ language: zh-CN
 | MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
 | MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
+| Bad Memory | 1 | origin paper logged; persistent prompt-injection setups not yet normalized |
+| MemPoison | 1 | origin paper logged; persistent memory-poisoning protocol not yet normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -160,7 +168,11 @@ enters the catalog.
    becomes a kernel evaluation priority.
 9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-10. Add independent reproduction rows only when the source gives enough setup
+10. Upgrade PM-Bench if pending intentions, reminders, or future cue monitoring
+    become a kernel evaluation priority.
+11. Upgrade MemPoison if persistent poisoning and compositional memory defense
+    become a security evaluation priority.
+12. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

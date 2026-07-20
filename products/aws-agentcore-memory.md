@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-06
+last_revised: 2026-07-20
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -57,6 +57,11 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
 record streaming 作为当前能力面:memory record create / update / delete 事件可流向
 Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证据,可支持"AgentCore Memory
 暴露 evented memory lifecycle"这一判断,但不支持任何独立性能结论。
+
+2026-07-20 复核时,当前 AgentCore release notes 仍把 Harness GA 列在 2026-06
+section,并写明 GA harness 支持 built-in memory by default 或 bring-your-own
+memory。本轮没有发现新的 post-2026-07-13 memory capability delta;这里只把它作为
+当前官方 release surface 的再确认,不登记为独立性能或质量证据。
 
 ## 4. 决策相关性 / Decision relevance
 

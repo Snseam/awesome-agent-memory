@@ -32,6 +32,8 @@ official repository, dataset card, or independent reproduction.
 | LoCoMo | seed | paper-origin | very long-term conversational memory | retrieval / temporal / causal | [`locomo.md`](locomo.md) | yes |
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
+| PM-Bench | seed | paper-origin | prospective memory | delayed intention / cue monitoring / ongoing activity | [`pm-bench.md`](pm-bench.md) | yes |
+| MemOps | seed | paper-origin | memory operation selection | remember / forget / update / reflect / no-op | [`memops.md`](memops.md) | yes |
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
 | StructMemEval | seed | paper-origin | structured memory organization | structure selection / state tracking / task-specific organization | [`structmemeval.md`](structmemeval.md) | yes |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
@@ -49,6 +51,8 @@ official repository, dataset card, or independent reproduction.
 | MemSyco-Bench | seed | paper-origin | memory-induced sycophancy | scope / conflict resolution / update / valid personalization | [`memsyco-bench.md`](memsyco-bench.md) | yes |
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
+| Bad Memory | seed | paper-origin | persistent memory prompt injection | memory files / preference stores / KB poisoning / mitigation | [`bad-memory-prompt-injection.md`](bad-memory-prompt-injection.md) | yes |
+| MemPoison | seed | paper-origin | persistent memory poisoning | compositional corruption / dormant trigger / defense blind spots | [`mempoison.md`](mempoison.md) | yes |
 
 ## Evidence Ledgers
 

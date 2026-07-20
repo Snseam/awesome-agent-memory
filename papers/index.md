@@ -21,9 +21,16 @@ removed.
 
 ## 2026-07 manual radar additions
 
-These entries were added by the 2026-07-06 weekly radar refresh. They are not
+These entries were added by the 2026-07 weekly radar refreshes. They are not
 part of the 2026-05-19 nine-list scrape statistics above.
 
+- [PM-Bench: Evaluating Prospective Memory in LLM Agents](../benchmarks/pm-bench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.12385)
+- [Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents](memory-as-controlled-process.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.13591)
+- [Experience Memory Graph: One-Shot Error Correction for Agents](experience-memory-graph.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.13884)
+- [MemOps: Memory Operations Benchmark for Memory-Augmented Agents](../benchmarks/memops.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.12893)
+- [Bad Memory: Benchmarking and Mitigating Persistent Memory Prompt Injection Attacks](../benchmarks/bad-memory-prompt-injection.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.14611)
+- [Why Git: Git as Agentic Memory Layer](git-bound-agent-memory.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.14390)
+- [MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents](../benchmarks/mempoison.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.14651)
 - [A-TMA: Decoupling State-Aware Memory Failures in Long-Term Agent Memory](atma-state-aware-memory-failures.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.01935)
 - [MemSyco-Bench: Benchmarking Sycophancy in Agent Memory](../benchmarks/memsyco-bench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.01071)
 - [MemLeak: Diagnosing Information Leaks in Multimodal Agent Memory](../benchmarks/memleak.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29788)

@@ -155,6 +155,26 @@ events:
       - benchmarks/memsyco-bench.md
       - https://arxiv.org/abs/2607.01071
     extract_confidence: medium
+  - event_id: pm-bench-origin-2026
+    benchmark_id: pm-bench
+    source_kind: paper
+    source_id: benchmarks/pm-bench.md
+    source_date: 2026-07
+    actor: PM-Bench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Prospective-memory benchmark over a simulated seven-day week; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; author-reported F1 scores, agent configurations, released data, and code need full normalization before use."
+    evidence_refs:
+      - benchmarks/pm-bench.md
+      - https://arxiv.org/abs/2607.12385
+    extract_confidence: medium
   - event_id: memleak-origin-2026
     benchmark_id: memleak
     source_kind: paper
@@ -194,6 +214,66 @@ events:
     evidence_refs:
       - benchmarks/memdelta.md
       - https://arxiv.org/abs/2606.29914
+    extract_confidence: medium
+  - event_id: mempoison-origin-2026
+    benchmark_id: mempoison
+    source_kind: paper
+    source_id: benchmarks/mempoison.md
+    source_date: 2026-07
+    actor: MemPoison authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Persistent memory-poisoning benchmark and analysis over hand-validated cases; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; reported attack success and defense rates need full setup normalization before use."
+    evidence_refs:
+      - benchmarks/mempoison.md
+      - https://arxiv.org/abs/2607.14651
+    extract_confidence: medium
+  - event_id: memops-origin-2026
+    benchmark_id: memops
+    source_kind: paper
+    source_id: benchmarks/memops.md
+    source_date: 2026-07
+    actor: MemOps authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Memory-operation benchmark over remember, forget, update, reflect, and no-op choices; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; operation traces, scoring rules, and reported model behavior need full normalization before use."
+    evidence_refs:
+      - benchmarks/memops.md
+      - https://arxiv.org/abs/2607.12893
+    extract_confidence: medium
+  - event_id: bad-memory-origin-2026
+    benchmark_id: bad-memory
+    source_kind: paper
+    source_id: benchmarks/bad-memory-prompt-injection.md
+    source_date: 2026-07
+    actor: Bad Memory authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Persistent prompt-injection attacks against memory files, preferences, knowledge bases, and defenses; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; attack success rates, defense setups, and agent configurations need full normalization before use."
+    evidence_refs:
+      - benchmarks/bad-memory-prompt-injection.md
+      - https://arxiv.org/abs/2607.14611
     extract_confidence: medium
   - event_id: fact-memory-vs-long-context-baseline-2026
     benchmark_id: fact-memory-vs-long-context

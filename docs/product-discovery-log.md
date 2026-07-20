@@ -156,3 +156,13 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-07-20 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Google Agent Platform Memory Bank | Gemini Enterprise Agent Platform release notes 2026-07-15 | 更新 `products/google-memory-bank.md`;memory profiles 与 IngestEvents GA 是托管产品行为证据 |
+| update-existing | Oracle AI Agent Memory | Oracle 26.6 docs / product page | 更新 `products/oracle-ai-agent-memory.md`;hybrid search、CRUD/cascade delete、retention policy、context cards、async APIs 和 custom extraction 是产品行为证据 |
+| update-existing | OpenAI ChatGPT Memory | current ChatGPT release notes / Help Center recheck | 更新 `products/openai-memory.md`;summary 删除、关闭、文本框编辑和高亮纠错属于 UX/governance 信号 |
+| update-existing | AWS Bedrock AgentCore Memory | current AgentCore release notes recheck | 更新 `products/aws-agentcore-memory.md`;Harness built-in/BYO memory surface 为再确认,未发现 post-window memory delta |
+| watchlist | Speculate with Memory | arXiv 2607.12236 | memory-augmented speculation 先保留为 cost/latency adjacent,不作为核心 memory 产品或 benchmark |

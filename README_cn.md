@@ -10,7 +10,7 @@
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
 [![记忆产品](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-21-blueviolet.svg)](benchmarks/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-25-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--07-lightgrey.svg)](docs/signals.md)
 
@@ -56,10 +56,10 @@
 | 论文索引 | 989 篇抓取论文 + 截至 2026-07 的手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
-| full / seed 论文笔记 | 7 个 full + 15 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
+| full / seed 论文笔记 | 7 个 full + 18 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
 | 记忆产品笔记 | 38 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
 | 产品页面快照 | 37 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
-| Benchmark 目录 | 21 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
+| Benchmark 目录 | 25 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
 | Claims ledger | 结构化 YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | 区分厂商自报、论文评测、方法批评和独立复现。 |
 | 成本节省专题 | seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | 查找能减少 token、延迟或运行成本的 agent-memory 论文、方法、代码和产品。 |
 | 综述与 taxonomy | 1 份活综述 + 6 条 meta-survey 记录 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | 在选型或设计前建立领域视角。 |
@@ -175,11 +175,11 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`papers/`](papers/) | 7 个 full 论文笔记、15 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、18 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
 | [`papers/stubs/`](papers/stubs/) | 988 个尚未 full 阅读论文的生成 stub。 |
 | [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF，约 1.8 GB。详见下方存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物：抓取脚本和 dedup JSON。 |
-| [`benchmarks/`](benchmarks/) | 21 个 benchmark catalog 行，包含协议笔记、stub-backed 候选行和笔记模板。 |
+| [`benchmarks/`](benchmarks/) | 25 个 benchmark catalog 行，包含协议笔记、stub-backed 候选行和笔记模板。 |
 | [`benchmarks/claims/`](benchmarks/claims/) | benchmark 提及、厂商自报、方法批评和复现的 usage-event ledger。 |
 | [`benchmarks/archives/`](benchmarks/archives/) | benchmark 页面、repo 或 dataset card 的可选审计快照。 |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | 按能力、使用方式和证据独立性整理的 benchmark 全景。 |
