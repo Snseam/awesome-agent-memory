@@ -1,16 +1,16 @@
 ---
 title: 2026-07 Memory Radar refresh
-date: 2026-07-06
+date: 2026-07-27
 status: current-source-refresh
 language: zh-CN
 ---
 
 # 2026-07 Memory Radar refresh
 
-本页记录 2026-07-06 的 weekly radar refresh。主 agent 从最新 `origin/main`
-创建 `codex/weekly-memory-radar-2026-07-06`,并用 paper/product/GitHub discovery
-子 agent 做候选检索。所有 GitHub/list/catalog 信号只作为 discovery;最终收录只依赖
-primary paper/product sources。
+本页记录 2026-07-06 与 2026-07-27 的 weekly radar refresh。主 agent 从最新
+`origin/main` 创建对应周更分支,并用 paper/product/GitHub discovery 子 agent 做候选
+检索。所有 GitHub/list/catalog 信号只作为 discovery;最终收录只依赖 primary
+paper/product sources。
 
 ## 执行模型
 
@@ -21,6 +21,70 @@ primary paper/product sources。
 | GitHub/benchmarks | `researcher` | repo/list/dataset discovery signals only |
 | repo-map | `explore` | counts、landing files、现有条目和别名风险 |
 | source/relevance review | main agent + later reviewer | must-add / update-existing / watchlist / adjacent / reject |
+
+## 2026-07-27 weekly refresh delta
+
+### Papers and benchmarks
+
+| Action | Item | Why it matters | Local anchor |
+|---|---|---|---|
+| must-add | Retain or Consolidate? | 把 raw retention 与 consolidation 变成 budget-dependent operator selection,避免固定记忆策略 | [`../papers/retain-or-consolidate-budget-dependent-memory.md`](../papers/retain-or-consolidate-budget-dependent-memory.md) |
+| must-add | Mechanistic Attention Guidance for Agent Memory Refinement | 用 retrieval-head attention telemetry 指导 memory refinement,补可解释 refinement 信号 | [`../papers/mechanistic-attention-guidance-agent-memory-refinement.md`](../papers/mechanistic-attention-guidance-agent-memory-refinement.md) |
+| must-add | AttriMem | 把 memory construction 的 process feedback / attribution 变成 RL 优化目标 | [`../papers/attrimem-attribution-guided-memory-learning.md`](../papers/attrimem-attribution-guided-memory-learning.md) |
+| must-add | Beyond Memory Leaderboards | 要求 scientific-memory benchmark 按 retrieval budget、modality、judge/rubric 做可解释对比 | [`../papers/beyond-memory-leaderboards-budgeted-context-restoration.md`](../papers/beyond-memory-leaderboards-budgeted-context-restoration.md) |
+| must-add | Forged Reasoning Attacks | 记录 malicious reasoning trace 如何污染 agent memory,补 memory write-path 安全压力 | [`../papers/forged-reasoning-attacks-agent-memory.md`](../papers/forged-reasoning-attacks-agent-memory.md) |
+| must-add | From Memory to Skills | 讨论 evidence-grounded promotion from memories to skills/procedures,补 procedural memory governance | [`../papers/from-memory-to-skills.md`](../papers/from-memory-to-skills.md) |
+| must-add | MemTools | 提出 memory lifecycle component contracts 与 evaluation/protocol 解耦,补 interop/evaluator 压力 | [`../papers/memtools-interoperable-agent-memory-framework.md`](../papers/memtools-interoperable-agent-memory-framework.md) |
+| must-add | Proactive Memory Agent | 把 memory recall 从被动检索推进到 intervention timing/policy 问题 | [`../papers/proactive-memory-agent.md`](../papers/proactive-memory-agent.md) |
+| must-add | OCR-Memory | 把长期 memory 扩展到 OCR artifact retrieval 与视觉文本上下文恢复 | [`../papers/ocr-memory.md`](../papers/ocr-memory.md) |
+| must-add | Profile-Graph Memory / MemHop | 记录 profile graph 与 MemHop-style 多跳 personalization;benchmark promotion 暂缓 | [`../papers/profile-graph-memory-memhop.md`](../papers/profile-graph-memory-memhop.md) |
+| must-add | MOSAIC | 补 graph storage、conflict detection、hash retrieval 的长期 memory architecture 信号 | [`../papers/mosaic-long-term-memory.md`](../papers/mosaic-long-term-memory.md) |
+| must-add | Memora | 新增 weeks-to-months personalized memory benchmark 和 forgetting-aware FAMA metric | [`../benchmarks/memora.md`](../benchmarks/memora.md) |
+| update-existing | BEAM | 官方 repo / dataset 源补强,但 1M/10M performance claims 仍不升级为独立证据 | [`../benchmarks/beam.md`](../benchmarks/beam.md) |
+
+### Products
+
+| Action | Product | Why it matters | Local anchor |
+|---|---|---|---|
+| must-add | Databricks Managed Agent Memory | Azure Databricks 把 Unity Catalog-backed managed memory store 暴露为 beta 产品能力 | [`../products/databricks-managed-agent-memory.md`](../products/databricks-managed-agent-memory.md) |
+| update-existing | AWS Bedrock AgentCore Memory | Harness GA 与 Memory execution role policy 补充 managed memory 权限/运行时信号 | [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md) |
+| update-existing | Google Agent Platform Memory Bank | profiles GA、IngestEvents GA、Gemini Embedding 2 支持是官方产品行为更新 | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) |
+| update-existing | Anthropic Claude memory-store | `agent-memory-2026-07-22` beta header 改变 memory listing 语义 | [`../products/claude-dreams.md`](../products/claude-dreams.md) |
+| update-existing | OpenAI Projects memory | Project-only memory scope 与 "no list of project memories" 是 governance/control-surface 信号 | [`../products/openai-memory.md`](../products/openai-memory.md) |
+| update-existing | Alibaba OpenSearch Agentic Memory | 作为 Alibaba managed-memory family / alias signal,不与 generic OpenSearch 混同 | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) |
+| update-existing | Letta trajectory memory | trajectory 格式是 Letta memory formation 的新信号,不是独立新产品 | [`../products/letta.md`](../products/letta.md) |
+
+### Watchlist / adjacent / reject
+
+| Decision | Item | Reason |
+|---|---|---|
+| watchlist | Supra cognitive modes | 相关 routed-memory architecture,但证据/新颖性弱于本轮 direct memory papers |
+| watchlist | Oracle Agent Memory report | Oracle-affiliated LongMemEval numbers 只能进入 vendor/affiliated evidence,本轮不加 score claim |
+| watchlist | Tacitus / Mnemosyne / SimpleMem / MCP memory catalogs | GitHub 或 catalog 活动只作 discovery,需 source/license/release health 补证 |
+| watchlist | Cloudflare Think harness | 与 Cloudflare Agent Memory 重叠;先观察是否形成独立 memory product |
+| adjacent | Microsoft Foundry Local compaction / Cloudflare Code Mode | context compaction 或 tool execution 信号,不是一等长期 memory 产品 |
+| source mismatch | Alibaba OpenSearch / Bailian / generic OpenSearch | 只使用 official Aliyun/Bailian/OpenSearch Agentic Memory 页面,不把 generic OpenSearch docs 当产品证据 |
+| reject as evidence | GitHub stars, README benchmark tables, third-party product lists | 可发现候选,不能支持性能、质量、maturity 或独立复现结论 |
+
+### Evidence gaps
+
+| Item | Gap | Why not blocking |
+|---|---|---|
+| 2026-07 paper seeds | 尚未 full read PDF、code/data/license、leaderboard 和 exact setup | 本轮只登记 seed note;不登记 normalized score 或 independent reproduction |
+| Memora / BEAM | repo 与 dataset 源已补,但 protocol/results 未归一化 | 只新增 origin / source rows,不作为排行证据 |
+| Product updates | 官方 docs/release notes 支撑 product behavior | 未写任何 independent benchmark 或 superiority claim |
+| OpenAI Projects source | shell reachability 可能 403,但 Help Center 页面浏览器可访问 | 只更新 product behavior;保留可访问性 caveat |
+
+### Trend synthesis
+
+- **Operator choice is becoming budget-aware**:Retain/Consolidate、Beyond Memory
+  Leaderboards、MemDelta 都把 retrieval budget 和 context volume 变成评价前提。
+- **Memory write governance is now a security surface**:AttriMem、FARMA、
+  From Memory to Skills、MemTools 都把写入、归因、promotion 或 interop 合同推到前台。
+- **Managed memory is moving into governed cloud substrates**:Databricks、
+  Google、AWS、OpenAI、Anthropic、Alibaba 更新都强调 scope、identity、policy、store。
+- **Personalization benchmarks are adding forgetting pressure**:Memora 与
+  Profile-Graph/MemHop 让长期 profile 不再只测 recall,还要测 obsolete-memory 抑制。
 
 ## Must-add / update-existing
 
@@ -87,5 +151,7 @@ primary paper/product sources。
   notes / changelog / blog。
 - GitHub stars、README 性能数字、MCP catalog 和 awesome-list placement 只作 discovery。
 - Author-reported benchmark results are paper-origin claims;vendor numbers are vendor claims。
-- 本轮 benchmark catalog 从 18 行增至 21 行;paper seed notes 从 12 增至 15;product
-  note count 不变。
+- 2026-07-06 轮次 benchmark catalog 从 18 行增至 21 行;paper seed notes 从 12
+  增至 15;product note count 不变。
+- 2026-07-27 轮次 benchmark catalog 从 21 行增至 22 行;paper seed notes 从 15
+  增至 26;product notes 从 38 增至 39;product archives 从 37 增至 38。

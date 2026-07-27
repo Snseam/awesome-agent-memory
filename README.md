@@ -9,8 +9,8 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![Memory products](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-21-blueviolet.svg)](benchmarks/)
+[![Memory products](https://img.shields.io/badge/memory%20products-39-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-22-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--07-lightgrey.svg)](docs/signals.md)
 
@@ -58,10 +58,10 @@ separate buckets.
 | Paper index | 989 scraped papers + manual radar additions through 2026-07 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
-| Full / seed paper notes | 7 full + 15 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
-| Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
-| Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
-| Benchmark catalog | 21 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
+| Full / seed paper notes | 7 full + 26 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
+| Memory product notes | 39 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
+| Product page archives | 38 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
+| Benchmark catalog | 22 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
 | Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
@@ -169,8 +169,8 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`products/`](products/) | 38 memory product notes, including Mem0, Letta, Zep, Graphiti, EverOS, MemOS, Redis Agent Memory Server, Supermemory, TencentDB Agent Memory, agentmemory, Memori, memU, memsearch, and platform-managed memory offerings. |
-| [`products/archives/`](products/archives/) | 37 markdown snapshots of canonical memory product pages. |
+| [`products/`](products/) | 39 memory product notes, including Mem0, Letta, Zep, Graphiti, EverOS, MemOS, Redis Agent Memory Server, Supermemory, TencentDB Agent Memory, agentmemory, Memori, memU, memsearch, Databricks Managed Agent Memory, and platform-managed memory offerings. |
+| [`products/archives/`](products/archives/) | 38 markdown snapshots of canonical memory product pages. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Product landscape by domain and audience. |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A, Tier B, reject, and alias decisions. |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product architecture patterns: memory OS, graph/temporal memory, MCP/local-first memory, managed cloud memory, and personal memory. |
@@ -180,11 +180,11 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 15 seed notes, and the master [`index.md`](papers/index.md). |
+| [`papers/`](papers/) | 7 full paper notes, 26 seed notes, and the master [`index.md`](papers/index.md). |
 | [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs, about 1.8 GB. See the archival policy below. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |
-| [`benchmarks/`](benchmarks/) | 21 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
+| [`benchmarks/`](benchmarks/) | 22 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
 | [`benchmarks/claims/`](benchmarks/claims/) | Usage-event ledger for benchmark mentions, vendor claims, critiques, and reproductions. |
 | [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repositories, or dataset cards. |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |

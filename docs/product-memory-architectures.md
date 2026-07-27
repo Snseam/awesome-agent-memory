@@ -50,6 +50,7 @@ flowchart TB
     Managed --> Cloudflare["Cloudflare Agent Memory"]
     Managed --> Oracle["Oracle AI Agent Memory"]
     Managed --> Alibaba["Alibaba Bailian Memory"]
+    Managed --> Databricks["Databricks Managed Agent Memory"]
     Personal --> OpenAI["OpenAI Memory"]
     Personal --> Claude["Claude Dreams / memory"]
     Personal --> PersonalAI["Personal AI"]
@@ -183,12 +184,12 @@ flowchart LR
 | Field | Synthesis |
 |---|---|
 | architecture pattern | 云平台提供 managed memory store + identity scope + retrieval tools;开发者配置 scope、TTL、strategy、权限 |
-| products mapped | AWS AgentCore Memory、Google Memory Bank、Microsoft Foundry Memory、Cloudflare Agent Memory、Oracle AI Agent Memory、Alibaba Bailian Memory |
+| products mapped | AWS AgentCore Memory、Google Memory Bank、Microsoft Foundry Memory、Cloudflare Agent Memory、Oracle AI Agent Memory、Alibaba Bailian Memory、Databricks Managed Agent Memory |
 | common data flow | app/agent events -> managed extraction -> scoped store -> semantic/search retrieval -> prompt/tool injection -> cloud governance |
 | memory types | session events、user profile、facts、chat summaries、procedural memory、thread context cards |
 | retrieval/consolidation strategy | 平台内置抽取/合并/过期;部分平台暴露 strategy、TTL、CRUD 或 provider abstraction |
 | governance/inspectability | IAM/RBAC、tenant isolation、TTL、CRUD、export、audit 是核心;内部提取/排序通常黑箱 |
-| confidence/unknowns | 官方 docs 证据强;Cloudflare private beta、Google Preview/Pre-GA、Microsoft preview 需要时间标签。 |
+| confidence/unknowns | 官方 docs 证据强;Cloudflare private beta、Google Preview/Pre-GA、Microsoft preview、Databricks beta 需要时间标签。 |
 
 ```mermaid
 flowchart TB

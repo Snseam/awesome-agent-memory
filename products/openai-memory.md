@@ -10,7 +10,7 @@ memory_modules:
   - ingest-adapter
   - retriever-reranker
 status: full
-last_revised: 2026-07-06
+last_revised: 2026-07-27
 archive: archives/openai-memory-overview.md
 ---
 
@@ -64,6 +64,13 @@ vendor-managed memory 的 UX/治理升级,不是新的开放 memory kernel。
 删除、标记 not relevant 以及 legacy saved memories 控制。OpenAI 同时说明 Codex
 memory 不受该 ChatGPT 产品 memory 变更影响。该更新继续归类为 vendor-managed
 product behavior,不作为开放 agent-memory API 或独立质量证据。
+
+2026-07 复核的 ChatGPT Projects help page 说明 Projects have built-in memory。
+Project memory 可设为 project-only 或 default;shared projects 会自动变成
+project-only,且不能恢复为 default。Project-only memory 限制 chats 只引用同一
+project 内的 conversations,不能访问其他 projects 或普通 ChatGPT context。帮助页
+还说明 project memory 不提供像 personal saved memories 那样的条目列表。该能力
+是 ChatGPT 产品侧 scope/control 信号,不是开放 agent memory API。
 
 ## 4. 决策相关性 / Decision relevance
 

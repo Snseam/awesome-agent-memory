@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-27
 archive: archives/alibaba-bailian-memory-overview.md
 ---
 
@@ -45,6 +45,12 @@ AgentLoop 更像 enterprise agent observability / optimization platform,而不�
 产品条目,避免与 Bailian Memory Library / long-term memory API / OpenClaw memory
 plugin 混淆。
 
+2026-07 复核又发现阿里云 OpenSearch 的 Agentic Memory API 文档。它是 OpenSearch
+产品线下的智能体记忆服务,与百炼 Memory Library 同属阿里云 managed-memory 家族,
+但 canonical product surface 不同。本轮先记录为 alias / family signal,不新建
+产品 note,避免把 Bailian、OpenSearch、PolarSearch Memory Container 与 OpenClaw
+plugin 混成一个产品。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:百炼代表国内云平台把 long-term memory API 产品化的路线。
@@ -70,6 +76,7 @@ plugin 混淆。
 - 记忆库:https://help.aliyun.com/zh/model-studio/memory-library
 - 长期记忆 API:https://help.aliyun.com/zh/model-studio/long-term-memory-2-0
 - AgentLoop:https://help.aliyun.com/en/document_detail/3033860.html
+- OpenSearch Agentic Memory:https://help.aliyun.com/zh/open-search/search-platform/developer-reference/agentic-memory-by-api
 - OpenClaw memory plugin:https://help.aliyun.com/en/model-studio/modelstudio-memory-for-openclaw
 
 ---

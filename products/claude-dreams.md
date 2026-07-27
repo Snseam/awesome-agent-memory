@@ -10,7 +10,7 @@ evidence_level: medium (production product, no public benchmark numbers)
 code_available: no (proprietary)
 license: proprietary
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-07-27
 ---
 
 # Claude Dreams
@@ -69,7 +69,17 @@ Agent 使用 ContextPack
 
 ## Notes
 
-(随产品迭代追踪)
+### 2026-07 platform memory-store update
+
+Claude Platform 2026-07 release notes 增加 `agent-memory-2026-07-22` beta header。
+该 header 改变 memory-store list 语义:server-defined stable order、`depth` 取值
+限制、`path_prefix` segment matching、cursor 不兼容旧 header,并要求 SDK 对
+memory-store calls 使用新 header。该更新属于 Managed Agents memory-store API 行为,
+与 Dreams/offline consolidation 相邻但不等同。
+
+本仓暂不拆新产品 note:Claude Dreams 仍记录 offline consolidation architecture
+signal;memory-store API 后续如公开更多 lifecycle / store schema / governance docs,
+再考虑拆分为 Claude Managed Agents Memory。
 
 ---
 

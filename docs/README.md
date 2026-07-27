@@ -16,7 +16,7 @@ decide what to read before opening the paper index or the product notes.
    Codex weekly refresh runbook for papers, products, GitHub discovery, and
    benchmarks.
 5. [`memory-radar-2026-07.md`](memory-radar-2026-07.md) — latest current-source
-   refresh across papers, products, GitHub projects, and reviewer decisions.
+   refresh across papers, products, benchmarks, GitHub projects, and reviewer decisions.
 6. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
    agent-memory papers, algorithms, code paths, and products that reduce token,
    latency, or runtime cost.
