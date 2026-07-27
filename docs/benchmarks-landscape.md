@@ -32,6 +32,7 @@ language: zh-CN
 | agent 任务 / 多 agent | LoCoBench-Agent / MemoryArena / MemBench | coding agent, shared memory conflict, write/manage 评测 | candidate,需升级 source note |
 | evolving profile memory | [`DynamicMem`](../benchmarks/dynamicmem.md) | 15-month multi-app histories / profile reconstruction / temporal update | seed,origin paper logged; protocol/results not normalized |
 | auditable memory artifact | [`MEMPROBE`](../benchmarks/memprobe.md) | hidden user-state recovery from memory stores / full-store vs top-k probing | seed,origin paper logged; protocol/results not normalized |
+| personalized memory / forgetting | [`Memora`](../benchmarks/memora.md) | weeks-to-months personalization / recall / reasoning / recommending / forgetting-aware accuracy | seed,origin paper + repo logged; protocol/results not normalized |
 | memory-induced sycophancy | [`MemSyco-Bench`](../benchmarks/memsyco-bench.md) | whether retrieved memory should influence factual reasoning, conflicts, updates, and personalization | seed,origin paper logged; results/resources not normalized |
 | multimodal deletion leakage | [`MemLeak`](../benchmarks/memleak.md) | residual recovery after deletion via correlated text and retained images | seed,origin paper logged; image/data/setup not normalized |
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
@@ -58,6 +59,7 @@ language: zh-CN
 | MemoryArena | 1 | survey mention |
 | DynamicMem | 1 | origin paper logged; metrics/results not yet normalized |
 | MEMPROBE | 1 | origin paper logged; metrics/results not yet normalized |
+| Memora | 1 | origin paper + repo logged; FAMA protocol not normalized |
 | MemSyco-Bench | 1 | origin paper logged; memory-induced sycophancy protocol not yet normalized |
 | MemLeak | 1 | origin paper logged; multimodal deletion-leakage protocol not yet normalized |
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
@@ -148,19 +150,21 @@ enters the catalog.
 2. Upgrade LoCoMo from seed to full because it is the most product-used
    benchmark in current notes.
 3. Upgrade BEAM source before using Mem0's 1M/10M claims in any decision.
-4. Upgrade PersonaMem-v2 because TencentDB Agent Memory and Hy-Memory both cite
+4. Upgrade Memora if personalized forgetting-aware memory becomes a product or
+   kernel evaluation priority.
+5. Upgrade PersonaMem-v2 because TencentDB Agent Memory and Hy-Memory both cite
    PersonaMem-style claims.
-5. Upgrade MemoryRewardBench only when reward-model judging becomes an evaluator
+6. Upgrade MemoryRewardBench only when reward-model judging becomes an evaluator
    priority.
-6. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
+7. Promote MemoryArena and MemBench if multi-agent conflict or write/manage
    evaluation becomes a kernel priority.
-7. Upgrade DynamicMem if evolving user-profile memory becomes a product or kernel
+8. Upgrade DynamicMem if evolving user-profile memory becomes a product or kernel
    evaluation priority.
-8. Upgrade MEMPROBE if auditable memory artifact quality or over-retention
+9. Upgrade MEMPROBE if auditable memory artifact quality or over-retention
    becomes a kernel evaluation priority.
-9. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
+10. Upgrade GateMem if shared-memory governance or enterprise scoped recall becomes
    a kernel priority.
-10. Add independent reproduction rows only when the source gives enough setup
+11. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

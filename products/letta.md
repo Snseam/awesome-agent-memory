@@ -10,7 +10,7 @@ evidence_level: medium
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-05-19
+last_revised: 2026-07-27
 ---
 
 # Letta(原 MemGPT)
@@ -51,7 +51,16 @@ Letta 把它产品化为 stateful agent runtime。
 
 ## Notes
 
-(随版本更新追踪)
+### 2026-07 trajectory signal
+
+Letta 2026-07-23 blog 发布 `@letta-ai/trajectory`,把 Claude Code、Codex、
+Letta Code 等 agent harness 的 transcript 归一化为 agent experience data。博客
+说明 trajectory 可被索引或交给 memory agents 处理,Letta Code 也可用它从其他
+harness 的 session 中 bootstrap memory,并让 background dreaming 跨 harness
+consolidate lessons into persistent memory。
+
+这属于 product-research / vendor blog evidence。它强化了 Letta 的 "agent runtime
++ long-term memory" 路线,但不支持独立 benchmark 或成熟度结论。
 
 ---
 

@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-07-27
 archive: archives/oracle-ai-agent-memory-overview.md
 ---
 
@@ -43,6 +43,13 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 官方文档集存在。Oracle developer blog 的 Claude / Oracle / LangChain 组合文章在
 本环境返回 403,因此不把该 blog 的架构定位升级为本仓强证据;后续可人工复核后再补。
 
+## 3.2 2026-07 affiliated report signal
+
+2026-07 radar 发现 Oracle-affiliated Agent Memory report(arXiv:2607.13157)。
+它可作为 Oracle 路线的 watchlist / affiliated evidence,但 LongMemEval 或其他结果
+不能写成独立复现或客观 superiority claim;后续若纳入 claims ledger,必须标记 actor
+与 Oracle 关联。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Oracle 代表 "enterprise database becomes memory substrate" 路线。
@@ -67,6 +74,7 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 - archive: [`archives/oracle-ai-agent-memory-overview.md`](archives/oracle-ai-agent-memory-overview.md)
 - Docs:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
 - Docs index:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/index.html
+- Affiliated report:https://arxiv.org/abs/2607.13157
 
 ---
 

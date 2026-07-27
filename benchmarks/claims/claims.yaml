@@ -703,3 +703,24 @@ events:
       - benchmarks/memprobe.md
       - https://arxiv.org/abs/2606.24595
     extract_confidence: medium
+  - event_id: memora-origin-2026
+    benchmark_id: memora
+    source_kind: paper
+    source_id: benchmarks/memora.md
+    source_date: 2026-04
+    actor: Memora authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Weeks-to-months personalized agent conversations; FAMA combines recall and forgetting checks; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; official repo table is paper-origin evidence and not an independent reproduction."
+    evidence_refs:
+      - benchmarks/memora.md
+      - https://arxiv.org/abs/2604.20006
+      - https://github.com/geniesinc/Memora
+    extract_confidence: medium

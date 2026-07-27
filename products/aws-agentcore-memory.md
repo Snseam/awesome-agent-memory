@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-06
+last_revised: 2026-07-27
 archive: archives/aws-agentcore-memory-overview.md
 ---
 
@@ -57,6 +57,12 @@ insights、user preferences、facts 和 session summaries,并在未来会话中�
 record streaming 作为当前能力面:memory record create / update / delete 事件可流向
 Kinesis,用于下游审计、同步或增量处理。该能力是产品行为证据,可支持"AgentCore Memory
 暴露 evented memory lifecycle"这一判断,但不支持任何独立性能结论。
+
+2026-07 下旬 release notes 将 AgentCore Harness GA 描述为 built-in memory by
+default 或 bring-your-own memory,同时 AgentCore managed policy 文档新增
+`AmazonBedrockAgentCoreMemoryBedrockModelInferenceExecutionRolePolicy`,说明
+AgentCore Memory 调用 Bedrock 和 Bedrock Mantle 模型以处理 memories。该更新是
+权限 / runtime 集成信号,不是 memory algorithm 或质量证据。
 
 ## 4. 决策相关性 / Decision relevance
 
