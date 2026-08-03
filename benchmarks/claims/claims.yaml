@@ -703,3 +703,43 @@ events:
       - benchmarks/memprobe.md
       - https://arxiv.org/abs/2606.24595
     extract_confidence: medium
+  - event_id: memsecbench-origin-2026
+    benchmark_id: memsecbench
+    source_kind: paper
+    source_id: benchmarks/memsecbench.md
+    source_date: 2026-07
+    actor: MemSecBench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Memory-poisoning lifecycle benchmark from persistence to downstream consequence and selective repair; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; attack set, backend comparisons, and repair scores are not normalized in this ledger."
+    evidence_refs:
+      - benchmarks/memsecbench.md
+      - https://arxiv.org/abs/2607.27080
+    extract_confidence: medium
+  - event_id: setoka-origin-2026
+    benchmark_id: setoka
+    source_kind: paper
+    source_id: benchmarks/setoka.md
+    source_date: 2026-07
+    actor: Setoka authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Hierarchical user-understanding benchmark for personalized agents over heterogeneous data; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; data provenance, privacy boundary, and persona-inference labels are not normalized."
+    evidence_refs:
+      - benchmarks/setoka.md
+      - https://arxiv.org/abs/2607.27056
+    extract_confidence: medium

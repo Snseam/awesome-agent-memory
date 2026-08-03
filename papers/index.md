@@ -19,6 +19,18 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-08 manual radar additions
+
+These entries were added by the 2026-08-03 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Zero-Mem: Zero-Token Memory Operations for LLM Agents](zero-mem-zero-token-memory-operations.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.29377)
+- [Memory Provenance Laundering in LLM Agents](memory-provenance-laundering.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.29167)
+- [MemHarness: Memory Is Reconstructed, Not Replayed](memharness-memory-reconstructed-not-replayed.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.28272)
+- [Filesystem-Based Memory for LLM Agents](filesystem-based-memory-llm-agents.md) — 2026-07 — seed — [arxiv](https://arxiv.org/abs/2607.26637)
+- [MemSecBench: Tracking Agent Memory Poisoning](../benchmarks/memsecbench.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.27080)
+- [Setoka: Hierarchical User Understanding in Personalized Agents](../benchmarks/setoka.md) — 2026-07 — benchmark seed — [arxiv](https://arxiv.org/abs/2607.27056)
+
 ## 2026-07 manual radar additions
 
 These entries were added by the 2026-07-06 weekly radar refresh. They are not
