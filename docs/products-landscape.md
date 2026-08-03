@@ -68,6 +68,14 @@ language: zh-CN
 
 ## A. 按领域分类
 
+### 2026-08 source refresh note
+
+2026-08-03 周更只更新 existing product behavior,不新增核心产品计数。Google
+Memory Bank、Mem0、Zep、AWS AgentCore Memory、TencentDB Agent Memory 和 Hindsight 的变化分别
+记录在产品笔记与 [`product-discovery-log.md`](product-discovery-log.md)。这些变化
+来自官方 docs / changelog / release sources,只能支持 product behavior 或 vendor
+self-report,不能支持独立 benchmark 结论。
+
 ### A1. Agent memory 专门层(memory-as-a-product)
 
 | 名称 | 笔记 | Mode | Audience | 一句话 |

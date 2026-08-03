@@ -156,3 +156,19 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-08-03 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Google Agent Platform Memory Bank | setup docs / Memory Bank docs | 更新 `products/google-memory-bank.md`;topics、TTL、自定义配置和 Agent Runtime read/write 集成是产品行为证据 |
+| update-existing | Mem0 | changelog highlights | 更新 `products/mem0.md`;n8n / Zapier workflow integration 是接入面扩展,不是 benchmark |
+| update-existing | Zep | official changelog | 更新 `products/zep.md`;valid-time ordering、opaque page token、`is_null` date filter 强化 temporal graph query control |
+| update-existing | AWS AgentCore Memory | Bedrock Agents Classic maintenance docs / AgentCore release notes | 更新 `products/aws-agentcore-memory.md`;迁移与 runtime memory surface 是 vendor product behavior |
+| update-existing / watchlist | TencentDB Agent Memory | GitHub release / README_CN / Tencent Cloud article | 更新 `products/tencentdb-agent-memory.md`;v2 beta/team memory 是相关信号,性能/benchmark claims 仍不升级 |
+| update-existing | Hindsight | GitHub release `v0.8.6` | 更新 `products/hindsight.md`;ingest-age memory-unit filtering 是产品/API 行为,benchmark 数字仍是 vendor/affiliated claim |
+| watchlist | OWASP Agent Memory Guard | OWASP project page + GitHub | memory poisoning guard 相关,但 roadmap/评测证据不足,不新增产品计数 |
+| watchlist | Mnemoverse MCP Memory | official docs + GitHub | MCP persistent memory 相关,但本轮未完成 product note/source read |
+| watchlist | AMBIENT / inspeximus / ai-memory-mcp / memgres / sqlite-graph-memory | GitHub/site discovery | benchmark 或 MCP memory 信号,但多为 GitHub-only 或 vendor self-claim,不升级 |
+| watchlist | Letta Memory Filesystem | official changelog | 功能相关,但本轮未核验日期;不按 weekly window 升级 |
+| adjacent | Redis / Cloudflare / Microsoft Foundry Local signals | official docs/blogs | 没有清晰新 core memory product delta,保留为 discovery/watchlist |

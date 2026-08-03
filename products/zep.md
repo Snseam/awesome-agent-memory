@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-05-19
+last_revised: 2026-08-03
 archive: archives/zep-overview.md
 ---
 
@@ -55,6 +55,15 @@ healthcare 等行业的预置 entity schema 模板。
 > Benchmark record: [`../benchmarks/locomo.md`](../benchmarks/locomo.md);
 > event ledger row: `zep-locomo-2026` in
 > [`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml)。
+
+## 3.1 2026-08 changelog refresh
+
+Zep official changelog entries around the 2026-08-03 refresh window added graph
+query controls such as valid-time ordering for node/edge lists, opaque page
+tokens, and `is_null` date filters. These support the product-behavior claim that
+Zep is exposing more temporal graph control to applications. They do not change
+the evidence class of Zep benchmark numbers, which remain vendor/self-claim
+unless independently reproduced.
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -99,6 +108,7 @@ domain × audience 表:
 - archive: [`archives/zep-overview.md`](archives/zep-overview.md)
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
+- Changelog:https://help.getzep.com/changelog
 
 ---
 

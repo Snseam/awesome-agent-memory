@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-07-06
+last_revised: 2026-08-03
 ---
 
 # Mem0
@@ -120,6 +120,16 @@ Mem0 changelog highlights around 2026-06-27 added first-class expiration
 controls for memory writes, updates, and reads in Python / TypeScript SDKs. This
 is product-behavior evidence that Mem0 is moving memory lifecycle beyond add /
 search toward retention policy. It should not be mixed with benchmark claims.
+
+> 来源:https://docs.mem0.ai/changelog/highlights
+
+## 2026-08 workflow integrations
+
+Mem0 changelog highlights surfaced n8n and Zapier integrations around the
+2026-08-03 refresh window. This is product-behavior evidence that Mem0 is
+expanding durable memory into automation workflows where facts can be stored and
+recalled across tool runs. It is not evidence for memory quality, benchmark
+rankings, or architectural superiority.
 
 > 来源:https://docs.mem0.ai/changelog/highlights
 
