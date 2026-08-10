@@ -703,3 +703,63 @@ events:
       - benchmarks/memprobe.md
       - https://arxiv.org/abs/2606.24595
     extract_confidence: medium
+  - event_id: agentmembench-origin-2026
+    benchmark_id: agentmembench
+    source_kind: paper
+    source_id: benchmarks/agentmembench.md
+    source_date: 2026-06
+    actor: AgentMemBench author
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Shared strategy-comparison harness over LoCoMo, MultiDoc2Dial, and MSC; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; code, transformed datasets, and reported strategy results need full review before use."
+    evidence_refs:
+      - benchmarks/agentmembench.md
+      - https://arxiv.org/abs/2608.00009
+    extract_confidence: medium
+  - event_id: finperma-origin-2026
+    benchmark_id: finperma
+    source_kind: paper
+    source_id: benchmarks/finperma.md
+    source_date: 2026-08
+    actor: FinPerMA authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Event-grounded longitudinal investor-persona memory benchmark with Post-Shock checkpoint; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; finance-domain assumptions, persona generation, and released artifacts need full review."
+    evidence_refs:
+      - benchmarks/finperma.md
+      - https://arxiv.org/abs/2608.04095
+    extract_confidence: medium
+  - event_id: authmem-bench-origin-2026
+    benchmark_id: authmem-bench
+    source_kind: paper
+    source_id: benchmarks/authmem-bench.md
+    source_date: 2026-08
+    actor: AuthMem-Bench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Controlled paired source-authority benchmark for memory consolidation and downstream authorized reuse; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; authority taxonomy, automatic checks, and released artifacts need full review."
+    evidence_refs:
+      - benchmarks/authmem-bench.md
+      - https://arxiv.org/abs/2608.01679
+    extract_confidence: medium

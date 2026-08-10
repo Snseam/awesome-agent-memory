@@ -156,3 +156,14 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-08-10 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Microsoft Foundry Agent Service Memory | Learn memory usage guide, last updated 2026-08-05 | 更新 `products/microsoft-foundry-memory.md`;CRUD / TTL / scope / remember-forget 是 preview 产品行为证据,不是 independent benchmark |
+| update-existing | AWS AgentCore Memory | release notes, August 2026 GovCloud availability | 更新 `products/aws-agentcore-memory.md`;区域 / 合规可用性是产品行为证据,不是 benchmark 或性能证据 |
+| watchlist | Anthropic Claude Managed Agents | release notes 2026-08-07 | managed-agent platform 能力增强,但本周没有新的 memory-store-specific 更新;暂不升级 `products/claude-dreams.md` |
+| watchlist | Cloudflare Think / Redis Iris / Alibaba billing / Oracle Select AI memory depth | official docs / marketplace / release notes | 相邻产品行为或未来计费信号;不进入本轮核心 product count |
+| watchlist | Google Memory Bank release notes | July 2026 GA profiles / IngestEvents / embedding updates | 上周 open PR 已覆盖 Google Memory Bank 更新风险;本轮不重复推广到主线差异 |
+| watchlist | Mem0 / Zep / Letta / LangMem / Graphiti changelogs | official docs / changelogs spot-check | 本轮未发现足够强且未被 open PR 覆盖的新增 product behavior |

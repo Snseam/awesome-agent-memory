@@ -123,6 +123,18 @@ language: zh-CN
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Cloud Bailian Memory Library | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | Cloud platform | 百炼 / Model Studio 开发者 |
 
+### A3.1 2026-08 product refresh note
+
+- AWS AgentCore release notes now list AgentCore memory, policy, and harness as
+  available in AWS GovCloud (US-West). This updates deployment/region coverage
+  for [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md)
+  only; it is product-behavior evidence, not independent quality or performance
+  evidence.
+- Microsoft Foundry Agent Service Memory usage docs now expose memory store /
+  item CRUD, default TTL / retention, scopes, and direct remember / forget
+  behavior for [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md).
+  This is preview product-behavior evidence, not an independent benchmark.
+
 ### A4. Coding & Dev agents(memory 用于代码上下文)
 
 | 名称 | Mode | Audience | 备注 |
