@@ -19,6 +19,28 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-08 manual radar additions
+
+These entries were added by the 2026-08-10 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Stop When Memory Suffices: Evidence-Conditioned Progressive Execution for LLM Agents](router-mem-progressive-execution.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01285)
+- [LeanMem: Simple and Efficient Long-Term Memory for LLM Agents](leanmem-efficient-long-term-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.03463)
+- [MemSIF: From Structured Interactions to Dual-Track Fact Memory for LLM Agents](memsif-dual-track-fact-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01742)
+- [Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents](vermem-verifiable-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.03137)
+- [Hierarchical Graph Memory for LLM Agents with Path-level Localization and Rewrite](higram-hierarchical-graph-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.05095)
+- [MemoryCPT: An End-to-End Agent Memory Framework for Cost-Performance Trade-off](memorycpt-cost-performance-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.04843)
+- [RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States](romerl-memory-reward-trap.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.02508)
+- [MutMem: Cryptographically Authorized Mutation in Persistent Agent Memory](mutmem-authorized-mutation.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.02843)
+- [V-Mem: Modality-Routed Retrieval for Long-Term Multimodal Agentic Memory](v-mem-multimodal-agentic-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01543)
+- [Salami Attack: Stealthy Collusive Memory Poisoning against OpenClaw](salami-attack-collusive-memory-poisoning.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01637)
+- [Memory Reward Inflation in Self-Improving LLM Agents](memory-reward-inflation.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2608.00017)
+- [When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses](stateauditor-stale-dependencies.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.01619)
+- [Causal Episodic Memory for Feedback-Driven Agent Repair](merit-causal-episodic-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.05906)
+- [AgentMemBench: A Systematic Benchmark for Evaluating Long-Term Memory Management Strategies in Conversational AI Agents](../benchmarks/agentmembench.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.00009)
+- [FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents](../benchmarks/finperma.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.04095)
+- [When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary](../benchmarks/authmem-bench.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.01679)
+
 ## 2026-07 manual radar additions
 
 These entries were added by the 2026-07-06 weekly radar refresh. They are not

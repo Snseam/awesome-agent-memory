@@ -13,7 +13,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-08-10
 archive: archives/microsoft-foundry-memory-overview.md
 ---
 
@@ -48,6 +48,16 @@ Java/REST 均有接口覆盖。当前仍是 public preview。
 2026-06-29 复核时,Build 2026 recap 仍把 Foundry Agent Service Memory 标为 public
 preview,并明确三类 memory:procedural memory、user memory、session memory。博客中
 Tau-bench 成功率提升是 Microsoft vendor claim,本仓只作为 vendor evidence 记录。
+
+## 3.2 2026-08 refresh
+
+2026-08-10 复核 Microsoft Learn memory usage guide 时,页面显示 latest preview
+提供 memory item create/read/update/list/delete、store-level default TTL/retention
+controls,以及同步 remember / forget command behavior。how-to 页面还把 scope 用作
+memory item partition key,并继续给出 Python、C#、JavaScript、Java 和 REST 示例。
+
+这次更新强化的是 developer-visible memory lifecycle 和治理面。它仍是 preview
+产品行为证据,不能写成 Microsoft memory 的独立性能或质量结论。
 
 ## 4. 决策相关性 / Decision relevance
 

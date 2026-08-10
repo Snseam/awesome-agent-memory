@@ -49,6 +49,9 @@ official repository, dataset card, or independent reproduction.
 | MemSyco-Bench | seed | paper-origin | memory-induced sycophancy | scope / conflict resolution / update / valid personalization | [`memsyco-bench.md`](memsyco-bench.md) | yes |
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
+| AgentMemBench | seed | paper-origin | conversational memory strategy comparison | retrieval / answer faithfulness / footprint / latency | [`agentmembench.md`](agentmembench.md) | yes |
+| FinPerMA | seed | paper-origin | personalized memory under event shocks | personalization / preference update / event grounding | [`finperma.md`](finperma.md) | yes |
+| AuthMem-Bench | seed | paper-origin | source-authority governance | provenance / authority / unauthorized-action prevention | [`authmem-bench.md`](authmem-bench.md) | yes |
 
 ## Evidence Ledgers
 
