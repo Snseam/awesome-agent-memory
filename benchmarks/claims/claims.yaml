@@ -195,6 +195,106 @@ events:
       - benchmarks/memdelta.md
       - https://arxiv.org/abs/2606.29914
     extract_confidence: medium
+  - event_id: injecmem-origin-2026
+    benchmark_id: injecmem
+    source_kind: paper
+    source_id: benchmarks/injecmem.md
+    source_date: 2026-08
+    actor: InjecMEM authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Memory-injection attack benchmark for persistent agent memory; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; attack variants, defenses, setup, and reported results need full normalization."
+    evidence_refs:
+      - benchmarks/injecmem.md
+      - https://arxiv.org/abs/2608.23471
+    extract_confidence: medium
+  - event_id: compaction-cliff-origin-2026
+    benchmark_id: compaction-cliff
+    source_kind: paper
+    source_id: benchmarks/compaction-cliff.md
+    source_date: 2026-08
+    actor: Compaction Cliff authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "AgentArtifactCorpus-style context compaction benchmark for rule retention, retrieval, and downstream compliance; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; Knowledge Triage setup and metrics need full normalization."
+    evidence_refs:
+      - benchmarks/compaction-cliff.md
+      - https://arxiv.org/abs/2608.22752
+    extract_confidence: medium
+  - event_id: stale-constraints-origin-2026
+    benchmark_id: stale-constraints
+    source_kind: paper
+    source_id: benchmarks/stale-constraints.md
+    source_date: 2026-08
+    actor: Stale Constraints authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Inherited-memory freshness benchmark for stale and superseded constraints; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; Zenodo artifact, task construction, and verification-budget details need full normalization."
+    evidence_refs:
+      - benchmarks/stale-constraints.md
+      - https://arxiv.org/abs/2608.25553
+    extract_confidence: medium
+  - event_id: memuse-origin-2026
+    benchmark_id: memuse
+    source_kind: paper
+    source_id: benchmarks/memuse.md
+    source_date: 2026-08
+    actor: MemUse authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Conversational-memory benchmark separating direct QA from natural integration; local note is seed quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; deployment details, released benchmark data, and metrics need full normalization."
+    evidence_refs:
+      - benchmarks/memuse.md
+      - https://arxiv.org/abs/2608.24189
+    extract_confidence: medium
+  - event_id: agent-memory-leaderboard-2026-cycle
+    benchmark_id: agent-memory-leaderboard
+    source_kind: code_repository
+    source_id: benchmarks/agent-memory-leaderboard.md
+    source_date: 2026-08
+    actor: Agent Memory Leaderboard maintainers
+    actor_type: project_maintainers
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Public benchmark-platform candidate surfaced by GitHub discovery; local note is candidate quality."
+    reproduction_status: not_reproduced
+    evidence_level: primary_repository
+    independence_class: survey_only
+    comparability_notes: "Discovery/platform event only; do not use rankings until protocol governance and task definitions are mapped."
+    evidence_refs:
+      - benchmarks/agent-memory-leaderboard.md
+      - https://github.com/AML-memory/agent-memory-leaderboard
+    extract_confidence: low
   - event_id: fact-memory-vs-long-context-baseline-2026
     benchmark_id: fact-memory-vs-long-context
     source_kind: paper

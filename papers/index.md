@@ -19,6 +19,26 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-08 manual radar additions
+
+These entries were added by the 2026-08-31 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [ContextPilot: Proactive Context Management for Long-Horizon Agentic Tasks](contextpilot-proactive-context-management.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.28476)
+- [The Retriever Should Remember: Experience-Amortized Reranking for Conversational Memory](earm-experience-amortized-reranking.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.22767)
+- [Recuris: Recursive Experiential-Working Memory Evolution for LLM Agents](recuris-experiential-working-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24876)
+- [EviGraph: Improving LLM Agents with Quality-Guaranteed Graph Construction for Problem-Solving](evigraph-evidence-construction.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24667)
+- [KOPE: Kernel Optimization via Experience Graph Memory](kope-experience-graph-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25570)
+- [CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval](caskg-skill-graph-retrieval.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.25500)
+- [UAQ: Uncertainty-Aware Querying for Agentic Memory](uaq-agent-memory.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.27924)
+- [GraphMemix: Evidence Forests for Graph-Based Memory Reasoning](graphmemix-evidence-forests.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.26983)
+- [Constraint Weakening in Agent Workflows](constraint-weakening-agent-workflows.md) — 2026-08 — seed — [arxiv](https://arxiv.org/abs/2608.24569)
+- [InjecMEM: Benchmarking Memory Injection Attacks on LLM Agents](../benchmarks/injecmem.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.23471)
+- [The Compaction Cliff: Evaluating Context Compaction in LLM Agents](../benchmarks/compaction-cliff.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.22752)
+- [When Stale Constraints Go Unchecked](../benchmarks/stale-constraints.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.25553)
+- [MemUse: Benchmarking Natural Integration of Conversational Memory](../benchmarks/memuse.md) — 2026-08 — benchmark seed — [arxiv](https://arxiv.org/abs/2608.24189)
+- [Agent Memory Leaderboard](../benchmarks/agent-memory-leaderboard.md) — 2026-08 — benchmark-platform candidate — [github](https://github.com/AML-memory/agent-memory-leaderboard)
+
 ## 2026-07 manual radar additions
 
 These entries were added by the 2026-07-06 weekly radar refresh. They are not

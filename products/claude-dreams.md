@@ -10,7 +10,7 @@ evidence_level: medium (production product, no public benchmark numbers)
 code_available: no (proprietary)
 license: proprietary
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-08-31
 ---
 
 # Claude Dreams
@@ -34,6 +34,22 @@ Anthropic/Claude 侧需要分开看两条线:
 本文件继续保留 Dreams/offline consolidation 的 architecture signal;Claude Code memory
 后续可单独拆成产品 note,如果公开 docs 稳定且与 `CLAUDE.md`/`MEMORY.md` 形成清晰
 agent-memory lifecycle。
+
+## 2026-08 product update
+
+Anthropic's 2026-08-25 release notes add memory behavior for Claude Cowork and
+the broader Claude app surface. The public product evidence says memory now
+works across chat and Cowork cloud, Topics can be edited or deleted from
+Settings > Memory, sensitive-topic memory is a separate opt-in, and default
+enablement differs by plan: on for Free/Pro/Max and off by default for Team and
+Enterprise.
+
+This update is useful product-behavior evidence for memory governance and user
+control. It does not disclose the Dreams implementation, and it should not be
+treated as benchmark or architecture evidence beyond the documented product
+surface.
+
+> 来源:https://support.claude.com/en/articles/12138966-release-notes
 
 ## Architectural takeaways
 

@@ -49,6 +49,11 @@ official repository, dataset card, or independent reproduction.
 | MemSyco-Bench | seed | paper-origin | memory-induced sycophancy | scope / conflict resolution / update / valid personalization | [`memsyco-bench.md`](memsyco-bench.md) | yes |
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
+| InjecMEM | seed | paper-origin | persistent memory-injection security | memory injection / poisoned retrieval / cross-session safety | [`injecmem.md`](injecmem.md) | backlog |
+| Compaction Cliff | seed | paper-origin | context compaction and rule retention | compaction safety / artifact retrieval / downstream compliance | [`compaction-cliff.md`](compaction-cliff.md) | backlog |
+| Stale Constraints | seed | paper-origin | inherited-memory freshness | supersession / freshness verification / budgeted rechecking | [`stale-constraints.md`](stale-constraints.md) | backlog |
+| MemUse | seed | paper-origin | natural conversational memory use | direct QA / natural integration / preference use | [`memuse.md`](memuse.md) | backlog |
+| Agent Memory Leaderboard | candidate | benchmark-platform | public benchmark submission hub | protocol registry / leaderboard governance | [`agent-memory-leaderboard.md`](agent-memory-leaderboard.md) | backlog |
 
 ## Evidence Ledgers
 

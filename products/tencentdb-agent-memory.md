@@ -14,7 +14,7 @@ memory_modules:
   - dream-consolidator
   - audit-ui
 status: seed
-last_revised: 2026-06-29
+last_revised: 2026-08-31
 archive: archives/tencentdb-agent-memory-overview.md
 ---
 
@@ -54,6 +54,20 @@ Tencent Cloud VectorDB。
   / `node_id` 追溯
 - **接入**:OpenClaw plugin、Hermes Gateway adapter、agent tools
   `tdai_memory_search` / `tdai_conversation_search`
+
+## 3.1 2026-08 release v2.0.1
+
+TencentDB Agent Memory v2.0.1 adds product-surface evidence that the project is
+turning session and cross-session memory operations into explicit integration
+points. The release notes mention client bindings, persistent session binding,
+and a Memory Hub that supports cross-session semantic/keyword search with
+permission scoping.
+
+Treat this as official release behavior from the project maintainers. It does
+not change the benchmark-evidence class of TencentDB self-reported PersonaMem
+claims.
+
+> 来源:https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.1
 
 ## 4. 决策相关性 / Decision relevance
 
