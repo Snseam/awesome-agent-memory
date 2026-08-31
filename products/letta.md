@@ -10,7 +10,7 @@ evidence_level: medium
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-05-19
+last_revised: 2026-08-31
 ---
 
 # Letta(原 MemGPT)
@@ -48,6 +48,19 @@ Letta 把它产品化为 stateful agent runtime。
 
 - Letta 在公开 memory benchmark 上的表现?
 - archival memory 的实际大小和检索成本曲线?
+
+## 2026-08 Letta Code memory layout releases
+
+Letta Code release notes in late August add memory-layout controls to the coding
+agent surface. v0.31.4 introduced configurable memory layout behavior, v0.31.5
+added root-layout memory prompts, and the adjacent v0.31.6 notes continue the
+theme with memory limits and shared-memory frontmatter.
+
+This is product-behavior evidence for explicit memory prompt/layout management
+inside a coding agent. It should stay separate from Letta/MemGPT architecture
+claims and from any benchmark-performance claim.
+
+> 来源:https://github.com/letta-ai/letta-code/releases
 
 ## Notes
 

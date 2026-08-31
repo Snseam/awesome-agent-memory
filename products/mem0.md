@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-07-06
+last_revised: 2026-08-31
 ---
 
 # Mem0
@@ -113,6 +113,20 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 > 来源:https://mem0.ai/blog/state-of-ai-agent-memory-2026
 > archive:[`archives/mem0-blog-state-of-2026.md`](archives/mem0-blog-state-of-2026.md)、
 > [`archives/mem0-april-2026-release.md`](archives/mem0-april-2026-release.md)
+
+## 2026-08 DeepSeek Harness plugin
+
+Mem0 changelog highlights in late August added a DeepSeek Harness plugin under
+`@mem0/deepseek-plugin`. The product surface exposes `search_memory` and
+`add_memory` tools and keeps the existing `userId` / `agentId` / `runId`
+scoping model.
+
+This is product-behavior evidence that Mem0 continues to package memory as
+agent-tool plumbing across model/harness ecosystems. It is not independent
+quality evidence and should not be mixed with the LoCoMo/LongMemEval/BEAM
+claims ledger.
+
+> 来源:https://docs.mem0.ai/changelog/highlights
 
 ## 2026-06/07 SDK expiration controls
 

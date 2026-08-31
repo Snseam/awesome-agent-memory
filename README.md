@@ -10,9 +10,9 @@
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
 [![Memory products](https://img.shields.io/badge/memory%20products-38-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-21-blueviolet.svg)](benchmarks/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-26-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
-[![Updated](https://img.shields.io/badge/updated-2026--07-lightgrey.svg)](docs/signals.md)
+[![Updated](https://img.shields.io/badge/updated-2026--08-lightgrey.svg)](docs/signals.md)
 
 </div>
 
@@ -55,13 +55,13 @@ separate buckets.
 
 | Area | Current coverage | Entry point | Use it when you need to |
 |---|---:|---|---|
-| Paper index | 989 scraped papers + manual radar additions through 2026-07 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
+| Paper index | 989 scraped papers + manual radar additions through 2026-08 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
-| Full / seed paper notes | 7 full + 15 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
+| Full / seed paper notes | 7 full + 24 seed | [`papers/`](papers/) | Use human-read notes for architectural decisions. |
 | Memory product notes | 38 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
 | Product page archives | 37 snapshots | [`products/archives/`](products/archives/) | Audit product claims after source pages change. |
-| Benchmark catalog | 21 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
+| Benchmark catalog | 26 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
 | Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
@@ -74,7 +74,7 @@ Start with the path that matches your question:
 | Goal | Read these first |
 |---|---|
 | Get the field overview | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md), then [`docs/taxonomy.md`](docs/taxonomy.md) |
-| Read the latest source refresh | [`docs/memory-radar-2026-07.md`](docs/memory-radar-2026-07.md), then [`docs/signals.md`](docs/signals.md) |
+| Read the latest source refresh | [`docs/memory-radar-2026-08-31.md`](docs/memory-radar-2026-08-31.md), then [`docs/signals.md`](docs/signals.md) |
 | Find relevant papers | [`papers/index.md`](papers/index.md), then full notes under [`papers/`](papers/) |
 | Compare memory products | [`docs/products-landscape.md`](docs/products-landscape.md), [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md), [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | Check why a product was included or rejected | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
@@ -159,6 +159,7 @@ flowchart LR
 | [`docs/taxonomy.md`](docs/taxonomy.md) | Shared vocabulary for classifying agent-memory systems and memory-kernel responsibilities. |
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | External meta-survey index from late 2025 through 2026 H1. |
 | [`docs/research-radar.md`](docs/research-radar.md) | Workflow for turning papers, products, and benchmark evidence into ImpactReports and ADR inputs. |
+| [`docs/memory-radar-2026-08-31.md`](docs/memory-radar-2026-08-31.md) | 2026-08-31 weekly refresh across papers, products, GitHub projects, and reviewer decisions. |
 | [`docs/memory-radar-2026-07.md`](docs/memory-radar-2026-07.md) | 2026-07 weekly refresh across papers, products, GitHub projects, and reviewer decisions. |
 | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Focused lane for agent-memory token reduction, budgeted retrieval, runtime-cost methods, code paths, and product practice signals. |
 | [`docs/information-sources.md`](docs/information-sources.md) | Source catalog for papers, products, communities, and zh-CN information channels. |
@@ -180,11 +181,11 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 15 seed notes, and the master [`index.md`](papers/index.md). |
+| [`papers/`](papers/) | 7 full paper notes, 24 seed notes, and the master [`index.md`](papers/index.md). |
 | [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs, about 1.8 GB. See the archival policy below. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |
-| [`benchmarks/`](benchmarks/) | 21 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
+| [`benchmarks/`](benchmarks/) | 26 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
 | [`benchmarks/claims/`](benchmarks/claims/) | Usage-event ledger for benchmark mentions, vendor claims, critiques, and reproductions. |
 | [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repositories, or dataset cards. |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |

@@ -156,3 +156,13 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-08-31 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Claude memory / Claude Dreams | Anthropic release notes 2026-08-25 | 更新 `products/claude-dreams.md`;Claude Cowork/app memory 是产品行为证据,不等于 Dreams 技术披露 |
+| update-existing | Mem0 | Mem0 changelog highlights | 更新 `products/mem0.md`;DeepSeek Harness plugin 说明 Mem0 继续作为 agent-tool memory 层扩散 |
+| update-existing | TencentDB Agent Memory | GitHub release v2.0.1 | 更新 `products/tencentdb-agent-memory.md`;session binding / Memory Hub 是 release 行为证据 |
+| update-existing | Letta Code | Letta Code GitHub releases | 更新 `products/letta.md`;memory layout / prompt controls 作为 coding-agent memory UX 信号 |
+| watchlist | AWS / Google / OpenAI / Cloudflare / Microsoft / Redis | official docs and release-note spot checks | 本轮未提升新条目;已有打开 PR 覆盖部分重叠项,不重复导入 |

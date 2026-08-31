@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-06-24
+date: 2026-08-31
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,10 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-08-31 | [ContextPilot](https://arxiv.org/abs/2608.28476) / [EARM](https://arxiv.org/abs/2608.22767) / [Recuris](https://arxiv.org/abs/2608.24876) / [EviGraph](https://arxiv.org/abs/2608.24667) / [KOPE](https://arxiv.org/abs/2608.25570) / [CaSKG](https://arxiv.org/abs/2608.25500) / [UAQ](https://arxiv.org/abs/2608.27924) / [GraphMemix](https://arxiv.org/abs/2608.26983) / [Constraint Weakening](https://arxiv.org/abs/2608.24569) | paper | 周更 radar 追加 proactive context management、experience-amortized retrieval、experiential/skill memory、evidence graph、budgeted graph/multimodal memory 和 operational constraint decay 九条 seed note | `seed-note` ✅(见 `papers/`) |
+| 2026-08-31 | [InjecMEM](https://arxiv.org/abs/2608.23471) / [Compaction Cliff](https://arxiv.org/abs/2608.22752) / [Stale Constraints](https://arxiv.org/abs/2608.25553) / [MemUse](https://arxiv.org/abs/2608.24189) | paper | benchmark catalog 新增 memory injection、context compaction、stale constraint freshness 和 natural memory integration 四条 paper-origin benchmark seed | `seed-note` ✅(见 `benchmarks/`) |
+| 2026-08-31 | [Agent Memory Leaderboard](https://github.com/AML-memory/agent-memory-leaderboard) | release | GitHub benchmark-platform candidate surfaced,但 governance/protocol 未归一化前不使用 leaderboard scores | `stub` ✅(见 `benchmarks/`) |
+| 2026-08-31 | [Anthropic release notes](https://support.claude.com/en/articles/12138966-release-notes) / [Mem0 changelog](https://docs.mem0.ai/changelog/highlights) / [TencentDB Agent Memory v2.0.1](https://github.com/TencentCloud/TencentDB-Agent-Memory/releases/tag/v2.0.1) / [Letta Code releases](https://github.com/letta-ai/letta-code/releases) | product | 官方产品源补充 Claude Cowork memory、Mem0 DeepSeek Harness plugin、TencentDB v2.0.1 session/memory hub 和 Letta Code memory-layout controls | `deep-note` ✅(更新 `products/`) |
 | 2026-07-06 | [A-TMA](https://arxiv.org/abs/2607.01935) / [Mandol](https://arxiv.org/abs/2606.29778) / [Forensic Trajectory Signatures](https://arxiv.org/abs/2606.30566) | paper | 周更 radar 追加 state-aware ghost memory、agglomerative memory-native storage、memory-poisoning trajectory forensics 三条 seed note | `seed-note` ✅(见 `papers/`) |
 | 2026-07-06 | [MemSyco-Bench](https://arxiv.org/abs/2607.01071) / [MemLeak](https://arxiv.org/abs/2606.29788) / [MemDelta](https://arxiv.org/abs/2606.29914) | paper | benchmark catalog 新增 memory-induced sycophancy、多模态删除泄漏、controlled baseline methodology | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-07-06 | [AWS AgentCore release notes](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html) / [Google release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes) / [OpenAI Business release notes](https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes) / [Mem0 changelog](https://docs.mem0.ai/changelog/highlights) / [Redis guide](https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/) | product | 官方产品源补充 AgentCore streaming、Memory Bank model default、ChatGPT org memory controls、Mem0 expiration 和 Redis two-tier guidance | `deep-note` ✅(更新 `products/`) |

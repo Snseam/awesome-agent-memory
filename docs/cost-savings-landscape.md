@@ -64,6 +64,16 @@ language: zh-CN
 | [`LightMem agent memory`](../papers/lightmem-agent-memory.md) | seed paper note | 用 SLM 负责 retrieval、writing、offline consolidation,强调 bounded online cost 和低延迟路径。 | seed 质量;需补 PDF/code/license 细读。 |
 | [`Agent Memory systems characterization`](../papers/agent-memory-systems-characterization.md) | seed paper note | 把 memory construction、retrieval、generation 作为系统成本画像对象。 | seed 质量;尚未复核 profiling harness 细节。 |
 
+### 2026-08 current-source additions
+
+| Item | Current repo status | Cost-saving relevance | Evidence boundary |
+|---|---|---|---|
+| [`ContextPilot`](../papers/contextpilot-proactive-context-management.md) | seed paper note | Proactive context management combines planning, long-term memory, and soft offloading for long-horizon tasks. | seed quality;reported gains and code path need full read. |
+| [`EARM`](../papers/earm-experience-amortized-reranking.md) | seed paper note | Reuses query-memory relevance scores through matrix completion to reduce repeated LLM reranking. | seed quality;cost/quality trade-off and cache invalidation need extraction. |
+| [`KOPE`](../papers/kope-experience-graph-memory.md) | seed paper note | Experience graph memory for kernel optimization claims lower search effort and better reuse of past optimization attempts. | seed quality;domain-specific and not direct conversational memory evidence. |
+| [`CaSKG`](../papers/caskg-skill-graph-retrieval.md) | seed paper note | Skill-graph retrieval can constrain multi-agent communication/search overhead. | seed quality;skill graph construction cost and task coverage need full read. |
+| [`GraphMemix`](../papers/graphmemix-evidence-forests.md) | seed paper note | Evidence forests suggest a bounded graph-memory alternative for retrieval and reasoning over multimodal evidence. | seed quality;claims remain paper-origin until normalized. |
+
 ### Candidate papers and code paths to upgrade
 
 | Item | Local anchor | External source checked 2026-06-30 | Why it belongs here | Upgrade path |
