@@ -156,3 +156,14 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-09-07 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | AWS AgentCore Memory | official AgentCore release notes | 更新 `products/aws-agentcore-memory.md`;direct LTM ingestion、flexible namespaces、JSON payload 和 GovCloud availability 都按 product behavior 处理 |
+| update-existing | Alibaba Bailian Memory Library | official long-term memory API docs | 更新 `products/alibaba-bailian-memory.md`;商业化计费、Pro/Lite 检索、metadata、CRUD、去重和用户画像 schema 是 product/pricing signal |
+| update-existing | Graphiti | upstream GitHub releases | 更新 `products/graphiti.md`;Neo4j custom database routing/search fix 影响 self-hosted tenant correctness |
+| watchlist | Cloudflare Think harness | official Cloudflare docs / discovery signal | 与 Cloudflare Agent Memory 重叠,本轮不拆独立产品笔记 |
+| watchlist | Mnemosyne / Exocortex / inite / ZenBrain | GitHub/product discovery only | 保留为下一轮产品 discovery 候选;未达到本轮 primary-source deep-note 门槛 |
+| update-deferred | Claude / TencentDB Agent Memory / Mem0 / Google / Microsoft / OpenAI / Redis / Letta | open PR overlap or no stronger new source delta | 避免重复 PR #16-#20 和 #22 中的 July/August 条目;本轮只记录未重叠的 9 月官方变化 |

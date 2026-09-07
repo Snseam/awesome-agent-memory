@@ -62,6 +62,7 @@ language: zh-CN
 | [`Fact-based memory vs long-context`](../benchmarks/fact-based-memory-vs-long-context.md) | candidate benchmark note | 直接比较 fact-based memory 和 long-context inference 的 accuracy、cumulative API cost、break-even turns。 | stub-quality source note;pricing assumptions time-sensitive。 |
 | [`ConvoMem`](../benchmarks/convomem.md) | full benchmark note | 提供 1k-3M token 可调 context 下的 accuracy/cost/latency crossover 视角。 | synthetic data;不要把"前 150 个 conversations 不需要 RAG"泛化到所有产品。 |
 | [`LightMem agent memory`](../papers/lightmem-agent-memory.md) | seed paper note | 用 SLM 负责 retrieval、writing、offline consolidation,强调 bounded online cost 和低延迟路径。 | seed 质量;需补 PDF/code/license 细读。 |
+| [`Compact-Memory LLM Agents`](../papers/compact-memory-llm-agents.md) | seed paper note | 用 online max-member clustering + atom-aware packing 面向 2k-5k prompt budget 压缩 agent memory context。 | seed 质量;author-reported evidence,需补 full setup/code/license 细读。 |
 | [`Agent Memory systems characterization`](../papers/agent-memory-systems-characterization.md) | seed paper note | 把 memory construction、retrieval、generation 作为系统成本画像对象。 | seed 质量;尚未复核 profiling harness 细节。 |
 
 ### Candidate papers and code paths to upgrade
