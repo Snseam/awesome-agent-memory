@@ -15,8 +15,9 @@ decide what to read before opening the paper index or the product notes.
 4. [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) —
    Codex weekly refresh runbook for papers, products, GitHub discovery, and
    benchmarks.
-5. [`memory-radar-2026-07.md`](memory-radar-2026-07.md) — latest current-source
-   refresh across papers, products, GitHub projects, and reviewer decisions.
+5. [`memory-radar-2026-09-07.md`](memory-radar-2026-09-07.md) — latest
+   current-source refresh across papers, benchmarks, products, GitHub discovery,
+   and reviewer decisions.
 6. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
    agent-memory papers, algorithms, code paths, and products that reduce token,
    latency, or runtime cost.
@@ -49,7 +50,7 @@ decide what to read before opening the paper index or the product notes.
 |---|---|
 | [`research-radar.md`](research-radar.md) | Generic Radar loop: paper/product/benchmark -> ResearchItem or BenchmarkItem -> ImpactReport -> sandbox -> ADR. |
 | [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) | Weekly Codex automation contract for source search, subagent review, verification, and PR output. |
-| [`memory-radar-2026-07.md`](memory-radar-2026-07.md) | 2026-07 weekly refresh with must-add, update-existing, watchlist, adjacent, and reject decisions. |
+| [`memory-radar-2026-09-07.md`](memory-radar-2026-09-07.md) | 2026-09-07 weekly refresh with must-add, update-existing, watchlist, adjacent, and reject decisions. |
 | [`information-sources.md`](information-sources.md) | Source catalog for papers, products, communities, and zh-CN information channels. |
 | [`related-work.md`](related-work.md) | Positioning against sibling agent-memory awesome-lists. |
 
