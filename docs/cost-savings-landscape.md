@@ -1,6 +1,6 @@
 ---
 title: Agent-memory cost-savings landscape
-date: 2026-06-30
+date: 2026-09-14
 status: seed
 language: zh-CN
 ---
@@ -70,6 +70,7 @@ language: zh-CN
 |---|---|---|---|---|
 | BudgetMem | [`stub`](../papers/stubs/budgetmem-learning-query-aware-budget-tier-routing-for.md) | <https://arxiv.org/abs/2602.06025> and <https://github.com/ViktorAxelsen/BudgetMem> | query-aware budget-tier routing:按查询难度选择不同 memory processing tier。 | 升级为 full note;记录 code license、router training、LoCoMo/LongMemEval/HotpotQA 设置。 |
 | Structured Distillation for Personalized Agent Memory | [`stub`](../papers/stubs/structured-distillation-for-personalized-agent-memory-11.md) | <https://arxiv.org/abs/2603.13017> and <https://github.com/Process-Point-Technologies-Corporation/searchat> | 论文声称 11x token reduction with retrieval preservation,并有 Searchat 代码实现。 | 复核 compression ratio、MRR 设置、是否保存 provenance/conflict。 |
+| MemForest | [`seed`](../papers/memforest-eventtree-agent-memory.md) | <https://arxiv.org/abs/2609.08273> and <https://github.com/Celina-love-sweet/MemForest> | EventTree partitioning and progressive merging target memory compression, retrieval work, and context cost. | Full-read merge reversibility, provenance retention, quality-cost setup, and license before promotion. |
 | MEMAUDIT | [`stub`](../papers/stubs/memaudit-an-exact-package-oracle-evaluation-protocol-for.md) | <https://arxiv.org/abs/2605.02199> | budgeted long-term memory writing 的 evaluator,可约束"省空间但不乱写"。 | 升级 benchmark/evaluator note;明确 package oracle 和 storage budget。 |
 | A2RAG | [`stub`](../papers/stubs/a2rag-adaptive-agentic-graph-retrieval-for-cost-aware-and.md) | <https://arxiv.org/abs/2601.21162> | cost-aware adaptive Graph-RAG,只在需要时触发更贵的 graph/verification 路径。 | 判断是否属于 agent memory core 还是 Graph-RAG 相邻方法。 |
 | DimMem | external candidate | <https://arxiv.org/abs/2605.15759>, <https://github.com/ChowRunFa/DimMem> | dimensional structuring + Qwen3-4B extractor,报告 LoCoMo per-query token cost reduction。 | 新建 paper stub/full note 前要避开旧 radar 中错误 DimMem arXiv ID。 |

@@ -11,7 +11,7 @@ memory_modules:
   - semantic-dedup
   - retriever-reranker
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-09-14
 archive: archives/memsearch-overview.md
 ---
 
@@ -35,6 +35,15 @@ memory for AI coding agents。
 - **Markdown + vector backend**:human-readable artifact 与 Milvus/hybrid search 结合。
 - **Coding-agent plugins**:面向 Claude Code、Codex CLI、OpenCode/OpenClaw 等入口。
 - **Automatic capture / recall**:产品定位强调用户安装后无需手动保存命令。
+
+### 3.1 2026-09 refresh
+
+The official `v0.4.20` release improves session-memory retention within the
+context budget, clarifies recall status, handles summary failures without
+silently retaining turn text, and avoids unnecessary Milvus Lite reindexing when
+the plugin stops. It also fixes headless summarizer EOF handling and adds
+Windows Milvus Lite support. These are release-level behavior signals, not
+independent retrieval-quality evidence.
 
 ## 4. 决策相关性 / Decision relevance
 

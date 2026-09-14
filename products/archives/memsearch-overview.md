@@ -1,7 +1,7 @@
 ---
 source_url: https://github.com/zilliztech/memsearch
 source_docs: https://zilliztech.github.io/memsearch/
-fetched: 2026-06-24
+fetched: 2026-09-14
 purpose: research backup; canonical sources are the URLs above
 ---
 
@@ -24,3 +24,11 @@ targets.
 
 Included because it combines human-readable memory artifacts with vector search
 for coding agents. Claims about retrieval quality remain vendor/source claims.
+
+## 2026-09 Release Snapshot
+
+The official `v0.4.20` release documents session-memory retention within the
+context budget, recall-status handling, summary-failure behavior, reduced
+Milvus Lite reindexing, and Windows compatibility. It also includes headless
+summarizer and collection-priority fixes. This archive records upstream release
+behavior, not an independent quality evaluation.

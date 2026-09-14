@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-06-24
+date: 2026-09-14
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,9 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-09-14 | [LifeFuse-Mem](https://arxiv.org/abs/2609.12436) / [ROAM](https://arxiv.org/abs/2609.09778) / [MemSentry](https://arxiv.org/abs/2609.08747) / [MemForest](https://arxiv.org/abs/2609.08273) / [AIM](https://arxiv.org/abs/2609.12320) | paper | 9 月新论文把 durable-versus-temporary fusion、atomic relation organization、persistent-memory poisoning、EventTree compression 和 multi-user visibility/CRUD 推到 memory core | `seed-note` ✅(见 `papers/`) |
+| 2026-09-14 | [MUMBench](https://arxiv.org/abs/2609.12320) / [MERIT](https://arxiv.org/abs/2609.05441) | paper | 新 benchmark 分别补 multi-user private/shared memory operations 与 tool-use memory utility/cost/leakage instrumentation | `seed-note` ✅(见 `benchmarks/`) |
+| 2026-09-14 | [Graphiti v0.30.2](https://github.com/getzep/graphiti/releases/tag/v0.30.2) / [memsearch v0.4.20](https://github.com/zilliztech/memsearch/releases/tag/v0.4.20) | release | 官方 release 继续强化 Graphiti 的 backend isolation/routing 与 memsearch 的 context-budget retention、recall status 和 local runtime behavior | `deep-note` ✅(更新 `products/`) |
 | 2026-07-06 | [A-TMA](https://arxiv.org/abs/2607.01935) / [Mandol](https://arxiv.org/abs/2606.29778) / [Forensic Trajectory Signatures](https://arxiv.org/abs/2606.30566) | paper | 周更 radar 追加 state-aware ghost memory、agglomerative memory-native storage、memory-poisoning trajectory forensics 三条 seed note | `seed-note` ✅(见 `papers/`) |
 | 2026-07-06 | [MemSyco-Bench](https://arxiv.org/abs/2607.01071) / [MemLeak](https://arxiv.org/abs/2606.29788) / [MemDelta](https://arxiv.org/abs/2606.29914) | paper | benchmark catalog 新增 memory-induced sycophancy、多模态删除泄漏、controlled baseline methodology | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-07-06 | [AWS AgentCore release notes](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html) / [Google release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes) / [OpenAI Business release notes](https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes) / [Mem0 changelog](https://docs.mem0.ai/changelog/highlights) / [Redis guide](https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/) | product | 官方产品源补充 AgentCore streaming、Memory Bank model default、ChatGPT org memory controls、Mem0 expiration 和 Redis two-tier guidance | `deep-note` ✅(更新 `products/`) |

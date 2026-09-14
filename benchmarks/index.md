@@ -33,6 +33,7 @@ official repository, dataset card, or independent reproduction.
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
+| MUMBench | seed | paper-origin | multi-user memory operations | visibility / retrieval / creation / update / deletion | [`mumbench.md`](mumbench.md) | origin only |
 | StructMemEval | seed | paper-origin | structured memory organization | structure selection / state tracking / task-specific organization | [`structmemeval.md`](structmemeval.md) | yes |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
 | MemoryRewardBench | candidate | paper-origin | reward models for memory management | memory-quality judging / reward-model calibration | [`memoryrewardbench.md`](memoryrewardbench.md) | yes |
@@ -49,6 +50,7 @@ official repository, dataset card, or independent reproduction.
 | MemSyco-Bench | seed | paper-origin | memory-induced sycophancy | scope / conflict resolution / update / valid personalization | [`memsyco-bench.md`](memsyco-bench.md) | yes |
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
+| MERIT | seed | paper-origin | instrumented tool-use memory utility | task success / recall / leakage / cost | [`merit.md`](merit.md) | origin only |
 
 ## Evidence Ledgers
 

@@ -31,6 +31,19 @@ part of the 2026-05-19 nine-list scrape statistics above.
 - [Mandol: An Agglomerative Agent Memory System for Long-Term Conversations](mandol-agglomerative-agent-memory.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.29778)
 - [Forensic Trajectory Signatures for Agent Memory Poisoning Detection](forensic-trajectory-memory-poisoning.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.30566)
 
+## 2026-09-14 manual radar additions
+
+These entries were added by the 2026-09-14 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory](lifefuse-mem-lifecycle-aware-state-fusion.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12436)
+- [ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations](roam-robust-atomic-memory-organization.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.09778)
+- [MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI](memsentry-persistent-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08747)
+- [MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging](memforest-eventtree-agent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08273) / [code](https://github.com/Celina-love-sweet/MemForest)
+- [AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems](aim-privacy-aware-interoperable-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MUMBench](../benchmarks/mumbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MERIT](../benchmarks/merit.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.05441)
+
 ## 2026-06 manual radar additions
 
 These entries were added by the 2026-06-24 current-source radar refresh. They

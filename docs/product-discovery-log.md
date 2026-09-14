@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-06-24
+date: 2026-09-14
 status: working-log
 language: zh-CN
 ---
@@ -156,3 +156,13 @@ language: zh-CN
 | update-existing | Mem0 | changelog highlights 2026-06-27 | 更新 `products/mem0.md`;expiration controls 作为 lifecycle signal |
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
+
+## 11. 2026-09-14 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Graphiti | official GitHub release `v0.30.2` | 更新 `products/graphiti.md` 与 archive;记录 Neo4j database routing、group-ID clear、并发隔离和 FalkorDB full-text 修复 |
+| update-existing | memsearch | official GitHub release `v0.4.20` | 更新 `products/memsearch.md` 与 archive;记录 context-budget retention、recall status、summary failure、Milvus Lite 和 Windows 修复 |
+| watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
+| watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
+| adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |

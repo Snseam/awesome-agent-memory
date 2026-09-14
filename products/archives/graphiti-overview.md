@@ -1,6 +1,6 @@
 ---
 source_url: https://github.com/getzep/graphiti
-fetched: 2026-05-19
+fetched: 2026-09-14
 purpose: research backup; canonical is the URL above
 ---
 
@@ -52,3 +52,10 @@ pip install graphiti-core[anthropic,groq]
 ## License
 
 Apache 2.0.
+
+## 2026-09 Release Snapshot
+
+The official `v0.30.2` release updates graphiti-core, honors the configured
+Neo4j database in MCP, adds Saga nodes for group-ID clears, isolates concurrent
+multi-group requests with request-scoped drivers, and improves FalkorDB edge
+full-text search behavior. This archive records upstream product behavior only.

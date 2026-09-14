@@ -703,3 +703,43 @@ events:
       - benchmarks/memprobe.md
       - https://arxiv.org/abs/2606.24595
     extract_confidence: medium
+  - event_id: mumbench-origin-2026
+    benchmark_id: mumbench
+    source_kind: paper
+    source_id: benchmarks/mumbench.md
+    source_date: 2026-09
+    actor: AIM authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Multi-user interactions across four domains; retrieval, creation, update, and deletion under private/public visibility."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported AIM metrics are paper-origin claims and resources need normalization."
+    evidence_refs:
+      - benchmarks/mumbench.md
+      - https://arxiv.org/abs/2609.12320
+    extract_confidence: medium
+  - event_id: merit-origin-2026
+    benchmark_id: merit
+    source_kind: paper
+    source_id: benchmarks/merit.md
+    source_date: 2026-09
+    actor: MERIT authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Instrumented episodic tool-use tasks with leak checks, updated-fact recall, corruption controls, and token/dollar metering."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; reported pilot/grid results are paper-origin and release artifacts need verification."
+    evidence_refs:
+      - benchmarks/merit.md
+      - https://arxiv.org/abs/2609.05441
+    extract_confidence: medium
