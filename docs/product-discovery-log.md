@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-09-14
+date: 2026-09-15
 status: working-log
 language: zh-CN
 ---
@@ -166,3 +166,21 @@ language: zh-CN
 | watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
 | watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
 | adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |
+
+## 12. 2026-09-15 GoodMem contribution
+
+Proposed inclusion: [GoodMem](../products/goodmem.md), with an
+[official-source summary](../products/archives/goodmem-overview.md), an A1
+landscape entry, and a service-backed MCP architecture note.
+
+The inclusion rationale is documented persistent memory spaces, writing,
+recall, workload permissions, and cross-session reuse. Conventional RAG is also
+a supported use; automatic extraction, consolidation, and forgetting are not
+established by this review. Sources include the official product, MCP,
+service-identity, scoped-key, deployment, and license pages linked in the note.
+
+Evidence class: vendor documentation reviewed by an affiliated contributor,
+Amin Ahmad of PAIR Systems. The note remains `seed`, subject to maintainer
+review; no independent benchmark result or prior reviewer approval is claimed.
+The server is proprietary and its built-in MCP interface is read-only / early
+access. Inventory after this addition: 41 product notes and 40 archives.

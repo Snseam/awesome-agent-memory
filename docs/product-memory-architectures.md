@@ -180,6 +180,17 @@ flowchart LR
     DB --> Audit
 ```
 
+### 4.1 Service-backed MCP with an explicit write path
+
+[GoodMem](../products/goodmem.md) supplies a service-backed variant: the host
+selects content for an authorized API/SDK write path, and clients recall it from
+shared memory spaces. Built-in HTTP MCP is currently read-only / early access;
+the separate stdio adapter offers broader operations. Workload identities and
+scoped keys bound access. This mapping is an affiliated contributor's inference
+from vendor documentation, not an independent architecture audit. Automatic
+IDE capture, consolidation, and the local-artifact lifecycle in the diagram
+above are not established for GoodMem by the reviewed sources.
+
 ## 5. Platform-managed memory
 
 | Field | Synthesis |
