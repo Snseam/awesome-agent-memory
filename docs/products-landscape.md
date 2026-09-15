@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-09-14
+date: 2026-09-15
 status: working-spec
 language: zh-CN
 ---
@@ -28,7 +28,7 @@ release activity without new memory-specific behavior stays in the watchlist.
 
 **Domain**(领域)= 这个产品最自然落到的应用场景。
 **Audience**(服务对象)= 真实掏钱 / 部署的人。同一产品可对多个 audience。
-**Mode**:OSS / OSS+SaaS / SaaS / Big-tech-builtin / Research-only / Plugin。
+**Mode**:OSS / OSS+SaaS / SaaS / Proprietary self-hosted / Big-tech-builtin / Research-only / Plugin。
 
 下表条目的判定标准是:**产品本身把"记忆"作为一等公民设计**;只是顺带做向量
 检索或 RAG 的不算。
@@ -92,6 +92,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Zep | [`../products/zep.md`](../products/zep.md) | OSS+SaaS | SaaS 团队 / 企业 | 时间感知 KG;hosted 与 self-host 并存 |
 | Graphiti | [`../products/graphiti.md`](../products/graphiti.md) | OSS | 个人开发者 / 研究者 | Zep 的开源底座,纯库形态 |
 | Cognee | [`../products/cognee.md`](../products/cognee.md) | OSS+SaaS | 个人开发者 / 中小团队 | 记忆 + ontology + KG;偏 PKM/研究方向 |
+| GoodMem | [`../products/goodmem.md`](../products/goodmem.md) | Proprietary self-hosted + SaaS | agent 开发者 / 团队 | 持久化 memory spaces、语义召回与 scoped access;内置只读 HTTP MCP,也用于常规 RAG |
 | Letta(原 MemGPT)| [`../products/letta.md`](../products/letta.md) | OSS+SaaS | 研究者 / 个人开发者 | agent runtime 内置分层记忆 |
 | LangMem | [`../products/langmem.md`](../products/langmem.md) | OSS | LangChain 用户 | LangChain/LangGraph 系的 memory primitive |
 | Supermemory | [`../products/supermemory.md`](../products/supermemory.md) | OSS+SaaS | SaaS 团队 / 企业 / 个人 | context cloud:memory、RAG、profiles、connectors 一体化 |
