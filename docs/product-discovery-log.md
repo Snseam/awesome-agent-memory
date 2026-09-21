@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-09-14
+date: 2026-09-21
 status: working-log
 language: zh-CN
 ---
@@ -166,3 +166,14 @@ language: zh-CN
 | watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
 | watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
 | adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |
+
+## 12. 2026-09-21 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Hindsight | official GitHub release `v0.10.0` | 更新 `products/hindsight.md` 与 archive;记录 batched embeddings、tokenizer、retention、text-search、transfer 和 coding-agent import behavior |
+| update-existing | OpenViking | official releases `v0.4.21` / Python SDK `0.1.12` | 更新 `products/openviking.md` 与 archive;记录 Hermes、MiMo/MiMoCode、WorkBuddy、standalone provider 以及 storage/retrieval/MCP reliability |
+| watchlist | Mem0 `v2.1.0` | official GitHub release | 只记录 surface identity / telemetry signal;没有足够新的 memory semantics |
+| watchlist | TencentDB `v2.0.2-beta.2` / Cognee `v1.6.0` | official GitHub release metadata | release 可访问,但具体 memory behavior delta 未验证 |
+| watchlist | ReMe | official repo/docs and related paper | file-native memory integration relevant, but needs fuller source cross-check before product-note revision |
+| reject as source mismatch | Mem0 `v3.2.0` candidate | release listing points to `ts-v3.2.0` | canonical tag mismatch blocks promotion |

@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-09-21
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,9 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-09-21 | [MACE](https://arxiv.org/abs/2609.21533) / [Disentangling Long-Term Memory](https://arxiv.org/abs/2609.18461) / [Interactive Memory Learning](https://arxiv.org/abs/2609.17088) / [ThinkFlow](https://arxiv.org/abs/2609.17010) / [EchoPath](https://arxiv.org/abs/2609.16635) / [Semantic-TVM](https://arxiv.org/abs/2609.15011) | paper | 本周新 primary sources 把 adaptive memory policy、latent personalization、可执行 procedural memory 和 privacy-shaped memory view 推进到 memory core | `seed-note` ✅(见 `papers/`) |
+| 2026-09-21 | [Hindsight v0.10.0](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.0) / [OpenViking v0.4.21](https://github.com/volcengine/OpenViking/releases/tag/v0.4.21) | release | 官方 release 强化 ingestion/retention、transfer、coding-agent import、Hermes/WorkBuddy/MiMo integrations 以及 storage/retrieval/MCP 可靠性 | `deep-note` ✅(更新 `products/`) |
+| 2026-09-21 | [LTM100](https://github.com/skhynix/LTM100) / [REVOKE](https://github.com/Dextergao14/REVOKE) / [recalld-benchmarks](https://github.com/bit-robotics/recalld-benchmarks) | release | GitHub discovery 暴露 memory load、procedural invalidation 和 affiliated reproducibility 三条 benchmark 线,但尚未升级为 catalog evidence | `archive-only`(watchlist) |
 | 2026-09-14 | [LifeFuse-Mem](https://arxiv.org/abs/2609.12436) / [ROAM](https://arxiv.org/abs/2609.09778) / [MemSentry](https://arxiv.org/abs/2609.08747) / [MemForest](https://arxiv.org/abs/2609.08273) / [AIM](https://arxiv.org/abs/2609.12320) | paper | 9 月新论文把 durable-versus-temporary fusion、atomic relation organization、persistent-memory poisoning、EventTree compression 和 multi-user visibility/CRUD 推到 memory core | `seed-note` ✅(见 `papers/`) |
 | 2026-09-14 | [MUMBench](https://arxiv.org/abs/2609.12320) / [MERIT](https://arxiv.org/abs/2609.05441) | paper | 新 benchmark 分别补 multi-user private/shared memory operations 与 tool-use memory utility/cost/leakage instrumentation | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-09-14 | [Graphiti v0.30.2](https://github.com/getzep/graphiti/releases/tag/v0.30.2) / [memsearch v0.4.20](https://github.com/zilliztech/memsearch/releases/tag/v0.4.20) | release | 官方 release 继续强化 Graphiti 的 backend isolation/routing 与 memsearch 的 context-budget retention、recall status 和 local runtime behavior | `deep-note` ✅(更新 `products/`) |

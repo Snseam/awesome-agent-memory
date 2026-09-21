@@ -1,7 +1,7 @@
 ---
 source_url: https://volcengine-openviking.mintlify.app/
 source_repo: https://github.com/volcengine/OpenViking
-fetched: 2026-06-11
+fetched: 2026-09-21
 purpose: research backup; canonical sources are the URLs above
 ---
 
@@ -28,3 +28,15 @@ context loading plus semantic retrieval.
 OpenClaw completion and token-cost improvements on the docs page are vendor-
 claimed benchmark results. OpenViking should be described as a context database
 with first-class memory, not as a pure memory layer.
+
+## 2026-09-21 release snapshot
+
+Official releases `v0.4.21` and Python SDK `0.1.12` add or strengthen Hermes,
+MiMo/MiMoCode, and WorkBuddy integrations, provide a standalone Hermes memory
+provider, and include storage, queue, locking, retrieval, MCP, and local
+vector-store reliability work.
+
+Sources:
+
+- https://github.com/volcengine/OpenViking/releases/tag/v0.4.21
+- https://github.com/volcengine/OpenViking/releases/tag/python-sdk%400.1.12
