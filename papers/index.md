@@ -62,6 +62,18 @@ part of the 2026-05-19 nine-list scrape statistics above.
 - [MUMBench](../benchmarks/mumbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.12320)
 - [MERIT](../benchmarks/merit.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.05441)
 
+## 2026-09-21 manual radar additions
+
+These entries were added by the 2026-09-21 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems](mace-memory-agent-co-evolution.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.21533)
+- [Disentangling Long-Term Memory via Latent Neuro-Symbolic Reasoning](latent-neuro-symbolic-long-term-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.18461)
+- [Interactive Memory Learning for Long-Term Conversations](interactive-memory-learning-long-term-conversations.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.17088)
+- [ThinkFlow: Self-Evolving Probabilistic Latent Memory for Lifelong Conversational Agents](thinkflow-latent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.17010)
+- [EchoPath: Execution-Level Replayable Memory for GUI Agents](echopath-execution-replayable-memory-gui-agents.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.16635)
+- [Semantic-TVM: Structure-Preserving Trustworthy Virtual Memory for Memory-Augmented and Tool-Using Agents](semantic-tvm-trustworthy-virtual-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.15011)
+
 ## 2026-06 manual radar additions
 
 These entries were added by the 2026-06-24 current-source radar refresh. They

@@ -13,7 +13,7 @@ memory_modules:
   - dream-consolidator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-09-21
 archive: archives/hindsight-overview.md
 ---
 
@@ -45,6 +45,12 @@ license,最新 release 为 `v0.7.1`(2026-05-28)。
 包括 `list_memory_units` 按 ingest age 过滤(`created_before`)以及多篇 memory
 positioning blog/docs 更新。这里仅记录为产品行为与 API surface 更新;Hindsight
 LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立复现。
+
+2026-09-21 周更复核到官方 GitHub release `v0.10.0`(2026-09-14)。该 release
+补充批量 document embedding、`o200k_base` tokenizer、oversized item retention
+改进、per-bank text-search 开关、knowledge-base export，以及 coding-agent
+import 修复。这里仍只记录官方 product behavior;没有把 release 或 README
+数字解释成独立 benchmark 证据。
 
 ## 3. 关键技术选择
 
@@ -92,6 +98,7 @@ LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立
 - Docs:https://hindsight.vectorize.io/
 - Release:https://github.com/vectorize-io/hindsight/releases/tag/v0.7.1
 - Release v0.8.6:https://github.com/vectorize-io/hindsight/releases/tag/v0.8.6
+- Release v0.10.0:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.0
 
 ---
 

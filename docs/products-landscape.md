@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-09-14
+date: 2026-09-21
 status: working-spec
 language: zh-CN
 ---
@@ -17,11 +17,11 @@ language: zh-CN
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
 
-## 2026-09-14 refresh note
+## 2026-09-21 refresh note
 
 This refresh found no new product that cleared the existing core inclusion
-boundary. It updated the Graphiti and memsearch notes with official upstream
-releases; the product inventory remains 38 notes and 37 archives. Generic OSS
+boundary. It updated the Hindsight and OpenViking notes with official upstream
+releases; the product inventory remains 40 notes and 39 archives. Generic OSS
 release activity without new memory-specific behavior stays in the watchlist.
 
 ## 阅读说明

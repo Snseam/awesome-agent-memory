@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - dream-consolidator
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-09-21
 archive: archives/openviking-overview.md
 ---
 
@@ -37,6 +37,12 @@ management 和 MCP/OpenClaw/Claude Desktop 等集成。
 - **Self-evolving memory**:sessions 自动抽取 profile、preferences、entities、
   events、cases、patterns 六类 memory。
 
+2026-09-21 周更复核到官方 releases `v0.4.21` 与 Python SDK `0.1.12`
+(2026-09-18 至 2026-09-20)。更新信号包括 Hermes、MiMo/MiMoCode 和
+WorkBuddy memory/log integrations、standalone Hermes memory provider，以及
+storage、queue、locking、retrieval、MCP 和 local vector-store 的可靠性修复。
+这些是官方 product behavior,不等同于独立 benchmark 或质量结论。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:OpenViking 把 memory 放进更广义的 context DB,是本仓需要区分的相邻
@@ -61,6 +67,8 @@ management 和 MCP/OpenClaw/Claude Desktop 等集成。
 - archive: [`archives/openviking-overview.md`](archives/openviking-overview.md)
 - Docs:https://volcengine-openviking.mintlify.app/
 - GitHub:https://github.com/volcengine/OpenViking
+- Release v0.4.21:https://github.com/volcengine/OpenViking/releases/tag/v0.4.21
+- Python SDK 0.1.12:https://github.com/volcengine/OpenViking/releases/tag/python-sdk%400.1.12
 
 ---
 

@@ -56,7 +56,7 @@
 | 论文索引 | 989 篇抓取论文 + 截至 2026-09 的手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
-| full / seed 论文笔记 | 7 个 full + 73 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
+| full / seed 论文笔记 | 7 个 full + 79 个 seed | [`papers/`](papers/) | 为架构决策引用人工阅读笔记。 |
 | 记忆产品笔记 | 40 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
 | 产品页面快照 | 39 个快照 | [`products/archives/`](products/archives/) | 在源页面变化后审计产品 claims。 |
 | Benchmark 目录 | 23 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
@@ -72,7 +72,7 @@
 | 目标 | 先读这些 |
 |---|---|
 | 快速理解领域 | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md)，再读 [`docs/taxonomy.md`](docs/taxonomy.md) |
-| 阅读最新来源刷新 | [`docs/memory-radar-2026-09-14.md`](docs/memory-radar-2026-09-14.md)，再看 [`docs/signals.md`](docs/signals.md) |
+| 阅读最新来源刷新 | [`docs/memory-radar-2026-09-21.md`](docs/memory-radar-2026-09-21.md)，再看 [`docs/signals.md`](docs/signals.md) |
 | 找相关论文 | [`papers/index.md`](papers/index.md)，再看 [`papers/`](papers/) 下的 full note |
 | 比较记忆产品 | [`docs/products-landscape.md`](docs/products-landscape.md)、[`docs/product-memory-architectures.md`](docs/product-memory-architectures.md)、[`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | 查看产品为什么入库或被拒绝 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
@@ -154,7 +154,7 @@ flowchart LR
 | [`docs/taxonomy.md`](docs/taxonomy.md) | 分类 agent-memory 系统和 memory-kernel 职责的共享词表。 |
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | 2025 年末到 2026 H1 的外部 meta-survey 索引。 |
 | [`docs/research-radar.md`](docs/research-radar.md) | 把论文、产品、benchmark 证据转成 ImpactReport 和 ADR 输入的工作流。 |
-| [`docs/memory-radar-2026-09-14.md`](docs/memory-radar-2026-09-14.md) | 2026-09 周更来源刷新，覆盖论文、产品、GitHub 项目和 reviewer 分流结论。 |
+| [`docs/memory-radar-2026-09-21.md`](docs/memory-radar-2026-09-21.md) | 2026-09 周更来源刷新，覆盖论文、产品、GitHub 项目和 reviewer 分流结论。 |
 | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | agent-memory token reduction、预算检索、运行成本方法、代码路径和产品实践信号专题。 |
 | [`docs/information-sources.md`](docs/information-sources.md) | 论文、产品、社区和中文信息源 catalog。 |
 | [`docs/related-work.md`](docs/related-work.md) | 发现线索归因和抓取来源记录。 |
@@ -175,7 +175,7 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`papers/`](papers/) | 7 个 full 论文笔记、73 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
+| [`papers/`](papers/) | 7 个 full 论文笔记、79 个 seed 笔记和主索引 [`index.md`](papers/index.md)。 |
 | [`papers/stubs/`](papers/stubs/) | 988 个尚未 full 阅读论文的生成 stub。 |
 | [`papers/pdfs/`](papers/pdfs/) | 534 个本地 PDF，约 1.8 GB。详见下方存档策略。 |
 | [`papers/_scrape/`](papers/_scrape/) | 可复现产物：抓取脚本和 dedup JSON。 |
