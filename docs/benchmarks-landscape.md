@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-09-14
+date: 2026-09-28
 status: seed
 language: zh-CN
 ---
@@ -37,6 +37,11 @@ language: zh-CN
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 | multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
 | tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
+| action/cost Pareto frontier | [`DolphinBench`](../benchmarks/dolphinbench.md) | task completion / cost / latency / Pareto frontier | seed,Mem0-affiliated origin; not independent evidence |
+| memory-use calibration | [`MemCalib`](../benchmarks/memcalib.md) | overuse / underuse / retrieved-memory calibration | seed,origin protocol only; metrics not normalized |
+| shared-memory admission | [`Correlated Promotion Benchmark`](../benchmarks/correlated-promotion-benchmark.md) | source lineage / correlated evidence / false-belief containment | seed,origin protocol only; admission metrics not normalized |
+| stability-plasticity diagnostics | [`MemProbe Stability-Plasticity`](../benchmarks/memprobe-stability-plasticity.md) | interference / misinformation / consolidation / reconsolidation profiles | seed,origin protocol only; distinct from MEMPROBE hidden-state benchmark |
+| conversational intervention quality | [`TWIST`](../benchmarks/twist.md) | contradiction recall / hard-negative specificity / attribution / sensitive recall | seed,origin protocol only; proposed benchmark artifacts unchecked |
 
 ## B. 初始交叉统计
 
@@ -65,6 +70,11 @@ language: zh-CN
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 | MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
 | MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
+| DolphinBench | 1 | origin protocol logged; Mem0-affiliated Pareto claims not independently reproduced |
+| MemCalib | 1 | origin protocol logged; memory-use calibration metrics not normalized |
+| Correlated Promotion Benchmark | 1 | origin protocol logged; shared-memory admission metrics not normalized |
+| MemProbe Stability-Plasticity | 1 | origin protocol logged; behavioral-profile diagnostics not normalized |
+| TWIST | 1 | origin protocol logged; intervention-quality tracks not normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -82,6 +92,7 @@ language: zh-CN
 | LongMemEval | 3 | Mem0 blog, Hindsight, Hy-Memory |
 | BEAM | 2 | Mem0 BEAM 1M and 10M self-reports |
 | PersonaMem-v2 | 2 | Hy-Memory, TencentDB Agent Memory |
+| DolphinBench | 1 | Mem0 blog / affiliated benchmark framing |
 
 ### B4. Independent reproductions
 
@@ -112,6 +123,11 @@ language: zh-CN
 | MEMPROBE | 0 | Origin protocol only |
 | MUMBench | 0 | Origin protocol only; no outside reuse logged |
 | MERIT | 0 | Origin protocol only; no outside reuse logged |
+| DolphinBench | 0 | Origin protocol / affiliated launch only; no outside reuse logged |
+| MemCalib | 0 | Origin protocol only; no outside reuse logged |
+| Correlated Promotion Benchmark | 0 | Origin protocol only; no outside reuse logged |
+| MemProbe Stability-Plasticity | 0 | Origin protocol only; no outside reuse logged |
+| TWIST | 0 | Origin protocol only; no outside reuse logged |
 
 ### B7. Independent or methodological pressure
 
@@ -170,7 +186,16 @@ enters the catalog.
    a kernel priority.
 11. Upgrade MERIT if tool-use memory utility and cost accounting become a kernel
    evaluation priority.
-12. Add independent reproduction rows only when the source gives enough setup
+12. Upgrade DolphinBench only after separating paper protocol from Mem0
+   vendor-affiliated leaderboard claims.
+13. Upgrade MemCalib if memory-use calibration becomes part of acceptance.
+14. Upgrade Correlated Promotion Benchmark if shared-memory admission, source
+   lineage, or false-belief containment becomes a kernel priority.
+15. Upgrade MemProbe Stability-Plasticity if update-vs-preserve diagnostics
+   become a consolidation-policy priority; keep it distinct from MEMPROBE.
+16. Upgrade TWIST if conversational memory intervention and hard-negative
+   governance become product acceptance criteria.
+17. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
 
 ## F. Maintenance Contract

@@ -743,3 +743,104 @@ events:
       - benchmarks/merit.md
       - https://arxiv.org/abs/2609.05441
     extract_confidence: medium
+  - event_id: dolphinbench-origin-2026
+    benchmark_id: dolphinbench
+    source_kind: paper
+    source_id: benchmarks/dolphinbench.md
+    source_date: 2026-09
+    actor: DolphinBench authors / Mem0
+    actor_type: affiliated_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Action-based agent-memory benchmark framed around task completion, cost, latency, and Pareto frontier; Mem0 blog reports 600 tool-using tests."
+    reproduction_status: not_reproduced
+    evidence_level: affiliated_evaluation
+    independence_class: vendor_affiliated
+    comparability_notes: "Origin protocol and vendor-affiliated framing only; leaderboard or Pareto claims need independent reproduction."
+    evidence_refs:
+      - benchmarks/dolphinbench.md
+      - https://arxiv.org/abs/2609.24971
+      - https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory
+    extract_confidence: medium
+  - event_id: memcalib-origin-2026
+    benchmark_id: memcalib
+    source_kind: paper
+    source_id: benchmarks/memcalib.md
+    source_date: 2026-09
+    actor: MemCalib authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Benchmark for calibrating whether agents overuse, underuse, or correctly use retrieved memory."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; metrics and artifacts need full normalization."
+    evidence_refs:
+      - benchmarks/memcalib.md
+      - https://arxiv.org/abs/2609.24259
+    extract_confidence: medium
+  - event_id: correlated-promotion-benchmark-origin-2026
+    benchmark_id: correlated-promotion-benchmark
+    source_kind: paper
+    source_id: benchmarks/correlated-promotion-benchmark.md
+    source_date: 2026-09
+    actor: CPB authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "CPB-Static and CPB-Live evaluate whether claims should be admitted to shared memory when repeated or paraphrased evidence may be correlated."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; false-adoption and consumer-probe rates need normalization before use."
+    evidence_refs:
+      - benchmarks/correlated-promotion-benchmark.md
+      - https://arxiv.org/abs/2609.30813
+    extract_confidence: medium
+  - event_id: memprobe-stability-plasticity-origin-2026
+    benchmark_id: memprobe-stability-plasticity
+    source_kind: paper
+    source_id: benchmarks/memprobe-stability-plasticity.md
+    source_date: 2026-09
+    actor: MemProbe Stability-Plasticity authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "56-episode diagnostic suite built from cognitive paradigms for interference, misinformation, consolidation strength, and reconsolidation windows."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; do not merge with the existing MEMPROBE hidden-state benchmark despite the alias overlap."
+    evidence_refs:
+      - benchmarks/memprobe-stability-plasticity.md
+      - https://arxiv.org/abs/2609.30558
+    extract_confidence: medium
+  - event_id: twist-origin-2026
+    benchmark_id: twist
+    source_kind: paper
+    source_id: benchmarks/twist.md
+    source_date: 2026-09
+    actor: TWIST authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Conversational-memory intervention benchmark with matched hard negatives, belief-change points, and sensitive-recall governance tracks."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; proposed benchmark and release artifacts need verification."
+    evidence_refs:
+      - benchmarks/twist.md
+      - https://arxiv.org/abs/2609.28575
+    extract_confidence: medium

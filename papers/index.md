@@ -19,6 +19,24 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-09-28 manual radar additions
+
+These entries were added by the 2026-09-28 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [DolphinBench](../benchmarks/dolphinbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.24971) / [blog](https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory)
+- [MemCalib](../benchmarks/memcalib.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.24259)
+- [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](../benchmarks/correlated-promotion-benchmark.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.30813)
+- [Probing Stability-Plasticity Tradeoffs in Agent Memory through Cognitive Experimental Paradigms](../benchmarks/memprobe-stability-plasticity.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.30558) / [code](https://github.com/jq-ding/MemProbe)
+- [TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory](../benchmarks/twist.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.28575)
+- [Scope Before You Persist: Preventing Cross-Family Interference in Agent Memory](scope-before-you-persist.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.29144)
+- [Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents](just-in-time-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.27334)
+- [EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory](ensimem-entity-structured-indexing.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.27279)
+- [Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](jev-mem-system-one-controlled-agentic-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.23986)
+- [AkasicMEM: Governed Enterprise Memory for Agents](akasicmem-governed-enterprise-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.25563)
+- [When Does Execution Provenance Help Agent Memory Retrieval?](execution-provenance-memory-retrieval.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.25913)
+- [RPMem: Learning Long-Term Recurrent Parametric Memory Across Sessions for LLM Agents](rpmem-recurrent-parametric-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.23466)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not

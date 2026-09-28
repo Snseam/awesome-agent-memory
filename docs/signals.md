@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-09-28
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,9 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-09-28 | [DolphinBench](https://arxiv.org/abs/2609.24971) / [MemCalib](https://arxiv.org/abs/2609.24259) / [CPB](https://arxiv.org/abs/2609.30813) / [MemProbe Stability-Plasticity](https://arxiv.org/abs/2609.30558) / [TWIST](https://arxiv.org/abs/2609.28575) | paper | 新 benchmark 把 agent-memory 评测推进到成本/延迟 Pareto、memory-use calibration、shared-memory admission、稳定性/可塑性和 intervention quality | `seed-note` ✅(见 `benchmarks/`) |
+| 2026-09-28 | [Scope Before You Persist](https://arxiv.org/abs/2609.29144) / [JitMem](https://arxiv.org/abs/2609.27334) / [EnSIMem](https://arxiv.org/abs/2609.27279) / [AkasicMEM](https://arxiv.org/abs/2609.25563) | paper | 新论文分别补 retrieval scope authorization、read-time curation、entity-structured indexing 和 enterprise governed memory | `seed-note` ✅(见 `papers/`) |
+| 2026-09-28 | [Databricks Managed Agent Memory](https://docs.databricks.com/aws/en/agents/agent-memory/managed-memory) / [Zep v3 changelog](https://help.getzep.com/v3/changelog) / [Microsoft Agent Framework memory](https://devblogs.microsoft.com/agent-framework/interactive-experiences-memory-and-resilient-execution/) | product | 官方产品源补充 Lakebase-backed managed memory、Zep source traceability / Agent Skills gating 和 FoundryMemoryProvider 集成 | `deep-note` ✅(更新 `products/`) |
 | 2026-09-14 | [LifeFuse-Mem](https://arxiv.org/abs/2609.12436) / [ROAM](https://arxiv.org/abs/2609.09778) / [MemSentry](https://arxiv.org/abs/2609.08747) / [MemForest](https://arxiv.org/abs/2609.08273) / [AIM](https://arxiv.org/abs/2609.12320) | paper | 9 月新论文把 durable-versus-temporary fusion、atomic relation organization、persistent-memory poisoning、EventTree compression 和 multi-user visibility/CRUD 推到 memory core | `seed-note` ✅(见 `papers/`) |
 | 2026-09-14 | [MUMBench](https://arxiv.org/abs/2609.12320) / [MERIT](https://arxiv.org/abs/2609.05441) | paper | 新 benchmark 分别补 multi-user private/shared memory operations 与 tool-use memory utility/cost/leakage instrumentation | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-09-14 | [Graphiti v0.30.2](https://github.com/getzep/graphiti/releases/tag/v0.30.2) / [memsearch v0.4.20](https://github.com/zilliztech/memsearch/releases/tag/v0.4.20) | release | 官方 release 继续强化 Graphiti 的 backend isolation/routing 与 memsearch 的 context-budget retention、recall status 和 local runtime behavior | `deep-note` ✅(更新 `products/`) |

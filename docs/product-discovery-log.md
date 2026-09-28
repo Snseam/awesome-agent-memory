@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-09-14
+date: 2026-09-28
 status: working-log
 language: zh-CN
 ---
@@ -95,6 +95,22 @@ language: zh-CN
 
 `n/a` 表示本轮子 agent 找到候选名,但主 agent 没有足够官方/源码证据支持深度入库。
 
+### 2026-09-28 discovery-only follow-up
+
+This weekly run did not promote new OSS/MCP memory products into the core
+product count. The following sources are recorded as follow-up candidates only;
+GitHub activity, MCP catalog placement, and self-reported benchmark tables are
+not product-quality or performance evidence.
+
+| name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
+|---|---|---|---|---|---|---|---|
+| xChuCx agent-memory | https://github.com/xChuCx/agent-memory | local/git-native MCP memory | repo + Glama schema signal | Tier B watchlist | MCP read/write/status tools for project memory | early OSS project; no independent quality evidence | GitHub, Glama |
+| mcp-memory-service | https://github.com/doobidoo/mcp-memory-service | shared memory backend | repo README | Tier B watchlist | REST + MCP + graph/consolidation surface | README claims are self-reported | GitHub |
+| Palinode | https://github.com/phasespace-labs/palinode | git-versioned Markdown memory | repo + MCP registry signal | Tier B watchlist | correction, rollback, and audit-friendly memory surface | release state and maturity need verification | GitHub, MCP registry |
+| m3-memory | https://github.com/skynetcmd/m3-memory | local-first multi-agent memory | repo + MCP registry signal | Tier B watchlist | local CLI core with optional MCP; multi-agent memory backend | LongMemEval-style numbers are self-reported | GitHub, MCP registry |
+| agent-memory leaderboard Cycle 2 | https://github.com/AML-memory/agent-memory-leaderboard | benchmark program | repo + official docs | benchmark watchlist | Cycle 2 opened 2026-09-20; useful evaluation-contract signal | private data/corpora and leaderboard claims need versioned protocol review | GitHub, official docs |
+| bradAGI awesome CLI coding agents | https://github.com/bradAGI/awesome-cli-coding-agents | discovery list | curated list | discovery only | surfaces Mnemoverse / pi-mem / pond / Nex style memory tools | list placement is not evidence | GitHub |
+
 ## 6. Reject / boundary decisions
 
 | pattern | decision | reason |
@@ -104,6 +120,7 @@ language: zh-CN
 | Generic agent frameworks | reject unless memory is first-class | AutoGen/CrewAI/LlamaIndex 等不能因为有 memory feature 就计入核心产品 |
 | Ordinary chat history | reject | 缺少 extraction/consolidation/retrieval/governance lifecycle |
 | Catalog-only MCP servers | reject or Tier B | 没有 canonical repo/docs 时不写产品笔记 |
+| Inaccessible benchmark repos | reject | Search snippets without reachable canonical repository or source page are not enough for catalog rows |
 
 ## 7. Reviewer synthesis
 

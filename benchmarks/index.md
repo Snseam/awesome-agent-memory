@@ -51,6 +51,11 @@ official repository, dataset card, or independent reproduction.
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
 | MERIT | seed | paper-origin | instrumented tool-use memory utility | task success / recall / leakage / cost | [`merit.md`](merit.md) | origin only |
+| DolphinBench | seed | paper-origin / affiliated | agent-memory Pareto benchmark | task completion / cost / latency | [`dolphinbench.md`](dolphinbench.md) | origin only |
+| MemCalib | seed | paper-origin | memory-use calibration | overuse / underuse / retrieved-memory calibration | [`memcalib.md`](memcalib.md) | origin only |
+| Correlated Promotion Benchmark | seed | paper-origin | shared-memory admission | source lineage / correlated evidence / false-belief containment | [`correlated-promotion-benchmark.md`](correlated-promotion-benchmark.md) | origin only |
+| MemProbe Stability-Plasticity | seed | paper-origin | cognitive memory diagnostics | interference / misinformation / consolidation / reconsolidation | [`memprobe-stability-plasticity.md`](memprobe-stability-plasticity.md) | origin only |
+| TWIST | seed | paper-origin | conversational memory intervention | contradiction detection / hard negatives / sensitive recall | [`twist.md`](twist.md) | origin only |
 
 ## Evidence Ledgers
 

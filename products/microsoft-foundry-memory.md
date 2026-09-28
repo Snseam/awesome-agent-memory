@@ -13,7 +13,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-08-10
+last_revised: 2026-09-28
 archive: archives/microsoft-foundry-memory-overview.md
 ---
 
@@ -59,6 +59,15 @@ memory item partition key,并继续给出 Python、C#、JavaScript、Java 和 RE
 这次更新强化的是 developer-visible memory lifecycle 和治理面。它仍是 preview
 产品行为证据,不能写成 Microsoft memory 的独立性能或质量结论。
 
+## 3.3 2026-09 refresh
+
+Microsoft Agent Framework blog material describes `FoundryMemoryProvider` as an
+integration that retrieves relevant memories before a run and submits
+conversation information for asynchronous extraction afterward. This reinforces
+the product boundary that Foundry memory is an agent-service integration surface
+for managed long-term memory, still preview product behavior rather than a
+separate product or independent evaluation.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Microsoft 路线比纯自动抽取更强调 developer-visible item lifecycle。
@@ -84,6 +93,7 @@ memory item partition key,并继续给出 Python、C#、JavaScript、Java 和 RE
 - How-to:https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/memory-usage
 - Build 2026:https://devblogs.microsoft.com/foundry/agent-service-build2026/
 - Build 2026 recap:https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-build-2026/
+- Agent Framework memory:https://devblogs.microsoft.com/agent-framework/interactive-experiences-memory-and-resilient-execution/
 
 ---
 

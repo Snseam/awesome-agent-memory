@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-08-31
+last_revised: 2026-09-28
 ---
 
 # Mem0
@@ -127,6 +127,23 @@ quality evidence and should not be mixed with the LoCoMo/LongMemEval/BEAM
 claims ledger.
 
 > 来源:https://docs.mem0.ai/changelog/highlights
+
+## 2026-09 DolphinBench
+
+Mem0 introduced DolphinBench as an action-based agent-memory benchmark and
+Pareto-frontier framing over task completion, cost, and latency. The blog says
+the suite contains 600 tool-using tests with solvability gates. This repository
+tracks DolphinBench as a benchmark seed at
+[`../benchmarks/dolphinbench.md`](../benchmarks/dolphinbench.md) and records its
+claims as vendor-affiliated / paper-origin evidence in
+[`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml).
+
+The benchmark is useful for cost-aware evaluation design, but Mem0 leaderboard
+or Pareto claims must not be treated as independent performance evidence until
+an external reproduction with enough setup detail exists.
+
+> 来源:https://arxiv.org/abs/2609.24971、
+> https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory
 
 ## 2026-06/07 SDK expiration controls
 
