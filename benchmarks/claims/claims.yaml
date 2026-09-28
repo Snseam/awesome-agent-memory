@@ -844,3 +844,66 @@ events:
       - benchmarks/twist.md
       - https://arxiv.org/abs/2609.28575
     extract_confidence: medium
+  - event_id: longmemeval-v2-origin-2026
+    benchmark_id: longmemeval-v2
+    source_kind: paper
+    source_id: benchmarks/longmemeval-v2.md
+    source_date: 2026-05
+    actor: LongMemEval-V2 authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "451 questions over customized web/enterprise trajectory histories; memory supplies compact evidence for a fixed reader."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; distinct from original LongMemEval; author-reported results are not independent reproduction."
+    evidence_refs:
+      - benchmarks/longmemeval-v2.md
+      - https://arxiv.org/abs/2605.12493
+      - https://github.com/xiaowu0162/LongMemEval-V2
+    extract_confidence: medium
+  - event_id: minteval-origin-2026
+    benchmark_id: minteval
+    source_kind: paper
+    source_id: benchmarks/minteval.md
+    source_date: 2026-05
+    actor: MINTEval authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Long evolving contexts with single-target recall and multi-target aggregation under intervening updates."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported system accuracy is not an independent reproduction."
+    evidence_refs:
+      - benchmarks/minteval.md
+      - https://arxiv.org/abs/2605.18565
+      - https://github.com/amy-hyunji/MINTEval
+    extract_confidence: medium
+  - event_id: inmind-origin-2026
+    benchmark_id: inmind
+    source_kind: paper
+    source_id: benchmarks/inmind.md
+    source_date: 2026-07
+    actor: InMind authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "125 paired direct/indirect queries over synthetic stored user facts with knowledge bridges."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin diagnostic only; paper-aligned results and repository license are pending on the official release roadmap."
+    evidence_refs:
+      - benchmarks/inmind.md
+      - https://arxiv.org/abs/2607.24368
+      - https://github.com/imlrz/InMind
+    extract_confidence: medium

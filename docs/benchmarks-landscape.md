@@ -20,7 +20,10 @@ language: zh-CN
 | 领域 | Benchmark | 主要测什么 | 当前证据状态 |
 |---|---|---|---|
 | 长程对话记忆 | [`LongMemEval`](../benchmarks/longmemeval.md) | information extraction / knowledge update / temporal / abstention | full,多产品自报引用 |
+| 环境经验记忆 | [`LongMemEval-V2`](../benchmarks/longmemeval-v2.md) | state / workflow / gotchas / premise awareness from agent trajectories | seed,与原 LongMemEval 不合并;origin protocol only |
 | 长程对话记忆 | [`LoCoMo`](../benchmarks/locomo.md) | factual recall / temporal / causal / multi-session | seed,产品横评最常见 |
+| 动态干扰 | [`MINTEval`](../benchmarks/minteval.md) | revised facts / multi-target aggregation under interference | seed,origin protocol only |
+| 隐式关联 | [`InMind`](../benchmarks/inmind.md) | query-to-memory knowledge bridge / retrieval routing | seed,125-task diagnostic;license pending |
 | 对话记忆规模曲线 | [`ConvoMem`](../benchmarks/convomem.md) | long-context vs block extraction vs RAG crossover | full,同时批评 LongMemEval/LoCoMo |
 | agent 记忆能力维度 | [`MemoryAgentBench`](../benchmarks/memoryagentbench.md) | retrieval / test-time learning / long-range / forgetting | seed,适合定义能力轴 |
 | shared-memory governance | [`GateMem`](../benchmarks/gatemem.md) | utility / access control / active forgetting | seed,6 月新增治理 benchmark |
@@ -52,7 +55,10 @@ language: zh-CN
 | Benchmark | Raw events | Notes |
 |---|---:|---|
 | LongMemEval | 5 | origin + Mem0 + Hindsight + Hy-Memory + ConvoMem critique counted by event type |
+| LongMemEval-V2 | 1 | origin protocol only; separate from original LongMemEval |
 | LoCoMo | 7 | origin + Mem0 paper/blog + Zep + Graphiti mention + MemoryOS + ConvoMem critique counted by event type |
+| MINTEval | 1 | origin protocol only; no independent result normalized |
+| InMind | 1 | origin diagnostic only; artifact/license caveats remain |
 | ConvoMem | 2 | origin + baseline comparison |
 | BEAM | 2 | Mem0 BEAM 1M / 10M vendor claims |
 | MemoryAgentBench | 2 | origin + survey mention |
@@ -116,6 +122,7 @@ language: zh-CN
 |---|---:|---|
 | LoCoMo | 6 | Mem0 paper/blog, Zep, Graphiti foundation mention, MemoryOS, ConvoMem critique |
 | LongMemEval | 4 | Mem0 blog, Hindsight, Hy-Memory, ConvoMem critique |
+| LongMemEval-V2 / MINTEval / InMind | 0 | Origin protocols only; no outside reuse logged |
 | BEAM | 2 | Mem0 vendor claims, source note still candidate |
 | PersonaMem-v2 | 2 | Hy-Memory and TencentDB Agent Memory vendor claims |
 | MemoryAgentBench | 1 | Survey mention only |
@@ -197,6 +204,8 @@ enters the catalog.
    governance become product acceptance criteria.
 17. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
+18. Normalize LongMemEval-V2 tiers/judge, MINTEval splits/license, and InMind
+    release artifacts before treating origin results as comparable evidence.
 
 ## F. Maintenance Contract
 

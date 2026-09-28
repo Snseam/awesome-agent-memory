@@ -17,6 +17,18 @@ language: zh-CN
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
 
+## 2026-09-28 refresh note
+
+Tablestore Memory Storage Service is a separate Alibaba Cloud managed-memory
+product from Bailian Memory Library. Its AgentStorage store supports structured
+and file memory, scoped retrieval, and Dream consolidation. The official docs
+support product behavior only; the Alibaba performance figures are vendor claims.
+The inventory now has 41 product notes and 40 source snapshots.
+
+Redis Agent Memory is now documented as a supported Redis Iris / Redis Cloud
+service; the former OSS server is a research reference. Letta Code and Hindsight
+also published memory lifecycle updates in their official release notes.
+
 ## 2026-09-14 refresh note
 
 This refresh found no new product that cleared the existing core inclusion
@@ -99,7 +111,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | TencentDB Agent Memory | [`../products/tencentdb-agent-memory.md`](../products/tencentdb-agent-memory.md) | OSS+SaaS | OpenClaw 用户 / 企业 / 腾讯云客户 | 腾讯云 + 本地 OSS 的 L0-L3 分层 agent memory |
 | EverOS | [`../products/everos.md`](../products/everos.md) | OSS+SaaS | coding agent 用户 / agent builder / 企业 | EverMind/EverMemOS 产品族;Profile/Episodic/Skill + self-evolving skills |
 | MemOS | [`../products/memos.md`](../products/memos.md) | OSS | 研究者 / agent builder | MemTensor 的 self-evolving memory OS;注意与 MemoryOS 区分 |
-| Redis Agent Memory Server | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | OSS | Redis 用户 / agent builder | working + long-term 双层 memory API server,提供 REST 与 MCP |
+| Redis Agent Memory | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | Redis Cloud + OSS reference | Redis 用户 / agent builder | 受支持的托管双层 memory 服务;原 OSS server 为研究参考 |
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | OSS | coding agent 用户 / agent builder / OceanBase 生态 | Experience + Skill distillation,多接口 memory plugin/API server |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | OSS+SaaS | 个人开发者 / 团队 / Markdown 用户 | local-first Markdown memory + knowledge graph + MCP |
 | ByteRover(原 Cipher) | [`../products/byterover.md`](../products/byterover.md) | Source-available | coding agent 用户 / 团队 | autonomous coding agents 的 portable memory layer |
@@ -138,6 +150,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Cloudflare Agent Memory | [`../products/cloudflare-agent-memory.md`](../products/cloudflare-agent-memory.md) | Big-tech-builtin / Private beta | Cloudflare Agents 用户 |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Cloud Bailian Memory Library | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | Cloud platform | 百炼 / Model Studio 开发者 |
+| Alibaba Cloud Tablestore Memory Storage Service | [`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md) | Cloud platform | Tablestore / AgentStorage 开发者 |
 
 ### A4. Coding & Dev agents(memory 用于代码上下文)
 
@@ -154,7 +167,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Basic Memory | OSS+SaaS | Claude / Codex / Cursor / VS Code 用户 | Markdown files + MCP,人和 agent 共用 memory |
 | ByteRover | Source-available | autonomous coding agent 用户 | CLI/MCP/context tree 跨 agent 共享项目 memory |
 | PowerMem | OSS | Claude Code / Codex / Cursor / OpenClaw 用户 | CLI/HTTP/MCP/插件共用后端 memory |
-| Redis Agent Memory Server | OSS | 任意 MCP/REST agent | Redis-backed memory server,支持 working/long-term memory |
+| Redis Agent Memory Server (OSS reference) | OSS | 任意 MCP/REST agent | 双层 memory 参考实现;非 Redis 受支持生产路径 |
 | Honcho | OSS+SaaS | Claude Code / OpenCode / OpenClaw / Hermes 用户 | peer-centric memory + MCP/SDK |
 | agentmemory | OSS | Claude Code / Codex / Cursor / OpenClaw / MCP 用户 | coding-agent persistent memory server |
 | memU | OSS / productizing | workspace agents / OpenClaw / MCP 用户 | workspace runtime 编译多模态 context 为 memory |
@@ -214,7 +227,8 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Cloudflare Agent Memory | SaaS / Private beta | Cloudflare Workers/Agents 客户 |
 | Oracle AI Agent Memory | Enterprise platform | Oracle AI Database 客户 |
 | Alibaba Bailian Memory Library | SaaS | 阿里云百炼客户 |
-| Redis Agent Memory Server | OSS / self-host | Redis 用户 / 企业平台团队 |
+| Alibaba Tablestore Memory Storage Service | Cloud platform | Tablestore / AgentStorage 客户 |
+| Redis Agent Memory | Redis Cloud | Redis 用户 / 企业平台团队 |
 
 ### A9. DB / Vector store 衍生的 memory API
 
@@ -225,7 +239,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Qdrant memory APIs | OSS+SaaS | 个人 / 团队 |
 | pgvector + 应用层 | OSS | 个人 / 团队 |
 | Oracle AI Agent Memory | Enterprise platform | Oracle AI Database 客户 |
-| Redis Agent Memory Server | OSS | Redis 用户 / agent 平台团队 |
+| Redis Agent Memory | Redis Cloud + OSS reference | Redis 用户 / agent 平台团队 |
 | OpenViking | OSS | agent builder / coding agent 用户 |
 | PowerMem | OSS | OceanBase / 本地后端用户 |
 
@@ -237,14 +251,14 @@ memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取
 ### B1. 个人开发者(self-host 主导)
 Letta self-host / Mem0 self-host / Zep self-host / Graphiti / Cognee /
 Obsidian + 插件 / LangMem / Hindsight / TencentDB Agent Memory /
-EverOS / MemOS / Redis Agent Memory Server / PowerMem / Basic Memory /
+EverOS / MemOS / Redis Agent Memory Server (OSS reference) / PowerMem / Basic Memory /
 ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
 OpenViking / MemoryOS / A-MEM / MemX /
 Supermemory self-host。
 
 ### B2. 中小团队 / SaaS startup
 Mem0 cloud / Zep cloud / Supermemory API / Hindsight cloud / Basic Memory
-Cloud / Honcho API / Redis Agent Memory Server / agentmemory / Memori / memU /
+Cloud / Honcho API / Redis Agent Memory / agentmemory / Memori / memU /
 memsearch / OpenAI Assistants / Pinecone / Cursor for Teams。
 
 ### B3. 大企业
@@ -253,6 +267,7 @@ Cognition Devin / Sierra / Decagon / Supermemory Enterprise /
 Tencent Cloud Agent Memory / AWS Bedrock AgentCore Memory /
 Google Agent Platform Memory Bank / Microsoft Foundry Agent Service Memory /
 Cloudflare Agent Memory / Oracle AI Agent Memory / Alibaba Bailian Memory /
+Alibaba Tablestore Memory Storage / Redis Agent Memory /
 Personal AI Memory Core。
 
 ### B4. C 端最终用户

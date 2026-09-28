@@ -1,33 +1,35 @@
 ---
-title: Redis Agent Memory Server
+title: Redis Agent Memory
 type: product
-source: https://redis.github.io/agent-memory-server/
+source: https://redis.io/docs/latest/develop/ai/context-engine/agent-memory/
 date_first_seen: 2026-06
-domain: memory-api-server
-business_model: OSS / Redis ecosystem
-license: Apache 2.0
+domain: platform-managed-memory
+business_model: Redis Cloud managed service; OSS research foundation
+license: Proprietary managed service; Apache 2.0 OSS reference
 memory_modules:
   - ingest-adapter
   - semantic-dedup
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-06
+last_revised: 2026-09-28
 archive: archives/redis-agent-memory-server-overview.md
 ---
 
-# Redis Agent Memory Server
+# Redis Agent Memory
 
 ## 1. 一句话定位
 
-Redis Agent Memory Server 是 Redis 生态的生产向 agent memory API/MCP server,以
-working memory + long-term memory 双层结构管理跨会话上下文。
+Redis Agent Memory 是 Redis Iris 下受支持的 agent memory 服务,以 session
+memory + long-term memory 双层结构管理跨会话上下文。原开源 Agent Memory
+Server 仍可作为研究参考实现,但官方不再把它作为受支持的生产路径。
 
 ## 2. 是什么 / 做什么
 
-官方文档将它描述为 production-ready memory system for AI agents。它保存
-conversation history、user preferences 与 facts,支持 semantic、keyword、hybrid
-search,并通过 REST API、MCP server 和 Python client 暴露。
+当前官方文档描述了 Redis Cloud 托管服务的有序 session events、自动摘要、
+后台长期记忆抽取、按 owner/session/namespace/topic/type 过滤,以及 semantic、
+keyword、hybrid retrieval。公开接口包括 REST、Python/TypeScript SDK;
+Redis 产品页另列 MCP。Redis Software 自管部署仍为 private preview。
 
 ## 3. 关键技术选择
 
@@ -37,6 +39,9 @@ search,并通过 REST API、MCP server 和 Python client 暴露。
 - **Smart memory management**:automatic extraction、contextual grounding、
   deduplication、memory editing。
 - **Ops surface**:authentication、multi-tenancy、background processing、多后端向量库。
+
+以上旧 server 能力来自 2026-06 的 OSS 快照;不能直接推定托管服务与旧 server
+的每个接口或后端选项完全相同。
 
 ## 3.1 2026-06 refresh
 
@@ -52,28 +57,41 @@ agent memory,并把 semantic retrieval、TTL / decay、RedisVL / vector search �
 放进统一实践指南。该来源更新产品定位和实现建议;它不是 Redis Agent Memory Server
 的新独立 benchmark,也不能支持质量优于其他 memory server 的结论。
 
+## 3.3 2026-09 product-boundary correction
+
+Redis 当前 docs 将 Agent Memory 定位为 Redis Iris 的受支持服务,可在 Redis
+Cloud 创建;Redis Software 部署仍是 private preview。独立的旧 OSS server
+被官方明确称为 research foundation / reference implementation。托管服务
+公开 custom memory types、敏感数据抽取排除、session 与 long-term 各自 TTL、
+REST 与 Python/TypeScript SDK。此处是官方产品行为与支持边界的更正,不是
+独立性能或运行成熟度证明。
+
 ## 4. 决策相关性 / Decision relevance
 
-- **对照点**:Redis 把 memory server 包装为可运维 API,区别于纯库或纯 SaaS。
+- **对照点**:Redis 将托管 memory 服务和开源参考 server 分开;采购、部署与
+  可修改底层代码的边界不同。
 - **借鉴点**:working/long-term split 与 REST+MCP 双接口是很实用的部署形态。
 - **差异点**:默认与 Redis 生态绑定,人类可读 artifact 不是主路径。
 
 ## 5. 适用 / 不适用场景
 
-- **适用**:需要可部署 memory service 的团队;希望用 MCP/REST 快速接入 agent 的
-  Redis 用户。
+- **适用**:使用 Redis Cloud 且需要托管 memory service 的团队;研究旧 server
+  实现或自行部署参考代码的团队应明确其非受支持生产路径。
 - **不适用**:要求所有记忆以 Markdown/git 形式审计;只做短会话 prototype 的项目。
 
 ## 6. 注意事项 / 风险
 
-- **产品边界**:它是 agent memory server,不是通用 Redis vector search 的简单包装。
+- **产品边界**:当前 Redis Agent Memory 是托管服务;旧 Agent Memory Server
+  是 OSS 研究参考实现,两者不可视为同一支持承诺。
 - **成本与治理**:multi-tenancy、auth、delete/export 实际成熟度需部署验证。
-- **claim 边界**:production-ready 等表述来自官方文档。
+- **claim 边界**:可用性、性能和规模表述来自 Redis,没有独立验证。
 
 ## 7. 进一步阅读
 
-- archive: [`archives/redis-agent-memory-server-overview.md`](archives/redis-agent-memory-server-overview.md)
-- Docs:https://redis.github.io/agent-memory-server/
+- archive: [`archives/redis-agent-memory-server-overview.md`](archives/redis-agent-memory-server-overview.md) (2026-06 OSS snapshot)
+- Current docs:https://redis.io/docs/latest/develop/ai/context-engine/agent-memory/
+- Product:https://redis.io/agent-memory/
+- OSS boundary:https://redis.github.io/agent-memory-server/
 - MCP:https://redis.github.io/agent-memory-server/mcp/
 - GitHub:https://github.com/redis/agent-memory-server
 - Blog:https://redis.io/blog/why-bigger-context-window-wont-fix-agent-memory/

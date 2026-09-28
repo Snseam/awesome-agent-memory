@@ -29,7 +29,10 @@ official repository, dataset card, or independent reproduction.
 | Benchmark | Status | Origin | Task family | Capabilities | Primary local anchor | Claim coverage |
 |---|---|---|---|---|---|---|
 | LongMemEval | full | paper-origin | long-term chat memory | retrieval / update / temporal / abstention | [`longmemeval.md`](longmemeval.md) | yes |
+| LongMemEval-V2 | seed | paper-origin | customized environment experience | state / workflow / gotchas / premise awareness | [`longmemeval-v2.md`](longmemeval-v2.md) | origin only |
 | LoCoMo | seed | paper-origin | very long-term conversational memory | retrieval / temporal / causal | [`locomo.md`](locomo.md) | yes |
+| MINTEval | seed | paper-origin | evolving long-horizon memory | revised facts / interference / aggregation | [`minteval.md`](minteval.md) | origin only |
+| InMind | seed | paper-origin | implicit-association memory | indirect retrieval / knowledge bridge / routing | [`inmind.md`](inmind.md) | origin only |
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
