@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-08-03
+last_revised: 2026-09-28
 archive: archives/zep-overview.md
 ---
 
@@ -65,6 +65,15 @@ Zep is exposing more temporal graph control to applications. They do not change
 the evidence class of Zep benchmark numbers, which remain vendor/self-claim
 unless independently reproduced.
 
+## 3.2 2026-09 changelog refresh
+
+Zep v3 changelog entries around 2026-09-23 to 2026-09-25 add product-behavior
+signals around graph/memory operations: Agent Skills are gated by Agent Memory
+access, entity nodes expose source episodes, source traceability docs were
+added, and ordering / deletion-summary rebuild fixes landed. These are
+operational correctness and provenance-surface updates, not independent
+benchmark evidence.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它
@@ -108,7 +117,7 @@ domain × audience 表:
 - archive: [`archives/zep-overview.md`](archives/zep-overview.md)
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
-- Changelog:https://help.getzep.com/changelog
+- Changelog:https://help.getzep.com/v3/changelog
 
 ---
 

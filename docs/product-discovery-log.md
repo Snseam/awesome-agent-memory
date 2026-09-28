@@ -1,6 +1,6 @@
 ---
 title: Product discovery log — agent memory products
-date: 2026-09-14
+date: 2026-09-28
 status: working-log
 language: zh-CN
 ---
@@ -95,6 +95,41 @@ language: zh-CN
 
 `n/a` 表示本轮子 agent 找到候选名,但主 agent 没有足够官方/源码证据支持深度入库。
 
+### 2026-09-28 verified product addition
+
+| name | canonical_url | category | evidence | decision | why_include | boundary |
+|---|---|---|---|---|---|---|
+| Alibaba Cloud Tablestore Memory Storage Service | https://www.alibabacloud.com/help/en/tablestore/memory-storage-service-sub-product-test/memory-storage-overview | Tablestore / AgentStorage managed memory | official overview, store/API, file, Dream docs dated 2026-09-24 | Tier A core | message extraction, structured/file memory, scoped retrieval, versioned files, consolidation | distinct from Bailian `memoryId` API, AgentLoop agent-space store, and Agent Run runtime binding; vendor performance claims not independent |
+
+The official pages disagree on whether `tenantId` is required for
+`SearchMemories`; this is an API verification gap, not evidence that omitting a
+tenant is safe. See [`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md).
+
+### 2026-09-28 verified existing-entry updates
+
+| entry | primary source | decision | bounded change |
+|---|---|---|---|
+| Redis Agent Memory | https://redis.github.io/agent-memory-server/ and https://redis.io/docs/latest/develop/ai/context-engine/agent-memory/ | update-existing | Redis Iris/Cloud is now the supported service; original OSS server is an unsupported research reference, not the production product |
+| Letta / Letta Code | https://github.com/letta-ai/letta-code/releases/tag/v0.33.0 and https://github.com/letta-ai/letta-code/releases/tag/v0.33.3 | update-existing | background memory upkeep/conflict repair and fresh-agent MemFS, limited to coding-agent release behavior |
+| Hindsight | https://github.com/vectorize-io/hindsight/releases/tag/v0.10.1 | update-existing | bank transfer, recall-budget enforcement, tenant file scoping, and coding-agent injection option; release claims only |
+| Alibaba Bailian Memory Library | https://help.aliyun.com/zh/model-studio/memory-library and https://help.aliyun.com/zh/model-studio/managed-agents-memory-store | update-existing / watchlist boundary | related Model Studio Managed Agents file-store API recorded separately from Bailian extraction/search; no extra product count pending family review |
+
+### 2026-09-28 discovery-only follow-up
+
+This weekly run did not promote new OSS/MCP memory products into the core
+product count. The following sources are recorded as follow-up candidates only;
+GitHub activity, MCP catalog placement, and self-reported benchmark tables are
+not product-quality or performance evidence.
+
+| name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
+|---|---|---|---|---|---|---|---|
+| xChuCx agent-memory | https://github.com/xChuCx/agent-memory | local/git-native MCP memory | repo + Glama schema signal | Tier B watchlist | MCP read/write/status tools for project memory | early OSS project; no independent quality evidence | GitHub, Glama |
+| mcp-memory-service | https://github.com/doobidoo/mcp-memory-service | shared memory backend | repo README | Tier B watchlist | REST + MCP + graph/consolidation surface | README claims are self-reported | GitHub |
+| Palinode | https://github.com/phasespace-labs/palinode | git-versioned Markdown memory | repo + MCP registry signal | Tier B watchlist | correction, rollback, and audit-friendly memory surface | release state and maturity need verification | GitHub, MCP registry |
+| m3-memory | https://github.com/skynetcmd/m3-memory | local-first multi-agent memory | repo + MCP registry signal | Tier B watchlist | local CLI core with optional MCP; multi-agent memory backend | LongMemEval-style numbers are self-reported | GitHub, MCP registry |
+| agent-memory leaderboard Cycle 2 | https://github.com/AML-memory/agent-memory-leaderboard | benchmark program | repo + official docs | benchmark watchlist | Cycle 2 opened 2026-09-20; useful evaluation-contract signal | private data/corpora and leaderboard claims need versioned protocol review | GitHub, official docs |
+| bradAGI awesome CLI coding agents | https://github.com/bradAGI/awesome-cli-coding-agents | discovery list | curated list | discovery only | surfaces Mnemoverse / pi-mem / pond / Nex style memory tools | list placement is not evidence | GitHub |
+
 ## 6. Reject / boundary decisions
 
 | pattern | decision | reason |
@@ -104,6 +139,7 @@ language: zh-CN
 | Generic agent frameworks | reject unless memory is first-class | AutoGen/CrewAI/LlamaIndex 等不能因为有 memory feature 就计入核心产品 |
 | Ordinary chat history | reject | 缺少 extraction/consolidation/retrieval/governance lifecycle |
 | Catalog-only MCP servers | reject or Tier B | 没有 canonical repo/docs 时不写产品笔记 |
+| Inaccessible benchmark repos | reject | Search snippets without reachable canonical repository or source page are not enough for catalog rows |
 
 ## 7. Reviewer synthesis
 
@@ -124,10 +160,11 @@ language: zh-CN
 | Google Memory Bank | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) | [`../products/archives/google-memory-bank-overview.md`](../products/archives/google-memory-bank-overview.md) | official docs; endpoint GA update plus Preview / Pre-GA caveat |
 | Microsoft Foundry Memory | [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md) | [`../products/archives/microsoft-foundry-memory-overview.md`](../products/archives/microsoft-foundry-memory-overview.md) | official docs; preview label |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | [`../products/archives/oracle-ai-agent-memory-overview.md`](../products/archives/oracle-ai-agent-memory-overview.md) | official docs; database substrate |
-| Redis AMS | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | [`../products/archives/redis-agent-memory-server-overview.md`](../products/archives/redis-agent-memory-server-overview.md) | official docs + repo |
+| Redis Agent Memory | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | [`../products/archives/redis-agent-memory-server-overview.md`](../products/archives/redis-agent-memory-server-overview.md) | current Redis Iris docs + historical OSS snapshot |
 | OpenViking | [`../products/openviking.md`](../products/openviking.md) | [`../products/archives/openviking-overview.md`](../products/archives/openviking-overview.md) | docs + repo; benchmark claims labeled |
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | [`../products/archives/powermem-overview.md`](../products/archives/powermem-overview.md) | repo + site; benchmark claims labeled |
 | Alibaba Bailian Memory | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | [`../products/archives/alibaba-bailian-memory-overview.md`](../products/archives/alibaba-bailian-memory-overview.md) | official Aliyun docs |
+| Alibaba Tablestore Memory Storage | [`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md) | [`../products/archives/alibaba-tablestore-memory-storage-overview.md`](../products/archives/alibaba-tablestore-memory-storage-overview.md) | official Tablestore docs; 2026-09-24 update |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | [`../products/archives/basic-memory-overview.md`](../products/archives/basic-memory-overview.md) | docs + repo; AGPL/local-first |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | [`../products/archives/byterover-overview.md`](../products/archives/byterover-overview.md) | site + repo/docs; alias Cipher |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | [`../products/archives/honcho-overview.md`](../products/archives/honcho-overview.md) | repo + docs; vendor eval claims labeled |

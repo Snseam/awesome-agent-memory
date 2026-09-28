@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-09-28
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,12 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-09-28 | [Tablestore Memory Storage Service](https://www.alibabacloud.com/help/en/tablestore/memory-storage-service-sub-product-test/memory-storage-overview) / [Memory Dream](https://www.alibabacloud.com/help/en/tablestore/memory-storage-service-sub-product-test/memory-consolidation-dream) | product | 阿里云 2026-09-24 官方文档确认 AgentStorage 独立的结构化/文件记忆与整合任务产品面;性能数字仍为厂商宣称 | `deep-note` ✅([`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md)) |
+| 2026-09-28 | [Redis Agent Memory docs](https://redis.io/docs/latest/develop/ai/context-engine/agent-memory/) / [OSS boundary](https://redis.github.io/agent-memory-server/) / [Letta Code releases](https://github.com/letta-ai/letta-code/releases/tag/v0.33.0) / [Hindsight v0.10.1](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.1) | product | 官方来源修正 Redis 托管服务与 OSS 参考实现边界,并补 Letta Code 后台记忆维护和 Hindsight bank/retrieval 治理更新 | `deep-note` ✅(更新 `products/`) |
+| 2026-09-28 | [SAMem](https://aclanthology.org/2026.findings-acl.722/) / [GAM](https://aclanthology.org/2026.acl-long.1600/) / [Memory-R2](https://arxiv.org/abs/2605.21768) / [PersonaAgent](https://aclanthology.org/2026.findings-acl.1315/) | paper | ACL/旧 arXiv 补录 state-aware retrieval、graph consolidation、memory-action credit assignment,并修正 PersonaAgent 旧标题 | `seed-note` ✅(三篇 seed + 一条 stub 元数据修正) |
+| 2026-09-28 | [DolphinBench](https://arxiv.org/abs/2609.24971) / [MemCalib](https://arxiv.org/abs/2609.24259) / [CPB](https://arxiv.org/abs/2609.30813) / [MemProbe Stability-Plasticity](https://arxiv.org/abs/2609.30558) / [TWIST](https://arxiv.org/abs/2609.28575) | paper | 新 benchmark 把 agent-memory 评测推进到成本/延迟 Pareto、memory-use calibration、shared-memory admission、稳定性/可塑性和 intervention quality | `seed-note` ✅(见 `benchmarks/`) |
+| 2026-09-28 | [Scope Before You Persist](https://arxiv.org/abs/2609.29144) / [JitMem](https://arxiv.org/abs/2609.27334) / [EnSIMem](https://arxiv.org/abs/2609.27279) / [AkasicMEM](https://arxiv.org/abs/2609.25563) | paper | 新论文分别补 retrieval scope authorization、read-time curation、entity-structured indexing 和 enterprise governed memory | `seed-note` ✅(见 `papers/`) |
+| 2026-09-28 | [Databricks Managed Agent Memory](https://docs.databricks.com/aws/en/agents/agent-memory/managed-memory) / [Zep v3 changelog](https://help.getzep.com/v3/changelog) / [Microsoft Agent Framework memory](https://devblogs.microsoft.com/agent-framework/interactive-experiences-memory-and-resilient-execution/) | product | 官方产品源补充 Lakebase-backed managed memory、Zep source traceability / Agent Skills gating 和 FoundryMemoryProvider 集成 | `deep-note` ✅(更新 `products/`) |
 | 2026-09-14 | [LifeFuse-Mem](https://arxiv.org/abs/2609.12436) / [ROAM](https://arxiv.org/abs/2609.09778) / [MemSentry](https://arxiv.org/abs/2609.08747) / [MemForest](https://arxiv.org/abs/2609.08273) / [AIM](https://arxiv.org/abs/2609.12320) | paper | 9 月新论文把 durable-versus-temporary fusion、atomic relation organization、persistent-memory poisoning、EventTree compression 和 multi-user visibility/CRUD 推到 memory core | `seed-note` ✅(见 `papers/`) |
 | 2026-09-14 | [MUMBench](https://arxiv.org/abs/2609.12320) / [MERIT](https://arxiv.org/abs/2609.05441) | paper | 新 benchmark 分别补 multi-user private/shared memory operations 与 tool-use memory utility/cost/leakage instrumentation | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-09-14 | [Graphiti v0.30.2](https://github.com/getzep/graphiti/releases/tag/v0.30.2) / [memsearch v0.4.20](https://github.com/zilliztech/memsearch/releases/tag/v0.4.20) | release | 官方 release 继续强化 Graphiti 的 backend isolation/routing 与 memsearch 的 context-budget retention、recall status 和 local runtime behavior | `deep-note` ✅(更新 `products/`) |

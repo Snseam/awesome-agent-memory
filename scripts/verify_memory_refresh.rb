@@ -5,6 +5,7 @@ require "yaml"
 require "English"
 require "set"
 require "shellwords"
+require "date"
 
 ROOT = File.expand_path("..", __dir__)
 
@@ -168,7 +169,7 @@ def scan_conflict_markers
 end
 
 def check_yaml
-  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
 end
 
 def check_counts
@@ -226,7 +227,7 @@ def extract_front_matter_value(path, key)
 end
 
 def check_duplicates
-  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
   event_ids = claims.fetch("events").map { |event| event.fetch("event_id") }
   dup_events = event_ids.group_by(&:itself).select { |_id, rows| rows.size > 1 }
   assert(dup_events.empty?, "duplicate benchmark claim event_ids: #{dup_events.keys.join(", ")}")
@@ -268,6 +269,46 @@ def check_duplicates
   assert(dup_product_ids.empty?, "duplicate product ids/slugs: #{dup_product_ids.keys.join(", ")}")
 end
 
+def front_matter(path)
+  body = File.read(path)
+  match = body.match(/\A---\n(.*?)\n---/m)
+  return {} unless match
+
+  metadata = {}
+  current_key = nil
+  match[1].each_line do |line|
+    if (key_value = line.match(/\A([A-Za-z0-9_-]+):\s*(.*)\z/))
+      current_key = key_value[1]
+      value = key_value[2].strip
+      metadata[current_key] = value.empty? ? [] : value
+    elsif current_key && line.match?(/\A\s+-\s+/)
+      metadata[current_key] = [] unless metadata[current_key].is_a?(Array)
+      metadata[current_key] << line.sub(/\A\s+-\s+/, "").strip
+    else
+      current_key = nil unless line.match?(/\A\s/)
+    end
+  end
+  metadata
+end
+
+def check_benchmark_alias_collisions
+  benchmark_files = files_in_dir("benchmarks", "benchmarks/*.md")
+                    .reject { |path| File.basename(path) == "_template.md" }
+  aliases = benchmark_files.each_with_object([]) do |path, rows|
+    metadata = front_matter(path)
+    names = [metadata["benchmark_id"], metadata["name"], metadata["title"], *Array(metadata["aliases"])]
+    names.compact.map(&:to_s).map(&:strip).reject(&:empty?).each do |name|
+      rows << [name.downcase, name, path]
+    end
+  end
+
+  dup_aliases = aliases.group_by(&:first).select { |_alias, rows| rows.map(&:last).uniq.size > 1 }
+  offenders = dup_aliases.values.flat_map do |rows|
+    rows.map { |_normalized, name, path| "#{name} -> #{path.delete_prefix("#{ROOT}/")}" }
+  end
+  assert(offenders.empty?, "duplicate benchmark aliases/names:\n#{offenders.join("\n")}")
+end
+
 def check_local_markdown_links
   files = repo_files(
     "*.md",
@@ -299,6 +340,7 @@ check_yaml
 check_paper_note_statuses
 check_counts
 check_duplicates
+check_benchmark_alias_collisions
 check_local_markdown_links
 
 puts "verify_memory_refresh passed"

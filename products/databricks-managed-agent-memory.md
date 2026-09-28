@@ -1,17 +1,17 @@
 ---
 title: Databricks Managed Agent Memory
 type: product
-source: https://learn.microsoft.com/en-us/azure/databricks/agents/agent-memory/managed-memory
+source: https://docs.databricks.com/aws/en/agents/agent-memory/managed-memory
 date_first_seen: 2026-07
 domain: platform-managed-memory
-business_model: Azure Databricks managed service
+business_model: Databricks managed service
 license: Proprietary cloud service
 memory_modules:
   - ingest-adapter
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-09-28
 archive: archives/databricks-managed-agent-memory-overview.md
 ---
 
@@ -19,7 +19,7 @@ archive: archives/databricks-managed-agent-memory-overview.md
 
 ## 1. 一句话定位
 
-Databricks Managed Agent Memory 是 Azure Databricks 为 agents 提供的 beta 托管
+Databricks Managed Agent Memory 是 Databricks 为 agents 提供的 beta 托管
 长期记忆能力,以 Unity Catalog memory stores 管理跨对话记忆、scope 隔离和治理。
 
 ## 2. 是什么 / 做什么
@@ -30,15 +30,25 @@ Memory store 是 Unity Catalog securable;memory entry 用 scope 和 path 标识,
 
 ## 3. 关键技术选择
 
-- **Unity Catalog substrate**:memory store 继承 Unity Catalog governance、access
-  control 和 lineage。
+- **Lakebase substrate**:current Databricks docs describe managed memory as
+  Lakebase-backed beta infrastructure with Databricks governance controls.
 - **Scope isolation**:每条 memory entry 属于一个 scope;搜索只返回被查询 scope
   下的 entries。
+- **Actor / session partitioning**:docs expose actor and session concepts along
+  with path-shaped entries, making user/session separation explicit.
 - **Path-shaped entries**:entry 带 path,类似 `/memories/preferences.md`。
 - **OpenAI-compatible conversation binding**:Databricks OpenAI client 可把
   conversation 绑定到 memory store 与 scope。
 - **Access control**:公开权限包括 `CREATE MEMORY STORE`、`READ MEMORY STORE`、
   `WRITE MEMORY STORE` 和 `MANAGE`。
+
+## 3.1 2026-09 refresh
+
+2026-09-28 复核时,canonical docs moved to `docs.databricks.com` and describe
+Managed Agent Memory as a beta, framework-agnostic long-term memory service
+backed by Lakebase. The developer surface includes memory entry search/list and
+actor/session/path fields. This is official product-behavior evidence only; it
+does not establish independent quality, durability, or benchmark superiority.
 
 ## 4. 决策相关性 / Decision relevance
 
@@ -50,7 +60,7 @@ Memory store 是 Unity Catalog securable;memory entry 用 scope 和 path 标识,
 
 ## 5. 适用 / 不适用场景
 
-- **适用**:已经使用 Azure Databricks、Unity Catalog、model serving 或 Lakehouse
+- **适用**:已经使用 Databricks、Unity Catalog、model serving 或 Lakehouse
   governance 的企业 agent。
 - **不适用**:本地优先、跨云 portable memory kernel,或需要直接审计底层 memory
   artifact 的应用。
@@ -66,7 +76,7 @@ Memory store 是 Unity Catalog securable;memory entry 用 scope 和 path 标识,
 ## 7. 进一步阅读
 
 - archive: [`archives/databricks-managed-agent-memory-overview.md`](archives/databricks-managed-agent-memory-overview.md)
-- Docs:https://learn.microsoft.com/en-us/azure/databricks/agents/agent-memory/managed-memory
+- Docs:https://docs.databricks.com/aws/en/agents/agent-memory/managed-memory
 
 ---
 
