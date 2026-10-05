@@ -166,3 +166,14 @@ language: zh-CN
 | watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
 | watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
 | adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |
+
+## 12. 2026-10-05 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Claude managed-agent memory store | official Anthropic release notes, 2026-09-28 | 更新 `products/claude-dreams.md`;记录 sandbox memory-store mount/sync,不延伸为 Dreams implementation claim |
+| update-existing | Letta | official dynamic-workflows post and Letta Code releases `v0.34.0`-`v0.34.4` | 更新 `products/letta.md`;记录 workflow memory pointers and scratchpad fix,不写成 benchmark evidence |
+| update-existing | Hindsight | official release `v0.10.2`, 2026-09-29 | 更新 `products/hindsight.md`;记录 scope-aware consolidation and concise extraction changes |
+| update-existing | OpenViking | official release `v0.4.23`, 2026-10-02 | 更新 `products/openviking.md`;记录 recall/rerank, BM25, decay, compilation, extraction-rule and ACL surfaces |
+| watchlist | Cognee `v1.6.2`, Honcho `v3.2.2`, Oracle memory announcement | official release or announcement pages with limited memory-specific detail | 保留观察,不改产品 note 或 benchmark claims |
+| adjacent | generic MCP catalogs and GitHub-only benchmark harnesses | discovery sources | 只用于发现候选,不作为性能、质量或成熟度证据 |

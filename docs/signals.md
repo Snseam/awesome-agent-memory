@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-10-05
 status: living-log
 language: zh-CN
 ---
@@ -15,6 +15,16 @@ language: zh-CN
 Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 (`deep-note` 表示已落地产品/聚合笔记,不等同于 frontmatter `status: full`;
 `archive-only` 表示有趣但不进入 ResearchItem 流程)
+
+## 2026 Q4
+
+| 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
+|---|---|---|---|---|
+| 2026-10-02 | [OpenViking v0.4.23](https://github.com/volcengine/OpenViking/releases/tag/v0.4.23) | release | 官方 release 增加 global vector recall/unified reranking、BM25、event-time decay、memory compilation、extraction rules、ACL tools 和 session auto-commit compatibility | `deep-note` ✅(更新 `products/openviking.md`) |
+| 2026-09-29 | [Hindsight v0.10.2](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.2) | release | scope-aware consolidation、coding-agent concise extraction 和 consolidation API typing 进入 release surface | `deep-note` ✅(更新 `products/hindsight.md`) |
+| 2026-09-28 | [Anthropic Managed Agents release notes](https://platform.claude.com/docs/en/release-notes/overview?entry=september-28-2026) / [Letta dynamic workflows](https://www.letta.com/blog/dynamic-workflows/) | product / blog | managed sandbox memory-store sync 与 stateless subagent 的 memory pointer 传递成为可观察产品行为 | `deep-note` ✅(更新产品笔记) |
+| 2026-10-02 / 2026-10-01 / 2026-09-30 / 2026-09-29 / 2026-09-28 | [DyadMem](https://arxiv.org/abs/2610.03020) / [MemFit](https://arxiv.org/abs/2610.00872) / [APDMem](https://arxiv.org/abs/2610.02472) / [Mem++](https://arxiv.org/abs/2610.02002) / [Interpreting at Write Time](https://arxiv.org/abs/2610.02897) / [MemCodex](https://arxiv.org/abs/2609.39765) / [Audience-Bound Persistent Memory](https://arxiv.org/abs/2609.36373) / [TAGGRAPH](https://arxiv.org/abs/2609.38353) / [U-Fuzz](https://arxiv.org/abs/2609.38275) | paper | 新一轮 primary sources 把 relationship memory、progressive disclosure、non-destructive storage、goal-conditioned writing、自编程层级记忆、audience authorization、graph retrieval 和 memory-use fuzzing 推进到可记录协议 | `seed-note` ✅(见 `papers/` / `benchmarks/`) |
+| 2026-10-02 to 2026-10-04 | [agent-memory-benchmarks](https://github.com/RonsenbergVI/agent-memory-benchmarks) / DriftTrap-Bench / Flux memory benchmark / MemArena-Bench | discovery | 新 harness、drift、preregistered comparison 和 vendor-affiliated benchmark 项目值得跟踪,但没有足够独立 protocol/result evidence | `archive-only`(watchlist, discovery-only) |
 
 ## 2026 Q3
 

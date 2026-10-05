@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-09-14
+date: 2026-10-05
 status: seed
 language: zh-CN
 ---
@@ -37,6 +37,21 @@ language: zh-CN
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 | multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
 | tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
+| relationship-aware memory lifecycle | [`DyadMem`](../benchmarks/dyadmem.md) | capture, update, recall, deletion, and full-pipeline behavior across multi-session relationships | seed,origin protocol only; paper-origin metrics |
+| controlled graph retrieval | [`TAGGRAPH`](../benchmarks/taggraph.md) | graph retrieval versus lexical/raw-input baselines under controlled extraction | seed,origin protocol only; paper-origin metrics |
+| persistent-memory failure testing | [`U-Fuzz`](../benchmarks/ufuzz.md) | query/state mutation for confirmed memory-use failures through an output-only interface | seed,origin protocol only; paper-origin findings |
+
+## 2026-10-05 radar note
+
+The October radar adds three paper-origin benchmark protocols. They widen the
+evaluation surface without adding independent score evidence:
+
+- **DyadMem** adds relationship-aware capture/update/recall/deletion behavior at
+  multi-session scale.
+- **TAGGRAPH** makes graph retrieval comparisons more controlled by fixing the
+  base graph and retaining lexical/raw-input baselines.
+- **U-Fuzz** tests unsafe or incorrect use of persistent memory, complementing
+  answer-quality benchmarks with failure discovery.
 
 ## B. 初始交叉统计
 
@@ -65,6 +80,9 @@ language: zh-CN
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 | MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
 | MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
+| DyadMem | 1 | origin protocol logged; relationship-aware lifecycle metrics not normalized |
+| TAGGRAPH | 1 | origin protocol logged; graph-versus-lexical results not normalized |
+| U-Fuzz | 1 | origin protocol logged; failure findings not independently reproduced |
 
 ### B2. Evaluation uses / baseline comparisons
 

@@ -35,6 +35,9 @@ official repository, dataset card, or independent reproduction.
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
 | MUMBench | seed | paper-origin | multi-user memory operations | visibility / retrieval / creation / update / deletion | [`mumbench.md`](mumbench.md) | origin only |
 | StructMemEval | seed | paper-origin | structured memory organization | structure selection / state tracking / task-specific organization | [`structmemeval.md`](structmemeval.md) | yes |
+| DyadMem | seed | paper-origin | relationship-aware multi-session memory | capture / update / recall / deletion / full pipeline | [`dyadmem.md`](dyadmem.md) | origin only |
+| TAGGRAPH | seed | paper-origin | controlled graph memory retrieval | graph retrieval / extraction quality / baseline control | [`taggraph.md`](taggraph.md) | origin only |
+| U-Fuzz | seed | paper-origin | persistent memory failure testing | memory-use failures / query mutation / state mutation | [`ufuzz.md`](ufuzz.md) | origin only |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
 | MemoryRewardBench | candidate | paper-origin | reward models for memory management | memory-quality judging / reward-model calibration | [`memoryrewardbench.md`](memoryrewardbench.md) | yes |
 | Fact-based memory vs long-context | candidate | paper-origin | memory-vs-context cost analysis | cost / accuracy / break-even turns | [`fact-based-memory-vs-long-context.md`](fact-based-memory-vs-long-context.md) | yes |

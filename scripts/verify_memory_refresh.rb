@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "yaml"
+require "date"
 require "English"
 require "set"
 require "shellwords"
@@ -168,7 +169,7 @@ def scan_conflict_markers
 end
 
 def check_yaml
-  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
 end
 
 def check_counts
@@ -226,7 +227,7 @@ def extract_front_matter_value(path, key)
 end
 
 def check_duplicates
-  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
   event_ids = claims.fetch("events").map { |event| event.fetch("event_id") }
   dup_events = event_ids.group_by(&:itself).select { |_id, rows| rows.size > 1 }
   assert(dup_events.empty?, "duplicate benchmark claim event_ids: #{dup_events.keys.join(", ")}")
