@@ -19,6 +19,21 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-10-05 manual radar additions
+
+These entries were added by the 2026-10-05 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MemFit: Efficient Long-Term Agentic Memory](memfit-efficient-long-term-agentic-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.00872)
+- [APDMem: Adaptive Progressive Disclosure Memory for Long-Horizon Agents](apdmem-progressive-disclosure-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02472)
+- [Mem++: Non-Destructive Memory for Long-Horizon Agents](memplus-nondestructive-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02002)
+- [Interpreting at Write Time: Goal-Conditioned Memory Construction](interpreting-write-time-multi-goal-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02897)
+- [MemCodex: Self-Programming Hierarchical Memory for Agents](memcodex-self-programming-hierarchical-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.39765)
+- [Audience-Bound Persistent Memory](audience-bound-persistent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.36373)
+- [DyadMem](../benchmarks/dyadmem.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.03020)
+- [TAGGRAPH](../benchmarks/taggraph.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.38353)
+- [U-Fuzz](../benchmarks/ufuzz.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.38275)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not

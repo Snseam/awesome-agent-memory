@@ -1,7 +1,7 @@
 ---
 title: OpenViking
 type: product
-source: https://volcengine-openviking.mintlify.app/
+source: https://openviking.ai/
 date_first_seen: 2026-06
 domain: context-database
 business_model: OSS / Volcengine ecosystem
@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - dream-consolidator
 status: seed
-last_revised: 2026-06-11
+last_revised: 2026-10-05
 archive: archives/openviking-overview.md
 ---
 
@@ -56,10 +56,25 @@ management 和 MCP/OpenClaw/Claude Desktop 等集成。
 - **边界**:不可把它简化成 vector DB 或普通 RAG。
 - **生态依赖**:OpenClaw 集成是亮点,但跨 runtime 的成熟度仍需验证。
 
+## 2026-10-02 v0.4.23 release
+
+The official `v0.4.23` release adds global vector recall with unified
+reranking, BM25 support across REST/MCP/SDK surfaces, event-time decay,
+in-place memory compilation for dedupe/merge/normalize, and account-level
+extraction rules plus ACL tooling. It also improves session auto-commit
+compatibility.
+
+These are documented product behaviors. OpenViking's token or completion
+figures remain vendor claims and are not upgraded to independent benchmark
+evidence by this release.
+
+> Release: https://github.com/volcengine/OpenViking/releases/tag/v0.4.23
+
 ## 7. 进一步阅读
 
 - archive: [`archives/openviking-overview.md`](archives/openviking-overview.md)
-- Docs:https://volcengine-openviking.mintlify.app/
+- Docs:https://openviking.ai/
+- Documentation:https://docs.openviking.ai/
 - GitHub:https://github.com/volcengine/OpenViking
 
 ---

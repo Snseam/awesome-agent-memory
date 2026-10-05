@@ -10,7 +10,7 @@ evidence_level: medium (production product, no public benchmark numbers)
 code_available: no (proprietary)
 license: proprietary
 status: seed
-last_revised: 2026-08-31
+last_revised: 2026-10-05
 ---
 
 # Claude Dreams
@@ -50,6 +50,16 @@ treated as benchmark or architecture evidence beyond the documented product
 surface.
 
 > 来源:https://support.claude.com/en/articles/12138966-release-notes
+
+## 2026-09-28 Managed Agents memory-store sync
+
+Anthropic's managed-agent release notes document a separate memory-store
+surface for self-hosted sandboxes. SDK workers can download a memory store at a
+configured mount path and synchronize changes back after the worker completes.
+This is product behavior evidence for lifecycle-aware agent memory attachment,
+not evidence about the internal Dreams implementation.
+
+> 来源:https://platform.claude.com/docs/en/release-notes/overview?entry=september-28-2026
 
 ## Architectural takeaways
 

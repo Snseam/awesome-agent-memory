@@ -743,3 +743,63 @@ events:
       - benchmarks/merit.md
       - https://arxiv.org/abs/2609.05441
     extract_confidence: medium
+  - event_id: dyadmem-origin-2026
+    benchmark_id: dyadmem
+    source_kind: paper
+    source_id: benchmarks/dyadmem.md
+    source_date: 2026-10
+    actor: DyadMem authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Relationship-aware multi-session episodes with capture, update, recall, deletion, and full-pipeline settings."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported QA results and artifact status need normalization."
+    evidence_refs:
+      - benchmarks/dyadmem.md
+      - https://arxiv.org/abs/2610.03020
+    extract_confidence: medium
+  - event_id: taggraph-origin-2026
+    benchmark_id: taggraph
+    source_kind: paper
+    source_id: benchmarks/taggraph.md
+    source_date: 2026-09
+    actor: TAGGRAPH authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Controlled graph retrieval with tagged extraction and lexical/raw-input baselines on persistent memory histories."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; graph-versus-lexical results remain paper-origin."
+    evidence_refs:
+      - benchmarks/taggraph.md
+      - https://arxiv.org/abs/2609.38353
+    extract_confidence: medium
+  - event_id: ufuzz-origin-2026
+    benchmark_id: ufuzz
+    source_kind: paper
+    source_id: benchmarks/ufuzz.md
+    source_date: 2026-09
+    actor: U-Fuzz authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Mutation campaigns over queries and persistent memory states with output-only failure confirmation."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; confirmed failures are not an independent rate across memory systems."
+    evidence_refs:
+      - benchmarks/ufuzz.md
+      - https://arxiv.org/abs/2609.38275
+    extract_confidence: medium

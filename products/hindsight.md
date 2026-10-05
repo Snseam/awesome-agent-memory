@@ -13,7 +13,7 @@ memory_modules:
   - dream-consolidator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-10-05
 archive: archives/hindsight-overview.md
 ---
 
@@ -39,12 +39,19 @@ retain / recall / reflect 三类操作,也可以作为 wrapper 接到现有 LLM 
 - 可用于 conversational agents 与 open-ended autonomous task agents
 
 截至 2026-05-31 查询,GitHub metadata 约 15.2k stars / 857 forks,MIT
-license,最新 release 为 `v0.7.1`(2026-05-28)。
+license。
 
 2026-08-03 周更复核到官方 GitHub release `v0.8.6`(2026-07-29)。该 release
 包括 `list_memory_units` 按 ingest age 过滤(`created_before`)以及多篇 memory
 positioning blog/docs 更新。这里仅记录为产品行为与 API surface 更新;Hindsight
 LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立复现。
+
+2026-09-29 官方 release `v0.10.2` 增加按 scope 选择 consolidation strategy、
+面向 coding agent 的可配置/同步 concise extraction、consolidation API typing
+以及 store/bank 修复。这里记录的是 release surface 与操作边界,不把 release
+说明升级成独立质量证据。
+
+> Release v0.10.2:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.2
 
 ## 3. 关键技术选择
 
@@ -92,6 +99,7 @@ LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立
 - Docs:https://hindsight.vectorize.io/
 - Release:https://github.com/vectorize-io/hindsight/releases/tag/v0.7.1
 - Release v0.8.6:https://github.com/vectorize-io/hindsight/releases/tag/v0.8.6
+- Release v0.10.2:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.2
 
 ---
 
