@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-08-03
+last_revised: 2026-10-12
 archive: archives/zep-overview.md
 ---
 
@@ -65,6 +65,22 @@ Zep is exposing more temporal graph control to applications. They do not change
 the evidence class of Zep benchmark numbers, which remain vendor/self-claim
 unless independently reproduced.
 
+## 3.2 2026-10 changelog refresh
+
+Zep official changelog entries on 2026-10-06 and 2026-10-08 added
+memory-relevant graph behavior updates. Node summaries accepted by
+`graph.node.update` can now be up to 5,000 characters, so generated summaries
+can be written back without the earlier 500-character cap. Auto search now uses
+the reranker for searches with more than 128 candidates and scores up to 200
+candidates instead of using only reciprocal-rank-fusion order.
+
+The 2026-10-08 changelog also changed identity matching across graphs: Zep now
+uses entity-type identity properties to find existing entities in all graphs,
+reducing duplicate entities that previously appeared when name or embedding
+search did not also find the existing node. These entries are product-behavior
+evidence for graph-memory update, deduplication, and retrieval behavior; they
+are not independent benchmark evidence.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它
@@ -109,6 +125,8 @@ domain × audience 表:
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
 - Changelog:https://help.getzep.com/changelog
+- 2026-10-06 changelog:https://help.getzep.com/changelog/2026/10/6
+- 2026-10-08 changelog:https://help.getzep.com/v3/changelog/2026/10/8
 
 ---
 
