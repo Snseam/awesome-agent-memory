@@ -19,6 +19,23 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-10-12 manual radar additions
+
+These entries were added by the 2026-10-12 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Capability-Driven Self-Evolution of Agent Memory](capability-driven-self-evolution-agent-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.06361)
+- [Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell](persistent-memory-multi-agent-inference-cost.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.07782)
+- [Test-Time Memory Construction](test-time-memory-construction.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.13348)
+- [From Retrieval to Reconstruction: Constructing Evolvable Cognitive Memory for Long-Term Dialogue](from-retrieval-to-reconstruction-cognitive-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11314)
+- [Event-Centric Memory with Query-Aware Graph Augmentation for Long-Term Conversational Agents](event-centric-query-aware-graph-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11920)
+- [Relevance Is Not Sufficiency: What Actually Closes the Evidence Gap in Long-Term Memory QA](relevance-not-sufficiency-evidence-gap.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.09348)
+- [MINDSET: Energy-based Schema Evolution for Long Conversational Agent Memory](mindset-schema-evolution-conversational-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08586)
+- [Gated Memory: Admission-Controlled Memory Formation for Conversational AI](gated-memory-admission-controlled-formation.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11270)
+- [The Right Memory in the Wrong Context: Verifying Retrieval Admissibility in Long-Term Agent Memory](right-memory-wrong-context-admissibility.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.07309)
+- [DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks](daedalus-self-generated-task-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08048) / [code](https://github.com/illuin-tech/daedalus)
+- [Beyond Corrected Memory: Execution Consistency in Multi-Agent Systems](beyond-corrected-memory-execution-consistency.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08101)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not

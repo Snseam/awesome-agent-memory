@@ -166,3 +166,14 @@ language: zh-CN
 | watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
 | watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
 | adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |
+
+## 12. 2026-10-12 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Zep | official 2026-10-06 / 2026-10-08 changelog | 更新 `products/zep.md`;summary writeback、large-candidate rerank 和 identity-property duplicate fix 都是 product behavior |
+| update-existing | Oracle AI Agent Memory | Oracle 2026-10-06 developer blog;OCI Generative AI 2026-09-25 post as adjacent context | 更新 `products/oracle-ai-agent-memory.md`;Deep Data Security / identity-token enforcement 是 enterprise governance signal |
+| watchlist | Alibaba ANOLISA v1.0 | Alibaba Cloud Community 2026-10-10 | memory migration / isolation / masking 信号强,但产品边界与 Bailian/AgentLoop 不同,留待后续 note pass |
+| adjacent | AWS AgentCore Memory | AgentCore release notes | memory JSON/GovCloud deltas already covered by existing AWS note;current October notes were not new memory behavior |
+| watchlist | Redis agent memory workshop | Redis event page | future event;等 recording 或 docs 后再决定是否更新 Redis note |
+| watchlist | MCP reference memory server | modelcontextprotocol/servers PR #5037 | upstream reference server added cross-process file locking for shared `MEMORY_FILE_PATH`;behavior signal only, still not a market product |

@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-10-12
 status: living-log
 language: zh-CN
 ---
@@ -15,6 +15,15 @@ language: zh-CN
 Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 (`deep-note` 表示已落地产品/聚合笔记,不等同于 frontmatter `status: full`;
 `archive-only` 表示有趣但不进入 ResearchItem 流程)
+
+## 2026 Q4
+
+| 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
+|---|---|---|---|---|
+| 2026-10-12 | [Test-Time Memory Construction](https://arxiv.org/abs/2610.13348) / [Capability-Driven Self-Evolution](https://arxiv.org/abs/2610.06361) / [DAEDALUS](https://arxiv.org/abs/2610.08048) | paper | 10 月新论文把 query-time construction、capability-specific self-evolution、self-generated task traces 都推进为 memory policy surface | `seed-note` ✅(见 `papers/`) |
+| 2026-10-12 | [From Retrieval to Reconstruction](https://arxiv.org/abs/2610.11314) / [Event-Centric Memory](https://arxiv.org/abs/2610.11920) / [MINDSET](https://arxiv.org/abs/2610.08586) | paper | graph / event / schema 路线继续把 memory 从 top-k recall 推向 versioned state reconstruction | `seed-note` ✅(见 `papers/`) |
+| 2026-10-12 | [Relevance Is Not Sufficiency](https://arxiv.org/abs/2610.09348) / [Right Memory Wrong Context](https://arxiv.org/abs/2610.07309) / [Persistent Memory in Multi-Agent Inference](https://arxiv.org/abs/2610.07782) | paper | 新评测压力分别强调 evidence sufficiency、retrieval admissibility 和 persistent-memory ablation 可检出性 | `seed-note` ✅(见 `papers/`) |
+| 2026-10-12 | [Zep changelog](https://help.getzep.com/changelog/2026/10/6) / [Oracle enterprise memory blog](https://blogs.oracle.com/developers/building-the-enterprise-brain-what-changes-when-agent-memory-belongs-to-a-company) | product | Zep 强化 graph-memory summary/rerank/entity matching;Oracle 把 enterprise memory 的 identity、read/write policy 和 audit 问题推到 database governance 层 | `deep-note` ✅(更新 `products/`) |
 
 ## 2026 Q3
 
