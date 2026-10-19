@@ -146,6 +146,15 @@ language: zh-CN
   但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
 - 所有 vendor benchmark 或性能 claim 都按 vendor-claimed / 自报处理,不写成独立实证。
 
+## 12. 2026-10-19 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Zep | official 2026-10-12/14 changelog | Update `products/zep.md`: v4 GA, scoped graph/search/MCP navigation, ingestion traces, idempotency, and integrity-preserving identity/entity behavior. |
+| update-existing | Graphiti | official GitHub `v0.31.0` release | Update `products/graphiti.md`: MCP SDK 2.x, requested-group routing, LLMRuntime routing, and upstream extraction/dedup/temporal fixes. |
+| adjacent | LangGraph checkpoint pruning | official GitHub `v1.2.16` release | Checkpoint persistence is not a documented LangMem durable-memory product delta. |
+| reject as core evidence | GitHub topics, catalog/MCP lists, and release-star signals | discovery-only sources | Retain as discovery paths; do not infer product maturity, quality, or benchmark performance. |
+
 ## 10. 2026-07-06 weekly refresh delta
 
 | Decision | Item | Source | Action |

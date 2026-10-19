@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-10-19
 status: living-log
 language: zh-CN
 ---
@@ -15,6 +15,14 @@ language: zh-CN
 Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 (`deep-note` 表示已落地产品/聚合笔记,不等同于 frontmatter `status: full`;
 `archive-only` 表示有趣但不进入 ResearchItem 流程)
+
+## 2026 Q4
+
+| 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
+|---|---|---|---|---|
+| 2026-10-19 | [MemCode](https://arxiv.org/abs/2610.19472) / [MemComposer](https://arxiv.org/abs/2610.21091) / [MemCut](https://arxiv.org/abs/2610.21405) | paper | 原子写入与离散关联检索、任务反馈驱动的记忆组装、以及删后残余秘密恢复构成本周三个直接 memory seed | `seed-note` ✅(见 `papers/`) |
+| 2026-10-19 | [Bemula](https://arxiv.org/abs/2610.18052) / [MemCut](https://arxiv.org/abs/2610.21405) | paper | 两个 origin benchmark 分别覆盖显式忘却请求和证据链残余恢复；结果仍是作者原始评测 | `seed-note` ✅(见 `benchmarks/`) |
+| 2026-10-14 | [Zep v4](https://help.getzep.com/changelog/2026/10/14) / [Graphiti v0.31.0](https://github.com/getzep/graphiti/releases/tag/v0.31.0) | release | 现有 temporal-graph memory 产品新增 v4 API/MCP/ingestion tracing 和 group-scoped routing、dedupe/temporal fixes | `deep-note` ✅(更新 `products/`) |
 
 ## 2026 Q3
 
