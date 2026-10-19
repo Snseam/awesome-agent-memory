@@ -1,4 +1,44 @@
 events:
+  - event_id: bemula-origin-2026
+    benchmark_id: bemula
+    source_kind: paper
+    source_id: benchmarks/bemula.md
+    source_date: 2026-10
+    actor: Bemula authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "50 multi-session dialogues; 135 explicit forget requests; 1,742 questions across storage, removal, preservation, relearning, and extraction suites."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported system results are not normalized or treated as independent evidence."
+    evidence_refs:
+      - benchmarks/bemula.md
+      - https://arxiv.org/abs/2610.18052
+    extract_confidence: medium
+  - event_id: memcut-origin-2026
+    benchmark_id: memcut
+    source_kind: paper
+    source_id: benchmarks/memcut.md
+    source_date: 2026-10
+    actor: MemCut authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "456 hand-designed secrets with annotated disclosure/evidence trails; native and residual recovery distinguish normal retrieval from surviving-object access."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; residual-recovery results are author-reported and not a product ranking."
+    evidence_refs:
+      - benchmarks/memcut.md
+      - https://arxiv.org/abs/2610.21405
+    extract_confidence: medium
   - event_id: longmemeval-origin-2024
     benchmark_id: longmemeval
     source_kind: paper

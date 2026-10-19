@@ -12,7 +12,7 @@ memory_modules:
   - parser-chunker
   - memorydiff-generator
 status: full
-last_revised: 2026-09-14
+last_revised: 2026-10-19
 archive: archives/graphiti-overview.md
 ---
 
@@ -61,6 +61,15 @@ isolation, and avoids a full Entity scan during FalkorDB edge full-text search.
 These are upstream release signals about product behavior and correctness, not
 independent quality or performance evidence.
 
+### 3.3 2026-10 v0.31.0 refresh
+
+The official v0.31.0 release upgrades the MCP SDK to 2.x, routes MCP tool calls
+to the requested `group_id` graph, introduces LLMRuntime prompt/model routing,
+and brings extraction, deduplication, and temporal fixes upstream from Zep's
+fork. It also makes C2 combined extraction the default and adds node/edge
+dedupe clients. These are upstream release-behavior and tenant-correctness
+signals only; no independent performance or reliability conclusion follows.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Graphiti 是目前最直接可比的"开源 memory kernel"。它和本仓
@@ -106,6 +115,7 @@ independent quality or performance evidence.
 - archive: [`archives/graphiti-overview.md`](archives/graphiti-overview.md)
 - 配套笔记:[`zep.md`](zep.md)(hosted 产品)
 - 仓库:https://github.com/getzep/graphiti
+- v0.31.0 release: https://github.com/getzep/graphiti/releases/tag/v0.31.0
 
 ---
 

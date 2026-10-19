@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-09-14
+date: 2026-10-19
 status: working-spec
 language: zh-CN
 ---
@@ -16,6 +16,14 @@ language: zh-CN
 
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
+
+## 2026-10-19 refresh note
+
+No new product cleared the core boundary. Official Zep v4 GA and Graphiti
+v0.31.0 updates strengthen API visibility, tenant graph routing, ingestion
+tracing, deduplication, and temporal-maintenance behavior in existing notes.
+They remain product-behavior evidence only, not independent performance or
+security claims.
 
 ## 2026-09-14 refresh note
 

@@ -51,6 +51,8 @@ official repository, dataset card, or independent reproduction.
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
 | MERIT | seed | paper-origin | instrumented tool-use memory utility | task success / recall / leakage / cost | [`merit.md`](merit.md) | origin only |
+| Bemula | seed | paper-origin | explicit memory unlearning | exact deletion / preservation / relearning / extraction resistance | [`bemula.md`](bemula.md) | origin only |
+| MemCut | seed | paper-origin | residual disclosure after forgetting | native / residual recovery | [`memcut.md`](memcut.md) | origin only |
 
 ## Evidence Ledgers
 

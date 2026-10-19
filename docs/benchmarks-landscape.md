@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-09-14
+date: 2026-10-19
 status: seed
 language: zh-CN
 ---
@@ -37,6 +37,8 @@ language: zh-CN
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 | multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
 | tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
+| explicit memory unlearning | [`Bemula`](../benchmarks/bemula.md) | exact deletion / preservation / relearning / extraction resistance | seed,origin protocol only; paper results not normalized |
+| residual forgetting evidence | [`MemCut`](../benchmarks/memcut.md) | native vs residual recovery through disclosure trails | seed,origin protocol only; paper results not normalized |
 
 ## B. 初始交叉统计
 
@@ -65,6 +67,8 @@ language: zh-CN
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 | MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
 | MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
+| Bemula | 1 | origin protocol logged; explicit forget-request results not normalized |
+| MemCut | 1 | origin protocol logged; residual-recovery results not normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -112,6 +116,8 @@ language: zh-CN
 | MEMPROBE | 0 | Origin protocol only |
 | MUMBench | 0 | Origin protocol only; no outside reuse logged |
 | MERIT | 0 | Origin protocol only; no outside reuse logged |
+| Bemula | 0 | Origin protocol only; no outside reuse logged |
+| MemCut | 0 | Origin protocol only; no outside reuse logged |
 
 ### B7. Independent or methodological pressure
 

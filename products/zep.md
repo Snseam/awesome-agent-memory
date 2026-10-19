@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-08-03
+last_revised: 2026-10-19
 archive: archives/zep-overview.md
 ---
 
@@ -65,6 +65,19 @@ Zep is exposing more temporal graph control to applications. They do not change
 the evidence class of Zep benchmark numbers, which remain vendor/self-claim
 unless independently reproduced.
 
+### 3.2 2026-10 v4 API refresh
+
+Zep's official 2026-10-12 and 2026-10-14 changelog entries make the v4 Context
+API and Python/TypeScript/Go v4 SDKs generally available while retaining the
+same project data as v3 for incremental migration. The release exposes scoped
+search methods, graph-neighbor/subgraph navigation through both API and Context
+MCP tools, episode debug logs and ingestion traces, UUID-based resource
+identity, and idempotent create retries. It also records data-integrity behavior:
+identity matching is normalized for case/whitespace, generic names require a
+shared neighbor before a non-model merge, and missing custom attributes no
+longer overwrite stored values. These are official product-behavior signals,
+not independent quality, security, or benchmark evidence.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它
@@ -109,6 +122,8 @@ domain × audience 表:
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
 - Changelog:https://help.getzep.com/changelog
+- v4 GA: https://help.getzep.com/changelog/2026/10/14
+- graph-integrity update: https://help.getzep.com/changelog/2026/10/12
 
 ---
 

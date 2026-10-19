@@ -19,6 +19,17 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-10-19 manual radar additions
+
+These entries were added by the 2026-10-19 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MemCode: Discrete Semantic Representations for Long-Term Agent Memory](memcode-discrete-semantic-agent-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.19472)
+- [MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning](memcomposer-memory-assembly-rl.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.21091)
+- [MemCut: Every Secret Leaves a Trail in the Long-Term Memory of LLM Agents](memcut-residual-forgetting.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.21405)
+- [Bemula: Can Agents Forget When Asked?](../benchmarks/bemula.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.18052)
+- [MemCut](../benchmarks/memcut.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.21405)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not
