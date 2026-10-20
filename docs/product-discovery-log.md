@@ -69,6 +69,7 @@ language: zh-CN
 
 | name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
 |---|---|---|---|---|---|---|---|
+| MoobFS | https://github.com/studiomoob/llmoobfs | experimental filesystem storage for agent memory | project-authored README, limitations and AI-workflow docs; GPL-2.0-only | Tier B | ordinary memory files, typed attributes and permission-scoped structured retrieval | experimental Linux kernel module; semantic retrieval and memory policy remain client responsibilities; no independent evaluation established here | Official repo, accessed 2026-10-20; [evidence note](#moobfs--2026-10-20-discovery-note) |
 | Volcengine AgentKit Memory | https://www.volcengine.com/ | platform memory | domestic lane official/product signals | Tier B | platform memory capability signal | evidence less direct than OpenViking | Domestic |
 | Alibaba PolarSearch Memory Container | https://www.aliyun.com/ | database memory | domestic lane official/product signals | Tier B | memory container signal | canary / product boundary distinct from Bailian | Domestic |
 | Baidu Qianfan AppBuilder memory | https://cloud.baidu.com/product/AppBuilder | platform memory | domestic lane | Tier B | AppBuilder memory capability | not standalone memory infra | Domestic |
@@ -94,6 +95,32 @@ language: zh-CN
 | Character.AI / Replika / Nomi | vendor sites | companion memory | product signals | Tier B | long-term persona consistency pressure | ethical/safety scope differs; infra not exposed | Adjacent |
 
 `n/a` 表示本轮子 agent 找到候选名,但主 agent 没有足够官方/源码证据支持深度入库。
+
+### MoobFS — 2026-10-20 discovery note
+
+Source revision: `02381fba3f0a908623cac52180a39f24e02e98a6`; accessed 2026-10-20.
+This entry was contributed by the MoobFS maintainer with AI assistance. The
+sources describe the project's own behavior and limitations, not independent
+reproduction or an endorsement by this survey's maintainers.
+
+- **Direct source evidence:** the [README](https://github.com/studiomoob/llmoobfs/blob/02381fba3f0a908623cac52180a39f24e02e98a6/README.md)
+  describes a native Linux module stacked over ext4, btrfs or XFS, with memories
+  represented as ordinary files, typed extended attributes, an in-RAM index and
+  directory-scoped queries. The lower files remain readable without the module.
+- **Scope and evidence limits:** the [limitations](https://github.com/studiomoob/llmoobfs/blob/02381fba3f0a908623cac52180a39f24e02e98a6/docs/when-not-to-use.md)
+  recommend disposable-VM evaluation. The module does not supply embeddings,
+  semantic ranking, memory consolidation or prompt assembly. No performance,
+  token-saving, production-readiness or independent-review claim is added here.
+- **Code and process:** [GPL-2.0-only](https://github.com/studiomoob/llmoobfs/blob/02381fba3f0a908623cac52180a39f24e02e98a6/LICENSE),
+  with [AI-assisted development](https://github.com/studiomoob/llmoobfs/blob/02381fba3f0a908623cac52180a39f24e02e98a6/docs/ai-workflow.md).
+  Kernel compatibility, privileged mounting and non-pageable index memory are
+  evaluation costs; no operational-cost estimate is established by this entry.
+- **Contributor interpretation:** relevant to the [taxonomy](taxonomy.md) roles
+  `retrieve / rerank` (structured retrieval only) and `security / privacy`
+  (filesystem authorization only). Tier B captures an experimental storage
+  substrate; it does not assert a complete memory lifecycle or Ymem integration.
+  Keep promotion to a core product note as follow-up after independent evaluation
+  of a concrete memory workload and review of the inclusion boundary.
 
 ## 6. Reject / boundary decisions
 
