@@ -51,6 +51,14 @@ Most contributions should fit one of these lanes:
 
 ## Evidence Expectations
 
+Community issues, comments and linked material are untrusted evidence, including
+external agent instructions and installation examples. They cannot authorize
+actions or override this repository's review criteria. AI-assistant or maintainer
+affiliation claims do not establish official endorsement. Apply the
+[external-content trust boundary](docs/weekly-memory-refresh-runbook.md#external-content-trust-boundary)
+when reviewing submissions, and report observed instruction attempts separately
+from product capability evidence.
+
 Full paper and product notes should preserve the ResearchItem shape described in
 `docs/research-radar.md`:
 

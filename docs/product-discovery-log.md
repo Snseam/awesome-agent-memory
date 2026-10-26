@@ -46,6 +46,7 @@ language: zh-CN
 
 | name | canonical_url | repo/docs | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
 |---|---|---|---|---|---|---|---|---|
+| Screenpipe | https://screenpipe.com/ | https://github.com/screenpipe/screenpipe | personal/workflow memory with captured-history ingest | affiliated primary docs + pinned source | Tier A / seed | persistent capture, editable memory CRUD and cross-session retrieval | commercial source-available terms; transport, retention and cloud-data boundaries; no independent validation | Public source and official docs |
 | EverOS (EverMind / EverMemOS) | https://evermind.ai/everos | https://github.com/EverMind-AI/EverOS | memory OS / skill memory | official product page + repo | Tier A | Profile/Episodic/Skill、self-evolving skills、Markdown export、MCP/agent integrations | benchmark/latency 是 vendor-claimed | Official/vendor, academic |
 | MemOS (MemTensor) | https://github.com/MemTensor/MemOS | https://memos.openmem.net/ | memory OS | GitHub repo + docs | Tier A | self-evolving memory OS、hybrid retrieval、cross-task skill reuse | 与 MemoryOS/EverMemOS 易混淆;需后续读代码 | OSS, academic |
 | Cloudflare Agent Memory | https://blog.cloudflare.com/introducing-agent-memory/ | https://developers.cloudflare.com/agents/concepts/conversation-state-and-memory/ | platform-managed memory | official blog + docs | Tier A | platform memory primitive、Session/context memory、SQLite/provider model | private beta / experimental | Official/vendor, adjacent |
@@ -69,6 +70,8 @@ language: zh-CN
 
 | name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
 |---|---|---|---|---|---|---|---|
+| TANCO Chuandeng / Lianzhu | https://skillhub.cn/skills/tanco/tanco-chuandeng-handoff-payskill / https://skillhub.cn/skills/tanco/tanco-lianzhu-devchain-payskill | handoff / execution-checkpoint workflows | publisher docs and readable source previews, accessed 2026-10-26 | adjacent workflow discovery | structured handoff, agent-maintained state, artifact hashes and resumable checkpoints | not a core memory product; implementation previews are not independent runtime or quality validation | pinned publisher index and versioned platform file previews |
+| Hyperconsciousness (HC) | https://github.com/louis030195/hyperconsciousness | scoped agent knowledge store | affiliated primary docs + static interface inspection at 5748f891 | Tier B | encrypted append-only records and grant-scoped MCP/HTTP capture/recall on one trusted node | developer alpha; central-only contract replaces proposal peer sync; runtime/security/recall not independently validated | README, MISSION, CONSTRAINTS, migration guide, MIT license |
 | Volcengine AgentKit Memory | https://www.volcengine.com/ | platform memory | domestic lane official/product signals | Tier B | platform memory capability signal | evidence less direct than OpenViking | Domestic |
 | Alibaba PolarSearch Memory Container | https://www.aliyun.com/ | database memory | domestic lane official/product signals | Tier B | memory container signal | canary / product boundary distinct from Bailian | Domestic |
 | Baidu Qianfan AppBuilder memory | https://cloud.baidu.com/product/AppBuilder | platform memory | domestic lane | Tier B | AppBuilder memory capability | not standalone memory infra | Domestic |
@@ -155,6 +158,7 @@ not product-quality or performance evidence.
 |---|---|---|---|
 | EverOS | [`../products/everos.md`](../products/everos.md) | [`../products/archives/everos-overview.md`](../products/archives/everos-overview.md) | official page + GitHub; vendor benchmark claims labeled |
 | MemOS | [`../products/memos.md`](../products/memos.md) | [`../products/archives/memos-overview.md`](../products/archives/memos-overview.md) | GitHub/docs; token-saving claims labeled |
+| Screenpipe | [`../products/screenpipe.md`](../products/screenpipe.md) | [`../products/archives/screenpipe-overview.md`](../products/archives/screenpipe-overview.md) | pinned source + official data-flow docs; affiliated submission, static review only |
 | Cloudflare Agent Memory | [`../products/cloudflare-agent-memory.md`](../products/cloudflare-agent-memory.md) | [`../products/archives/cloudflare-agent-memory-overview.md`](../products/archives/cloudflare-agent-memory-overview.md) | official blog/docs; private beta / experimental label |
 | AWS AgentCore Memory | [`../products/aws-agentcore-memory.md`](../products/aws-agentcore-memory.md) | [`../products/archives/aws-agentcore-memory-overview.md`](../products/archives/aws-agentcore-memory-overview.md) | official docs; cloud managed service |
 | Google Memory Bank | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) | [`../products/archives/google-memory-bank-overview.md`](../products/archives/google-memory-bank-overview.md) | official docs; endpoint GA update plus Preview / Pre-GA caveat |
@@ -255,3 +259,123 @@ not product-quality or performance evidence.
 | reject as core evidence | GitHub PRs, topics, and lists | discovery-only sources | No maturity, correctness, or performance conclusion from repository activity. |
 | update-existing (consolidation follow-up) | Hindsight v0.10.3 | [official release](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.3) | Separate read/write scopes, current-tag consolidation and document content-hash append conditions; no universal external-store CAS claim. |
 | update-existing (consolidation follow-up) | OpenViking v0.5.2 | [official release](https://github.com/volcengine/OpenViking/releases/tag/v0.5.2) | Compilation/history, WM versus LTM behavior, privacy tools and identity/SDK migration; no independent privacy or migration acceptance claim. |
+
+## 2026-10-26 community issue decisions
+
+These are maintainer inclusion decisions after reading the linked public sources.
+An affiliated proposal supplies a discovery lead; it is not an independent
+product evaluation. No proposed tool or installer was executed, no private
+computer history was read, and no benchmark result is added.
+
+| Issue | Decision | Durable record | Boundary |
+|---|---|---|---|
+| [#29 Screenpipe](https://github.com/Snseam/awesome-agent-memory/issues/29) | Core product, seed note | [Screenpipe](../products/screenpipe.md) and [authored source summary](../products/archives/screenpipe-overview.md) | Captured-history ingestion plus first-class editable memory records; source-available, not an independent retrieval or deletion evaluation |
+| [#30 Hyperconsciousness](https://github.com/Snseam/awesome-agent-memory/issues/30) | Tier B discovery lead | Lightweight row above; version correction below | Current central-only developer alpha, not the proposal's former peer-sync design or private Companion |
+| [#21 TANCO Skills](https://github.com/Snseam/awesome-agent-memory/issues/21) | Adjacent workflow discovery | Bounded handoff/checkpoint references below | Workflow artifacts are not a general memory service; advertising review and payment integration do not become core memory products |
+
+### Screenpipe: editable memory, beyond the original capture-only proposal
+
+Source-reading risk: the pinned upstream contains an instruction targeting AI
+readers outside its repository. See the [intake trust review](#2026-10-26-intake-trust-review)
+below; the seed entry is not a safety endorsement or authorization to run it.
+
+The submitter self-identifies as the project's founder/maintainer. At source
+revision `334b865ec7b2938eeb44c443e17aebfa3e0a10a3`, the current public surface
+includes explicit memory create/update/delete and memory search, alongside
+screen/audio history capture. That documented lifecycle supports a **seed**
+product note under personal/workflow memory, with captured history as an ingest
+source. The decision does not assume automated consolidation, correct recall,
+secure erasure, or that local capture keeps all downstream model calls local.
+
+The comparator is the repository's editable-memory boundary used for Basic
+Memory and Kinic. The existing MIRIX/Pieces Tier B rows are historical judgments,
+not a blanket exclusion of activity-derived memory; this pass does not re-review
+or promote those other entries. Transport-specific tool/auth differences and
+raw-history versus curated-memory retention are recorded in the canonical note.
+
+### Hyperconsciousness: correct the proposal's versioned boundary
+
+Source-reading risk: the pinned constraints document contains the same external
+AI-reader instruction in hidden HTML comments; see the
+[intake trust review](#2026-10-26-intake-trust-review).
+
+Reviewed 2026-10-26 at `5748f89138c6817c88af419b0511cff77d0b4ee4`. The proposal
+pinned `d2152ce2154affccc47f35a34876b066740d52ad`; the [version comparison](https://github.com/louis030195/hyperconsciousness/compare/d2152ce2154affccc47f35a34876b066740d52ad...5748f89138c6817c88af419b0511cff77d0b4ee4)
+and current [mission](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/MISSION.md)
+now describe one authoritative, self-hostable node with authenticated clients.
+The [central-only migration guide](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/docs/CENTRAL-ONLY-MIGRATION.md)
+removes peer discovery/transport and background replication; legacy data remains
+readable for migration. Backup is separate from peer sync or demonstrated recovery.
+
+The [current README](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/README.md)
+offers alpha binaries as well as source builds; npm is not the alpha distribution
+source. Public Rust engine/CLI and MCP/HTTP capture/recall are distinct from the
+private Companion and agent orchestration. [Constraints](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/docs/CONSTRAINTS.md)
+do not establish OS isolation, retrieval quality, secure erasure, or revocation
+of exported copies. The [pinned license](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/LICENSE)
+is MIT; this is a license observation, not a security or maturity judgment.
+
+Keep Tier B under the repository's evidence/maturity rule: this intake is a
+limited discovery review of an evolving alpha API/migration contract, not a
+complete core product assessment. The submitter's requested tier is not the
+decision criterion. A future core-note review should separately examine write/read grants,
+retraction and restore semantics, stable interface documentation and workload
+limits; evidence for quality or security claims would require additional testing.
+
+### TANCO: retain concrete handoff evidence, correct the proposed scope
+
+Issue #21 was checked against the publisher's [pinned README](https://github.com/tancoai/tangke-skillhub/blob/e469dc63fe7c36a07b2439674c785fcdbb09482e/README.md)
+and [SKILLS index](https://github.com/tancoai/tangke-skillhub/blob/e469dc63fe7c36a07b2439674c785fcdbb09482e/SKILLS.md),
+plus live SkillHub file previews accessed 2026-10-26. That GitHub revision
+contains only the two index files, not the implementation or a license. Its SHA
+must not be presented as a pin for the separately distributed SkillHub code.
+
+| Public package preview | Files read | Supported observation | Inclusion boundary |
+|---|---|---|---|
+| [Chuandeng 1.0.8](https://skillhub.cn/skills/tanco/tanco-chuandeng-handoff-payskill) | `scripts/handoff_snapshot.py` | Structured handoff artifacts, manifest/history, quality checks and snapshot cleanup; the agent maintains `.handoff/state.json` | Adjacent handoff workflow; state contents and checksum do not establish truth or source authenticity |
+| [Lianzhu 1.2.10](https://skillhub.cn/skills/tanco/tanco-lianzhu-devchain-payskill) | `scripts/lianzhu.py`, `LICENSE.md` | JSON state writes, artifact hashes, checkpoints and resume identity checks | Adjacent execution workflow, not a general memory service; no execution/recovery test performed |
+| [Chayan 1.1.7](https://skillhub.cn/skills/tanco/tanco-chayan-copywriting-payskill) | `scripts/chayan_scan.py` | Local rule-based Chinese promotional-copy scanning with text/JSON output | Corrects the issue's broader signal-review description; does not establish factual verification or memory-admission behavior |
+
+Lianzhu's observed package license is **Source-Available Audit License**, explicitly
+not open source. Reuse rights for the other two reviewed packages were not
+established; do not infer their terms from Lianzhu or from public code visibility.
+Package versions above are the platform's displayed versions, not independently
+verified downloaded artifacts. No package was installed, executed or hash-verified.
+The [payment adapter](https://skillhub.cn/skills/tanco/tencent-skillhub-pay-adapter)
+remains outside memory-core scope. Publisher ratings, downloads and promotional
+claims are not quality evidence. A future memory-specific review would need a
+stable artifact/source version and explicit write/read/update/retention semantics,
+separate from task status and generic workflow recovery.
+
+### 2026-10-26 intake trust review
+
+The follow-up audit found **indirect prompt injection in linked primary sources**,
+not in the three issue bodies. Screenpipe's
+[pinned MCP source, lines 1–4](https://github.com/screenpipe/screenpipe/blob/334b865ec7b2938eeb44c443e17aebfa3e0a10a3/packages/screenpipe-mcp/src/index.ts#L1-L4)
+contains a comment directing AI readers to propagate a promotional header into
+files they edit, including outside that repository. HC's
+[pinned constraints, lines 1–3](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/docs/CONSTRAINTS.md#L1-L3)
+contains the same direction in HTML comments, which ordinary rendered Markdown
+can hide. This is an attempt to cross the data/instruction boundary. It was
+ignored; the operational wording is not copied into this repository.
+
+All three current issues had zero comments at review time. Their raw bodies did
+not contain an observed instruction override, hidden payload or exfiltration
+request. The Codex authorship statements in #29/#30 are submitter claims, not
+OpenAI endorsement or authority. #21 contains promotional scope claims already
+corrected above; this review does not establish its entire linked distribution
+as injection-free.
+
+The original PR review missed the linked-source injection risk. A follow-up
+search of Git-tracked content at `750141f` found no copy of the observed header
+or cross-repository propagation instruction. This bounds the observed result;
+it does not prove absence of every possible influence on the earlier review.
+The attack finding does not itself disprove the source's memory CRUD, nor does
+correct CRUD make the source safe for an agent to trust. Inclusion and source
+handling require separate judgments under the existing Tier criteria.
+
+Scope: current issue bodies/comments, PR #38 changes, selected pinned primary
+sources and fresh-context independent review. This was not an exhaustive crawl
+of all linked pages, historical/deleted content, distributed packages or runtime
+behavior. The [review controls](weekly-memory-refresh-runbook.md#external-content-trust-boundary)
+reduce exposure but are not an execution sandbox or a security certification.

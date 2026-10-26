@@ -198,8 +198,8 @@ def check_counts
       ["paper tree status counts", /#{full_notes}\s+full paper notes,\s+#{seed_notes}\s+seed notes/],
       ["paper stub count", /#{count_stubs}\s+stubs\b/],
       ["product note count", /#{count_product_notes}\s+notes\b/],
-      ["product archive count", /#{count_product_archives}\s+snapshots\b/],
-      ["product archive tree count", /#{count_product_archives}\s+markdown snapshots\b/],
+      ["product archive count", /#{count_product_archives}\s+source records\b/],
+      ["product archive tree count", /#{count_product_archives}\s+Markdown product source records\b/],
       ["benchmark catalog row count", /#{count_benchmark_rows}\s+catalog rows\b/],
       ["benchmark tree row count", /#{count_benchmark_rows}\s+benchmark catalog rows\b/]
     ],
@@ -208,8 +208,8 @@ def check_counts
       ["paper tree status counts", /#{full_notes}\s+个 full 论文笔记、#{seed_notes}\s+个 seed 笔记/],
       ["paper stub count", /#{count_stubs}\s+个 stub\b/],
       ["product note count", /#{count_product_notes}\s+个笔记/],
-      ["product archive count", /#{count_product_archives}\s+个快照/],
-      ["product archive tree count", /#{count_product_archives}\s+个记忆产品 canonical 页面 markdown 快照/],
+      ["product archive count", /#{count_product_archives}\s+份来源记录/],
+      ["product archive tree count", /#{count_product_archives}\s+份 Markdown 产品来源记录/],
       ["benchmark catalog row count", /#{count_benchmark_rows}\s+个 catalog 行/],
       ["benchmark tree row count", /#{count_benchmark_rows}\s+个 benchmark catalog 行/]
     ]
