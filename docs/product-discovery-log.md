@@ -146,6 +146,14 @@ language: zh-CN
   但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
 - 所有 vendor benchmark 或性能 claim 都按 vendor-claimed / 自报处理,不写成独立实证。
 
+## 12. 2026-10-26 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Mem0 | official 2026-10-20 time-management guide | Update `products/mem0.md` with event-time writes, current/historical selection, expiry, time-aware recall, reference time, decay, and history as product-behavior evidence only. |
+| watchlist | Graphiti v0.31.2 | official GitHub release | Avoid partial overlap with the open #34 v0.31.0/v0.31.1 update; revisit after merge or a complete combined review. |
+| reject as core evidence | GitHub PRs, topics, and lists | discovery-only sources | No maturity, correctness, or performance conclusion from repository activity. |
+
 ## 10. 2026-07-06 weekly refresh delta
 
 | Decision | Item | Source | Action |

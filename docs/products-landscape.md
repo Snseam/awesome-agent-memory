@@ -1,6 +1,6 @@
 ---
 title: Products landscape — agent memory by domain × audience
-date: 2026-09-14
+date: 2026-10-26
 status: working-spec
 language: zh-CN
 ---
@@ -16,6 +16,14 @@ language: zh-CN
 
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
+
+## 2026-10-26 refresh note
+
+Mem0's official time-management guide now documents event-time writes,
+current-versus-historical selection, expiry without deletion, time-window
+retrieval, reproducible reference times, decay, and per-record history. This
+extends the existing lifecycle comparison as product-behavior evidence only;
+it is not an independent correctness or retrieval-quality result.
 
 ## 2026-09-14 refresh note
 
