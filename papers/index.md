@@ -19,6 +19,14 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-10-26 manual radar additions
+
+These entries were added by the 2026-10-26 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Memory-Centric Continual Learning for AI Agents (MCCL)](mccl-memory-centric-continual-learning.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.29357)
+- [FrontierMemory](../benchmarks/frontiermemory.md) — 2026-10 — benchmark seed — [official benchmark](https://www.frontiermemory.com/blog/v1/)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not

@@ -743,3 +743,24 @@ events:
       - benchmarks/merit.md
       - https://arxiv.org/abs/2609.05441
     extract_confidence: medium
+  - event_id: frontiermemory-origin-2026
+    benchmark_id: frontiermemory
+    source_kind: product_research
+    source_id: https://www.frontiermemory.com/blog/v1/
+    source_date: 2026-10
+    actor: Letta Research
+    actor_type: benchmark_maintainer
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "674 PASS/FAIL source trajectories feed a memory-generation run, then a task agent runs 15 memory-dependent tasks against a no-memory control; generation is limited to six hours."
+    reproduction_status: not_reproduced
+    evidence_level: primary_product_page
+    independence_class: affiliated_evaluation
+    comparability_notes: "Origin protocol and affiliated leaderboard only. Three APEX verifiers use an LLM judge; corpus is gated and results must not be treated as independent harness comparisons."
+    evidence_refs:
+      - benchmarks/frontiermemory.md
+      - https://www.frontiermemory.com/blog/v1/
+      - https://github.com/letta-ai/frontiermemory
+    extract_confidence: medium

@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-08-31
+last_revised: 2026-10-26
 ---
 
 # Mem0
@@ -136,6 +136,23 @@ is product-behavior evidence that Mem0 is moving memory lifecycle beyond add /
 search toward retention policy. It should not be mixed with benchmark claims.
 
 > 来源:https://docs.mem0.ai/changelog/highlights
+
+## 2026-10 temporal lifecycle controls
+
+Mem0's official 2026-10-20 guide documents a broader time-aware surface than
+the earlier expiration-only update: a write-time `timestamp` can preserve event
+time during imports; `latest_only` selects a current state while retaining prior
+records; `expiration_date` and `show_expired` separate expiry from deletion; and
+time-window filters, `reference_date`, soft `decay=True` reranking, and
+per-record history support time-aware recall and replay.
+
+This is **product-behavior evidence** from Mem0, not an independent evaluation
+of temporal correctness, forgetting, or retrieval quality. For Ymem it makes
+event time, current-versus-historical state, expiration, reproducible reference
+time, and history/auditability concrete compatibility questions rather than
+implying that Mem0's behavior has been independently reproduced.
+
+> 来源:https://mem0.ai/blog/managing-time-in-ai-memory
 
 ## Notes
 

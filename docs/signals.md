@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-09-14
+date: 2026-10-26
 status: living-log
 language: zh-CN
 ---
@@ -15,6 +15,13 @@ language: zh-CN
 Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 (`deep-note` 表示已落地产品/聚合笔记,不等同于 frontmatter `status: full`;
 `archive-only` 表示有趣但不进入 ResearchItem 流程)
+
+## 2026 Q4
+
+| 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
+|---|---|---|---|---|
+| 2026-10-26 | [MCCL](https://arxiv.org/abs/2610.29357) / [FrontierMemory](https://www.frontiermemory.com/blog/v1/) | paper / benchmark | MCCL frames memory as continual behavioral improvement; FrontierMemory supplies an affiliated, no-memory-control protocol for trajectory-derived memory | `seed-note` ✅(见 `papers/` / `benchmarks/`) |
+| 2026-10-20 | [Mem0 temporal controls](https://mem0.ai/blog/managing-time-in-ai-memory) | product | official guide documents event time, state selection, expiry, time-aware retrieval, replay reference time, decay, and history; product behavior only | `deep-note` ✅(更新 `products/mem0.md`) |
 
 ## 2026 Q3
 

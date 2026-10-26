@@ -1,6 +1,6 @@
 ---
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-09-14
+date: 2026-10-26
 status: seed
 language: zh-CN
 ---
@@ -37,6 +37,7 @@ language: zh-CN
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 | multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
 | tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
+| continual learning through memory | [`FrontierMemory`](../benchmarks/frontiermemory.md) | whether trajectory-derived memory improves later memory-dependent tasks over a no-memory control | seed,Letta-origin protocol; gated corpus and affiliated leaderboard caveats |
 
 ## B. 初始交叉统计
 
@@ -65,6 +66,7 @@ language: zh-CN
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 | MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
 | MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
+| FrontierMemory | 1 | origin protocol logged; affiliated leaderboard results not normalized |
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -112,6 +114,7 @@ language: zh-CN
 | MEMPROBE | 0 | Origin protocol only |
 | MUMBench | 0 | Origin protocol only; no outside reuse logged |
 | MERIT | 0 | Origin protocol only; no outside reuse logged |
+| FrontierMemory | 0 | Origin protocol only; no independent rerun logged |
 
 ### B7. Independent or methodological pressure
 
