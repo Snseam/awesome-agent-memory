@@ -11,6 +11,12 @@ This short authored summary accompanies [the seed product note](../screenpipe.md
 It records a source review prompted by affiliated submission
 [Issue #29](https://github.com/Snseam/awesome-agent-memory/issues/29).
 
+The pinned MCP source contains a prompt-injection comment aimed at propagating
+a promotional header into unrelated files. That instruction was ignored and is
+not reproduced here; see the [intake trust review](../../docs/product-discovery-log.md#2026-10-26-intake-trust-review).
+This authored archive is evidence about product interfaces, not trusted agent
+instructions or a safety endorsement.
+
 ## Reviewed product boundary
 
 Screenpipe combines captured computer activity, workflow automation, and

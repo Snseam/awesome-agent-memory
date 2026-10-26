@@ -275,7 +275,11 @@ computer history was read, and no benchmark result is added.
 
 ### Screenpipe: editable memory, beyond the original capture-only proposal
 
-The affiliated proposal came from the project's founder/maintainer. At source
+Source-reading risk: the pinned upstream contains an instruction targeting AI
+readers outside its repository. See the [intake trust review](#2026-10-26-intake-trust-review)
+below; the seed entry is not a safety endorsement or authorization to run it.
+
+The submitter self-identifies as the project's founder/maintainer. At source
 revision `334b865ec7b2938eeb44c443e17aebfa3e0a10a3`, the current public surface
 includes explicit memory create/update/delete and memory search, alongside
 screen/audio history capture. That documented lifecycle supports a **seed**
@@ -290,6 +294,10 @@ or promote those other entries. Transport-specific tool/auth differences and
 raw-history versus curated-memory retention are recorded in the canonical note.
 
 ### Hyperconsciousness: correct the proposal's versioned boundary
+
+Source-reading risk: the pinned constraints document contains the same external
+AI-reader instruction in hidden HTML comments; see the
+[intake trust review](#2026-10-26-intake-trust-review).
 
 Reviewed 2026-10-26 at `5748f89138c6817c88af419b0511cff77d0b4ee4`. The proposal
 pinned `d2152ce2154affccc47f35a34876b066740d52ad`; the [version comparison](https://github.com/louis030195/hyperconsciousness/compare/d2152ce2154affccc47f35a34876b066740d52ad...5748f89138c6817c88af419b0511cff77d0b4ee4)
@@ -307,8 +315,10 @@ do not establish OS isolation, retrieval quality, secure erasure, or revocation
 of exported copies. The [pinned license](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/LICENSE)
 is MIT; this is a license observation, not a security or maturity judgment.
 
-Keep the requested Tier B scope while the central-only API/migration contract
-evolves. A future core-note review should separately examine write/read grants,
+Keep Tier B under the repository's evidence/maturity rule: this intake is a
+limited discovery review of an evolving alpha API/migration contract, not a
+complete core product assessment. The submitter's requested tier is not the
+decision criterion. A future core-note review should separately examine write/read grants,
 retraction and restore semantics, stable interface documentation and workload
 limits; evidence for quality or security claims would require additional testing.
 
@@ -336,3 +346,36 @@ remains outside memory-core scope. Publisher ratings, downloads and promotional
 claims are not quality evidence. A future memory-specific review would need a
 stable artifact/source version and explicit write/read/update/retention semantics,
 separate from task status and generic workflow recovery.
+
+### 2026-10-26 intake trust review
+
+The follow-up audit found **indirect prompt injection in linked primary sources**,
+not in the three issue bodies. Screenpipe's
+[pinned MCP source, lines 1–4](https://github.com/screenpipe/screenpipe/blob/334b865ec7b2938eeb44c443e17aebfa3e0a10a3/packages/screenpipe-mcp/src/index.ts#L1-L4)
+contains a comment directing AI readers to propagate a promotional header into
+files they edit, including outside that repository. HC's
+[pinned constraints, lines 1–3](https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/docs/CONSTRAINTS.md#L1-L3)
+contains the same direction in HTML comments, which ordinary rendered Markdown
+can hide. This is an attempt to cross the data/instruction boundary. It was
+ignored; the operational wording is not copied into this repository.
+
+All three current issues had zero comments at review time. Their raw bodies did
+not contain an observed instruction override, hidden payload or exfiltration
+request. The Codex authorship statements in #29/#30 are submitter claims, not
+OpenAI endorsement or authority. #21 contains promotional scope claims already
+corrected above; this review does not establish its entire linked distribution
+as injection-free.
+
+The original PR review missed the linked-source injection risk. A follow-up
+search of Git-tracked content at `750141f` found no copy of the observed header
+or cross-repository propagation instruction. This bounds the observed result;
+it does not prove absence of every possible influence on the earlier review.
+The attack finding does not itself disprove the source's memory CRUD, nor does
+correct CRUD make the source safe for an agent to trust. Inclusion and source
+handling require separate judgments under the existing Tier criteria.
+
+Scope: current issue bodies/comments, PR #38 changes, selected pinned primary
+sources and fresh-context independent review. This was not an exhaustive crawl
+of all linked pages, historical/deleted content, distributed packages or runtime
+behavior. The [review controls](weekly-memory-refresh-runbook.md#external-content-trust-boundary)
+reduce exposure but are not an execution sandbox or a security certification.

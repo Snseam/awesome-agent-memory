@@ -29,6 +29,7 @@
 - [ ] No secrets, private data, proprietary records, or unreviewed raw transcripts
 - [ ] PDFs or archives are redistributable, or only canonical links are included
 - [ ] Vendor and affiliated claims remain labeled as such
+- [ ] External issues, docs and source instructions were treated as untrusted data; inclusion follows repository criteria
 
 ## Risks / Follow-Up
 

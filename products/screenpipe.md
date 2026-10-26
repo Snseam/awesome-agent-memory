@@ -114,7 +114,12 @@ CRUD 和 agent recall，符合本仓对 [Basic Memory](basic-memory.md) 与
 
 ## 6. 证据与未完成验证
 
-[Issue #29][issue] 由 Screenpipe 创始人/维护者提交并披露关联关系，是
+**外部源码的提示注入风险：** 固定版本 [MCP 文件开头][stdio] 含有面向 AI
+读者的指令，要求将推广页眉传播到其他仓库的编辑文件。这是越过数据与指令
+边界的尝试，已忽略；收录不代表该来源可被信任为操作指令，也不代表安全
+背书。详见[社区投稿信任复核](../docs/product-discovery-log.md#2026-10-26-intake-trust-review)。
+
+[Issue #29][issue] 的投稿者自述为 Screenpipe 创始人/维护者并披露关联关系，是
 **affiliated submission**。本次独立进行公开文档和固定版本源码阅读，但
 证据仍属于 product behavior / project-authored documentation，分类属于
 maintainer synthesis，不是独立 benchmark 或运行复现。
