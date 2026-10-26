@@ -22,7 +22,9 @@ language: zh-CN
 The six refreshes from September 21 through October 26 add one distinct product:
 [Alibaba Tablestore Memory Storage Service](../products/alibaba-tablestore-memory-storage.md).
 It is separate from Bailian Memory Library and Model Studio Managed Agents stores.
-The combined inventory has **41 product notes and 40 source archives**.
+At that consolidation snapshot, the inventory had 41 product notes and 40 source archives.
+The subsequent [community issue intake](product-discovery-log.md#2026-10-26-community-issue-decisions)
+adds Screenpipe, bringing the current inventory to **42 product notes and 41 source archives**.
 
 Existing notes retain the dated Hindsight, OpenViking, Letta, Zep, Graphiti,
 Mem0, Claude managed-agent store, Databricks, Foundry, Oracle, Redis, and
@@ -186,6 +188,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Mymind | — | SaaS | 个人 |
 | Notion AI memory | — | SaaS | 团队 |
 | Obsidian + 插件 | — | OSS + 插件市场 | 个人 / 研究者 |
+| Screenpipe | [`../products/screenpipe.md`](../products/screenpipe.md) | Source-available + commercial distribution | 个人 / coding-agent 用户 / workflow builder |
 | Personal AI | [`../products/personal-ai.md`](../products/personal-ai.md) | SaaS | 个人 / creator / 开发者 |
 | Anuma | [`../products/anuma.md`](../products/anuma.md) | SaaS | 个人 |
 | Kinic | [`../products/kinic.md`](../products/kinic.md) | SaaS / tokenized datastore | 个人 / creator |

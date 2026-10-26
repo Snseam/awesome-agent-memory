@@ -218,12 +218,18 @@ flowchart TB
 | Field | Synthesis |
 |---|---|
 | architecture pattern | 账号级或用户拥有的 memory vault,从日常聊天/文件/浏览器/应用数据抽取可跨模型使用的个人上下文 |
-| products mapped | OpenAI Memory、Claude memory/Dreams、Gemini personal context、Personal AI、Anuma、Kinic |
+| products mapped | OpenAI Memory、Claude memory/Dreams、Gemini personal context、Personal AI、Anuma、Kinic、Screenpipe |
 | common data flow | personal interactions -> extraction -> account/vault store -> scoped recall -> personalized response |
 | memory types | saved facts、chat-history memory、preferences、persona、private entries、portable vault memories |
 | retrieval/consolidation strategy | consumer assistants 多为黑箱排序;portable memory 产品强调 edit/delete/export/private flags |
 | governance/inspectability | 消费者需要 memory on/off、per-memory delete、temporary/incognito chat、export/wipe;企业需要 admin disable |
 | confidence/unknowns | 用户控制面证据较强;内部 schema、冲突解决、保留策略通常不公开。 |
+
+[Screenpipe](../products/screenpipe.md) adds an inspectable variant: captured
+screen/audio history and a separate editable-memory API. Capture, curated-memory
+CRUD and downstream model use have different data/retention boundaries; the
+shared pattern diagram below does not establish automatic extraction or scoped
+authorization for every product.
 
 ```mermaid
 flowchart TB
