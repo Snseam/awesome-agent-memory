@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-08-03
+last_revised: 2026-10-19
 archive: archives/zep-overview.md
 ---
 
@@ -65,6 +65,44 @@ Zep is exposing more temporal graph control to applications. They do not change
 the evidence class of Zep benchmark numbers, which remain vendor/self-claim
 unless independently reproduced.
 
+## 3.2 2026-09 changelog refresh
+
+Zep v3 changelog entries around 2026-09-23 to 2026-09-25 add product-behavior
+signals around graph/memory operations: Agent Skills are gated by Agent Memory
+access, entity nodes expose source episodes, source traceability docs were
+added, and ordering / deletion-summary rebuild fixes landed. These are
+operational correctness and provenance-surface updates, not independent
+benchmark evidence.
+
+## 3.3 2026-10 changelog refresh
+
+Zep official changelog entries on 2026-10-06 and 2026-10-08 added
+memory-relevant graph behavior updates. Node summaries accepted by
+`graph.node.update` can now be up to 5,000 characters, so generated summaries
+can be written back without the earlier 500-character cap. Auto search now uses
+the reranker for searches with more than 128 candidates and scores up to 200
+candidates instead of using only reciprocal-rank-fusion order.
+
+The 2026-10-08 changelog also changed identity matching across graphs: Zep now
+uses entity-type identity properties to find existing entities in all graphs,
+reducing duplicate entities that previously appeared when name or embedding
+search did not also find the existing node. These entries are product-behavior
+evidence for graph-memory update, deduplication, and retrieval behavior; they
+are not independent benchmark evidence.
+
+## 3.4 2026-10 v4 API refresh
+
+Zep's official 2026-10-12 and 2026-10-14 changelog entries make the v4 Context
+API and Python/TypeScript/Go v4 SDKs generally available while retaining the
+same project data as v3 for incremental migration. The release exposes scoped
+search methods, graph-neighbor/subgraph navigation through both API and Context
+MCP tools, episode debug logs and ingestion traces, UUID-based resource
+identity, and idempotent create retries. It also records data-integrity behavior:
+identity matching is normalized for case/whitespace, generic names require a
+shared neighbor before a non-model merge, and missing custom attributes no
+longer overwrite stored values. These are official product-behavior signals,
+not independent quality, security, or benchmark evidence.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Zep 占据和 memory kernel 几乎相同的生态位 — host-agnostic 的记忆层。它
@@ -108,7 +146,12 @@ domain × audience 表:
 - archive: [`archives/zep-overview.md`](archives/zep-overview.md)
 - 配套笔记:[`graphiti.md`](graphiti.md)(OSS 内核)
 - 官方:https://www.getzep.com、https://help.getzep.com/(docs 已迁移)
-- Changelog:https://help.getzep.com/changelog
+- v3 changelog:https://help.getzep.com/v3/changelog
+- Current changelog:https://help.getzep.com/changelog
+- 2026-10-06 changelog:https://help.getzep.com/changelog/2026/10/6
+- 2026-10-08 changelog:https://help.getzep.com/v3/changelog/2026/10/8
+- v4 GA: https://help.getzep.com/changelog/2026/10/14
+- graph-integrity update: https://help.getzep.com/changelog/2026/10/12
 
 ---
 

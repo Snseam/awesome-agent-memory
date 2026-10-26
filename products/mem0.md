@@ -11,7 +11,7 @@ evidence_level: medium (open-source library, blog claims need independent benchm
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-08-31
+last_revised: 2026-10-26
 ---
 
 # Mem0
@@ -39,7 +39,7 @@ layer)。kernel 的差异化应该清晰:
 | 抽取 | LLM 抽 fact,粒度细,易产生噪声 | host 决定抽取策略,kernel 不强制抽 fact |
 | Schema | 偏对话场景,User/Agent/Run 三元 scope | 通用 MemoryRecord + ProvenanceRef,不假设对话 |
 | 整理 | 实时 merge / update | 离线 consolidate + MemoryDiff 候选 |
-| 审计 | 弱:无显式 diff 流,变更不可逆 | 强:每次 consolidate 产 diff,host 决定接受 |
+| 审计 | Platform 文档提供逐条 add/update 历史；尚未建立 host 审批式 mutation diff / rollback 语义 | 强:每次 consolidate 产 diff,host 决定接受 |
 | Provenance | 弱 | 一等公民 |
 
 ## What to borrow
@@ -114,6 +114,15 @@ Mem0 自报的 benchmark(LoCoMo 类基准对比上一代 baseline):
 > archive:[`archives/mem0-blog-state-of-2026.md`](archives/mem0-blog-state-of-2026.md)、
 > [`archives/mem0-april-2026-release.md`](archives/mem0-april-2026-release.md)
 
+## 2026-06/07 SDK expiration controls
+
+Mem0 changelog highlights around 2026-06-27 added first-class expiration
+controls for memory writes, updates, and reads in Python / TypeScript SDKs. This
+is product-behavior evidence that Mem0 is moving memory lifecycle beyond add /
+search toward retention policy. It should not be mixed with benchmark claims.
+
+> 来源:https://docs.mem0.ai/changelog/highlights
+
 ## 2026-08 DeepSeek Harness plugin
 
 Mem0 changelog highlights in late August added a DeepSeek Harness plugin under
@@ -128,14 +137,44 @@ claims ledger.
 
 > 来源:https://docs.mem0.ai/changelog/highlights
 
-## 2026-06/07 SDK expiration controls
+## 2026-09 DolphinBench
 
-Mem0 changelog highlights around 2026-06-27 added first-class expiration
-controls for memory writes, updates, and reads in Python / TypeScript SDKs. This
-is product-behavior evidence that Mem0 is moving memory lifecycle beyond add /
-search toward retention policy. It should not be mixed with benchmark claims.
+Mem0 introduced DolphinBench as an action-based agent-memory benchmark and
+Pareto-frontier framing over task completion, cost, and latency. The blog says
+the suite contains 600 tool-using tests with solvability gates. This repository
+tracks DolphinBench as a benchmark seed at
+[`../benchmarks/dolphinbench.md`](../benchmarks/dolphinbench.md) and records its
+claims as vendor-affiliated / paper-origin evidence in
+[`../benchmarks/claims/claims.yaml`](../benchmarks/claims/claims.yaml).
 
-> 来源:https://docs.mem0.ai/changelog/highlights
+The benchmark is useful for cost-aware evaluation design, but Mem0 leaderboard
+or Pareto claims must not be treated as independent performance evidence until
+an external reproduction with enough setup detail exists.
+
+> 来源:https://arxiv.org/abs/2609.24971、
+> https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory
+
+## 2026-10 temporal lifecycle controls
+
+Mem0's official 2026-10-20 guide (checked 2026-10-26) documents a broader
+Mem0 Platform / `MemoryClient` time-aware surface than the earlier expiration-only
+update: a write-time `timestamp` can preserve event
+time during imports; `latest_only` selects a current state while retaining prior
+records; `expiration_date` and `show_expired` separate expiry from deletion; and
+time-window filters, `reference_date`, project-level soft decay reranking via
+`client.project.update(decay=True)`, and per-record `history(memory_id)` expose
+time-aware recall plus add/update history with old values, new values, and times.
+
+This is **product-behavior evidence** from Mem0, not an independent evaluation
+of temporal correctness, forgetting, or retrieval quality. For Ymem it makes
+event time, current-versus-historical state, expiration, reproducible reference
+time, and history/auditability concrete compatibility questions rather than
+implying that Mem0's behavior has been independently reproduced. The guide does
+not establish OSS feature parity, transaction-time snapshots, or point-in-time
+restore: `reference_date` supplies a relative-time reference for retrieval, and
+history is not a documented approval or rollback contract.
+
+> 来源:https://mem0.ai/blog/managing-time-in-ai-memory
 
 ## Notes
 

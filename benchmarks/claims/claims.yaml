@@ -743,3 +743,330 @@ events:
       - benchmarks/merit.md
       - https://arxiv.org/abs/2609.05441
     extract_confidence: medium
+  - event_id: dolphinbench-origin-2026
+    benchmark_id: dolphinbench
+    source_kind: paper
+    source_id: benchmarks/dolphinbench.md
+    source_date: 2026-09
+    actor: DolphinBench authors / Mem0
+    actor_type: affiliated_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Action-based agent-memory benchmark framed around task completion, cost, latency, and Pareto frontier; Mem0 blog reports 600 tool-using tests."
+    reproduction_status: not_reproduced
+    evidence_level: affiliated_evaluation
+    independence_class: vendor_affiliated
+    comparability_notes: "Origin protocol and vendor-affiliated framing only; leaderboard or Pareto claims need independent reproduction."
+    evidence_refs:
+      - benchmarks/dolphinbench.md
+      - https://arxiv.org/abs/2609.24971
+      - https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory
+    extract_confidence: medium
+  - event_id: memcalib-origin-2026
+    benchmark_id: memcalib
+    source_kind: paper
+    source_id: benchmarks/memcalib.md
+    source_date: 2026-09
+    actor: MemCalib authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Benchmark for calibrating whether agents overuse, underuse, or correctly use retrieved memory."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; metrics and artifacts need full normalization."
+    evidence_refs:
+      - benchmarks/memcalib.md
+      - https://arxiv.org/abs/2609.24259
+    extract_confidence: medium
+  - event_id: correlated-promotion-benchmark-origin-2026
+    benchmark_id: correlated-promotion-benchmark
+    source_kind: paper
+    source_id: benchmarks/correlated-promotion-benchmark.md
+    source_date: 2026-09
+    actor: CPB authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "CPB-Static and CPB-Live evaluate whether claims should be admitted to shared memory when repeated or paraphrased evidence may be correlated."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; false-adoption and consumer-probe rates need normalization before use."
+    evidence_refs:
+      - benchmarks/correlated-promotion-benchmark.md
+      - https://arxiv.org/abs/2609.30813
+    extract_confidence: medium
+  - event_id: memprobe-stability-plasticity-origin-2026
+    benchmark_id: memprobe-stability-plasticity
+    source_kind: paper
+    source_id: benchmarks/memprobe-stability-plasticity.md
+    source_date: 2026-09
+    actor: MemProbe Stability-Plasticity authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "56-episode diagnostic suite built from cognitive paradigms for interference, misinformation, consolidation strength, and reconsolidation windows."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; do not merge with the existing MEMPROBE hidden-state benchmark despite the alias overlap."
+    evidence_refs:
+      - benchmarks/memprobe-stability-plasticity.md
+      - https://arxiv.org/abs/2609.30558
+    extract_confidence: medium
+  - event_id: twist-origin-2026
+    benchmark_id: twist
+    source_kind: paper
+    source_id: benchmarks/twist.md
+    source_date: 2026-09
+    actor: TWIST authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Conversational-memory intervention benchmark with matched hard negatives, belief-change points, and sensitive-recall governance tracks."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; proposed benchmark and release artifacts need verification."
+    evidence_refs:
+      - benchmarks/twist.md
+      - https://arxiv.org/abs/2609.28575
+    extract_confidence: medium
+  - event_id: longmemeval-v2-origin-2026
+    benchmark_id: longmemeval-v2
+    source_kind: paper
+    source_id: benchmarks/longmemeval-v2.md
+    source_date: 2026-05
+    actor: LongMemEval-V2 authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "451 questions over customized web/enterprise trajectory histories; memory supplies compact evidence for a fixed reader."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; distinct from original LongMemEval; author-reported results are not independent reproduction."
+    evidence_refs:
+      - benchmarks/longmemeval-v2.md
+      - https://arxiv.org/abs/2605.12493
+      - https://github.com/xiaowu0162/LongMemEval-V2
+    extract_confidence: medium
+  - event_id: minteval-origin-2026
+    benchmark_id: minteval
+    source_kind: paper
+    source_id: benchmarks/minteval.md
+    source_date: 2026-05
+    actor: MINTEval authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Long evolving contexts with single-target recall and multi-target aggregation under intervening updates."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported system accuracy is not an independent reproduction."
+    evidence_refs:
+      - benchmarks/minteval.md
+      - https://arxiv.org/abs/2605.18565
+      - https://github.com/amy-hyunji/MINTEval
+    extract_confidence: medium
+  - event_id: inmind-origin-2026
+    benchmark_id: inmind
+    source_kind: paper
+    source_id: benchmarks/inmind.md
+    source_date: 2026-07
+    actor: InMind authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "125 paired direct/indirect queries over synthetic stored user facts with knowledge bridges."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin diagnostic only; paper-aligned results and repository license are pending on the official release roadmap."
+    evidence_refs:
+      - benchmarks/inmind.md
+      - https://arxiv.org/abs/2607.24368
+      - https://github.com/imlrz/InMind
+    extract_confidence: medium
+  - event_id: dyadmem-origin-2026
+    benchmark_id: dyadmem
+    source_kind: paper
+    source_id: benchmarks/dyadmem.md
+    source_date: 2026-10
+    actor: DyadMem authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Relationship-aware multi-session episodes with capture, update, recall, deletion, and full-pipeline settings."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported QA results and artifact status need normalization."
+    evidence_refs:
+      - benchmarks/dyadmem.md
+      - https://arxiv.org/abs/2610.03020
+    extract_confidence: medium
+  - event_id: taggraph-origin-2026
+    benchmark_id: taggraph
+    source_kind: paper
+    source_id: benchmarks/taggraph.md
+    source_date: 2026-09
+    actor: TAGGRAPH authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Controlled graph retrieval with tagged extraction and lexical/raw-input baselines on persistent memory histories."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; graph-versus-lexical results remain paper-origin."
+    evidence_refs:
+      - benchmarks/taggraph.md
+      - https://arxiv.org/abs/2609.38353
+    extract_confidence: medium
+  - event_id: ufuzz-origin-2026
+    benchmark_id: ufuzz
+    source_kind: paper
+    source_id: benchmarks/ufuzz.md
+    source_date: 2026-09
+    actor: U-Fuzz authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Mutation campaigns over queries and persistent memory states with output-only failure confirmation."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; confirmed failures are not an independent rate across memory systems."
+    evidence_refs:
+      - benchmarks/ufuzz.md
+      - https://arxiv.org/abs/2609.38275
+    extract_confidence: medium
+  - event_id: bemula-origin-2026
+    benchmark_id: bemula
+    source_kind: paper
+    source_id: benchmarks/bemula.md
+    source_date: 2026-10
+    actor: Bemula authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "50 multi-session dialogues; 135 explicit forget requests; 1,742 questions across storage, removal, preservation, relearning, and extraction suites."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; paper-reported system results are not normalized or treated as independent evidence."
+    evidence_refs:
+      - benchmarks/bemula.md
+      - https://arxiv.org/abs/2610.18052
+    extract_confidence: medium
+  - event_id: memcut-origin-2026
+    benchmark_id: memcut
+    source_kind: paper
+    source_id: benchmarks/memcut.md
+    source_date: 2026-10
+    actor: MemCut authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "456 hand-designed secrets with annotated disclosure/evidence trails; native and residual recovery distinguish normal retrieval from surviving-object access."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; residual-recovery results are author-reported and not a product ranking."
+    evidence_refs:
+      - benchmarks/memcut.md
+      - https://arxiv.org/abs/2610.21405
+    extract_confidence: medium
+  - event_id: frontiermemory-origin-2026
+    benchmark_id: frontiermemory
+    source_kind: product_research
+    source_id: https://www.frontiermemory.com/blog/v1/
+    source_date: 2026-10
+    actor: Letta Research
+    actor_type: benchmark_maintainer
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "674 PASS/FAIL source trajectories feed a memory-generation run, then a task agent runs 15 memory-dependent tasks against a no-memory control; generation is limited to six hours."
+    reproduction_status: not_reproduced
+    evidence_level: primary_product_page
+    independence_class: affiliated_evaluation
+    comparability_notes: "Origin protocol and affiliated leaderboard only. Three APEX verifiers use an LLM judge; corpus is gated and results must not be treated as independent harness comparisons."
+    evidence_refs:
+      - benchmarks/frontiermemory.md
+      - https://www.frontiermemory.com/blog/v1/
+      - https://github.com/letta-ai/frontiermemory
+    extract_confidence: medium
+  - event_id: worldmemarena-origin-2026
+    benchmark_id: worldmemarena
+    source_kind: paper
+    source_id: benchmarks/worldmemarena.md
+    source_date: 2026-05
+    actor: WorldMemArena authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Versioned PDF and dataset card describe 461 samples; implementation offers a 150-sample subset. Stage-level memory metrics are unavailable for answer-only baselines."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; abstract landing page still says 400. No inferred release history or independent performance claim."
+    evidence_refs:
+      - benchmarks/worldmemarena.md
+      - https://arxiv.org/pdf/2605.29341v2
+      - https://huggingface.co/datasets/LCZZZZ/WorldMemArena
+    extract_confidence: medium
+  - event_id: ledger-qa-origin-2026
+    benchmark_id: ledger-qa
+    source_kind: paper
+    source_id: benchmarks/ledger-qa.md
+    source_date: 2026-02
+    actor: Kehao Zhang and UMA coauthors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Synthetic accumulated-state QA; separate transfer and task-trained settings. Public training release does not establish frozen test-set equivalence."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; no normalized scores. Judge and lexical scoring differ, and code/test-artifact licensing requires verification."
+    evidence_refs:
+      - benchmarks/ledger-qa.md
+      - https://aclanthology.org/2026.emnlp-main.1299/
+      - https://arxiv.org/html/2602.18493v2
+    extract_confidence: medium

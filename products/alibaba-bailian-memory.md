@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-09-07
+last_revised: 2026-09-28
 archive: archives/alibaba-bailian-memory-overview.md
 ---
 
@@ -54,6 +54,19 @@ Pro 开启 Rerank,Lite 关闭 Rerank;记忆片段与用户画像暂无失效日�
 `DeleteMemory`、自定义 metadata、自动去重和用户画像 schema。这是托管 memory API
 的 product-behavior / pricing signal,不是独立质量结论。
 
+2026-09-28 复核确认:Tablestore / AgentStorage 的
+[`Memory Storage Service`](alibaba-tablestore-memory-storage.md) 使用独立的
+`MemoryStore` 与 `AddMemories` / `SearchMemories` 接口,不是本页百炼
+`memoryId` / `AddMemory` / `SearchMemory` API 的别名。AgentLoop Memory Store
+另有 agent-space 资源与 mem0-compatible 接口;Agent Run 则绑定 AgentRuntime。
+这些阿里云产品面不能仅凭相同的 "Memory Store" 名称合并。
+
+同属 Model Studio 的 Managed Agents Memory Store 另有 `memstore_` 容器、
+按路径组织的 UTF-8 文件、会话只读/读写挂载、历史版本与版本正文擦除。
+文件列表不支持正文关键词搜索;归档后不可写入或绑定新会话。这是独立的
+agent-runtime 文件记忆接口,本页作为相邻产品面记录,不把其 API 归到百炼
+`AddMemory` / `SearchMemory`。是否拆为单独核心条目留待产品族边界复核。
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:百炼代表国内云平台把 long-term memory API 产品化的路线。
@@ -80,6 +93,8 @@ Pro 开启 Rerank,Lite 关闭 Rerank;记忆片段与用户画像暂无失效日�
 - 长期记忆 API:https://help.aliyun.com/zh/model-studio/long-term-memory-2-0
 - AgentLoop:https://help.aliyun.com/en/document_detail/3033860.html
 - OpenClaw memory plugin:https://help.aliyun.com/en/model-studio/modelstudio-memory-for-openclaw
+- Managed Agents Memory Store:https://help.aliyun.com/zh/model-studio/managed-agents-memory-store
+- Managed Agents Memory Store API:https://help.aliyun.com/zh/model-studio/memory-store-api
 
 ---
 

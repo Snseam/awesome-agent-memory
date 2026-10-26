@@ -19,6 +19,115 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-10-26 identity maintenance
+
+- [Forged Reasoning Attacks / FARMA and SENTINEL](forged-reasoning-attacks-agent-memory.md) — [arXiv 2607.05029](https://arxiv.org/abs/2607.05029): consolidated two seed notes for the same paper, preserving provenance and audit guidance; no new paper or independent result.
+
+## 2026-10-26 manual radar additions
+
+These entries were added by the 2026-10-26 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Memory-Centric Continual Learning for AI Agents (MCCL)](mccl-memory-centric-continual-learning.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.29357)
+- [FrontierMemory](../benchmarks/frontiermemory.md) — 2026-10 — benchmark seed — [official benchmark](https://www.frontiermemory.com/blog/v1/)
+
+- [WorldMemArena](../benchmarks/worldmemarena.md) — 2026-05 protocol backfill — benchmark seed — [v2 PDF](https://arxiv.org/pdf/2605.29341v2); source-count discrepancy recorded.
+- [UMA / Ledger-QA](../benchmarks/ledger-qa.md) — EMNLP 2026 protocol backfill — benchmark seed; existing [UMA stub](stubs/learning-to-remember-end-to-end-training-of-memory-agents.md) metadata corrected, not a second paper — [ACL](https://aclanthology.org/2026.emnlp-main.1299/).
+
+
+## 2026-10-19 manual radar additions
+
+These entries were added by the 2026-10-19 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MemCode: Discrete Semantic Representations for Long-Term Agent Memory](memcode-discrete-semantic-agent-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.19472)
+- [MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning](memcomposer-memory-assembly-rl.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.21091)
+- [MemCut: Every Secret Leaves a Trail in the Long-Term Memory of LLM Agents](memcut-residual-forgetting.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.21405)
+- [Bemula: Can Agents Forget When Asked?](../benchmarks/bemula.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.18052)
+- [MemCut](../benchmarks/memcut.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.21405)
+
+## 2026-10-12 manual radar additions
+
+These entries were added by the 2026-10-12 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [Capability-Driven Self-Evolution of Agent Memory](capability-driven-self-evolution-agent-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.06361)
+- [Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell](persistent-memory-multi-agent-inference-cost.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.07782)
+- [Test-Time Memory Construction](test-time-memory-construction.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.13348)
+- [From Retrieval to Reconstruction: Constructing Evolvable Cognitive Memory for Long-Term Dialogue](from-retrieval-to-reconstruction-cognitive-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11314)
+- [Event-Centric Memory with Query-Aware Graph Augmentation for Long-Term Conversational Agents](event-centric-query-aware-graph-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11920)
+- [Relevance Is Not Sufficiency: What Actually Closes the Evidence Gap in Long-Term Memory QA](relevance-not-sufficiency-evidence-gap.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.09348)
+- [MINDSET: Energy-based Schema Evolution for Long Conversational Agent Memory](mindset-schema-evolution-conversational-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08586)
+- [Gated Memory: Admission-Controlled Memory Formation for Conversational AI](gated-memory-admission-controlled-formation.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.11270)
+- [The Right Memory in the Wrong Context: Verifying Retrieval Admissibility in Long-Term Agent Memory](right-memory-wrong-context-admissibility.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.07309)
+- [DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks](daedalus-self-generated-task-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08048) / [code](https://github.com/illuin-tech/daedalus)
+- [Beyond Corrected Memory: Execution Consistency in Multi-Agent Systems](beyond-corrected-memory-execution-consistency.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.08101)
+
+## 2026-10-05 manual radar additions
+
+These entries were added by the 2026-10-05 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MemFit: Efficient Long-Term Agentic Memory](memfit-efficient-long-term-agentic-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.00872)
+- [APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory](apdmem-progressive-disclosure-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02472)
+- [Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents](memplus-nondestructive-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02002)
+- [Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory](interpreting-write-time-multi-goal-memory.md) — 2026-10 — seed — [arxiv](https://arxiv.org/abs/2610.02897)
+- [MemCodex: Self-Programming Hierarchical Memory for Language Agents](memcodex-self-programming-hierarchical-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.39765)
+- [Audience-Bound Persistent Memory](audience-bound-persistent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.36373)
+- [DyadMem](../benchmarks/dyadmem.md) — 2026-10 — benchmark seed — [arxiv](https://arxiv.org/abs/2610.03020)
+- [TAGGRAPH](../benchmarks/taggraph.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.38353)
+- [U-Fuzz](../benchmarks/ufuzz.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.38275)
+
+## 2026-09-28 manual radar additions
+
+These entries were added by the 2026-09-28 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [DolphinBench](../benchmarks/dolphinbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.24971) / [blog](https://mem0.ai/blog/introducing-dolphinbench-mapping-the-pareto-frontier-of-agent-memory)
+- [MemCalib](../benchmarks/memcalib.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.24259)
+- [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](../benchmarks/correlated-promotion-benchmark.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.30813)
+- [Probing Stability-Plasticity Tradeoffs in Agent Memory through Cognitive Experimental Paradigms](../benchmarks/memprobe-stability-plasticity.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.30558) / [code](https://github.com/jq-ding/MemProbe)
+- [TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory](../benchmarks/twist.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.28575)
+- [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](../benchmarks/longmemeval-v2.md) — 2026-05 backfill — benchmark seed — [arxiv](https://arxiv.org/abs/2605.12493)
+- [MINTEval: Evaluating Memory under Multi-Target Interference in Long-Horizon Agent Systems](../benchmarks/minteval.md) — 2026-05 backfill — benchmark seed — [arxiv](https://arxiv.org/abs/2605.18565)
+- [Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory](../benchmarks/inmind.md) — 2026-07 backfill — benchmark seed — [arxiv](https://arxiv.org/abs/2607.24368)
+- [Scope Before You Persist: Preventing Cross-Family Interference in Agent Memory](scope-before-you-persist.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.29144)
+- [Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents](just-in-time-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.27334)
+- [EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory](ensimem-entity-structured-indexing.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.27279)
+- [Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](jev-mem-system-one-controlled-agentic-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.23986)
+- [AkasicMEM: Governed Enterprise Memory for Agents](akasicmem-governed-enterprise-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.25563)
+- [EPGM: Execution Provenance for Budgeted Agent Memory Retrieval](execution-provenance-memory-retrieval.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.25913)
+- [RPMem: Learning Long-Term Recurrent Parametric Memory Across Sessions for LLM Agents](rpmem-recurrent-parametric-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.23466)
+- [SAMem: State-Aware Memory as a Fine-Grained Memory for LLM Agents in Decision-Making](samem-state-aware-fine-grained-memory.md) — Findings of ACL 2026 backfill — seed — [acl](https://aclanthology.org/2026.findings-acl.722/)
+- [GAM: Hierarchical Graph-based Agentic Memory for LLM Agents](gam-hierarchical-graph-agentic-memory.md) — ACL 2026 backfill — seed — [acl](https://aclanthology.org/2026.acl-long.1600/)
+- [Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents](memory-r2-fair-credit-assignment.md) — 2026-05 backfill — seed — [arxiv](https://arxiv.org/abs/2605.21768)
+- [PersonaAgent: Bridging Memory and Action for Personalized LLM Agents](stubs/personaagent-when-large-language-model-agents-meet.md) — Findings of ACL 2026 title correction for an existing stub — [acl](https://aclanthology.org/2026.findings-acl.1315/)
+
+## 2026-09-21 manual radar additions
+
+These entries were added by the 2026-09-21 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [MACE: Memory-Agent Co-Evolution with Adaptive Memory Graphs for Multi-Agent Systems](mace-memory-agent-co-evolution.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.21533)
+- [Disentangling Long-Term Memory via Latent Neuro-Symbolic Reasoning](latent-neuro-symbolic-long-term-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.18461)
+- [Interactive Memory Learning for Long-Term Conversations](interactive-memory-learning-long-term-conversations.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.17088)
+- [ThinkFlow: Self-Evolving Probabilistic Latent Memory for Lifelong Conversational Agents](thinkflow-latent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.17010)
+- [EchoPath: Execution-Level Replayable Memory for GUI Agents](echopath-execution-replayable-memory-gui-agents.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.16635)
+- [Semantic-TVM: Structure-Preserving Trustworthy Virtual Memory for Memory-Augmented and Tool-Using Agents](semantic-tvm-trustworthy-virtual-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.15011)
+
+## 2026-09-14 manual radar additions
+
+These entries were added by the 2026-09-14 weekly radar refresh. They are not
+part of the 2026-05-19 nine-list scrape statistics above.
+
+- [LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory](lifefuse-mem-lifecycle-aware-state-fusion.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12436)
+- [ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations](roam-robust-atomic-memory-organization.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.09778)
+- [MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI](memsentry-persistent-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08747)
+- [MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging](memforest-eventtree-agent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08273) / [code](https://github.com/Celina-love-sweet/MemForest)
+- [AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems](aim-privacy-aware-interoperable-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MUMBench](../benchmarks/mumbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.12320)
+- [MERIT](../benchmarks/merit.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.05441)
+
 ## 2026-09-07 manual radar additions
 
 These entries were added by the 2026-09-07 weekly radar refresh. They are not
@@ -48,19 +157,6 @@ part of the 2026-05-19 nine-list scrape statistics above.
 - [MemDelta: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation](../benchmarks/memdelta.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.29914)
 - [Mandol: An Agglomerative Agent Memory System for Long-Term Conversations](mandol-agglomerative-agent-memory.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.29778)
 - [Forensic Trajectory Signatures for Agent Memory Poisoning Detection](forensic-trajectory-memory-poisoning.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.30566)
-
-## 2026-09-14 manual radar additions
-
-These entries were added by the 2026-09-14 weekly radar refresh. They are not
-part of the 2026-05-19 nine-list scrape statistics above.
-
-- [LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory](lifefuse-mem-lifecycle-aware-state-fusion.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12436)
-- [ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations](roam-robust-atomic-memory-organization.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.09778)
-- [MemSentry: A Framework for Detecting Persistent Memory Poisoning in Agentic AI](memsentry-persistent-memory-poisoning.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08747)
-- [MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging](memforest-eventtree-agent-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.08273) / [code](https://github.com/Celina-love-sweet/MemForest)
-- [AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems](aim-privacy-aware-interoperable-memory.md) — 2026-09 — seed — [arxiv](https://arxiv.org/abs/2609.12320)
-- [MUMBench](../benchmarks/mumbench.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.12320)
-- [MERIT](../benchmarks/merit.md) — 2026-09 — benchmark seed — [arxiv](https://arxiv.org/abs/2609.05441)
 
 ## 2026-06 manual radar additions
 
@@ -778,7 +874,7 @@ are not part of the 2026-05-19 nine-list scrape statistics above.
 - [Pack and Force Your Memory: Long-form and Consistent Video Generation](stubs/pack-and-force-your-memory-long-form-and-consistent-video.md) — 2025 — sources: [Tele] — _deferred_ — [arxiv](https://arxiv.org/abs/2510.01784)
 - [PARL-MT: Learning to Call Functions in Multi-Turn Conversation with Progress Awareness](stubs/parl-mt-learning-to-call-functions-in-multi-turn.md) — 2025 — sources: [C3I] — _deferred_ — [arxiv](https://arxiv.org/abs/2509.23206)
 - [Personaagent with graphrag: Community-aware knowledge graphs for personalized llm](stubs/personaagent-with-graphrag-community-aware-knowledge-graphs.md) — 2025 — sources: [DEEP] — _deferred_ — [arxiv](https://arxiv.org/abs/2511.17467)
-- [PersonaAgent: When Large Language Model Agents Meet Personalization at Test Time](stubs/personaagent-when-large-language-model-agents-meet.md) — 2025 — sources: [C3I] — _deferred_ — [arxiv](https://arxiv.org/abs/2506.06254)
+- [PersonaAgent: Bridging Memory and Action for Personalized LLM Agents](stubs/personaagent-when-large-language-model-agents-meet.md) — 2025 — sources: [C3I] — _deferred_ — [arxiv](https://arxiv.org/abs/2506.06254) / [acl](https://aclanthology.org/2026.findings-acl.1315/)
 - [PersonaFeedback: A Large-scale Human-annotated Benchmark For Personalization](stubs/personafeedback-a-large-scale-human-annotated-benchmark-for.md) — 2025 — sources: [IAAR] — _deferred_ — [arxiv](https://arxiv.org/abs/2506.12915)
 - [PolySkill: Learning Generalizable Skills Through Polymorphic Abstraction](stubs/polyskill-learning-generalizable-skills-through-polymorphic.md) — 2025 — sources: [AMW] — _deferred_ — [arxiv](https://arxiv.org/abs/2510.15863)
 - [Pre-Storage Reasoning for Episodic Memory: Shifting Inference Burden to Memory for Personalized Dialogue](stubs/pre-storage-reasoning-for-episodic-memory-shifting.md) — 2025 — sources: [IAAR] — _deferred_ — [arxiv](https://arxiv.org/abs/2509.10852)

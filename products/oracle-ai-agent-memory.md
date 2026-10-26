@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-10-12
 archive: archives/oracle-ai-agent-memory-overview.md
 ---
 
@@ -50,6 +50,23 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 不能写成独立复现或客观 superiority claim;后续若纳入 claims ledger,必须标记 actor
 与 Oracle 关联。
 
+## 3.3 2026-10 enterprise governance signal
+
+Oracle 2026-10-06 developer blog describes a 26.8 Agent Memory update published
+on 2026-09-22 that connects Agent Memory to Oracle Deep Data Security. The
+product-behavior delta is that the database can evaluate the signed-in user's
+identity token on every read and write instead of treating application-supplied
+user IDs as proof of identity. The same post frames enterprise agent memory
+around three audit questions: whose memory it is, who else can read or write it,
+and what memory the agent saw when it acted.
+
+Oracle's 2026-09-25 OCI Generative AI post is adjacent but useful context:
+project-scoped long-term memory uses `memory_subject_id` plus per-conversation
+`memory_access_policy` values such as `recall_and_store`, `recall_only`,
+`store_only`, and `none`. This appears in OCI Generative AI rather than the
+Oracle AI Database Agent Memory docs, so this note treats it as an Oracle
+managed-memory family signal rather than a fully merged product surface.
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Oracle 代表 "enterprise database becomes memory substrate" 路线。
@@ -75,6 +92,8 @@ memory(`add` / `search` workflows),用于保存用户偏好、规则和跨会话
 - Docs:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/about.html
 - Docs index:https://docs.oracle.com/en/database/oracle/agent-memory/26.4/agmea/index.html
 - Affiliated report:https://arxiv.org/abs/2607.13157
+- Enterprise governance blog:https://blogs.oracle.com/developers/building-the-enterprise-brain-what-changes-when-agent-memory-belongs-to-a-company
+- OCI Generative AI long-term memory:https://blogs.oracle.com/ai-and-datascience/oci-generative-ai-long-term-memory
 
 ---
 

@@ -1,6 +1,6 @@
 ---
+date: 2026-10-26
 title: Product discovery log — agent memory products
-date: 2026-09-14
 status: working-log
 language: zh-CN
 ---
@@ -95,6 +95,41 @@ language: zh-CN
 
 `n/a` 表示本轮子 agent 找到候选名,但主 agent 没有足够官方/源码证据支持深度入库。
 
+### 2026-09-28 verified product addition
+
+| name | canonical_url | category | evidence | decision | why_include | boundary |
+|---|---|---|---|---|---|---|
+| Alibaba Cloud Tablestore Memory Storage Service | https://www.alibabacloud.com/help/en/tablestore/memory-storage-service-sub-product-test/memory-storage-overview | Tablestore / AgentStorage managed memory | official overview, store/API, file, Dream docs dated 2026-09-24 | Tier A core | message extraction, structured/file memory, scoped retrieval, versioned files, consolidation | distinct from Bailian `memoryId` API, AgentLoop agent-space store, and Agent Run runtime binding; vendor performance claims not independent |
+
+The official pages disagree on whether `tenantId` is required for
+`SearchMemories`; this is an API verification gap, not evidence that omitting a
+tenant is safe. See [`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md).
+
+### 2026-09-28 verified existing-entry updates
+
+| entry | primary source | decision | bounded change |
+|---|---|---|---|
+| Redis Agent Memory | https://redis.github.io/agent-memory-server/ and https://redis.io/docs/latest/develop/ai/context-engine/agent-memory/ | update-existing | Redis Iris/Cloud is now the supported service; original OSS server is an unsupported research reference, not the production product |
+| Letta / Letta Code | https://github.com/letta-ai/letta-code/releases/tag/v0.33.0 and https://github.com/letta-ai/letta-code/releases/tag/v0.33.3 | update-existing | background memory upkeep/conflict repair and fresh-agent MemFS, limited to coding-agent release behavior |
+| Hindsight | https://github.com/vectorize-io/hindsight/releases/tag/v0.10.1 | update-existing | bank transfer, recall-budget enforcement, tenant file scoping, and coding-agent injection option; release claims only |
+| Alibaba Bailian Memory Library | https://help.aliyun.com/zh/model-studio/memory-library and https://help.aliyun.com/zh/model-studio/managed-agents-memory-store | update-existing / watchlist boundary | related Model Studio Managed Agents file-store API recorded separately from Bailian extraction/search; no extra product count pending family review |
+
+### 2026-09-28 discovery-only follow-up
+
+This weekly run did not promote new OSS/MCP memory products into the core
+product count. The following sources are recorded as follow-up candidates only;
+GitHub activity, MCP catalog placement, and self-reported benchmark tables are
+not product-quality or performance evidence.
+
+| name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
+|---|---|---|---|---|---|---|---|
+| xChuCx agent-memory | https://github.com/xChuCx/agent-memory | local/git-native MCP memory | repo + Glama schema signal | Tier B watchlist | MCP read/write/status tools for project memory | early OSS project; no independent quality evidence | GitHub, Glama |
+| mcp-memory-service | https://github.com/doobidoo/mcp-memory-service | shared memory backend | repo README | Tier B watchlist | REST + MCP + graph/consolidation surface | README claims are self-reported | GitHub |
+| Palinode | https://github.com/phasespace-labs/palinode | git-versioned Markdown memory | repo + MCP registry signal | Tier B watchlist | correction, rollback, and audit-friendly memory surface | release state and maturity need verification | GitHub, MCP registry |
+| m3-memory | https://github.com/skynetcmd/m3-memory | local-first multi-agent memory | repo + MCP registry signal | Tier B watchlist | local CLI core with optional MCP; multi-agent memory backend | LongMemEval-style numbers are self-reported | GitHub, MCP registry |
+| agent-memory leaderboard Cycle 2 | https://github.com/AML-memory/agent-memory-leaderboard | benchmark program | repo + official docs | benchmark watchlist | Cycle 2 opened 2026-09-20; useful evaluation-contract signal | private data/corpora and leaderboard claims need versioned protocol review | GitHub, official docs |
+| bradAGI awesome CLI coding agents | https://github.com/bradAGI/awesome-cli-coding-agents | discovery list | curated list | discovery only | surfaces Mnemoverse / pi-mem / pond / Nex style memory tools | list placement is not evidence | GitHub |
+
 ## 6. Reject / boundary decisions
 
 | pattern | decision | reason |
@@ -104,6 +139,7 @@ language: zh-CN
 | Generic agent frameworks | reject unless memory is first-class | AutoGen/CrewAI/LlamaIndex 等不能因为有 memory feature 就计入核心产品 |
 | Ordinary chat history | reject | 缺少 extraction/consolidation/retrieval/governance lifecycle |
 | Catalog-only MCP servers | reject or Tier B | 没有 canonical repo/docs 时不写产品笔记 |
+| Inaccessible benchmark repos | reject | Search snippets without reachable canonical repository or source page are not enough for catalog rows |
 
 ## 7. Reviewer synthesis
 
@@ -124,10 +160,11 @@ language: zh-CN
 | Google Memory Bank | [`../products/google-memory-bank.md`](../products/google-memory-bank.md) | [`../products/archives/google-memory-bank-overview.md`](../products/archives/google-memory-bank-overview.md) | official docs; endpoint GA update plus Preview / Pre-GA caveat |
 | Microsoft Foundry Memory | [`../products/microsoft-foundry-memory.md`](../products/microsoft-foundry-memory.md) | [`../products/archives/microsoft-foundry-memory-overview.md`](../products/archives/microsoft-foundry-memory-overview.md) | official docs; preview label |
 | Oracle AI Agent Memory | [`../products/oracle-ai-agent-memory.md`](../products/oracle-ai-agent-memory.md) | [`../products/archives/oracle-ai-agent-memory-overview.md`](../products/archives/oracle-ai-agent-memory-overview.md) | official docs; database substrate |
-| Redis AMS | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | [`../products/archives/redis-agent-memory-server-overview.md`](../products/archives/redis-agent-memory-server-overview.md) | official docs + repo |
+| Redis Agent Memory | [`../products/redis-agent-memory-server.md`](../products/redis-agent-memory-server.md) | [`../products/archives/redis-agent-memory-server-overview.md`](../products/archives/redis-agent-memory-server-overview.md) | current Redis Iris docs + historical OSS snapshot |
 | OpenViking | [`../products/openviking.md`](../products/openviking.md) | [`../products/archives/openviking-overview.md`](../products/archives/openviking-overview.md) | docs + repo; benchmark claims labeled |
 | PowerMem | [`../products/powermem.md`](../products/powermem.md) | [`../products/archives/powermem-overview.md`](../products/archives/powermem-overview.md) | repo + site; benchmark claims labeled |
 | Alibaba Bailian Memory | [`../products/alibaba-bailian-memory.md`](../products/alibaba-bailian-memory.md) | [`../products/archives/alibaba-bailian-memory-overview.md`](../products/archives/alibaba-bailian-memory-overview.md) | official Aliyun docs |
+| Alibaba Tablestore Memory Storage | [`../products/alibaba-tablestore-memory-storage.md`](../products/alibaba-tablestore-memory-storage.md) | [`../products/archives/alibaba-tablestore-memory-storage-overview.md`](../products/archives/alibaba-tablestore-memory-storage-overview.md) | official Tablestore docs; 2026-09-24 update |
 | Basic Memory | [`../products/basic-memory.md`](../products/basic-memory.md) | [`../products/archives/basic-memory-overview.md`](../products/archives/basic-memory-overview.md) | docs + repo; AGPL/local-first |
 | ByteRover | [`../products/byterover.md`](../products/byterover.md) | [`../products/archives/byterover-overview.md`](../products/archives/byterover-overview.md) | site + repo/docs; alias Cipher |
 | Honcho | [`../products/honcho.md`](../products/honcho.md) | [`../products/archives/honcho-overview.md`](../products/archives/honcho-overview.md) | repo + docs; vendor eval claims labeled |
@@ -146,7 +183,7 @@ language: zh-CN
   但先作为 Tier B 轻量索引,等待源码/许可/release health 补证。
 - 所有 vendor benchmark 或性能 claim 都按 vendor-claimed / 自报处理,不写成独立实证。
 
-## 10. 2026-07-06 weekly refresh delta
+## 2026-07-06 weekly refresh delta
 
 | Decision | Item | Source | Action |
 |---|---|---|---|
@@ -157,7 +194,7 @@ language: zh-CN
 | update-existing | Redis Agent Memory Server | Redis blog 2026-07-01 | 更新 `products/redis-agent-memory-server.md`;作为产品定位/实现建议,非 benchmark |
 | watchlist | Cloudflare Think harness | Cloudflare docs | 暂不拆产品;与 Cloudflare Agent Memory 有重叠,先观察是否形成独立 memory product |
 
-## 11. 2026-09-14 weekly refresh delta
+## 2026-09-14 weekly refresh delta
 
 | Decision | Item | Source | Action |
 |---|---|---|---|
@@ -166,3 +203,55 @@ language: zh-CN
 | watchlist | MemOS `v2.0.19` | official GitHub release | 只记录为 release-health signal;本轮没有足够 memory-specific behavior 证据升级产品笔记 |
 | watchlist | CreaMem / SafeMem / graph-based personalized memory | arXiv discovery | 保留观察;分别存在场景化、embodied 或 survey/overlap 边界,不重复入 core notes |
 | adjacent | BIO-MEMART / KVShareArena | arXiv discovery | 保持在 prompt/KV-cache 或 adjacent lane,不计入 durable agent-memory core |
+
+## 2026-09-21 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Hindsight | official GitHub release `v0.10.0` | 更新 `products/hindsight.md` 与 archive;记录 batched embeddings、tokenizer、retention、text-search、transfer 和 coding-agent import behavior |
+| update-existing | OpenViking | official releases `v0.4.21` / Python SDK `0.1.12` | 更新 `products/openviking.md` 与 archive;记录 Hermes、MiMo/MiMoCode、WorkBuddy、standalone provider 以及 storage/retrieval/MCP reliability |
+| watchlist | Mem0 `v2.1.0` | official GitHub release | 只记录 surface identity / telemetry signal;没有足够新的 memory semantics |
+| watchlist | TencentDB `v2.0.2-beta.2` / Cognee `v1.6.0` | official GitHub release metadata | release 可访问,但具体 memory behavior delta 未验证 |
+| watchlist | ReMe | official repo/docs and related paper | file-native memory integration relevant, but needs fuller source cross-check before product-note revision |
+| reject as source mismatch | Mem0 `v3.2.0` candidate | release listing points to `ts-v3.2.0` | canonical tag mismatch blocks promotion |
+
+## 2026-10-05 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Claude managed-agent memory store | official Anthropic release notes, 2026-09-28 | 更新 `products/claude-dreams.md`;记录 sandbox memory-store mount/sync,不延伸为 Dreams implementation claim |
+| update-existing | Letta | official dynamic-workflows post and Letta Code releases `v0.34.0`-`v0.34.4` | 更新 `products/letta.md`;记录 workflow memory pointers and scratchpad fix,不写成 benchmark evidence |
+| update-existing | Hindsight | official release `v0.10.2`, 2026-09-29 | 更新 `products/hindsight.md`;记录 scope-aware consolidation and concise extraction changes |
+| update-existing | OpenViking | official release `v0.4.23`, 2026-10-02 | 更新 `products/openviking.md`;记录 recall/rerank, BM25, decay, compilation, extraction-rule and ACL surfaces |
+| watchlist | Cognee `v1.6.2`, Honcho `v3.2.2`, Oracle memory announcement | official release or announcement pages with limited memory-specific detail | 保留观察,不改产品 note 或 benchmark claims |
+| adjacent | generic MCP catalogs and GitHub-only benchmark harnesses | discovery sources | 只用于发现候选,不作为性能、质量或成熟度证据 |
+
+## 2026-10-12 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Zep | official 2026-10-06 / 2026-10-08 changelog | 更新 `products/zep.md`;summary writeback、large-candidate rerank 和 identity-property duplicate fix 都是 product behavior |
+| update-existing | Oracle AI Agent Memory | Oracle 2026-10-06 developer blog;OCI Generative AI 2026-09-25 post as adjacent context | 更新 `products/oracle-ai-agent-memory.md`;Deep Data Security / identity-token enforcement 是 enterprise governance signal |
+| watchlist | Alibaba ANOLISA v1.0 | Alibaba Cloud Community 2026-10-10 | memory migration / isolation / masking 信号强,但产品边界与 Bailian/AgentLoop 不同,留待后续 note pass |
+| adjacent | AWS AgentCore Memory | AgentCore release notes | memory JSON/GovCloud deltas already covered by existing AWS note;current October notes were not new memory behavior |
+| watchlist | Redis agent memory workshop | Redis event page | 2026-10-12 时为未来活动；本轮未复核后续 recording 或 docs，仍不据活动推广产品能力 |
+| watchlist | MCP reference memory server | modelcontextprotocol/servers PR #5037 | upstream reference server added cross-process file locking for shared `MEMORY_FILE_PATH`;behavior signal only, still not a market product |
+
+## 2026-10-19 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Zep | official 2026-10-12/14 changelog | Update `products/zep.md`: v4 GA, scoped graph/search/MCP navigation, ingestion traces, idempotency, and integrity-preserving identity/entity behavior. |
+| update-existing | Graphiti | official GitHub `v0.31.0` release | Update `products/graphiti.md`: MCP SDK 2.x, requested-group routing, LLMRuntime routing, and upstream extraction/dedup/temporal fixes. |
+| adjacent | LangGraph checkpoint pruning | official GitHub `v1.2.16` release | Checkpoint persistence is not a documented LangMem durable-memory product delta. |
+| reject as core evidence | GitHub topics, catalog/MCP lists, and release-star signals | discovery-only sources | Retain as discovery paths; do not infer product maturity, quality, or benchmark performance. |
+
+## 2026-10-26 weekly refresh delta
+
+| Decision | Item | Source | Action |
+|---|---|---|---|
+| update-existing | Mem0 | official 2026-10-20 time-management guide | Update `products/mem0.md` with event-time writes, current/historical selection, expiry, time-aware recall, reference time, decay, and history as product-behavior evidence only. |
+| update-existing (consolidation follow-up) | Graphiti v0.31.2 | [official release](https://github.com/getzep/graphiti/releases/tag/v0.31.2) | Combined review completed on 2026-10-26: surviving-episode provenance, summary rebuild caveats, Neptune filtering, and reference-server trust boundary added to the existing product note. |
+| reject as core evidence | GitHub PRs, topics, and lists | discovery-only sources | No maturity, correctness, or performance conclusion from repository activity. |
+| update-existing (consolidation follow-up) | Hindsight v0.10.3 | [official release](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.3) | Separate read/write scopes, current-tag consolidation and document content-hash append conditions; no universal external-store CAS claim. |
+| update-existing (consolidation follow-up) | OpenViking v0.5.2 | [official release](https://github.com/volcengine/OpenViking/releases/tag/v0.5.2) | Compilation/history, WM versus LTM behavior, privacy tools and identity/SDK migration; no independent privacy or migration acceptance claim. |

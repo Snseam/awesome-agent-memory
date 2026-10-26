@@ -1,6 +1,6 @@
 ---
+date: 2026-10-26
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
-date: 2026-09-14
 status: seed
 language: zh-CN
 ---
@@ -20,7 +20,10 @@ language: zh-CN
 | 领域 | Benchmark | 主要测什么 | 当前证据状态 |
 |---|---|---|---|
 | 长程对话记忆 | [`LongMemEval`](../benchmarks/longmemeval.md) | information extraction / knowledge update / temporal / abstention | full,多产品自报引用 |
+| 环境经验记忆 | [`LongMemEval-V2`](../benchmarks/longmemeval-v2.md) | state / workflow / gotchas / premise awareness from agent trajectories | seed,与原 LongMemEval 不合并;origin protocol only |
 | 长程对话记忆 | [`LoCoMo`](../benchmarks/locomo.md) | factual recall / temporal / causal / multi-session | seed,产品横评最常见 |
+| 动态干扰 | [`MINTEval`](../benchmarks/minteval.md) | revised facts / multi-target aggregation under interference | seed,origin protocol only |
+| 隐式关联 | [`InMind`](../benchmarks/inmind.md) | query-to-memory knowledge bridge / retrieval routing | seed,125-task diagnostic;license pending |
 | 对话记忆规模曲线 | [`ConvoMem`](../benchmarks/convomem.md) | long-context vs block extraction vs RAG crossover | full,同时批评 LongMemEval/LoCoMo |
 | agent 记忆能力维度 | [`MemoryAgentBench`](../benchmarks/memoryagentbench.md) | retrieval / test-time learning / long-range / forgetting | seed,适合定义能力轴 |
 | shared-memory governance | [`GateMem`](../benchmarks/gatemem.md) | utility / access control / active forgetting | seed,6 月新增治理 benchmark |
@@ -37,6 +40,31 @@ language: zh-CN
 | baseline-control methodology | [`MemDelta`](../benchmarks/memdelta.md) | component-controlled memory-vs-RAG/full-context evaluation and write-path cost discipline | seed,methodology event logged; not an end-agent leaderboard |
 | multi-user memory governance | [`MUMBench`](../benchmarks/mumbench.md) | private/shared visibility plus retrieval, creation, update, and deletion | seed,origin protocol only; paper-origin metrics |
 | tool-use memory utility and cost | [`MERIT`](../benchmarks/merit.md) | downstream task success, updated-fact recall, leakage, corruption, and token/dollar cost | seed,origin protocol only; release artifacts unchecked |
+| action/cost Pareto frontier | [`DolphinBench`](../benchmarks/dolphinbench.md) | task completion / cost / latency / Pareto frontier | seed,Mem0-affiliated origin; not independent evidence |
+| memory-use calibration | [`MemCalib`](../benchmarks/memcalib.md) | overuse / underuse / retrieved-memory calibration | seed,origin protocol only; metrics not normalized |
+| shared-memory admission | [`Correlated Promotion Benchmark`](../benchmarks/correlated-promotion-benchmark.md) | source lineage / correlated evidence / false-belief containment | seed,origin protocol only; admission metrics not normalized |
+| stability-plasticity diagnostics | [`MemProbe Stability-Plasticity`](../benchmarks/memprobe-stability-plasticity.md) | interference / misinformation / consolidation / reconsolidation profiles | seed,origin protocol only; distinct from MEMPROBE hidden-state benchmark |
+| conversational intervention quality | [`TWIST`](../benchmarks/twist.md) | contradiction recall / hard-negative specificity / attribution / sensitive recall | seed,origin protocol only; proposed benchmark artifacts unchecked |
+| relationship-aware memory lifecycle | [`DyadMem`](../benchmarks/dyadmem.md) | capture, update, recall, deletion, and full-pipeline behavior across multi-session relationships | seed,origin protocol only; paper-origin metrics |
+| controlled graph retrieval | [`TAGGRAPH`](../benchmarks/taggraph.md) | graph retrieval versus lexical/raw-input baselines under controlled extraction | seed,origin protocol only; paper-origin metrics |
+| persistent-memory failure testing | [`U-Fuzz`](../benchmarks/ufuzz.md) | query/state mutation for confirmed memory-use failures through an output-only interface | seed,origin protocol only; paper-origin findings |
+| explicit memory unlearning | [`Bemula`](../benchmarks/bemula.md) | exact deletion / preservation / relearning / extraction resistance | seed,origin protocol only; paper results not normalized |
+| residual forgetting evidence | [`MemCut`](../benchmarks/memcut.md) | native vs residual recovery through disclosure trails | seed,origin protocol only; paper results not normalized |
+| continual learning through memory | [`FrontierMemory`](../benchmarks/frontiermemory.md) | whether trajectory-derived memory improves later memory-dependent tasks over a no-memory control | seed,Letta-origin protocol; gated corpus and affiliated leaderboard caveats |
+| multimodal lifecycle diagnosis | [`WorldMemArena`](../benchmarks/worldmemarena.md) | writing / maintenance / retrieval / use | seed,461 in v2 PDF/data card versus 400 in landing abstract; answer-only metrics differ |
+| accumulated state tracking | [`Ledger-QA`](../benchmarks/ledger-qa.md) | incremental state / aggregation / query-agnostic memory | seed,origin protocol; frozen test split and code licensing unresolved |
+
+## 2026-10-05 radar note
+
+The October radar adds three paper-origin benchmark protocols. They widen the
+evaluation surface without adding independent score evidence:
+
+- **DyadMem** adds relationship-aware capture/update/recall/deletion behavior at
+  multi-session scale.
+- **TAGGRAPH** makes graph retrieval comparisons more controlled by fixing the
+  base graph and retaining lexical/raw-input baselines.
+- **U-Fuzz** tests unsafe or incorrect use of persistent memory, complementing
+  answer-quality benchmarks with failure discovery.
 
 ## B. 初始交叉统计
 
@@ -47,7 +75,10 @@ language: zh-CN
 | Benchmark | Raw events | Notes |
 |---|---:|---|
 | LongMemEval | 5 | origin + Mem0 + Hindsight + Hy-Memory + ConvoMem critique counted by event type |
+| LongMemEval-V2 | 1 | origin protocol only; separate from original LongMemEval |
 | LoCoMo | 7 | origin + Mem0 paper/blog + Zep + Graphiti mention + MemoryOS + ConvoMem critique counted by event type |
+| MINTEval | 1 | origin protocol only; no independent result normalized |
+| InMind | 1 | origin diagnostic only; artifact/license caveats remain |
 | ConvoMem | 2 | origin + baseline comparison |
 | BEAM | 2 | Mem0 BEAM 1M / 10M vendor claims |
 | MemoryAgentBench | 2 | origin + survey mention |
@@ -65,6 +96,20 @@ language: zh-CN
 | MemDelta | 1 | methodology event logged; use for claims discipline, not direct benchmark ranking |
 | MUMBench | 1 | origin protocol logged; paper-reported operation metrics not normalized |
 | MERIT | 1 | origin protocol logged; paper-reported utility/cost results not normalized |
+| DolphinBench | 1 | origin protocol logged; Mem0-affiliated Pareto claims not independently reproduced |
+| MemCalib | 1 | origin protocol logged; memory-use calibration metrics not normalized |
+| Correlated Promotion Benchmark | 1 | origin protocol logged; shared-memory admission metrics not normalized |
+| MemProbe Stability-Plasticity | 1 | origin protocol logged; behavioral-profile diagnostics not normalized |
+| TWIST | 1 | origin protocol logged; intervention-quality tracks not normalized |
+| DyadMem | 1 | origin protocol logged; relationship-aware lifecycle metrics not normalized |
+| TAGGRAPH | 1 | origin protocol logged; graph-versus-lexical results not normalized |
+| U-Fuzz | 1 | origin protocol logged; failure findings not independently reproduced |
+| Bemula | 1 | origin protocol logged; explicit forget-request results not normalized |
+| MemCut | 1 | origin protocol logged; residual-recovery results not normalized |
+| FrontierMemory | 1 | origin protocol logged; affiliated leaderboard results not normalized |
+| WorldMemArena | 1 | origin protocol only; explicit source-count discrepancy |
+| Ledger-QA | 1 | origin protocol only; training data is not a verified frozen test split |
+
 
 ### B2. Evaluation uses / baseline comparisons
 
@@ -105,6 +150,7 @@ language: zh-CN
 |---|---:|---|
 | LoCoMo | 6 | Mem0 paper/blog, Zep, Graphiti foundation mention, MemoryOS, ConvoMem critique |
 | LongMemEval | 4 | Mem0 blog, Hindsight, Hy-Memory, ConvoMem critique |
+| LongMemEval-V2 / MINTEval / InMind | 0 | Origin protocols only; no outside reuse logged |
 | BEAM | 2 | Mem0 vendor claims, source note still candidate |
 | PersonaMem-v2 | 2 | Hy-Memory and TencentDB Agent Memory vendor claims |
 | MemoryAgentBench | 1 | Survey mention only |
@@ -112,6 +158,17 @@ language: zh-CN
 | MEMPROBE | 0 | Origin protocol only |
 | MUMBench | 0 | Origin protocol only; no outside reuse logged |
 | MERIT | 0 | Origin protocol only; no outside reuse logged |
+| DolphinBench | 0 | Origin protocol / affiliated launch only; no outside reuse logged |
+| MemCalib | 0 | Origin protocol only; no outside reuse logged |
+| Correlated Promotion Benchmark | 0 | Origin protocol only; no outside reuse logged |
+| MemProbe Stability-Plasticity | 0 | Origin protocol only; no outside reuse logged |
+| TWIST | 0 | Origin protocol only; no outside reuse logged |
+| Bemula | 0 | Origin protocol only; no outside reuse logged |
+| MemCut | 0 | Origin protocol only; no outside reuse logged |
+| FrontierMemory | 0 | Origin protocol only; no independent rerun logged |
+| DyadMem / TAGGRAPH / U-Fuzz | 0 each | No outside-origin reuse logged |
+| WorldMemArena / Ledger-QA | 0 each | No independent reproduction or outside-origin reuse logged |
+
 
 ### B7. Independent or methodological pressure
 
@@ -170,8 +227,24 @@ enters the catalog.
    a kernel priority.
 11. Upgrade MERIT if tool-use memory utility and cost accounting become a kernel
    evaluation priority.
-12. Add independent reproduction rows only when the source gives enough setup
+12. Upgrade DolphinBench only after separating paper protocol from Mem0
+   vendor-affiliated leaderboard claims.
+13. Upgrade MemCalib if memory-use calibration becomes part of acceptance.
+14. Upgrade Correlated Promotion Benchmark if shared-memory admission, source
+   lineage, or false-belief containment becomes a kernel priority.
+15. Upgrade MemProbe Stability-Plasticity if update-vs-preserve diagnostics
+   become a consolidation-policy priority; keep it distinct from MEMPROBE.
+16. Upgrade TWIST if conversational memory intervention and hard-negative
+   governance become product acceptance criteria.
+17. Add independent reproduction rows only when the source gives enough setup
    detail to distinguish reruns from marketing summaries.
+18. Normalize LongMemEval-V2 tiers/judge, MINTEval splits/license, and InMind
+    release artifacts before treating origin results as comparable evidence.
+
+19. Pin WorldMemArena data/adapter revisions and Ledger-QA generation/scoring before reproduction; distinguish data terms from code terms.
+20. For FrontierMemory, separate memory-generation repetitions from task attempts, preserve matched no-memory controls, and disclose unavailable hosted traces.
+
+The [proposed lifecycle evaluation plan](memory-lifecycle-evaluation.md) connects these protocols to scoped, temporal, forgetting, and downstream-utility tests. No proposed run is a completed ledger event.
 
 ## F. Maintenance Contract
 

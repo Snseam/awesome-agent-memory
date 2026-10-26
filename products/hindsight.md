@@ -13,7 +13,7 @@ memory_modules:
   - dream-consolidator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-10-26
 archive: archives/hindsight-overview.md
 ---
 
@@ -39,12 +39,52 @@ retain / recall / reflect 三类操作,也可以作为 wrapper 接到现有 LLM 
 - 可用于 conversational agents 与 open-ended autonomous task agents
 
 截至 2026-05-31 查询,GitHub metadata 约 15.2k stars / 857 forks,MIT
-license,最新 release 为 `v0.7.1`(2026-05-28)。
+license。
 
 2026-08-03 周更复核到官方 GitHub release `v0.8.6`(2026-07-29)。该 release
 包括 `list_memory_units` 按 ingest age 过滤(`created_before`)以及多篇 memory
 positioning blog/docs 更新。这里仅记录为产品行为与 API surface 更新;Hindsight
 LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立复现。
+
+2026-09-21 周更复核到官方 GitHub release `v0.10.0`(2026-09-14)。该 release
+补充批量 document embedding、`o200k_base` tokenizer、oversized item retention
+改进、per-bank text-search 开关、knowledge-base export，以及 coding-agent
+import 修复。这里仍只记录官方 product behavior;没有把 release 或 README
+数字解释成独立 benchmark 证据。
+
+2026-09-28 复核 `v0.10.1`(2026-09-21) 官方 release:新增统一 bank
+export/import 和 clone API;reflect 修复 recall/token budget 约束;修复 tenant-scoped
+file keys 与 bank 删除时文件清理;coding-agent 首次注入可在 reflect/pages/recall
+间选择。这些是发布说明中的产品行为/修复,尚未做运行复测或独立质量评估。
+
+2026-09-29 官方 release `v0.10.2` 增加按 scope 选择 consolidation strategy、
+面向 coding agent 的可配置/同步 concise extraction、consolidation API typing
+以及 store/bank 修复。这里记录的是 release surface 与操作边界,不把 release
+说明升级成独立质量证据。
+
+### 2.1 2026-10-08 v0.10.3 scope and concurrency refresh
+
+The official v0.10.3 release (sources checked 2026-10-26) extends shared-bank
+governance with separate `OperationValidatorExtension` hooks for readable tag
+groups and writable tag patterns. Read scopes are combined with the caller's
+filters, while write scopes restrict tags on retained or edited content.
+Bank-wide operations still depend on bank-level validators; the hooks do not
+remove the need for a host authorization policy.
+
+Consolidation updates now merge the target observation's current tags rather
+than an earlier recall snapshot. The upstream change explicitly does not add
+atomic compare-and-swap to external-store interfaces. For store-owned document
+appends, a separate change replaces a bank-wide watermark condition with the
+document's expected content hash and retries a lost append race.
+
+These are upstream product-behavior and correctness changes. No local server,
+provider, database, or independent benchmark reproduction was run for this
+note.
+
+Sources: [v0.10.3 release](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.3),
+[tag scopes #5048](https://github.com/vectorize-io/hindsight/pull/5048),
+[concurrent tag edits #4897](https://github.com/vectorize-io/hindsight/pull/4897),
+[document append condition #5389](https://github.com/vectorize-io/hindsight/pull/5389).
 
 ## 3. 关键技术选择
 
@@ -92,6 +132,9 @@ LongMemEval 相关数字仍按 vendor/affiliated claim 处理,不升级为独立
 - Docs:https://hindsight.vectorize.io/
 - Release:https://github.com/vectorize-io/hindsight/releases/tag/v0.7.1
 - Release v0.8.6:https://github.com/vectorize-io/hindsight/releases/tag/v0.8.6
+- Release v0.10.0:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.0
+- Release v0.10.1:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.1
+- Release v0.10.2:https://github.com/vectorize-io/hindsight/releases/tag/v0.10.2
 
 ---
 

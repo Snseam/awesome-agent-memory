@@ -12,7 +12,7 @@ memory_modules:
   - parser-chunker
   - memorydiff-generator
 status: full
-last_revised: 2026-09-14
+last_revised: 2026-10-26
 archive: archives/graphiti-overview.md
 ---
 
@@ -61,6 +61,40 @@ isolation, and avoids a full Entity scan during FalkorDB edge full-text search.
 These are upstream release signals about product behavior and correctness, not
 independent quality or performance evidence.
 
+### 3.3 2026-10 v0.31.0 refresh
+
+The official v0.31.0 release upgrades the MCP SDK to 2.x, routes MCP tool calls
+to the requested `group_id` graph, introduces LLMRuntime prompt/model routing,
+and brings extraction, deduplication, and temporal fixes upstream from Zep's
+fork. It also makes C2 combined extraction the default and adds node/edge
+dedupe clients. These are upstream release-behavior and tenant-correctness
+signals only; no independent performance or reliability conclusion follows.
+
+### 3.4 2026-10 v0.31.2 lifecycle and server boundaries
+
+The official v0.31.2 release (2026-10-20; sources checked 2026-10-26) adds
+changes beyond v0.31.0 routing. Removing an episode now retains facts supported
+by surviving episodes, removes the deleted episode from their provenance, and
+rebuilds surviving entity summaries. Rebuild failure retains the old summary
+and is logged; entity attributes are not rebuilt. This does not establish that
+all derived traces of deleted content are erased.
+
+Neptune full-text queries now apply group filters when loading search hits.
+Because filtering follows OpenSearch top-hit selection, a group-scoped query
+can still return fewer than the requested limit. The upstream PR reports query
+and parameter tests, not a live Neptune/OpenSearch integration run.
+
+The reference MCP and REST servers default to localhost and explicitly provide
+no caller authentication or authorization. `group_id` routing is not an access
+control boundary: applications must enforce caller permissions and decide which
+episodes to ingest. These are upstream product-behavior and security-boundary
+statements; no local server or independent reliability evaluation was run.
+
+Sources: [v0.31.2 release](https://github.com/getzep/graphiti/releases/tag/v0.31.2),
+[episode deletion #2025](https://github.com/getzep/graphiti/pull/2025),
+[Neptune filtering #2031](https://github.com/getzep/graphiti/pull/2031),
+[versioned security policy](https://github.com/getzep/graphiti/blob/v0.31.2/SECURITY.md).
+
 ## 4. 决策相关性 / Decision relevance
 
 - **对照点**:Graphiti 是目前最直接可比的"开源 memory kernel"。它和本仓
@@ -106,6 +140,7 @@ independent quality or performance evidence.
 - archive: [`archives/graphiti-overview.md`](archives/graphiti-overview.md)
 - 配套笔记:[`zep.md`](zep.md)(hosted 产品)
 - 仓库:https://github.com/getzep/graphiti
+- v0.31.0 release: https://github.com/getzep/graphiti/releases/tag/v0.31.0
 
 ---
 

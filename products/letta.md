@@ -10,7 +10,7 @@ evidence_level: medium
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-08-31
+last_revised: 2026-10-05
 ---
 
 # Letta(原 MemGPT)
@@ -61,6 +61,36 @@ inside a coding agent. It should stay separate from Letta/MemGPT architecture
 claims and from any benchmark-performance claim.
 
 > 来源:https://github.com/letta-ai/letta-code/releases
+
+## 2026-09 Letta Code memory upkeep
+
+Letta Code `v0.33.0` (2026-09-23) release notes say incidental memory upkeep
+and post-turn Git conflict repair now run through a background worker.
+`v0.33.3` (2026-09-27) adds root MemFS for fresh local agents and keeps invalid
+history repair in the background. These are coding-agent memory lifecycle and
+operational signals, not evidence that Letta server memory or benchmark scores
+changed. The release notes do not specify the success rate of background repair.
+
+> 来源:[v0.33.0](https://github.com/letta-ai/letta-code/releases/tag/v0.33.0),
+> [v0.33.3](https://github.com/letta-ai/letta-code/releases/tag/v0.33.3)
+
+## 2026-09/10 Letta Code workflow and memory surface update
+
+Letta's dynamic-workflows post describes a workflow where an orchestrator can
+fan out stateless subagents while passing memory or external-memory pointers,
+and where `/init` can inspect local files and prior coding-agent sessions.
+This makes memory context an explicit workflow input rather than an implicit
+property of every worker.
+
+Letta Code releases `v0.34.0` through `v0.34.4` then changed the Memory Palace
+surface and fixed a case where memory subagents could not write their scratchpad.
+These are official product and release signals; they do not establish a
+benchmark advantage or a general memory architecture claim.
+
+> Dynamic workflows: https://www.letta.com/blog/dynamic-workflows/
+>
+> Releases: https://github.com/letta-ai/letta-code/releases/tag/v0.34.0
+> and https://github.com/letta-ai/letta-code/releases/tag/v0.34.4
 
 ## Notes
 
