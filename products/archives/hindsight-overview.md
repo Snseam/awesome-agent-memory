@@ -1,6 +1,8 @@
 ---
 source_url: https://github.com/vectorize-io/hindsight
 fetched: 2026-05-31
+release_snapshot_added: 2026-09-21
+authored_update: 2026-10-26
 purpose: research backup; canonical is the URL above
 ---
 
@@ -36,3 +38,30 @@ The README presents LongMemEval benchmark claims and says some results were
 reproduced by research collaborators. This snapshot still treats the comparison
 table as project-reported evidence unless the reproduction artifact is reviewed
 directly.
+
+## 2026-09-21 release snapshot
+
+This dated addition supplements the original snapshot; earlier sections retain
+the original fetch date and were not recaptured in this release pass.
+
+The official `v0.10.0` release adds batched document embeddings, the
+`o200k_base` tokenizer, improved handling for oversized retained items, a
+per-bank text-search toggle, knowledge-base export in transfers, and
+coding-agent import fixes. These are product-behavior signals, not independent
+quality evidence.
+
+Source: https://github.com/vectorize-io/hindsight/releases/tag/v0.10.0
+
+## 2026-10-26 authored release update
+
+The v0.10.3 release and its linked upstream changes separate readable tag
+scopes from writable tag patterns, preserve current tags during consolidation,
+and use a per-document content-hash condition for store-owned appends. The
+external-store interface does not gain a general atomic CAS guarantee. This is
+an authored summary of official behavior, not a new capture of the original
+README or an independently tested concurrency result.
+
+Sources: [release](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.3),
+[tag scopes](https://github.com/vectorize-io/hindsight/pull/5048),
+[consolidation tags](https://github.com/vectorize-io/hindsight/pull/4897),
+[append condition](https://github.com/vectorize-io/hindsight/pull/5389).

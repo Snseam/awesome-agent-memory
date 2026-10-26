@@ -1,6 +1,6 @@
 ---
 title: Benchmark catalog — agent-memory evaluation protocols
-date: 2026-06-24
+date: 2026-10-26
 status: seed
 language: zh-CN
 ---
@@ -29,12 +29,18 @@ official repository, dataset card, or independent reproduction.
 | Benchmark | Status | Origin | Task family | Capabilities | Primary local anchor | Claim coverage |
 |---|---|---|---|---|---|---|
 | LongMemEval | full | paper-origin | long-term chat memory | retrieval / update / temporal / abstention | [`longmemeval.md`](longmemeval.md) | yes |
+| LongMemEval-V2 | seed | paper-origin | customized environment experience | state / workflow / gotchas / premise awareness | [`longmemeval-v2.md`](longmemeval-v2.md) | origin only |
 | LoCoMo | seed | paper-origin | very long-term conversational memory | retrieval / temporal / causal | [`locomo.md`](locomo.md) | yes |
+| MINTEval | seed | paper-origin | evolving long-horizon memory | revised facts / interference / aggregation | [`minteval.md`](minteval.md) | origin only |
+| InMind | seed | paper-origin | implicit-association memory | indirect retrieval / knowledge bridge / routing | [`inmind.md`](inmind.md) | origin only |
 | ConvoMem | full | paper-origin | conversational memory scaling | multi-evidence / preference / abstention | [`convomem.md`](convomem.md) | yes |
 | MemoryAgentBench | seed | paper-origin | incremental multi-turn agent memory | retrieval / learning / long-range / forgetting | [`memoryagentbench.md`](memoryagentbench.md) | yes |
 | GateMem | seed | paper-origin | multi-principal shared memory governance | utility / access control / active forgetting | [`gatemem.md`](gatemem.md) | backlog |
 | MUMBench | seed | paper-origin | multi-user memory operations | visibility / retrieval / creation / update / deletion | [`mumbench.md`](mumbench.md) | origin only |
 | StructMemEval | seed | paper-origin | structured memory organization | structure selection / state tracking / task-specific organization | [`structmemeval.md`](structmemeval.md) | yes |
+| DyadMem | seed | paper-origin | relationship-aware multi-session memory | capture / update / recall / deletion / full pipeline | [`dyadmem.md`](dyadmem.md) | origin only |
+| TAGGRAPH | seed | paper-origin | controlled graph memory retrieval | graph retrieval / extraction quality / baseline control | [`taggraph.md`](taggraph.md) | origin only |
+| U-Fuzz | seed | paper-origin | persistent memory failure testing | memory-use failures / query mutation / state mutation | [`ufuzz.md`](ufuzz.md) | origin only |
 | BEAM | candidate | paper-origin | million-token memory scale | long-scale recall / temporal degradation | [`beam.md`](beam.md) | yes |
 | MemoryRewardBench | candidate | paper-origin | reward models for memory management | memory-quality judging / reward-model calibration | [`memoryrewardbench.md`](memoryrewardbench.md) | yes |
 | Fact-based memory vs long-context | candidate | paper-origin | memory-vs-context cost analysis | cost / accuracy / break-even turns | [`fact-based-memory-vs-long-context.md`](fact-based-memory-vs-long-context.md) | yes |
@@ -51,6 +57,16 @@ official repository, dataset card, or independent reproduction.
 | MemLeak | seed | paper-origin | multimodal deletion leakage | deletion compliance / provenance / residual image leakage | [`memleak.md`](memleak.md) | yes |
 | MemDelta | seed | paper-origin | memory-evaluation baseline control | component delta / model-family sensitivity / write-path cost | [`memdelta.md`](memdelta.md) | yes |
 | MERIT | seed | paper-origin | instrumented tool-use memory utility | task success / recall / leakage / cost | [`merit.md`](merit.md) | origin only |
+| DolphinBench | seed | paper-origin / affiliated | agent-memory Pareto benchmark | task completion / cost / latency | [`dolphinbench.md`](dolphinbench.md) | origin only |
+| MemCalib | seed | paper-origin | memory-use calibration | overuse / underuse / retrieved-memory calibration | [`memcalib.md`](memcalib.md) | origin only |
+| Correlated Promotion Benchmark | seed | paper-origin | shared-memory admission | source lineage / correlated evidence / false-belief containment | [`correlated-promotion-benchmark.md`](correlated-promotion-benchmark.md) | origin only |
+| MemProbe Stability-Plasticity | seed | paper-origin | cognitive memory diagnostics | interference / misinformation / consolidation / reconsolidation | [`memprobe-stability-plasticity.md`](memprobe-stability-plasticity.md) | origin only |
+| TWIST | seed | paper-origin | conversational memory intervention | contradiction detection / hard negatives / sensitive recall | [`twist.md`](twist.md) | origin only |
+| Bemula | seed | paper-origin | explicit memory unlearning | exact deletion / preservation / relearning / extraction resistance | [`bemula.md`](bemula.md) | origin only |
+| MemCut | seed | paper-origin | residual disclosure after forgetting | native / residual recovery | [`memcut.md`](memcut.md) | origin only |
+| FrontierMemory | seed | product-research-origin | trajectory-to-memory downstream utility | procedural memory / continual learning / no-memory control | [`frontiermemory.md`](frontiermemory.md) | origin only |
+| WorldMemArena | seed | paper-origin | multimodal memory lifecycle | writing / maintenance / retrieval / use | [`worldmemarena.md`](worldmemarena.md) | origin only |
+| Ledger-QA | seed | paper-origin | accumulated state tracking | incremental updates / aggregation / memory reuse | [`ledger-qa.md`](ledger-qa.md) | origin only |
 
 ## Evidence Ledgers
 

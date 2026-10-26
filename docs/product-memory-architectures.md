@@ -51,7 +51,9 @@ flowchart TB
     Managed --> Cloudflare["Cloudflare Agent Memory"]
     Managed --> Oracle["Oracle AI Agent Memory"]
     Managed --> Alibaba["Alibaba Bailian Memory"]
+    Managed --> AlibabaTablestore["Alibaba Tablestore Memory Storage"]
     Managed --> Databricks["Databricks Managed Agent Memory"]
+    Managed --> RedisManaged["Redis Agent Memory (Iris)"]
     Personal --> OpenAI["OpenAI Memory"]
     Personal --> Claude["Claude Dreams / memory"]
     Personal --> PersonalAI["Personal AI"]
@@ -146,7 +148,7 @@ flowchart TB
 | Field | Synthesis |
 |---|---|
 | architecture pattern | sidecar memory substrate: IDE/agent hooks capture work, MCP exposes recall/write/delete/export tools, local files or DB store state |
-| products mapped | Basic Memory、Tree Ring Memory、ByteRover、Redis Agent Memory Server、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory、memsearch、memU、Memori |
+| products mapped | Basic Memory、Tree Ring Memory、ByteRover、Redis Agent Memory Server (OSS reference)、PowerMem、Honcho、Supermemory MCP、Pieces LTM、ClawMem、agentmemory、memsearch、memU、Memori |
 | common data flow | IDE/session hooks -> extraction -> Markdown/context tree/local DB -> hybrid index -> MCP recall -> session briefing/context injection |
 | memory types | project decisions、file history、debug episodes、preferences、skills、timeline、audit trail |
 | retrieval/consolidation strategy | vector + BM25 + graph/timeline;session stop 或 compaction 前做总结,重复模式提升为 skills |
@@ -185,7 +187,7 @@ flowchart LR
 | Field | Synthesis |
 |---|---|
 | architecture pattern | 云平台提供 managed memory store + identity scope + retrieval tools;开发者配置 scope、TTL、strategy、权限 |
-| products mapped | AWS AgentCore Memory、Google Memory Bank、Microsoft Foundry Memory、Cloudflare Agent Memory、Oracle AI Agent Memory、Alibaba Bailian Memory、Databricks Managed Agent Memory |
+| products mapped | AWS AgentCore Memory、Google Memory Bank、Microsoft Foundry Memory、Cloudflare Agent Memory、Oracle AI Agent Memory、Alibaba Bailian Memory、Alibaba Tablestore Memory Storage、Databricks Managed Agent Memory、Redis Agent Memory (Iris) |
 | common data flow | app/agent events -> managed extraction -> scoped store -> semantic/search retrieval -> prompt/tool injection -> cloud governance |
 | memory types | session events、user profile、facts、chat summaries、procedural memory、thread context cards |
 | retrieval/consolidation strategy | 平台内置抽取/合并/过期;部分平台暴露 strategy、TTL、CRUD 或 provider abstraction |

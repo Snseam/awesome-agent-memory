@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "yaml"
+require "date"
 require "English"
 require "set"
 require "shellwords"
@@ -168,7 +169,7 @@ def scan_conflict_markers
 end
 
 def check_yaml
-  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
 end
 
 def check_counts
@@ -198,6 +199,7 @@ def check_counts
       ["paper stub count", /#{count_stubs}\s+stubs\b/],
       ["product note count", /#{count_product_notes}\s+notes\b/],
       ["product archive count", /#{count_product_archives}\s+snapshots\b/],
+      ["product archive tree count", /#{count_product_archives}\s+markdown snapshots\b/],
       ["benchmark catalog row count", /#{count_benchmark_rows}\s+catalog rows\b/],
       ["benchmark tree row count", /#{count_benchmark_rows}\s+benchmark catalog rows\b/]
     ],
@@ -207,6 +209,7 @@ def check_counts
       ["paper stub count", /#{count_stubs}\s+个 stub\b/],
       ["product note count", /#{count_product_notes}\s+个笔记/],
       ["product archive count", /#{count_product_archives}\s+个快照/],
+      ["product archive tree count", /#{count_product_archives}\s+个记忆产品 canonical 页面 markdown 快照/],
       ["benchmark catalog row count", /#{count_benchmark_rows}\s+个 catalog 行/],
       ["benchmark tree row count", /#{count_benchmark_rows}\s+个 benchmark catalog 行/]
     ]
@@ -226,7 +229,7 @@ def extract_front_matter_value(path, key)
 end
 
 def check_duplicates
-  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"))
+  claims = YAML.load_file(File.join(ROOT, "benchmarks", "claims", "claims.yaml"), permitted_classes: [Date])
   event_ids = claims.fetch("events").map { |event| event.fetch("event_id") }
   dup_events = event_ids.group_by(&:itself).select { |_id, rows| rows.size > 1 }
   assert(dup_events.empty?, "duplicate benchmark claim event_ids: #{dup_events.keys.join(", ")}")
@@ -268,6 +271,63 @@ def check_duplicates
   assert(dup_product_ids.empty?, "duplicate product ids/slugs: #{dup_product_ids.keys.join(", ")}")
 end
 
+def front_matter(path)
+  body = File.read(path)
+  match = body.match(/\A---\n(.*?)\n---/m)
+  return {} unless match
+
+  metadata = {}
+  current_key = nil
+  match[1].each_line do |line|
+    line = line.chomp
+    if (key_value = line.match(/\A([A-Za-z0-9_-]+):\s*(.*)\z/))
+      current_key = key_value[1]
+      value = key_value[2].strip
+      metadata[current_key] = value.empty? || value == "[]" ? [] : value
+    elsif current_key && line.match?(/\A\s+-\s+/)
+      metadata[current_key] = [] unless metadata[current_key].is_a?(Array)
+      metadata[current_key] << line.sub(/\A\s+-\s+/, "").strip
+    else
+      current_key = nil unless line.match?(/\A\s/)
+    end
+  end
+  metadata
+end
+
+def check_benchmark_alias_collisions
+  benchmark_files = files_in_dir("benchmarks", "benchmarks/*.md")
+                    .reject { |path| File.basename(path) == "_template.md" }
+  aliases = benchmark_files.each_with_object([]) do |path, rows|
+    metadata = front_matter(path)
+    names = [metadata["benchmark_id"], metadata["name"], metadata["title"], *Array(metadata["aliases"])]
+    names.compact.map(&:to_s).map(&:strip).reject(&:empty?).each do |name|
+      normalized = name.sub(/\A(["'])(.*)\1\z/, '\2').downcase
+      rows << [normalized, name, path]
+    end
+  end
+
+  dup_aliases = aliases.group_by(&:first).select { |_alias, rows| rows.map(&:last).uniq.size > 1 }
+  offenders = dup_aliases.values.flat_map do |rows|
+    rows.map { |_normalized, name, path| "#{name} -> #{path.delete_prefix("#{ROOT}/")}" }
+  end
+  assert(offenders.empty?, "duplicate benchmark aliases/names:\n#{offenders.join("\n")}")
+end
+
+def check_paper_note_identities
+  ids = paper_note_files.filter_map do |path|
+    id = extract_front_matter_value(path, "arxiv_id")
+    next unless id
+
+    normalized = id.delete('"\'').sub(/v\d+\z/, "").downcase
+    [normalized, path]
+  end
+  duplicates = ids.group_by(&:first).select { |_id, rows| rows.size > 1 }
+  offenders = duplicates.flat_map do |id, rows|
+    rows.map { |_value, path| "#{id} -> #{path.delete_prefix("#{ROOT}/")}" }
+  end
+  assert(duplicates.empty?, "duplicate canonical paper arxiv_ids:\n#{offenders.join("\n")}")
+end
+
 def check_local_markdown_links
   files = repo_files(
     "*.md",
@@ -294,13 +354,17 @@ def check_local_markdown_links
   assert(missing.empty?, "missing local markdown links:\n#{missing.join("\n")}")
 end
 
-scan_conflict_markers
-check_yaml
-check_paper_note_statuses
-check_counts
-check_duplicates
-check_local_markdown_links
+if $PROGRAM_NAME == __FILE__
+  scan_conflict_markers
+  check_yaml
+  check_paper_note_statuses
+  check_counts
+  check_duplicates
+  check_paper_note_identities
+  check_benchmark_alias_collisions
+  check_local_markdown_links
 
-puts "verify_memory_refresh passed"
-status_counts = paper_status_counts
-puts "papers=#{paper_total_from_index} pdfs=#{count_pdfs} stubs=#{count_stubs} full_notes=#{status_counts.fetch("full", 0)} seed_notes=#{status_counts.fetch("seed", 0)} products=#{count_product_notes} product_archives=#{count_product_archives} benchmarks=#{count_benchmark_rows}"
+  puts "verify_memory_refresh passed"
+  status_counts = paper_status_counts
+  puts "papers=#{paper_total_from_index} pdfs=#{count_pdfs} stubs=#{count_stubs} full_notes=#{status_counts.fetch("full", 0)} seed_notes=#{status_counts.fetch("seed", 0)} products=#{count_product_notes} product_archives=#{count_product_archives} benchmarks=#{count_benchmark_rows}"
+end

@@ -13,10 +13,11 @@ code_available: check
 license: check
 memory_modules:
   - policy-privacy
+  - audit-ui
   - memorydiff-generator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-07-27
+last_revised: 2026-10-26
 urls:
   - https://arxiv.org/abs/2607.05029
 ---
@@ -40,6 +41,8 @@ and defense rates are author-reported results under the paper's setup.
 
 - `policy-privacy`:memory stores should classify trace/rationale memory
   separately from user facts and apply stricter provenance checks.
+- `audit-ui`:operators need to inspect why a rationale was stored and whether it
+  came from a trusted execution path.
 - `memorydiff-generator`:candidate reasoning-memory writes need source and
   authorship validation before promotion.
 - `evaluator-benchmark`:security evals should include rationale poisoning, not
