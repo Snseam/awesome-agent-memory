@@ -1070,3 +1070,84 @@ events:
       - https://aclanthology.org/2026.emnlp-main.1299/
       - https://arxiv.org/html/2602.18493v2
     extract_confidence: medium
+
+  - event_id: collabmem-origin-2026
+    benchmark_id: collabmem
+    source_kind: paper
+    source_id: benchmarks/collabmem.md
+    source_date: 2026-10
+    actor: COLLABMEM authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Collaborative multi-agent memory operations covering sharing, access control, routing, provenance, conflict resolution, and retention."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; no normalized scores or independent reproduction."
+    evidence_refs:
+      - benchmarks/collabmem.md
+      - https://aclanthology.org/2026.emnlp-main.1194/
+    extract_confidence: medium
+  - event_id: timlmembench-origin-2026
+    benchmark_id: timlmembench
+    source_kind: paper
+    source_id: benchmarks/timlmembench.md
+    source_date: 2026-10
+    actor: TimlMemBench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Governed dialogue memory decisions covering revocation, supersession, privacy scope, provenance, activation, and restraint."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; exact splits and artifact terms require review."
+    evidence_refs:
+      - benchmarks/timlmembench.md
+      - https://aclanthology.org/2026.findings-emnlp.507/
+    extract_confidence: medium
+  - event_id: memfail-origin-2026
+    benchmark_id: memfail
+    source_kind: paper
+    source_id: benchmarks/memfail.md
+    source_date: 2026-10
+    actor: MemFail authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Adversarial diagnostic evaluation across memory summarization, storage, and retrieval failures."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; no normalized scores or independent reproduction."
+    evidence_refs:
+      - benchmarks/memfail.md
+      - https://aclanthology.org/2026.findings-emnlp.779/
+    extract_confidence: medium
+  - event_id: wk-drift-origin-2026
+    benchmark_id: wk-drift
+    source_kind: paper
+    source_id: benchmarks/wk-drift.md
+    source_date: 2026-11
+    actor: WK-Drift authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Procedural memory maintenance under world knowledge drift, measuring stale-memory handling, update cost, and recovery latency."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "Origin protocol only; full drift construction and artifact terms require review."
+    evidence_refs:
+      - benchmarks/wk-drift.md
+      - https://aclanthology.org/2026.findings-aacl.140/
+    extract_confidence: medium

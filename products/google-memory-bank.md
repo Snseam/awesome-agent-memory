@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-11-16
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -94,3 +94,13 @@ memory。该更新只支持"Memory Bank 提供可配置托管 memory 与 runtime
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
 > [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
+
+
+## 3.4 2026-11 release-note refresh
+
+Google's 2026-11-06 release notes describe a dedicated Memory Bank console with
+memory creation, inspection, filtering, editing, deletion, revisions, schemas,
+extraction controls, retention TTL, and agent linking. These are official
+product-behavior signals for lifecycle and governance surfaces; they do not
+establish extraction quality, retrieval quality, or independent benchmark
+performance.

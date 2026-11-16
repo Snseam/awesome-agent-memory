@@ -15,12 +15,13 @@ decide what to read before opening the paper index or the product notes.
 4. [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) —
    Codex weekly refresh runbook for papers, products, GitHub discovery, and
    benchmarks.
-5. [`memory-radar-consolidation-2026-10-26.md`](memory-radar-consolidation-2026-10-26.md) — latest current-source
+5. [`memory-radar-2026-11-16.md`](memory-radar-2026-11-16.md) — latest weekly refresh
+6. [`memory-radar-consolidation-2026-10-26.md`](memory-radar-consolidation-2026-10-26.md) — latest current-source
    refresh across papers, products, GitHub projects, and reviewer decisions.
-6. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
+7. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
    agent-memory papers, algorithms, code paths, and products that reduce token,
    latency, or runtime cost.
-7. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
+8. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
    capability, usage type, and evidence independence.
 8. [`products-landscape.md`](products-landscape.md) — product map by domain and
    audience.
@@ -49,6 +50,7 @@ decide what to read before opening the paper index or the product notes.
 |---|---|
 | [`research-radar.md`](research-radar.md) | Generic Radar loop: paper/product/benchmark -> ResearchItem or BenchmarkItem -> ImpactReport -> sandbox -> ADR. |
 | [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) | Weekly Codex automation contract for source search, subagent review, verification, and PR output. |
+| [`memory-radar-2026-11-16.md`](memory-radar-2026-11-16.md) | Latest weekly primary-source refresh and evidence boundaries. |
 | [`memory-radar-consolidation-2026-10-26.md`](memory-radar-consolidation-2026-10-26.md) | Six-week consolidation, duplicate decisions, source repairs, and current evidence boundaries. |
 | [`memory-lifecycle-evaluation.md`](memory-lifecycle-evaluation.md) | Proposed experiments for scope, temporal state, forgetting, downstream utility, and migration; not executed. |
 | [`memory-radar-2026-10-26.md`](memory-radar-2026-10-26.md) | 2026-10-26 historical weekly source and inclusion decisions. |

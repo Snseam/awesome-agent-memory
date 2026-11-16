@@ -68,6 +68,11 @@ official repository, dataset card, or independent reproduction.
 | WorldMemArena | seed | paper-origin | multimodal memory lifecycle | writing / maintenance / retrieval / use | [`worldmemarena.md`](worldmemarena.md) | origin only |
 | Ledger-QA | seed | paper-origin | accumulated state tracking | incremental updates / aggregation / memory reuse | [`ledger-qa.md`](ledger-qa.md) | origin only |
 
+| COLLABMEM | seed | paper-origin | collaborative multi-agent memory | sharing / access / provenance / conflict | [`collabmem.md`](collabmem.md) | origin only |
+| TimlMemBench | seed | paper-origin | governed dialogue memory | revocation / supersession / privacy / restraint | [`timlmembench.md`](timlmembench.md) | origin only |
+| MemFail | seed | paper-origin | memory pipeline failure diagnosis | summarization / storage / retrieval / adversarial stress | [`memfail.md`](memfail.md) | origin only |
+| WK-Drift | seed | paper-origin | procedural memory maintenance | stale-memory detection / update cost / recovery | [`wk-drift.md`](wk-drift.md) | origin only |
+
 ## Evidence Ledgers
 
 - [`claims/index.md`](claims/index.md) explains the usage-event schema and

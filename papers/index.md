@@ -19,6 +19,16 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-11-16 weekly radar additions
+
+These entries were added from primary arXiv pages during the 2026-11-16 weekly
+refresh. They are seed notes; reported results remain paper-origin evidence.
+
+- [TrawMem: Reframing Agent Memory as Task-Oriented Role-Adaptive Workspaces](trawmem-task-oriented-workspaces.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.36918)
+- [Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents](accept-changes-reject-attacks.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.41056)
+- [Can LLM Agents Organize Their Own Memory?](somem-self-organized-memory.md) — 2026-11 — seed — [arXiv](https://arxiv.org/abs/2611.11929)
+- [DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory](discern-preserve-at-write.md) — 2026-11 — seed — [arXiv](https://arxiv.org/abs/2611.15729)
+
 ## 2026-10-26 identity maintenance
 
 - [Forged Reasoning Attacks / FARMA and SENTINEL](forged-reasoning-attacks-agent-memory.md) — [arXiv 2607.05029](https://arxiv.org/abs/2607.05029): consolidated two seed notes for the same paper, preserving provenance and audit guidance; no new paper or independent result.

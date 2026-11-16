@@ -129,6 +129,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | MemoryOS | [`../products/memoryos.md`](../products/memoryos.md) | OSS / Research | 研究者 / 个人开发者 | personalized agent 的 memory operating system |
 | A-MEM | [`../products/a-mem.md`](../products/a-mem.md) | OSS / Research | 研究者 | Zettelkasten 式 agentic memory organization |
 | MemX | [`../products/memx.md`](../products/memx.md) | OSS | 本地优先个人开发者 | 单文件 local-first memory,早期观察项 |
+| JiuwenMemory | [`../products/jiuwen-memory.md`](../products/jiuwen-memory.md) | OSS | agent builder / researchers | hierarchical and temporal memory with MCP and document surfaces |
 
 ### A2. Agent runtime / 平台(memory 内嵌)
 

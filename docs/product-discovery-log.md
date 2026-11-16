@@ -379,3 +379,15 @@ sources and fresh-context independent review. This was not an exhaustive crawl
 of all linked pages, historical/deleted content, distributed packages or runtime
 behavior. The [review controls](weekly-memory-refresh-runbook.md#external-content-trust-boundary)
 reduce exposure but are not an execution sandbox or a security certification.
+
+
+## 2026-11-16 weekly refresh delta
+
+| decision | candidate | source and handling | boundary |
+|---|---|---|---|
+| update-existing | Google Agent Platform Memory Bank | [official release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes), 2026-11-06 | console lifecycle controls, revisions, schemas, extraction controls, TTL and agent linking are product behavior only |
+| update-existing | Zep Agent Skills | [official changelog](https://help.getzep.com/changelog/2026/11/4), 2026-11-04 | general availability and Okta group restriction fix; no independent quality claim |
+| update-existing | agentmemory | [official release](https://github.com/rohitg00/agentmemory/releases/tag/v0.9.33), 2026-11-09 | provenance, redaction, pagination, consolidation and hook changes remain release behavior evidence |
+| add | JiuwenMemory | [official release](https://github.com/openJiuwen-ai/agent-memory/releases/tag/v0.2.1), 2026-11-13 | hierarchical/temporal/document/MCP surfaces; opt-in defaults and no runtime audit |
+| watchlist | Brain Memory, Counterparts, MemoryPilot, Substrate plugins | MCP Registry/GitHub discovery | catalog presence and README claims require source-by-source lifecycle and artifact review |
+| adjacent | Cloudflare Codex harness persistence | [official changelog](https://developers.cloudflare.com/changelog/product/agents/) | durable execution/session state, not confirmed semantic long-term user memory |

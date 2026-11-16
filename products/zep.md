@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-10-19
+last_revised: 2026-11-16
 archive: archives/zep-overview.md
 ---
 
@@ -157,3 +157,11 @@ domain × audience 表:
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
 > [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
+
+
+## 3.5 2026-11 Agent Skills refresh
+
+The official 2026-11-04 changelog marks Zep Agent Skills as generally available
+and records a related Context MCP authorization fix for Okta group restrictions.
+This updates the product's agent-surface and access-control evidence; it does
+not change the evidence class of Zep's benchmark claims.
