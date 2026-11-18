@@ -63,7 +63,7 @@ number of independently validated papers, products or experiments.
 
 | Area | Current coverage | Entry point | Use it when you need to |
 |---|---:|---|---|
-| Paper index | 989 scraped papers + manual radar additions through 2026-10 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
+| Paper index | 989 scraped papers + manual radar additions through 2026-11-18 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
 | Full / seed paper notes | 7 full + 119 seed | [`papers/`](papers/) | Distinguish fuller source analysis from preliminary notes; inspect each note's evidence and gaps. |

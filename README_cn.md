@@ -59,7 +59,7 @@
 
 | 板块 | 当前覆盖 | 入口 | 适合用来 |
 |---|---:|---|---|
-| 论文索引 | 989 篇抓取论文 + 截至 2026-10 的手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
+| 论文索引 | 989 篇抓取论文 + 截至 2026-11-18 的手工 radar 新增 | [`papers/index.md`](papers/index.md) | 搜索 agent-memory 论文和发现线索；989 是 2026-05 抓取基线。 |
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
 | full / seed 论文笔记 | 7 个 full + 119 个 seed | [`papers/`](papers/) | 区分较完整的来源分析与初步笔记；引用前检查具体证据与缺口。 |
