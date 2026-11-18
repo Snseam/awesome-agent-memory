@@ -1,5 +1,5 @@
 ---
-title: TrawMem: Reframing Agent Memory as Task-Oriented Role-Adaptive Workspaces
+title: "TrawMem: Reframing Agent Memory as Task-Oriented Role-Adaptive Workspaces"
 arxiv_id: 2610.36918
 source: arXiv:2610.36918
 date: 2026-10-27

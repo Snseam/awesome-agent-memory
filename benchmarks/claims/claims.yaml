@@ -1142,7 +1142,7 @@ events:
     claim_direction: methodological_only
     compared_systems: []
     reported_metrics: []
-    experimental_setup: "Procedural memory maintenance under world knowledge drift, measuring stale-memory handling, update cost, and recovery latency."
+    experimental_setup: "The authors supply typed drift events and compare maintenance over Time-Sensitive QA, GitChameleon and DriftMed. The study measures post-drift performance, update cost and recovery."
     reproduction_status: not_reproduced
     evidence_level: primary_pdf
     independence_class: survey_only
@@ -1151,3 +1151,173 @@ events:
       - benchmarks/wk-drift.md
       - https://aclanthology.org/2026.findings-aacl.140/
     extract_confidence: medium
+  - event_id: becos-locomo-protocol-sensitivity-2026
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: https://arxiv.org/abs/2611.19199
+    source_date: 2026-11-14
+    actor: Nikhil Kumar Jha and Amitoj Cheema (becosAI)
+    actor_type: paper_authors
+    usage_type: baseline_comparison
+    claim_direction: mixed
+    compared_systems:
+      - Becos research configuration
+      - whole conversation
+    reported_metrics:
+      - metric: largest score change with judge varied
+        value: 7.2
+        unit: percentage_points
+      - metric: largest score change with answer prompt varied
+        value: 9.3
+        unit: percentage_points
+    experimental_setup: "Four QA categories across ten conversations (1,540 questions), two answer models, two prompts, three judges and 150 blind human checks."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "The authors tuned on LoCoMo. Reported shifts are maxima across test configurations, in percentage points. The configuration was a research build."
+    evidence_refs:
+      - benchmarks/locomo.md
+      - https://arxiv.org/html/2611.19199v1
+      - https://github.com/becos-ai/locomo-results
+    extract_confidence: high
+  - event_id: memoir-locomo-retrieval-2026
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: papers/memoir-training-free-lifecycle.md
+    source_date: 2026-11-05
+    actor: MEMOIR authors
+    actor_type: paper_authors
+    usage_type: uses_for_eval
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Sequential retrieval ablations on 1,905 deduplicated QA pairs from ten dialogue stores. Score the retrieval before applying feedback for that query."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "Recall@5 in the ablations measures supporting evidence. The authors separately report end-to-end QA under another setup."
+    evidence_refs:
+      - benchmarks/locomo.md
+      - https://arxiv.org/html/2611.07631v1
+    extract_confidence: high
+  - event_id: memoir-longmemeval-cold-start-2026
+    benchmark_id: longmemeval
+    source_kind: paper
+    source_id: papers/memoir-training-free-lifecycle.md
+    source_date: 2026-11-05
+    actor: MEMOIR authors
+    actor_type: paper_authors
+    usage_type: uses_for_eval
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "LongMemEval-S with 500 single-query histories and session-level evidence."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "There is no later query within the same store to test feedback from an earlier answer."
+    evidence_refs:
+      - benchmarks/longmemeval.md
+      - https://arxiv.org/html/2611.07631v1
+    extract_confidence: high
+  - event_id: agentmemrec-locomo-transfer-2026
+    benchmark_id: locomo
+    source_kind: paper
+    source_id: papers/agent-memory-as-recommendation.md
+    source_date: 2026-10-26
+    actor: AgentMemRec authors
+    actor_type: paper_authors
+    usage_type: uses_for_eval
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Transfer a LongMemEval-trained ranker to LoCoMo with the T-Mem answer prompt and GPT-4o-mini judging the answers three times."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "Reader, prompt and context budget constrain comparability. No product score has been normalized here."
+    evidence_refs:
+      - benchmarks/locomo.md
+      - https://arxiv.org/html/2610.34673v1
+    extract_confidence: high
+  - event_id: agentmemrec-longmemeval-selection-2026
+    benchmark_id: longmemeval
+    source_kind: paper
+    source_id: papers/agent-memory-as-recommendation.md
+    source_date: 2026-10-26
+    actor: AgentMemRec authors
+    actor_type: paper_authors
+    usage_type: uses_for_eval
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "LongMemEval-S and M. Select a bounded set of records for multi-session questions, with selection and answering evaluated in the paper's configurations."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "S and M have different history lengths. Store construction, serving budget and answer model matter for reuse."
+    evidence_refs:
+      - benchmarks/longmemeval.md
+      - https://arxiv.org/html/2610.34673v1
+    extract_confidence: high
+  - event_id: conditional-memory-utility-longmemeval-v2-2026
+    benchmark_id: longmemeval-v2
+    source_kind: paper
+    source_id: papers/task-conditioned-memory-utility.md
+    source_date: 2026-11-02
+    actor: Conditional Memory Utility Dataset authors
+    actor_type: paper_authors
+    usage_type: uses_for_eval
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "Factual-recall tasks derived from web-agent trajectories. A task-blind writer precedes paired with/without-memory evaluations by a frozen reader with matched filler."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: affiliated_eval
+    comparability_notes: "One released row is a condition-specific measurement. The frozen artifact has partial upstream text and excludes the later fixed-total-context study."
+    evidence_refs:
+      - benchmarks/longmemeval-v2.md
+      - https://arxiv.org/html/2611.03930v1
+      - https://huggingface.co/datasets/AgentsSci/AAMAS2027-ConditionalMemory/tree/v0.6-length-control
+    extract_confidence: high
+  - event_id: vibemembench-origin-2026
+    benchmark_id: vibemembench
+    source_kind: paper
+    source_id: benchmarks/vibemembench.md
+    source_date: 2026-09-20
+    actor: VibeMemBench authors
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "111 targets from 90 repositories, with 3,634 history trajectories. Executable tests determine whether each target is resolved."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "The authors retain targets where injected history helped in a reference run. Published success rates therefore condition on how targets were selected."
+    evidence_refs:
+      - benchmarks/vibemembench.md
+      - https://arxiv.org/abs/2609.23570
+    extract_confidence: high
+  - event_id: stalebench-origin-2026
+    benchmark_id: stalebench
+    source_kind: paper
+    source_id: benchmarks/stalebench.md
+    source_date: 2026-11-15
+    actor: S M Mahbub Murshed
+    actor_type: paper_authors
+    usage_type: originates_benchmark
+    claim_direction: methodological_only
+    compared_systems: []
+    reported_metrics: []
+    experimental_setup: "892 updating facts sourced from TempLAMA with Wikidata validity years. Queries omit the current value. Track current-version hits, stale top-five evidence and reader accuracy."
+    reproduction_status: not_reproduced
+    evidence_level: primary_pdf
+    independence_class: survey_only
+    comparability_notes: "The dated fact retrieval protocol isolates supersession. Version labels and reader context affect comparability. No product score is entered."
+    evidence_refs:
+      - benchmarks/stalebench.md
+      - https://arxiv.org/abs/2611.19752
+    extract_confidence: high

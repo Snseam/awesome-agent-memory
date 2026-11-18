@@ -1,5 +1,5 @@
 ---
-date: 2026-10-26
+date: 2026-11-18
 title: Benchmarks landscape — agent memory evaluation by capability and evidence
 status: seed
 language: zh-CN
@@ -20,7 +20,7 @@ language: zh-CN
 | 领域 | Benchmark | 主要测什么 | 当前证据状态 |
 |---|---|---|---|
 | 长程对话记忆 | [`LongMemEval`](../benchmarks/longmemeval.md) | information extraction / knowledge update / temporal / abstention | full,多产品自报引用 |
-| 环境经验记忆 | [`LongMemEval-V2`](../benchmarks/longmemeval-v2.md) | state / workflow / gotchas / premise awareness from agent trajectories | seed,与原 LongMemEval 不合并;origin protocol only |
+| 环境经验记忆 | [LongMemEval-V2](../benchmarks/longmemeval-v2.md) | 轨迹中的状态、工作流与环境经验 | seed，已记录在网页轨迹上构造配对事实问答的派生用法 |
 | 长程对话记忆 | [`LoCoMo`](../benchmarks/locomo.md) | factual recall / temporal / causal / multi-session | seed,产品横评最常见 |
 | 动态干扰 | [`MINTEval`](../benchmarks/minteval.md) | revised facts / multi-target aggregation under interference | seed,origin protocol only |
 | 隐式关联 | [`InMind`](../benchmarks/inmind.md) | query-to-memory knowledge bridge / retrieval routing | seed,125-task diagnostic;license pending |
@@ -54,6 +54,17 @@ language: zh-CN
 | multimodal lifecycle diagnosis | [`WorldMemArena`](../benchmarks/worldmemarena.md) | writing / maintenance / retrieval / use | seed,461 in v2 PDF/data card versus 400 in landing abstract; answer-only metrics differ |
 | accumulated state tracking | [`Ledger-QA`](../benchmarks/ledger-qa.md) | incremental state / aggregation / query-agnostic memory | seed,origin protocol; frozen test split and code licensing unresolved |
 
+## 11 月新增协议
+
+| 观测对象 | 基准 | 测量单位 |
+|---|---|---|
+| 多人协作时谁能取得、共享和使用记忆 | [COLLABMEM](../benchmarks/collabmem.md) | 带角色与权限的协作任务 |
+| 用户撤回、更正或限制信息的用途 | [TimlMemBench](../benchmarks/timlmembench.md) | 对话中的记忆决策 |
+| 记忆处理在哪个阶段出错 | [MemFail](../benchmarks/memfail.md) | 对摘要、存储和检索的诊断 |
+| 原有操作知识在环境变化后是否仍可用 | [WK-Drift](../benchmarks/wk-drift.md) | 漂移后任务表现及维护代价 |
+| 同仓库历史经验能否帮助通过代码测试 | [VibeMemBench](../benchmarks/vibemembench.md) | 111 个经过参考设置筛选的目标任务，按可执行测试判断是否解决 |
+| 排在前面的证据中混入多少过期陈述 | [StaleBench](../benchmarks/stalebench.md) | 892 个发生更新的事实，分别观察当前版本命中、前五项过期信息及读者回答 |
+
 ## 2026-10-05 radar note
 
 The October radar adds three paper-origin benchmark protocols. They widen the
@@ -74,9 +85,9 @@ evaluation surface without adding independent score evidence:
 
 | Benchmark | Raw events | Notes |
 |---|---:|---|
-| LongMemEval | 5 | origin + Mem0 + Hindsight + Hy-Memory + ConvoMem critique counted by event type |
-| LongMemEval-V2 | 1 | origin protocol only; separate from original LongMemEval |
-| LoCoMo | 7 | origin + Mem0 paper/blog + Zep + Graphiti mention + MemoryOS + ConvoMem critique counted by event type |
+| LongMemEval | 7 | Origin, three vendor uses, ConvoMem critique, MEMOIR and AgentMemRec |
+| LongMemEval-V2 | 2 | Origin and one derived factual-recall study |
+| LoCoMo | 10 | Seven earlier records plus the Becos, MEMOIR and AgentMemRec evaluations |
 | MINTEval | 1 | origin protocol only; no independent result normalized |
 | InMind | 1 | origin diagnostic only; artifact/license caveats remain |
 | ConvoMem | 2 | origin + baseline comparison |
@@ -109,13 +120,16 @@ evaluation surface without adding independent score evidence:
 | FrontierMemory | 1 | origin protocol logged; affiliated leaderboard results not normalized |
 | WorldMemArena | 1 | origin protocol only; explicit source-count discrepancy |
 | Ledger-QA | 1 | origin protocol only; training data is not a verified frozen test split |
+| COLLABMEM / TimlMemBench / MemFail / WK-Drift / VibeMemBench / StaleBench | 1 each | Origin protocol in the claims ledger |
 
 
 ### B2. Evaluation uses / baseline comparisons
 
 | Benchmark | Eval-use events | Evidence class |
 |---|---:|---|
-| LoCoMo | 1 | Mem0 paper affiliated evaluation; useful for paper analysis, not independent reproduction |
+| LoCoMo | 4 | Mem0, Becos, MEMOIR and AgentMemRec authors’ evaluations |
+| LongMemEval | 2 | MEMOIR and AgentMemRec authors’ evaluations |
+| LongMemEval-V2 | 1 | Task-conditioned utility authors’ evaluation on derived tasks |
 | ConvoMem | 1 | Origin paper baseline comparison against Mem0-style RAG; useful for protocol/crossover analysis |
 | Fact-based memory vs long-context | 1 | Source-paper comparison of fact-based memory against long-context inference; useful for cost/accuracy trade-off analysis, not independent reproduction |
 
@@ -139,7 +153,7 @@ evaluation surface without adding independent score evidence:
 
 | Benchmark | Products currently using/claiming it | Evidence class |
 |---|---|---|
-| LoCoMo | Mem0, Zep, MemoryOS; Graphiti appears via Zep foundation note | vendor / affiliated claims, no normalized independent reproduction in repo |
+| LoCoMo | Mem0, Zep, MemoryOS and Becos (research configuration), plus a Graphiti foundation mention | Vendor reports and affiliated paper evaluations |
 | LongMemEval | Mem0, Hindsight, Hy-Memory | vendor claims, Hindsight claims external reproduction but source not normalized |
 | BEAM | Mem0 | vendor self-claim only |
 | PersonaMem-v2 | Hy-Memory, TencentDB Agent Memory | vendor self-claim only |
@@ -148,9 +162,10 @@ evaluation surface without adding independent score evidence:
 
 | Benchmark | Reuse events outside origin | Reuse shape |
 |---|---:|---|
-| LoCoMo | 6 | Mem0 paper/blog, Zep, Graphiti foundation mention, MemoryOS, ConvoMem critique |
-| LongMemEval | 4 | Mem0 blog, Hindsight, Hy-Memory, ConvoMem critique |
-| LongMemEval-V2 / MINTEval / InMind | 0 | Origin protocols only; no outside reuse logged |
+| LoCoMo | 9 | Six earlier uses plus Becos, MEMOIR and AgentMemRec |
+| LongMemEval | 6 | Four earlier uses plus MEMOIR and AgentMemRec |
+| LongMemEval-V2 | 1 | Web-agent trajectories used to derive paired factual-recall tasks |
+| MINTEval / InMind | 0 each | Origin protocols only |
 | BEAM | 2 | Mem0 vendor claims, source note still candidate |
 | PersonaMem-v2 | 2 | Hy-Memory and TencentDB Agent Memory vendor claims |
 | MemoryAgentBench | 1 | Survey mention only |
@@ -175,7 +190,7 @@ evaluation surface without adding independent score evidence:
 | Benchmark | Pressure source | Interpretation |
 |---|---|---|
 | LongMemEval | ConvoMem critique | sample-size and filler-source critique, not a rerun |
-| LoCoMo | ConvoMem critique | small-conversation-count critique, not a rerun |
+| LoCoMo | ConvoMem critique and the Becos authors’ matched runs | Small sample, prompt sensitivity, judge sensitivity and tuning on the evaluation conversations |
 | ConvoMem | own baseline comparison | strong protocol for cost/accuracy crossover, but synthetic data and Mem0-only RAG baseline caveat |
 
 ## C. What Counts As Evidence

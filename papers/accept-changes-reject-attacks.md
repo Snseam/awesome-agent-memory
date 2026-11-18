@@ -1,5 +1,5 @@
 ---
-title: Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents
+title: "Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents"
 arxiv_id: 2610.41056
 source: arXiv:2610.41056
 date: 2026-10-29

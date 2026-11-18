@@ -1,5 +1,5 @@
 ---
-title: DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory
+title: "DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory"
 arxiv_id: 2611.15729
 source: arXiv:2611.15729
 date: 2026-11-11

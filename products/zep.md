@@ -12,7 +12,7 @@ memory_modules:
   - dream-consolidator
   - memorydiff-generator
 status: full
-last_revised: 2026-11-16
+last_revised: 2026-11-18
 archive: archives/zep-overview.md
 ---
 
@@ -161,7 +161,4 @@ domain × audience 表:
 
 ## 3.5 2026-11 Agent Skills refresh
 
-The official 2026-11-04 changelog marks Zep Agent Skills as generally available
-and records a related Context MCP authorization fix for Okta group restrictions.
-This updates the product's agent-surface and access-control evidence; it does
-not change the evidence class of Zep's benchmark claims.
+Zep announced general availability of Agent Skills on November 4. The same changelog records a separate Context MCP fix for allowed groups on an Okta org authorization server: Zep requests the groups scope when the identity provider supports it. These are vendor-documented product behaviors. [Zep changelog, November 4](https://help.getzep.com/changelog/2026/11/4)

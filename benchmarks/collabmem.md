@@ -1,13 +1,14 @@
 ---
-title: COLLABMEM: A Diagnostic Benchmark for Collaborative Memory Operations in Multi-Agent LLM Systems
+title: "COLLABMEM: A Diagnostic Benchmark for Collaborative Memory Operations in Multi-Agent LLM Systems"
 benchmark_id: collabmem
 name: COLLABMEM
-aliases:
-  - Collaborative Memory Operations Benchmark
+aliases: []
 status: seed
 origin_type: paper_origin
 origin_source: https://aclanthology.org/2026.emnlp-main.1194/
-first_public_date: 2026-10
+first_public_date: check
+proceedings_date: 2026-10
+venue: EMNLP 2026
 domain: multi-agent-memory-governance
 modality: text
 task_grain: collaborative memory operation
@@ -18,7 +19,7 @@ capability_axes:
   - provenance
   - conflict resolution
   - retention
-dataset_size: check
+dataset_size: "58 hand-authored scenarios (1,118 core probes); a 174-scenario scaled split (3,359 probes); additional challenge splits"
 data_nature: benchmark-authored multi-agent operations
 metrics:
   - diagnostic operation metrics
@@ -34,8 +35,8 @@ canonical_sources:
 confidence: medium
 memory_modules:
   - evaluator-benchmark
-  - policy-privacy
-last_revised: 2026-11-16
+  - security-privacy
+last_revised: 2026-11-18
 ---
 
 # COLLABMEM
@@ -46,6 +47,10 @@ COLLABMEM evaluates collaborative memory operations in multi-agent LLM
 systems, including sharing, access control, routing, provenance, conflict
 resolution, and retention.
 
+## Protocol
+
+The origin authors fix the trace, target role, answering model, judge and gold event. This makes it possible to localize errors to specific memory operations while keeping the rest of the task fixed. The core and scaled figures count different splits.
+
 ## Evidence Boundary
 
 The ACL Anthology record is the primary source for the benchmark identity and
@@ -55,7 +60,7 @@ are independently reviewed.
 ## Impact Use
 
 - `evaluator-benchmark`: tests shared-memory behavior beyond single-agent QA.
-- `policy-privacy`: makes visibility and access decisions explicit.
+- `security-privacy`: makes visibility and access decisions explicit.
 - Ready for ImpactReport: no; full artifact and license review remain open.
 
 ## Sources

@@ -13,7 +13,7 @@ memory_modules:
   - dream-consolidator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-10-26
+last_revised: 2026-11-18
 archive: archives/hindsight-overview.md
 ---
 
@@ -85,6 +85,43 @@ Sources: [v0.10.3 release](https://github.com/vectorize-io/hindsight/releases/ta
 [tag scopes #5048](https://github.com/vectorize-io/hindsight/pull/5048),
 [concurrent tag edits #4897](https://github.com/vectorize-io/hindsight/pull/4897),
 [document append condition #5389](https://github.com/vectorize-io/hindsight/pull/5389).
+
+### 2.2 2026-11-10 v1.2.1 document tags and overlapping retains
+
+Official stable release `v1.2.1` was published 2026-11-10 at 14:34:26 UTC
+(sources checked 2026-11-18). It includes two document-memory behavior changes
+absent from this note's earlier v0.10.3 coverage. PRs #6411 and #6433 merged on
+2026-11-07, before the November 9–18 observation window. Their inclusion here
+uses the November 10 release publication date.
+
+**Partial document-tag updates.** `PATCH /documents/{id}` accepts `add_tags`
+and `remove_tags`, preserving unspecified tags. Removals apply first, so a tag
+in both lists remains. The database-backed path resolves current tags under a
+document row lock, serializing concurrent changes and keeping document and
+memory tags aligned. CLI flags and TypeScript client fields expose the same
+operation. Mixing full-set `tags` with either partial field returns 422. The
+whole resulting tag set must satisfy write scopes, and a store without readable
+document tags rejects a partial update with 400. Custom stores must accept the
+new `for_update` keyword on `current_document_tags`, with locking behavior
+dependent on their implementation.
+
+**Same-content retain overlap.** Concurrent retains of the same document and
+content previously could write duplicate facts after the first batch. Under
+the per-document row lock, the write now skips already committed identical
+chunks and their facts. A chunk and its facts commit in the same transaction.
+The guard also covers streaming recovery and single-batch delta writes. The
+fix is scoped to same-content overlaps. Different-content retains retain the
+existing later-writer-wins behavior, and store-owned banks use their existing
+atomic retain call. General exactly-once ingestion would need broader evidence.
+
+These are released product-behavior and correctness changes. Verification here
+used official release metadata and maintainer PR descriptions. Upstream test
+reports remain upstream evidence, with independent runtime and quality
+validation still open.
+
+[Official v1.2.1 release](https://github.com/vectorize-io/hindsight/releases/tag/v1.2.1),
+[partial tag behavior and store limitations, PR #6411](https://github.com/vectorize-io/hindsight/pull/6411),
+and [same-content retain overlap fix, PR #6433](https://github.com/vectorize-io/hindsight/pull/6433).
 
 ## 3. 关键技术选择
 

@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-11-16
+last_revised: 2026-11-18
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -98,9 +98,4 @@ memory。该更新只支持"Memory Bank 提供可配置托管 memory 与 runtime
 
 ## 3.4 2026-11 release-note refresh
 
-Google's 2026-11-06 release notes describe a dedicated Memory Bank console with
-memory creation, inspection, filtering, editing, deletion, revisions, schemas,
-extraction controls, retention TTL, and agent linking. These are official
-product-behavior signals for lifecycle and governance surfaces; they do not
-establish extraction quality, retrieval quality, or independent benchmark
-performance.
+The November 6 console update lets administrators create standalone banks, filter records by scope and inspect revision history. The console can edit or delete unstructured memories and inspect structured profiles and their underlying facts. Generation settings, schema configuration, expiration and revision-history retention have separate controls. The embedding model is configurable before the first memory is stored. [Google Cloud release notes, November 6](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#November_06_2026)

@@ -1,13 +1,14 @@
 ---
-title: MemFail: Stress-Testing Failure Modes of LLM Memory Systems
+title: "MemFail: Stress-Testing Failure Modes of LLM Memory Systems"
 benchmark_id: memfail
 name: MemFail
-aliases:
-  - LLM Memory Failure Stress Test
+aliases: []
 status: seed
 origin_type: paper_origin
 origin_source: https://aclanthology.org/2026.findings-emnlp.779/
-first_public_date: 2026-10
+first_public_date: check
+proceedings_date: 2026-10
+venue: Findings of EMNLP 2026
 domain: memory-failure-diagnostics
 modality: text
 task_grain: memory pipeline failure diagnosis
@@ -16,7 +17,7 @@ capability_axes:
   - storage failure
   - retrieval failure
   - adversarial robustness
-dataset_size: check
+dataset_size: "five diagnostic datasets spanning four tasks"
 data_nature: adversarial diagnostic dataset
 metrics:
   - component-level failure metrics
@@ -33,7 +34,7 @@ confidence: medium
 memory_modules:
   - evaluator-benchmark
   - memorydiff-generator
-last_revised: 2026-11-16
+last_revised: 2026-11-18
 ---
 
 # MemFail
@@ -42,6 +43,10 @@ last_revised: 2026-11-16
 
 MemFail stress-tests failure modes across memory summarization, storage, and
 retrieval, including adversarial diagnostic cases.
+
+## Protocol
+
+The authors use five datasets for four tasks to probe summarization, storage and retrieval separately. The protocol asks where the memory pipeline fails and evaluates four systems in the origin study.
 
 ## Evidence Boundary
 

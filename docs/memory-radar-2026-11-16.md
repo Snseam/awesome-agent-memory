@@ -64,8 +64,7 @@ benchmark protocol。论文、产品和 benchmark 的结果仍分别保留 paper
 
 ## 5. Verification
 
-- `ruby scripts/verify_memory_refresh.rb` — pending final staged-tree run.
-- `git diff --check` and conflict-marker scan — pending final staged-tree run.
+- The [submitted PR #42](https://github.com/Snseam/awesome-agent-memory/pull/42) records the completed verifier, staged whitespace check and conflict-marker scan on its own tree. See the [November 18 consolidation](memory-radar-2026-11-18.md) for subsequent corrections and counts.
 - Targeted GET checks completed for the promoted arXiv, ACL Anthology, Google release-note,
   Zep changelog, agentmemory release, and JiuwenMemory release URLs; all inspected primary
   pages were accessible during the source-check pass.
