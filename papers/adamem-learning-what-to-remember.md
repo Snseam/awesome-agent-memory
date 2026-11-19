@@ -1,5 +1,5 @@
 ---
-title: AdaMem — Learning What to Remember for Personalized Long-Horizon LLM Agents
+title: "AdaMem: Learning What to Remember with Adaptive Memory Policies for Personalized Agents"
 arxiv_id: 2606.21144
 source: arXiv:2606.21144
 date: 2026-06
@@ -9,17 +9,19 @@ core_claim: |
   store from week-by-week QA feedback, improving useful memory while reducing
   memory volume.
 evidence_level: medium
-code_available: check
-license: check
+code_available: https://github.com/galaxyChen/AdaMem
+license: MIT (code)
+venue: EMNLP 2026 Industry Track
 memory_modules:
   - ingest-adapter
   - dream-consolidator
   - memorydiff-generator
   - evaluator-benchmark
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-11-18
 urls:
   - https://arxiv.org/abs/2606.21144
+  - https://aclanthology.org/2026.emnlp-industry.189/
 ---
 
 # AdaMem(arXiv 2606.21144)
@@ -46,6 +48,10 @@ Mem0 uniform baseline 之上提升 QA,同时减少 memory volume。
 
 本地笔记是 seed 质量。AdaMem-Bench 的数据生成、反馈强度和 baseline 设置仍需精读后确认。
 reported gains 只作为 paper-origin claim。
+
+## Conference version
+
+EMNLP 工业轨论文用五个各十周的故事、六种并行交互角色评估写入策略。作者区分了两种能力：从周期性反馈中学到偏好，以及随后真正按偏好选择写入。后者仍是作者报告的局限。该会议论文与已有 arXiv 条目对应同一项工作。[会议论文](https://aclanthology.org/2026.emnlp-industry.189/) · [作者代码](https://github.com/galaxyChen/AdaMem)
 
 ## Sources
 

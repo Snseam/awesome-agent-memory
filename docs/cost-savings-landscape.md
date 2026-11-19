@@ -1,6 +1,6 @@
 ---
 title: Agent-memory cost-savings landscape
-date: 2026-09-14
+date: 2026-11-18
 status: seed
 language: zh-CN
 ---
@@ -67,6 +67,14 @@ language: zh-CN
 | [`Router-Mem`](../papers/router-mem-progressive-execution.md) | seed paper note | 用 evidence sufficiency router 在低成本 retrieved evidence 和 deeper memory execution 之间切换。 | seed 质量;作者报告的 latency / score 需要 full read 与 artifact review。 |
 | [`LeanMem`](../papers/leanmem-efficient-long-term-memory.md) | seed paper note | 按 profile/event/source-grounded memory 分流存储和 query-specific retrieval budget。 | seed 质量;作者报告的成本 / latency / accuracy 需要 full read。 |
 | [`MemoryCPT`](../papers/memorycpt-cost-performance-memory.md) | seed paper note | 用 Query-agnostic Distillation + Query-aware Retrieval/Summarization 优化 Quality per Cost。 | seed 质量;QPC、训练成本和 artifact 需复核。 |
+
+### 2026-11 研究补充
+
+| 研究 | 成本发生在哪里 | 判断质量时应保留的对照 |
+|---|---|---|
+| [AgentMemRec](../papers/agent-memory-as-recommendation.md) | 每次查询的候选召回、排序与证据预算 | 固定答题模型、问题子集和可供阅读的 token 数，再比较选中的证据与多跳问题所需证据 |
+| [MEMOIR](../papers/memoir-training-free-lifecycle.md) | 即时写入与后续合并的开销可以分别测量 | 冷启动和允许跨查询反馈的场景分开报告，并检查合并后仍能检索到原始证据 |
+| [任务条件下的记忆效用](../papers/task-conditioned-memory-utility.md) | 对应每条记忆记录生成、存储与提供给回答模型的代价 | 同一个问题使用有记忆和无记忆配对，再做总上下文长度匹配，观察质量差异能否保留 |
 
 ### 2026-08 current-source additions
 

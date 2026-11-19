@@ -42,7 +42,7 @@ memory_modules:
   - evaluator-benchmark
   - retriever-reranker
   - dream-consolidator
-last_revised: 2026-06-11
+last_revised: 2026-11-18
 ---
 
 # LongMemEval
@@ -89,6 +89,10 @@ strong evidence without independent reruns.
 LongMemEval is best for capability-level diagnosis. Scores should not be mixed
 with LoCoMo or ConvoMem unless the report separates task family, dataset scale,
 and judge setup.
+
+## November 2026 reuse
+
+[MEMOIR](../papers/memoir-training-free-lifecycle.md) uses LongMemEval-S for cold-start retrieval, with a single query per store. [AgentMemRec](../papers/agent-memory-as-recommendation.md) uses the S and M variants to test selecting a bounded evidence set for multi-session questions. The [claims ledger](claims/claims.yaml) records both as evaluations by the method authors.
 
 ## Related Papers
 

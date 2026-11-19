@@ -17,9 +17,11 @@ memory_modules:
   - policy-privacy
   - evaluator-benchmark
 status: seed
-last_revised: 2026-08-31
+venue: EMNLP 2026 Main Conference
+last_revised: 2026-11-18
 urls:
   - https://arxiv.org/abs/2608.27924
+  - https://aclanthology.org/2026.emnlp-main.1886/
 ---
 
 # UAQ Agent Memory(arXiv 2608.27924)
@@ -48,7 +50,7 @@ RAG,但 memory 对 unanswerable question handling 的影响并不稳定。
 
 ## Sources
 
-- arXiv:https://arxiv.org/abs/2608.27924
+- [EMNLP 2026 主会论文](https://aclanthology.org/2026.emnlp-main.1886/) · [arXiv 初稿](https://arxiv.org/abs/2608.27924)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-10-26
+date: 2026-11-18
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,14 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-11-18 | [11 月研究整合](memory-radar-2026-11-18.md) | comparison | 回查全部历史 PR，把程序性经验、时效、条件效用与评测设计放在同一组研究问题下 | `seed-note` 与目录更新 |
+| 2026-11-17 | [EvoDisco](https://arxiv.org/abs/2611.22102) | paper | 在线学习图改写策略，再冻结记忆测留出任务 | `seed-note` |
+| 2026-11-16 | [AdMem](https://arxiv.org/abs/2611.20605) · [Experience Rot](https://arxiv.org/abs/2611.20922) | paper | 动作前预期可用于给经验赋值，工具版本变化则提供观察经验何时失效的对照 | `seed-note` |
+| 2026-11-16 | [上期雷达](memory-radar-2026-11-16.md) | paper / product | 4 篇论文、4 项协议以及 JiuwenMemory、Google、Zep 和 agentmemory 的产品资料进入本次汇总 | `seed-note` |
+| 2026-11-14 | [LoCoMo 匹配实验](https://arxiv.org/abs/2611.19199) | comparison | Becos 团队变化回答提示和裁判，发布作答、判分及人工盲查样本 | 已记入 [LoCoMo](../benchmarks/locomo.md) |
+| 2026-11-14 | [Letta Code v0.34.61](https://github.com/letta-ai/letta-code/releases/tag/v0.34.61) | release | local backend 新增两种自压缩模式，发布说明和实现方 PR 限定了适用的运行路径 | 更新[产品笔记](../products/letta.md) |
+| 2026-11-10 | [Hindsight v1.2.1](https://github.com/vectorize-io/hindsight/releases/tag/v1.2.1) | release | 发布部分增删文档标签、同文档同内容并发 retain 去重 | 更新[产品笔记](../products/hindsight.md) |
+| 2026-11-06 | [Anthropic 工程研究](https://www.anthropic.com/research/components-of-agent-memory) | blog | 记录直接检索对照、离线 wiki 整理和上下文加载条件 | 更新[Claude Dreams](../products/claude-dreams.md) |
 | 2026-10-26 | [Screenpipe source](https://github.com/screenpipe/screenpipe/tree/334b865ec7b2938eeb44c443e17aebfa3e0a10a3) / [community intake decisions](product-discovery-log.md#2026-10-26-community-issue-decisions) | product | 核查社区投稿：Screenpipe以可编辑memory API进入seed产品；HC按central-only新边界留Tier B；TANCO交接/检查点作为相邻工作流，修正察言的泛化描述 | `seed-note` ✅(Screenpipe；其余仅discovery) |
 | 2026-10-26 | [WorldMemArena v2](https://arxiv.org/pdf/2605.29341v2) / [UMA / Ledger-QA](https://aclanthology.org/2026.emnlp-main.1299/) / [FrontierMemory rules](https://github.com/letta-ai/frontiermemory/blob/49bea0f33a72da9771f8ef853ed7e48b69bf53df/docs/rules.md) | paper | 本次复核新增两个 seed 协议，区分摘要/PDF计数、训练/测试资产、生成次数/任务尝试；无独立复现 | `seed-note` ✅(见 `benchmarks/`) |
 | 2026-10-26 | [Graphiti v0.31.2](https://github.com/getzep/graphiti/releases/tag/v0.31.2) / [Hindsight v0.10.3](https://github.com/vectorize-io/hindsight/releases/tag/v0.10.3) / [OpenViking v0.5.2](https://github.com/volcengine/OpenViking/releases/tag/v0.5.2) | release | 本次复核补删除传播与reference-server信任边界、读写scope和并发标签、WM/LTM分离与迁移；日期为复核日期，各版本发布日期见产品笔记 | `deep-note` ✅(更新 `products/`) |

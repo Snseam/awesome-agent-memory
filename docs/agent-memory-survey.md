@@ -1,7 +1,7 @@
 ---
 title: Agent Memory — a living survey
 maintainer: yyl
-last_revised: 2026-05-19
+last_revised: 2026-11-18
 status: seed
 language: zh-CN
 ---
@@ -10,6 +10,8 @@ language: zh-CN
 
 > 这是一份**活文档**:每次有新论文或新产品测试,都会回来重写相关章节。
 > 不追求覆盖完整,追求对正在落地 memory kernel 的人有用。
+
+11 月的研究把记忆效用落实到具体任务和时间。程序性经验可以跨任务迁移，也可能在工具版本变化后误导执行。评估时应注明历史版本、观察实际任务结果，并记录同一任务在有无记忆时的差异。实验设置和来源见 [11 月研究整合](memory-radar-2026-11-18.md)。
 
 ## 0. 这份综述的位置
 

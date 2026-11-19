@@ -15,18 +15,18 @@ decide what to read before opening the paper index or the product notes.
 4. [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) —
    Codex weekly refresh runbook for papers, products, GitHub discovery, and
    benchmarks.
-5. [`memory-radar-consolidation-2026-10-26.md`](memory-radar-consolidation-2026-10-26.md) — latest current-source
-   refresh across papers, products, GitHub projects, and reviewer decisions.
-6. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
+5. [November 18 research consolidation](memory-radar-2026-11-18.md) — research findings, PR history, product submissions and evaluation protocols.
+6. [October consolidation](memory-radar-consolidation-2026-10-26.md) — decisions from the six September and October weekly refreshes.
+7. [`cost-savings-landscape.md`](cost-savings-landscape.md) — focused map of
    agent-memory papers, algorithms, code paths, and products that reduce token,
    latency, or runtime cost.
-7. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
+8. [`benchmarks-landscape.md`](benchmarks-landscape.md) — benchmark map by
    capability, usage type, and evidence independence.
-8. [`products-landscape.md`](products-landscape.md) — product map by domain and
+9. [`products-landscape.md`](products-landscape.md) — product map by domain and
    audience.
-9. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
+10. [`product-architecture-diagrams.md`](product-architecture-diagrams.md) —
    architecture diagrams for the current memory product notes.
-10. [`product-memory-architectures.md`](product-memory-architectures.md) —
+11. [`product-memory-architectures.md`](product-memory-architectures.md) —
    cross-product memory architecture patterns and comparison tables.
 
 ## Concept docs
@@ -49,6 +49,8 @@ decide what to read before opening the paper index or the product notes.
 |---|---|
 | [`research-radar.md`](research-radar.md) | Generic Radar loop: paper/product/benchmark -> ResearchItem or BenchmarkItem -> ImpactReport -> sandbox -> ADR. |
 | [`weekly-memory-refresh-runbook.md`](weekly-memory-refresh-runbook.md) | Weekly Codex automation contract for source search, subagent review, verification, and PR output. |
+| [November 18 research consolidation](memory-radar-2026-11-18.md) | Current research findings, coverage of the PR history and source decisions. |
+| [`memory-radar-2026-11-16.md`](memory-radar-2026-11-16.md) | November 16 weekly source review, carried forward in the November 18 consolidation. |
 | [`memory-radar-consolidation-2026-10-26.md`](memory-radar-consolidation-2026-10-26.md) | Six-week consolidation, duplicate decisions, source repairs, and current evidence boundaries. |
 | [`memory-lifecycle-evaluation.md`](memory-lifecycle-evaluation.md) | Proposed experiments for scope, temporal state, forgetting, downstream utility, and migration; not executed. |
 | [`memory-radar-2026-10-26.md`](memory-radar-2026-10-26.md) | 2026-10-26 historical weekly source and inclusion decisions. |

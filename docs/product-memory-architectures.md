@@ -1,6 +1,6 @@
 ---
 title: Product memory architectures — cross-product patterns
-date: 2026-06-24
+date: 2026-11-18
 status: working-note
 language: zh-CN
 ---
@@ -181,6 +181,10 @@ flowchart LR
     Artifacts --> Audit
     DB --> Audit
 ```
+
+### Service-backed memory spaces
+
+GoodMem puts the write decision in the host application. It persists selected content in a space and makes it available to authorized readers in later sessions. The early-access HTTP MCP exposes retrieval and diagnostics. Applications can ingest through a write-capable API. Retrieval can create query logs when an administrator enables logging. This is the architecture mapping proposed by the affiliated contributor in #26. Runtime permission enforcement and retrieval quality have yet to be measured here. [Product note](../products/goodmem.md) · [MCP reference](https://docs.goodmem.ai/docs/reference/mcp/)
 
 ## 5. Platform-managed memory
 

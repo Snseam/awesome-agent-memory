@@ -19,6 +19,30 @@ removed.
 - By year: 2026=388, 2025=309, 2024=129, 2023=72, 2022=6, 2021=4, 2020=3, 2018=2, 2017=1, undated=75
 - By source-count: 6 sources=6, 5 sources=18, 4 sources=32, 3 sources=66, 2 sources=127, 1 sources=740
 
+## 2026-11-18 research refresh
+
+These six seed notes cover procedural experience, memory maintenance and task-conditioned retrieval.
+Dates below are first arXiv submissions. AgentMemRec is a backfill from the October cutoff.
+
+- [EvoDisco](evodisco-memory-evolution.md) — 2026-11-17 · [arXiv](https://arxiv.org/abs/2611.22102)
+- [AdMem](admem-expectation-grounded-procedural-memory.md) — 2026-11-16 · [arXiv](https://arxiv.org/abs/2611.20605)
+- [Experience Rot](experience-rot-tool-change.md) — 2026-11-16 · [arXiv](https://arxiv.org/abs/2611.20922)
+- [MEMOIR](memoir-training-free-lifecycle.md) — 2026-11-05 · [arXiv](https://arxiv.org/abs/2611.07631)
+- [What Is This Memory Useful For?](task-conditioned-memory-utility.md) — 2026-11-02 · [arXiv](https://arxiv.org/abs/2611.03930)
+- [Agent Memory as Recommendation (AgentMemRec)](agent-memory-as-recommendation.md) — 2026-10-26 · [arXiv](https://arxiv.org/abs/2610.34673)
+
+Two existing seeds now link to their EMNLP 2026 versions. [AdaMem](adamem-learning-what-to-remember.md) · [Unanswerable question handling](uaq-agent-memory.md)
+
+## 2026-11-16 weekly radar additions
+
+These entries were added from primary arXiv pages during the 2026-11-16 weekly
+refresh. They are seed notes; reported results remain paper-origin evidence.
+
+- [TrawMem: Reframing Agent Memory as Task-Oriented Role-Adaptive Workspaces](trawmem-task-oriented-workspaces.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.36918)
+- [Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents](accept-changes-reject-attacks.md) — 2026-10 — seed — [arXiv](https://arxiv.org/abs/2610.41056)
+- [Can LLM Agents Organize Their Own Memory?](somem-self-organized-memory.md) — 2026-11 — seed — [arXiv](https://arxiv.org/abs/2611.11929)
+- [DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory](discern-preserve-at-write.md) — 2026-11 — seed — [arXiv](https://arxiv.org/abs/2611.15729)
+
 ## 2026-10-26 identity maintenance
 
 - [Forged Reasoning Attacks / FARMA and SENTINEL](forged-reasoning-attacks-agent-memory.md) — [arXiv 2607.05029](https://arxiv.org/abs/2607.05029): consolidated two seed notes for the same paper, preserving provenance and audit guidance; no new paper or independent result.
@@ -172,7 +196,7 @@ are not part of the 2026-05-19 nine-list scrape statistics above.
 - [Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory](infini-memory-topic-documents.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.10677)
 - [What Deserves Memory: Adaptive Memory Distillation for LLM Agents](what-deserves-memory-adaptive-memory-distillation.md) — ACL 2026 — seed — [acl](https://aclanthology.org/2026.acl-long.1607/)
 - [RaMem: Contextual Reinstatement for Long-term Agentic Memory](ramem.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.22844)
-- [AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents](adamem-learning-what-to-remember.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.21144)
+- [AdaMem: Learning What to Remember with Adaptive Memory Policies for Personalized Agents](adamem-learning-what-to-remember.md) — 2026-06 preprint, EMNLP 2026 Industry Track — seed — [ACL Anthology](https://aclanthology.org/2026.emnlp-industry.189/)
 - [AtomMem: Building Simple and Effective Memory System for LLM Agents via Atomic Facts](atommem-atomic-facts.md) — 2026-06 — seed — [arxiv](https://arxiv.org/abs/2606.19847)
 - [Lightweight LLM Agent Memory with Small Language Models](lightmem-agent-memory.md) — ACL 2026 — seed — [acl](https://aclanthology.org/2026.acl-long.588/) / [arxiv](https://arxiv.org/abs/2604.07798)
 - [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](../benchmarks/gatemem.md) — 2026-06 — benchmark seed — [arxiv](https://arxiv.org/abs/2606.18829)

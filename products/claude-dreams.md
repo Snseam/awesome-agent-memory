@@ -6,11 +6,11 @@ domain: memory
 memory_modules:
   - dream-consolidator
   - memorydiff-generator
-evidence_level: medium (production product, no public benchmark numbers)
+evidence_level: medium (official product documentation and a separate first-party engineering study)
 code_available: no (proprietary)
 license: proprietary
 status: seed
-last_revised: 2026-10-05
+last_revised: 2026-11-18
 ---
 
 # Claude Dreams
@@ -60,6 +60,10 @@ This is product behavior evidence for lifecycle-aware agent memory attachment,
 not evidence about the internal Dreams implementation.
 
 > 来源:https://platform.claude.com/docs/en/release-notes/overview?entry=september-28-2026
+
+## 2026-11-06 engineering study
+
+Anthropic describes four artifacts an agent can use between sessions. A transcript preserves events, notes record selected details, a wiki reorganizes information across documents, and a small amount of context loads at the start of a session. Its experiments vary which artifacts the agent can use and what offline consolidation does to them. In one document-review task a second pass repaired links in a generated wiki. In another setting direct search already surfaced the evidence a task needed. These are observations from Anthropic’s evaluation setups. The article leaves production scheduling and rollback unspecified. [Anthropic engineering study, figures 10–15](https://www.anthropic.com/research/components-of-agent-memory)
 
 ## Architectural takeaways
 

@@ -37,7 +37,7 @@ ImpactReport 和实验提案。kernel 主线的变更走 ADR 流程,由 Radar �
 详见 [`information-sources.md`](information-sources.md) —— 10 个类别的完整
 catalog,中文社区单独成节。该文档是 Radar 信息面的 single source of truth。
 
-当前来源刷新记录见 [`memory-radar-2026-06.md`](memory-radar-2026-06.md)。它保留
+最新来源刷新见 [11 月 18 日整合报告](memory-radar-2026-11-18.md)。[6 月首期雷达](memory-radar-2026-06.md)保留
 并行子 agent 搜索、主 agent 整合、source/relevance review 后的 must-add /
 update-existing / watchlist / reject 决策,避免把快照判断散落到单条笔记里。
 

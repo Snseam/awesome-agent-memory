@@ -1,5 +1,5 @@
 ---
-date: 2026-10-26
+date: 2026-11-18
 title: Products landscape — agent memory by domain × audience
 status: working-spec
 language: zh-CN
@@ -17,6 +17,10 @@ language: zh-CN
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
 
+## 2026-11-18 consolidated refresh
+
+The catalog now has **44 product notes and 43 source archives**. [JiuwenMemory](../products/jiuwen-memory.md) adds a library with temporal and hierarchical memory. [GoodMem](../products/goodmem.md) adds application-directed writes to persistent spaces and scoped retrieval. MoobFS remains a discovery entry for filesystem storage. [November source decisions](product-discovery-log.md#2026-11-18-community-submissions)
+
 ## 2026-10-26 consolidated refresh
 
 The six refreshes from September 21 through October 26 add one distinct product:
@@ -24,7 +28,7 @@ The six refreshes from September 21 through October 26 add one distinct product:
 It is separate from Bailian Memory Library and Model Studio Managed Agents stores.
 At that consolidation snapshot, the inventory had 41 product notes and 40 source archives.
 The subsequent [community issue intake](product-discovery-log.md#2026-10-26-community-issue-decisions)
-adds Screenpipe, bringing the current inventory to **42 product notes and 41 source archives**.
+added Screenpipe, bringing the October snapshot to 42 product notes and 41 source archives.
 
 Existing notes retain the dated Hindsight, OpenViking, Letta, Zep, Graphiti,
 Mem0, Claude managed-agent store, Databricks, Foundry, Oracle, Redis, and
@@ -109,6 +113,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Zep | [`../products/zep.md`](../products/zep.md) | OSS+SaaS | SaaS 团队 / 企业 | 时间感知 KG;hosted 与 self-host 并存 |
 | Graphiti | [`../products/graphiti.md`](../products/graphiti.md) | OSS | 个人开发者 / 研究者 | Zep 的开源底座,纯库形态 |
 | Cognee | [`../products/cognee.md`](../products/cognee.md) | OSS+SaaS | 个人开发者 / 中小团队 | 记忆 + ontology + KG;偏 PKM/研究方向 |
+| GoodMem | [产品笔记](../products/goodmem.md) | 专有自托管 / 托管云 | agent 应用开发者与团队 | 应用选择内容写入持久化空间，工作负载按权限跨会话召回 |
 | Letta(原 MemGPT)| [`../products/letta.md`](../products/letta.md) | OSS+SaaS | 研究者 / 个人开发者 | agent runtime 内置分层记忆 |
 | LangMem | [`../products/langmem.md`](../products/langmem.md) | OSS | LangChain 用户 | LangChain/LangGraph 系的 memory primitive |
 | Supermemory | [`../products/supermemory.md`](../products/supermemory.md) | OSS+SaaS | SaaS 团队 / 企业 / 个人 | context cloud:memory、RAG、profiles、connectors 一体化 |
@@ -129,6 +134,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | MemoryOS | [`../products/memoryos.md`](../products/memoryos.md) | OSS / Research | 研究者 / 个人开发者 | personalized agent 的 memory operating system |
 | A-MEM | [`../products/a-mem.md`](../products/a-mem.md) | OSS / Research | 研究者 | Zettelkasten 式 agentic memory organization |
 | MemX | [`../products/memx.md`](../products/memx.md) | OSS | 本地优先个人开发者 | 单文件 local-first memory,早期观察项 |
+| JiuwenMemory | [`../products/jiuwen-memory.md`](../products/jiuwen-memory.md) | OSS | agent builder / researchers | hierarchical and temporal memory with MCP and document surfaces |
 
 ### A2. Agent runtime / 平台(memory 内嵌)
 

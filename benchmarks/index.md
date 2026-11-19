@@ -1,6 +1,6 @@
 ---
 title: Benchmark catalog — agent-memory evaluation protocols
-date: 2026-10-26
+date: 2026-11-18
 status: seed
 language: zh-CN
 ---
@@ -29,7 +29,7 @@ official repository, dataset card, or independent reproduction.
 | Benchmark | Status | Origin | Task family | Capabilities | Primary local anchor | Claim coverage |
 |---|---|---|---|---|---|---|
 | LongMemEval | full | paper-origin | long-term chat memory | retrieval / update / temporal / abstention | [`longmemeval.md`](longmemeval.md) | yes |
-| LongMemEval-V2 | seed | paper-origin | customized environment experience | state / workflow / gotchas / premise awareness | [`longmemeval-v2.md`](longmemeval-v2.md) | origin only |
+| LongMemEval-V2 | seed | paper-origin | customized environment experience | state / workflow / gotchas / premise awareness | [`longmemeval-v2.md`](longmemeval-v2.md) | origin and derived factual-recall study |
 | LoCoMo | seed | paper-origin | very long-term conversational memory | retrieval / temporal / causal | [`locomo.md`](locomo.md) | yes |
 | MINTEval | seed | paper-origin | evolving long-horizon memory | revised facts / interference / aggregation | [`minteval.md`](minteval.md) | origin only |
 | InMind | seed | paper-origin | implicit-association memory | indirect retrieval / knowledge bridge / routing | [`inmind.md`](inmind.md) | origin only |
@@ -67,6 +67,12 @@ official repository, dataset card, or independent reproduction.
 | FrontierMemory | seed | product-research-origin | trajectory-to-memory downstream utility | procedural memory / continual learning / no-memory control | [`frontiermemory.md`](frontiermemory.md) | origin only |
 | WorldMemArena | seed | paper-origin | multimodal memory lifecycle | writing / maintenance / retrieval / use | [`worldmemarena.md`](worldmemarena.md) | origin only |
 | Ledger-QA | seed | paper-origin | accumulated state tracking | incremental updates / aggregation / memory reuse | [`ledger-qa.md`](ledger-qa.md) | origin only |
+| COLLABMEM | seed | paper-origin | collaborative multi-agent memory | sharing / access / provenance / conflict | [`collabmem.md`](collabmem.md) | origin only |
+| TimlMemBench | seed | paper-origin | governed dialogue memory | revocation / supersession / privacy / restraint | [`timlmembench.md`](timlmembench.md) | origin only |
+| MemFail | seed | paper-origin | memory pipeline failure diagnosis | summarization / storage / retrieval / adversarial stress | [`memfail.md`](memfail.md) | origin only |
+| WK-Drift | seed | paper-origin | procedural memory maintenance | supplied drift events / update cost / recovery | [wk-drift.md](wk-drift.md) | origin only |
+| VibeMemBench | seed | paper-origin | cross-task coding memory | repository history / executable task resolution | [vibemembench.md](vibemembench.md) | origin only |
+| StaleBench | seed | paper-origin | retrieval of changing facts | current versions / stale statements in top-k / reader accuracy | [stalebench.md](stalebench.md) | origin only |
 
 ## Evidence Ledgers
 

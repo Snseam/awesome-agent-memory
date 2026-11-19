@@ -9,10 +9,10 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![Memory products](https://img.shields.io/badge/memory%20products-42-purple.svg)](products/)
-[![Benchmarks](https://img.shields.io/badge/benchmarks-39-blueviolet.svg)](benchmarks/)
+[![Memory products](https://img.shields.io/badge/memory%20products-44-purple.svg)](products/)
+[![Benchmarks](https://img.shields.io/badge/benchmarks-45-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
-[![Updated](https://img.shields.io/badge/updated-2026--10-lightgrey.svg)](docs/signals.md)
+[![Updated](https://img.shields.io/badge/updated-2026--11-lightgrey.svg)](docs/signals.md)
 
 </div>
 
@@ -58,18 +58,18 @@ the number of links or the submitter's identity.
 
 ## At A Glance
 
-Catalog snapshot: **2026-10-26**. Counts describe repository coverage, not the
+Catalog snapshot: **2026-11-18**. Counts describe repository coverage, not the
 number of independently validated papers, products or experiments.
 
 | Area | Current coverage | Entry point | Use it when you need to |
 |---|---:|---|---|
-| Paper index | 989 scraped papers + manual radar additions through 2026-10 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
+| Paper index | 989 scraped papers + manual radar additions through 2026-11-18 | [`papers/index.md`](papers/index.md) | Searchable entry point for agent-memory papers; the 989 count is the 2026-05 scrape baseline. |
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
-| Full / seed paper notes | 7 full + 109 seed | [`papers/`](papers/) | Distinguish fuller source analysis from preliminary notes; inspect each note's evidence and gaps. |
-| Memory product notes | 42 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
-| Product source archives | 41 source records | [`products/archives/`](products/archives/) | Trace dated product evidence; entries include summaries and snapshots, not exclusively full page copies. |
-| Benchmark catalog | 39 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
+| Full / seed paper notes | 7 full + 119 seed | [`papers/`](papers/) | Distinguish fuller source analysis from preliminary notes; inspect each note's evidence and gaps. |
+| Memory product notes | 44 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
+| Product source archives | 43 source records | [`products/archives/`](products/archives/) | Trace dated product evidence; entries include summaries and snapshots, not exclusively full page copies. |
+| Benchmark catalog | 45 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
 | Survey and taxonomy | 1 living survey + 6 meta-survey records | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md) · [`docs/meta-surveys.md`](docs/meta-surveys.md) | Build a field-level view before choosing an implementation. |
@@ -96,7 +96,7 @@ Start with the path that matches your question:
 | Goal | Read these first |
 |---|---|
 | Get the field overview | [`docs/agent-memory-survey.md`](docs/agent-memory-survey.md), then [`docs/taxonomy.md`](docs/taxonomy.md) |
-| Read the latest source refresh | [`docs/memory-radar-consolidation-2026-10-26.md`](docs/memory-radar-consolidation-2026-10-26.md), then [`docs/signals.md`](docs/signals.md) |
+| Read the latest source refresh | [November research and PR consolidation](docs/memory-radar-2026-11-18.md) · [Dated signals](docs/signals.md) |
 | Find relevant papers | [`papers/index.md`](papers/index.md), then full notes under [`papers/`](papers/) |
 | Compare memory products | [`docs/products-landscape.md`](docs/products-landscape.md), [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md), [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
 | Check why a product was included or rejected | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
@@ -193,6 +193,8 @@ flowchart LR
 | [`docs/taxonomy.md`](docs/taxonomy.md) | Shared vocabulary for classifying agent-memory systems and memory-kernel responsibilities. |
 | [`docs/meta-surveys.md`](docs/meta-surveys.md) | External meta-survey index from late 2025 through 2026 H1. |
 | [`docs/research-radar.md`](docs/research-radar.md) | Workflow for turning papers, products, and benchmark evidence into ImpactReports and ADR inputs. |
+| [November research and PR consolidation](docs/memory-radar-2026-11-18.md) | Procedural memory, task-conditioned utility, evaluation protocols and community submissions. |
+| [`docs/memory-radar-2026-11-16.md`](docs/memory-radar-2026-11-16.md) | 2026-11-16 weekly primary-source refresh, decisions, and evidence boundaries. |
 | [`docs/memory-radar-consolidation-2026-10-26.md`](docs/memory-radar-consolidation-2026-10-26.md) | Six-week consolidation, duplicate decisions, source repairs, and evidence boundaries. |
 | [`docs/memory-lifecycle-evaluation.md`](docs/memory-lifecycle-evaluation.md) | Proposed scope, temporal, forgetting, utility and migration experiments; not executed. |
 | [Historical weekly reports](docs/README.md#research-workflow) | Dated source and inclusion decisions; later canonical notes may supersede them. |
@@ -205,8 +207,8 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`products/`](products/) | 42 memory product notes spanning memory services, SDKs, managed platforms and personal/workflow memory; see the landscape for the complete list. |
-| [`products/archives/`](products/archives/) | 41 Markdown product source records, including snapshots and authored summaries; review the date, revision and archive purpose. |
+| [`products/`](products/) | 44 memory product notes spanning memory services, SDKs, managed platforms and personal/workflow memory; see the landscape for the complete list. |
+| [`products/archives/`](products/archives/) | 43 Markdown product source records, including snapshots and authored summaries; review the date, revision and archive purpose. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Product landscape by domain and audience. |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A, Tier B, reject, and alias decisions. |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product architecture patterns: memory OS, graph/temporal memory, MCP/local-first memory, managed cloud memory, and personal memory. |
@@ -216,11 +218,11 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`papers/`](papers/) | 7 full paper notes, 109 seed notes, and the master [`index.md`](papers/index.md). |
+| [`papers/`](papers/) | 7 full paper notes, 119 seed notes, and the master [`index.md`](papers/index.md). |
 | [`papers/stubs/`](papers/stubs/) | 988 generated stubs for papers not yet fully read. |
 | [`papers/pdfs/`](papers/pdfs/) | 534 archived PDFs; each source's redistribution terms apply. See the archival policy below. |
 | [`papers/_scrape/`](papers/_scrape/) | Reproducibility artifacts: scrape script and dedup JSON. |
-| [`benchmarks/`](benchmarks/) | 39 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
+| [`benchmarks/`](benchmarks/) | 45 benchmark catalog rows, including protocol notes, stub-backed candidate rows, and the note template. |
 | [`benchmarks/claims/`](benchmarks/claims/) | Usage-event ledger for benchmark mentions, vendor claims, critiques, and reproductions. |
 | [`benchmarks/archives/`](benchmarks/archives/) | Optional source-page snapshots for benchmark pages, repositories, or dataset cards. |
 | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md) | Benchmark landscape by capability, usage type, and evidence independence. |

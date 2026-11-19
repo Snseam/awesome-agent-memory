@@ -11,7 +11,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-06-24
+last_revised: 2026-11-16
 archive: archives/agentmemory-overview.md
 ---
 
@@ -65,3 +65,11 @@ spot-check 显示仓库仍活跃:created 2026-02-25,updated 2026-06-24,pushed
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
 > [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
+
+
+## 3.1 2026-11 release refresh
+
+The official `v0.9.33` release notes dated 2026-11-09 describe changes around
+memory provenance, redaction, pagination, consolidation, hooks, and large-state
+handling. These are release-level product behavior signals; they do not prove
+retrieval quality, durability, or independent benchmark performance.

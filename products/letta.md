@@ -10,7 +10,7 @@ evidence_level: medium
 code_available: yes
 license: Apache 2.0
 status: seed
-last_revised: 2026-10-05
+last_revised: 2026-11-18
 ---
 
 # Letta(原 MemGPT)
@@ -91,6 +91,27 @@ benchmark advantage or a general memory architecture claim.
 >
 > Releases: https://github.com/letta-ai/letta-code/releases/tag/v0.34.0
 > and https://github.com/letta-ai/letta-code/releases/tag/v0.34.4
+
+## 2026-11-14 Letta Code v0.34.61 local self-compaction
+
+Official stable release `v0.34.61`, published 2026-11-14 at 02:54:27 UTC
+(sources checked 2026-11-18), adds `self_compact_all` and
+`self_compact_sliding_window` to the local backend, which previously rejected
+these modes. The agent's own model receives the turn's system prompt, the
+messages being summarized, the turn's tools, and a final compaction prompt.
+The request carries the agent's sampling settings. Context overflow or an
+empty text result triggers the existing transcript-summary fallback. Manual
+`/compact` uses the compiled system prompt without turn tools.
+
+The upstream PR records two limits. Its OpenAI Responses summary path retains
+stored item IDs and was untested against a live model. Anthropic Fable 5 agents
+continue to use the substitute summary model in every mode. This evidence
+covers released Letta Code local context compaction. Letta server archival
+retrieval and benchmark quality require separate evidence. Verification here
+was limited to official release metadata and the maintainer PR description.
+
+[Official v0.34.61 release](https://github.com/letta-ai/letta-code/releases/tag/v0.34.61)
+and [upstream behavior and limitations, PR #5351](https://github.com/letta-ai/letta-code/pull/5351).
 
 ## Notes
 

@@ -36,7 +36,7 @@ confidence: medium
 memory_modules:
   - evaluator-benchmark
   - retriever-reranker
-last_revised: 2026-09-28
+last_revised: 2026-11-18
 ---
 
 # LongMemEval-V2
@@ -68,6 +68,10 @@ latency evaluation. Exact tier weights and judging remain to be normalized.
 - Keep model, reader, tier, memory-context budget, and latency setup fixed
   before comparing methods.
 - Do not merge this benchmark's events with original LongMemEval.
+
+## Derived use in November 2026
+
+A [task-conditioned utility study](../papers/task-conditioned-memory-utility.md) samples web-agent memories to construct paired factual-recall tasks. It holds the reader and filler fixed within each comparison and varies the memory shown. Its released rows count paired measurements under particular conditions and repetitions. They do not represent additional questions in the original 451-question catalog. [Tagged data release](https://huggingface.co/datasets/AgentsSci/AAMAS2027-ConditionalMemory/tree/v0.6-length-control)
 
 ## Validity / License Caveats
 

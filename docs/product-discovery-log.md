@@ -1,5 +1,5 @@
 ---
-date: 2026-10-26
+date: 2026-11-18
 title: Product discovery log — agent memory products
 status: working-log
 language: zh-CN
@@ -70,6 +70,7 @@ language: zh-CN
 
 | name | canonical_url | category | evidence | suggested_tier | why_include | why_not_core | sources_checked |
 |---|---|---|---|---|---|---|---|
+| MoobFS | https://github.com/studiomoob/llmoobfs | filesystem storage for agent memory | pinned project documentation | Tier B | ordinary files, typed metadata and permission-scoped attribute queries | application owns relevance, consolidation and memory use | [November assessment](#2026-11-18-community-submissions) |
 | TANCO Chuandeng / Lianzhu | https://skillhub.cn/skills/tanco/tanco-chuandeng-handoff-payskill / https://skillhub.cn/skills/tanco/tanco-lianzhu-devchain-payskill | handoff / execution-checkpoint workflows | publisher docs and readable source previews, accessed 2026-10-26 | adjacent workflow discovery | structured handoff, agent-maintained state, artifact hashes and resumable checkpoints | not a core memory product; implementation previews are not independent runtime or quality validation | pinned publisher index and versioned platform file previews |
 | Hyperconsciousness (HC) | https://github.com/louis030195/hyperconsciousness | scoped agent knowledge store | affiliated primary docs + static interface inspection at 5748f891 | Tier B | encrypted append-only records and grant-scoped MCP/HTTP capture/recall on one trusted node | developer alpha; central-only contract replaces proposal peer sync; runtime/security/recall not independently validated | README, MISSION, CONSTRAINTS, migration guide, MIT license |
 | Volcengine AgentKit Memory | https://www.volcengine.com/ | platform memory | domestic lane official/product signals | Tier B | platform memory capability signal | evidence less direct than OpenViking | Domestic |
@@ -379,3 +380,20 @@ sources and fresh-context independent review. This was not an exhaustive crawl
 of all linked pages, historical/deleted content, distributed packages or runtime
 behavior. The [review controls](weekly-memory-refresh-runbook.md#external-content-trust-boundary)
 reduce exposure but are not an execution sandbox or a security certification.
+
+
+## 2026-11-16 weekly refresh delta
+
+| decision | candidate | source and handling | boundary |
+|---|---|---|---|
+| update-existing | Google Agent Platform Memory Bank | [official release notes](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes), 2026-11-06 | console lifecycle controls, revisions, schemas, extraction controls, TTL and agent linking are product behavior only |
+| update-existing | Zep Agent Skills | [official changelog](https://help.getzep.com/changelog/2026/11/4), 2026-11-04 | general availability and Okta group restriction fix; no independent quality claim |
+| update-existing | agentmemory | [official release](https://github.com/rohitg00/agentmemory/releases/tag/v0.9.33), 2026-11-09 | provenance, redaction, pagination, consolidation and hook changes remain release behavior evidence |
+| add | JiuwenMemory | [official release](https://github.com/openJiuwen-ai/agent-memory/releases/tag/v0.2.1), 2026-11-13 | hierarchical/temporal/document/MCP surfaces; opt-in defaults and no runtime audit |
+| watchlist | Brain Memory, Counterparts, MemoryPilot, Substrate plugins | MCP Registry/GitHub discovery | catalog presence and README claims require source-by-source lifecycle and artifact review |
+| adjacent | Cloudflare Codex harness persistence | [official changelog](https://developers.cloudflare.com/changelog/product/agents/) | durable execution/session state, not confirmed semantic long-term user memory |
+
+## 2026-11-18 community submissions
+
+- **GoodMem — Tier A product seed.** Amin Ahmad, founder of PAIR Systems, submitted the September source summary. The host can persist selected content, reuse it across sessions and restrict retrieval by space and workload identity. These capabilities meet the dedicated memory-layer criterion. The product also serves ordinary document search. Its server has a proprietary binary license. Runtime permission enforcement, automated forgetting and comparative quality remain open. [Product note](../products/goodmem.md) · [Dated source summary](../products/archives/goodmem-overview.md) · [Contributor PR #26](https://github.com/Snseam/awesome-agent-memory/pull/26)
+- **MoobFS — Tier B storage lead.** The maintainer submitted a filesystem design with AI assistance. At revision `5a94b3c5`, the project describes ordinary files with typed extended attributes, a kernel-resident index and permission-scoped directory queries. Semantic selection and memory policy belong to the client. The upstream status page describes experimental VM testing and identifies outstanding independent review. The November 17 v0.6.2 experimental prerelease points to a separate source snapshot. The README opening names kernel 6.12, while the status page also reports VM tests on 7.0 and 7.3 for the layer module only. [Experimental release](https://github.com/studiomoob/llmoobfs/releases/tag/v0.6.2-experimental) · [Independent reproduction tracking](https://github.com/studiomoob/llmoobfs/issues/195) [Pinned design](https://github.com/studiomoob/llmoobfs/blob/5a94b3c59a46055d0d470dfff0882ad0339d5a93/README.md) · [Project status](https://github.com/studiomoob/llmoobfs/blob/5a94b3c59a46055d0d470dfff0882ad0339d5a93/docs/status.md) · [Scope limits](https://github.com/studiomoob/llmoobfs/blob/5a94b3c59a46055d0d470dfff0882ad0339d5a93/docs/when-not-to-use.md) · [Contributor PR #35](https://github.com/Snseam/awesome-agent-memory/pull/35)

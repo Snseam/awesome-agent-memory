@@ -12,7 +12,7 @@ memory_modules:
   - retriever-reranker
   - policy-privacy
 status: seed
-last_revised: 2026-08-03
+last_revised: 2026-11-18
 archive: archives/google-memory-bank-overview.md
 ---
 
@@ -94,3 +94,8 @@ memory。该更新只支持"Memory Bank 提供可配置托管 memory 与 runtime
 
 > *Ymem 项目对本笔记决策相关性的具体绑定见
 > [`../docs/ymem-binding/relevance-index.md`](../docs/ymem-binding/relevance-index.md)。*
+
+
+## 3.4 2026-11 release-note refresh
+
+The November 6 console update lets administrators create standalone banks, filter records by scope and inspect revision history. The console can edit or delete unstructured memories and inspect structured profiles and their underlying facts. Generation settings, schema configuration, expiration and revision-history retention have separate controls. The embedding model is configurable before the first memory is stored. [Google Cloud release notes, November 6](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#November_06_2026)

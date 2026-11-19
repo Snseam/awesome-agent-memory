@@ -38,7 +38,7 @@ confidence: medium
 memory_modules:
   - evaluator-benchmark
   - retriever-reranker
-last_revised: 2026-06-11
+last_revised: 2026-11-18
 ---
 
 # LoCoMo
@@ -81,6 +81,16 @@ LoCoMo has limited statistical power for broad product claims.
 
 LoCoMo is useful for temporal/causal schema pressure. It is not a universal
 memory-product leaderboard unless setup parity is documented.
+
+## Three November protocols on the same conversations
+
+| Source | What was held fixed or varied | What the measurement supports |
+|---|---|---|
+| [Becos study](https://arxiv.org/html/2611.19199v1) | 1,540 questions across ten conversations after excluding the adversarial category. Two answer models, two prompts and three judges. The authors reran whole-conversation baselines and blind-checked 150 answers. | The authors report shifts up to 7.2 percentage points from the judge and 9.3 from the prompt. Their company's research configuration was developed on LoCoMo without a held-out set. [Released answers and verdicts](https://github.com/becos-ai/locomo-results) |
+| [MEMOIR](../papers/memoir-training-free-lifecycle.md) | In the retrieval ablations, 1,905 deduplicated question–answer pairs share ten dialogue stores. Each query is scored before its feedback changes the store. | Evidence recall at five measures whether the annotated support was retrieved. An answer-quality score has a different denominator and target. |
+| [AgentMemRec](../papers/agent-memory-as-recommendation.md) | The LongMemEval-trained ranker is transferred to LoCoMo. The authors use the T-Mem answering prompt with GPT-4o-mini and repeat judging three times. | This evaluates the authors’ retrieval pipeline under its specified reader and evidence budget. |
+
+All three uses are logged in the [claims ledger](claims/claims.yaml).
 
 ## Related Papers
 
