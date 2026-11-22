@@ -1,6 +1,6 @@
 ---
 title: Signals — agent memory news, releases, comparisons (reverse chrono)
-date: 2026-11-18
+date: 2026-11-22
 status: living-log
 language: zh-CN
 ---
@@ -20,6 +20,8 @@ Radar 动作 enum:`stub` `seed-note` `deep-note` `impact-report` `archive-only`
 
 | 日期 | 来源 | 类型 | 一句话 | Radar 动作 |
 |---|---|---|---|---|
+| 2026-11-22（审校） | [Alter Ego 连接器](https://cloudalterego.cafeboon.com/docs.html) | product | 用户可将规则和项目笔记保存在自己的云盘或 Git 仓库。跨助手复用通过工具调用完成。 | [`seed-note`](../products/alter-ego.md) |
+| 2026-11-22（审校） | [SoloPup Memory 公开 beta](https://github.com/OakcoderX/solopup-memory/releases/tag/v0.26.0-beta.3) | product | DSH 原生插件保留决策的来源和修订关系，并支持在受管理的存储中撤回来源。 | [`seed-note`](../products/solopup-memory.md) |
 | 2026-11-18 | [11 月研究整合](memory-radar-2026-11-18.md) | comparison | 回查全部历史 PR，把程序性经验、时效、条件效用与评测设计放在同一组研究问题下 | `seed-note` 与目录更新 |
 | 2026-11-17 | [EvoDisco](https://arxiv.org/abs/2611.22102) | paper | 在线学习图改写策略，再冻结记忆测留出任务 | `seed-note` |
 | 2026-11-16 | [AdMem](https://arxiv.org/abs/2611.20605) · [Experience Rot](https://arxiv.org/abs/2611.20922) | paper | 动作前预期可用于给经验赋值，工具版本变化则提供观察经验何时失效的对照 | `seed-note` |

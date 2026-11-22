@@ -1,6 +1,6 @@
 ---
 title: Product memory architectures — cross-product patterns
-date: 2026-11-18
+date: 2026-11-22
 status: working-note
 language: zh-CN
 ---
@@ -182,6 +182,10 @@ flowchart LR
     DB --> Audit
 ```
 
+### Native DeepSeek Harness memory
+
+SoloPup Memory uses DSH's native write and recall path. Markdown holds the topic text, ledgers tie revisions to owner messages, and a SQLite coordinator tracks withdrawal across managed stores. A reviewer can trace the prior record a correction supersedes and the owner message that supports it. Restoring those controls requires more than a copy of the Markdown. [Product note](../products/solopup-memory.md) · [Tagged storage design](https://github.com/OakcoderX/solopup-memory/blob/6664b3a37c33ea7272dd550592538f5c11c43c38/README.en.md#L129-L137)
+
 ### Service-backed memory spaces
 
 GoodMem puts the write decision in the host application. It persists selected content in a space and makes it available to authorized readers in later sessions. The early-access HTTP MCP exposes retrieval and diagnostics. Applications can ingest through a write-capable API. Retrieval can create query logs when an administrator enables logging. This is the architecture mapping proposed by the affiliated contributor in #26. Runtime permission enforcement and retrieval quality have yet to be measured here. [Product note](../products/goodmem.md) · [MCP reference](https://docs.goodmem.ai/docs/reference/mcp/)
@@ -222,7 +226,7 @@ flowchart TB
 | Field | Synthesis |
 |---|---|
 | architecture pattern | 账号级或用户拥有的 memory vault,从日常聊天/文件/浏览器/应用数据抽取可跨模型使用的个人上下文 |
-| products mapped | OpenAI Memory、Claude memory/Dreams、Gemini personal context、Personal AI、Anuma、Kinic、Screenpipe |
+| products mapped | OpenAI Memory、Claude memory/Dreams、Gemini personal context、Personal AI、Anuma、Kinic、Screenpipe、Alter Ego |
 | common data flow | personal interactions -> extraction -> account/vault store -> scoped recall -> personalized response |
 | memory types | saved facts、chat-history memory、preferences、persona、private entries、portable vault memories |
 | retrieval/consolidation strategy | consumer assistants 多为黑箱排序;portable memory 产品强调 edit/delete/export/private flags |
@@ -234,6 +238,8 @@ screen/audio history and a separate editable-memory API. Capture, curated-memory
 CRUD and downstream model use have different data/retention boundaries; the
 shared pattern diagram below does not establish automatic extraction or scoped
 authorization for every product.
+
+Alter Ego stores its rules, contexts and journals in the user's selected cloud folder or Git repository. Its MCP tools append or open files when the client calls them. The publisher separates file storage, in-transit tool content, retained provider tokens and copies in the AI conversation. [Product note](../products/alter-ego.md) · [Privacy policy](https://cloudalterego.cafeboon.com/privacy.html)
 
 ```mermaid
 flowchart TB

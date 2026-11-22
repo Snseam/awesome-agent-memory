@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![Memory products](https://img.shields.io/badge/memory%20products-44-purple.svg)](products/)
+[![Memory products](https://img.shields.io/badge/memory%20products-46-purple.svg)](products/)
 [![Benchmarks](https://img.shields.io/badge/benchmarks-45-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--11-lightgrey.svg)](docs/signals.md)
@@ -58,7 +58,7 @@ the number of links or the submitter's identity.
 
 ## At A Glance
 
-Catalog snapshot: **2026-11-18**. Counts describe repository coverage, not the
+Catalog snapshot: **2026-11-22**. Counts describe repository coverage, not the
 number of independently validated papers, products or experiments.
 
 | Area | Current coverage | Entry point | Use it when you need to |
@@ -67,8 +67,8 @@ number of independently validated papers, products or experiments.
 | Paper stubs | 988 stubs | [`papers/stubs/`](papers/stubs/) | Track papers that are covered but not yet fully read. |
 | Local PDFs | 534 files | [`papers/pdfs/`](papers/pdfs/) | Re-read sources and audit paper notes. |
 | Full / seed paper notes | 7 full + 119 seed | [`papers/`](papers/) | Distinguish fuller source analysis from preliminary notes; inspect each note's evidence and gaps. |
-| Memory product notes | 44 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
-| Product source archives | 43 source records | [`products/archives/`](products/archives/) | Trace dated product evidence; entries include summaries and snapshots, not exclusively full page copies. |
+| Memory product notes | 46 notes | [`products/`](products/) | Compare memory layers, memory SDKs, managed memory, and memory-enabled agents. |
+| Product source archives | 45 source records | [`products/archives/`](products/archives/) | Trace dated product evidence; entries include summaries and snapshots, not exclusively full page copies. |
 | Benchmark catalog | 45 catalog rows | [`benchmarks/index.md`](benchmarks/index.md) | First-class benchmark records plus stub-backed candidate rows and a usage-claim ledger. |
 | Claims ledger | Structured YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | Separate vendor claims, paper evaluations, critiques, and reproductions. |
 | Cost-savings lane | Seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | Find agent-memory papers, methods, code paths, and products that reduce token, latency, or runtime cost. |
@@ -99,7 +99,7 @@ Start with the path that matches your question:
 | Read the latest source refresh | [November research and PR consolidation](docs/memory-radar-2026-11-18.md) · [Dated signals](docs/signals.md) |
 | Find relevant papers | [`papers/index.md`](papers/index.md), then full notes under [`papers/`](papers/) |
 | Compare memory products | [`docs/products-landscape.md`](docs/products-landscape.md), [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md), [`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
-| Check why a product was included or rejected | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
+| Check why a submission was included or deferred | [November 22 community issue decisions](docs/product-discovery-log.md#2026-11-22-community-issue-decisions) · [Product discovery log](docs/product-discovery-log.md) |
 | Explore cost-saving memory approaches | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md), then [`benchmarks/fact-based-memory-vs-long-context.md`](benchmarks/fact-based-memory-vs-long-context.md) and [`papers/mem0-paper.md`](papers/mem0-paper.md) |
 | Evaluate benchmark claims | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md), [`benchmarks/index.md`](benchmarks/index.md), [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) |
 | Track new releases and source channels | [`docs/signals.md`](docs/signals.md), [`docs/information-sources.md`](docs/information-sources.md) |
@@ -207,8 +207,8 @@ flowchart LR
 
 | Path | Purpose |
 |---|---|
-| [`products/`](products/) | 44 memory product notes spanning memory services, SDKs, managed platforms and personal/workflow memory; see the landscape for the complete list. |
-| [`products/archives/`](products/archives/) | 43 Markdown product source records, including snapshots and authored summaries; review the date, revision and archive purpose. |
+| [`products/`](products/) | 46 memory product notes spanning memory services, SDKs, managed platforms and personal/workflow memory; see the landscape for the complete list. |
+| [`products/archives/`](products/archives/) | 45 Markdown product source records, including snapshots and authored summaries; review the date, revision and archive purpose. |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | Product landscape by domain and audience. |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | Multi-agent product discovery log with Tier A, Tier B, reject, and alias decisions. |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | Cross-product architecture patterns: memory OS, graph/temporal memory, MCP/local-first memory, managed cloud memory, and personal memory. |

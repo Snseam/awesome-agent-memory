@@ -1,5 +1,5 @@
 ---
-date: 2026-11-18
+date: 2026-11-22
 title: Products landscape — agent memory by domain × audience
 status: working-spec
 language: zh-CN
@@ -17,9 +17,13 @@ language: zh-CN
 入库/拒绝理由见 [`product-discovery-log.md`](product-discovery-log.md),跨产品
 架构模式见 [`product-memory-architectures.md`](product-memory-architectures.md)。
 
+## 2026-11-22 community intake
+
+SoloPup Memory adds source-linked corrections and withdrawal in DeepSeek Harness. Alter Ego adds user-owned file memory for connected assistants. The catalog now has **46 product notes and 45 source archives**. [SoloPup Memory](../products/solopup-memory.md) · [Alter Ego](../products/alter-ego.md) · [Four community issue decisions](product-discovery-log.md#2026-11-22-community-issue-decisions)
+
 ## 2026-11-18 consolidated refresh
 
-The catalog now has **44 product notes and 43 source archives**. [JiuwenMemory](../products/jiuwen-memory.md) adds a library with temporal and hierarchical memory. [GoodMem](../products/goodmem.md) adds application-directed writes to persistent spaces and scoped retrieval. MoobFS remains a discovery entry for filesystem storage. [November source decisions](product-discovery-log.md#2026-11-18-community-submissions)
+At this snapshot the catalog had **44 product notes and 43 source archives**. [JiuwenMemory](../products/jiuwen-memory.md) adds a library with temporal and hierarchical memory. [GoodMem](../products/goodmem.md) adds application-directed writes to persistent spaces and scoped retrieval. MoobFS remains a discovery entry for filesystem storage. [November source decisions](product-discovery-log.md#2026-11-18-community-submissions)
 
 ## 2026-10-26 consolidated refresh
 
@@ -172,6 +176,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Cognition Devin | SaaS | 企业 | 自治 agent 的工作 memory |
 | GitHub Copilot Workspace | SaaS | 团队 / 企业 | repository-level context;memory 形态较弱但在演进 |
 | Claude Code | SaaS | 个人开发者 / 团队 | CLAUDE.md + memory hooks |
+| [SoloPup Memory](../products/solopup-memory.md) | MIT 插件，公开 beta | DeepSeek Harness 用户 | 全局和项目文本记忆，支持按来源修订和撤回。词法检索对跨语言查询有限 |
 | Supermemory plugins / MCP | OSS+SaaS | 个人开发者 / 团队 | Claude、Cursor、Codex、OpenCode 等 agent 插件入口 |
 | TencentDB Agent Memory OpenClaw plugin | OSS+SaaS | OpenClaw 用户 | 自动 capture / recall,并保留 Mermaid task canvas |
 | Hy-Memory OpenClaw plugin | Plugin | OpenClaw 用户 | 多 agent 共享 userId namespace 的长期记忆 |
@@ -195,6 +200,7 @@ behavior 或 release signal,不写成独立 benchmark / superiority claim。
 | Notion AI memory | — | SaaS | 团队 |
 | Obsidian + 插件 | — | OSS + 插件市场 | 个人 / 研究者 |
 | Screenpipe | [`../products/screenpipe.md`](../products/screenpipe.md) | Source-available + commercial distribution | 个人 / coding-agent 用户 / workflow builder |
+| Alter Ego | [产品笔记](../products/alter-ego.md) | 托管 MCP 连接器 | 希望在多个助手中复用个人或项目文件的用户 |
 | Personal AI | [`../products/personal-ai.md`](../products/personal-ai.md) | SaaS | 个人 / creator / 开发者 |
 | Anuma | [`../products/anuma.md`](../products/anuma.md) | SaaS | 个人 |
 | Kinic | [`../products/kinic.md`](../products/kinic.md) | SaaS / tokenized datastore | 个人 / creator |
@@ -264,7 +270,7 @@ memory kernel 通常的关系是:**复用**它们做底层 vector store,**不取
 Letta self-host / Mem0 self-host / Zep self-host / Graphiti / Cognee /
 Obsidian + 插件 / LangMem / Hindsight / TencentDB Agent Memory /
 EverOS / MemOS / Redis Agent Memory Server (OSS reference) / PowerMem / Basic Memory /
-ByteRover / Honcho / agentmemory / Memori / memU / memsearch /
+ByteRover / Honcho / agentmemory / Memori / memU / memsearch / SoloPup Memory /
 OpenViking / MemoryOS / A-MEM / MemX /
 Supermemory self-host。
 
@@ -284,7 +290,7 @@ Personal AI Memory Core。
 
 ### B4. C 端最终用户
 ChatGPT memory / Claude memory / Gemini personal context /
-Character.AI / Replika / Mem.ai / Mymind / Personal AI / Anuma / Kinic /
+Character.AI / Replika / Mem.ai / Mymind / Personal AI / Anuma / Kinic / Alter Ego /
 Personal Supermemory / Gemini personal context。
 
 ### B5. 研究者 / 学术
