@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/papers-989-brightgreen.svg)](papers/index.md)
 [![PDFs](https://img.shields.io/badge/local_PDFs-534-orange.svg)](papers/pdfs/)
-[![记忆产品](https://img.shields.io/badge/memory%20products-44-purple.svg)](products/)
+[![记忆产品](https://img.shields.io/badge/memory%20products-46-purple.svg)](products/)
 [![Benchmarks](https://img.shields.io/badge/benchmarks-45-blueviolet.svg)](benchmarks/)
 [![Surveys](https://img.shields.io/badge/meta_surveys-6-yellow.svg)](docs/meta-surveys.md)
 [![Updated](https://img.shields.io/badge/updated-2026--11-lightgrey.svg)](docs/signals.md)
@@ -54,7 +54,7 @@
 
 ## 一眼总览
 
-目录快照日期：**2026-11-18**。这些数字表示仓库覆盖范围，不代表已经独立验证的
+目录快照日期：**2026-11-22**。这些数字表示仓库覆盖范围，不代表已经独立验证的
 论文、产品或实验数量。
 
 | 板块 | 当前覆盖 | 入口 | 适合用来 |
@@ -63,8 +63,8 @@
 | 论文 stub | 988 个 stub | [`papers/stubs/`](papers/stubs/) | 跟踪已覆盖但尚未 full 阅读的论文。 |
 | 本地 PDF | 534 个文件 | [`papers/pdfs/`](papers/pdfs/) | 复读来源和审计论文笔记。 |
 | full / seed 论文笔记 | 7 个 full + 119 个 seed | [`papers/`](papers/) | 区分较完整的来源分析与初步笔记；引用前检查具体证据与缺口。 |
-| 记忆产品笔记 | 44 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
-| 产品来源存档 | 43 份来源记录 | [`products/archives/`](products/archives/) | 追溯有日期的产品证据；包含摘要和快照，并非全部为完整页面副本。 |
+| 记忆产品笔记 | 46 个笔记 | [`products/`](products/) | 对比 memory layer、memory SDK、managed memory 和带记忆的 agent 产品。 |
+| 产品来源存档 | 45 份来源记录 | [`products/archives/`](products/archives/) | 追溯有日期的产品证据；包含摘要和快照，并非全部为完整页面副本。 |
 | Benchmark 目录 | 45 个 catalog 行 | [`benchmarks/index.md`](benchmarks/index.md) | 理解 memory benchmark、stub-backed 候选行及其 claims 来源。 |
 | Claims ledger | 结构化 YAML ledger | [`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) | 区分厂商自报、论文评测、方法批评和独立复现。 |
 | 成本节省专题 | seed landscape | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md) | 查找能减少 token、延迟或运行成本的 agent-memory 论文、方法、代码和产品。 |
@@ -92,7 +92,7 @@
 | 阅读最新研究 | [11 月研究与 PR 整合](docs/memory-radar-2026-11-18.md) · [按日期查来源](docs/signals.md) |
 | 找相关论文 | [`papers/index.md`](papers/index.md)，再看 [`papers/`](papers/) 下的 full note |
 | 比较记忆产品 | [`docs/products-landscape.md`](docs/products-landscape.md)、[`docs/product-memory-architectures.md`](docs/product-memory-architectures.md)、[`docs/product-architecture-diagrams.md`](docs/product-architecture-diagrams.md) |
-| 查看产品为什么入库或被拒绝 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) |
+| 查看投稿的收录或暂缓理由 | [11 月 22 日社区 issue 审校](docs/product-discovery-log.md#2026-11-22-community-issue-decisions) · [产品发现日志](docs/product-discovery-log.md) |
 | 探索 agent memory 如何节省成本 | [`docs/cost-savings-landscape.md`](docs/cost-savings-landscape.md)，再读 [`benchmarks/fact-based-memory-vs-long-context.md`](benchmarks/fact-based-memory-vs-long-context.md) 和 [`papers/mem0-paper.md`](papers/mem0-paper.md) |
 | 评估 benchmark claims | [`docs/benchmarks-landscape.md`](docs/benchmarks-landscape.md)、[`benchmarks/index.md`](benchmarks/index.md)、[`benchmarks/claims/claims.yaml`](benchmarks/claims/claims.yaml) |
 | 跟踪新发布和信息源 | [`docs/signals.md`](docs/signals.md)、[`docs/information-sources.md`](docs/information-sources.md) |
@@ -195,8 +195,8 @@ flowchart LR
 
 | 路径 | 用途 |
 |---|---|
-| [`products/`](products/) | 44 个记忆产品笔记，覆盖记忆服务、SDK、托管平台与个人／工作流记忆；完整名单见产品全景。 |
-| [`products/archives/`](products/archives/) | 43 份 Markdown 产品来源记录，包含快照与作者整理的摘要；使用前检查日期、版本与存档用途。 |
+| [`products/`](products/) | 46 个记忆产品笔记，覆盖记忆服务、SDK、托管平台与个人／工作流记忆；完整名单见产品全景。 |
+| [`products/archives/`](products/archives/) | 45 份 Markdown 产品来源记录，包含快照与作者整理的摘要；使用前检查日期、版本与存档用途。 |
 | [`docs/products-landscape.md`](docs/products-landscape.md) | 按领域和服务对象整理的产品全景。 |
 | [`docs/product-discovery-log.md`](docs/product-discovery-log.md) | 多子 agent 产品搜索日志，记录 Tier A、Tier B、拒绝和 alias 决策。 |
 | [`docs/product-memory-architectures.md`](docs/product-memory-architectures.md) | 跨产品架构模式：Memory OS、graph/temporal memory、MCP/local-first memory、云厂商 managed memory 和个人记忆。 |

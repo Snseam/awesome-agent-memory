@@ -1,6 +1,6 @@
 ---
 title: Information sources for the agent-memory Research Radar
-date: 2026-06-11
+date: 2026-11-22
 status: working-spec
 language: zh-CN
 ---
@@ -108,6 +108,12 @@ memory、coding-agent memory、MCP memory server 和国内云平台。后续产�
   往往最先出现在这里。
 - **LMArena / 记忆专项 leaderboards**(LongMemEval 官方 leaderboard、
   MemoryAgentBench leaderboard):基线移动信号。
+
+### Memory Poison Lab
+
+2026-11-22 复核。投稿者 RishabhPande 自述为项目维护者，并披露本次提案使用了 AI 辅助。项目用确定性脚本和合成数据讲解记忆来源与纠错。生成的摘要继承输入记录的 `origin`，并在 `source` 中记录压缩前的条目 ID。修复会清理已隔离的记录，也会清理能解析且与所有者在同一主题上最新可解析规则冲突的外部偏好。缺少可解析的所有者规则时，冲突比对无法据此撤回该偏好。[摘要的来源字段](https://github.com/RishabhPande/memory-poison-lab/blob/3a1f5a2e5af7795a899747890d52a245131b5385/mpolab/policy.py#L80-L95) · [修复范围](https://github.com/RishabhPande/memory-poison-lab/blob/3a1f5a2e5af7795a899747890d52a245131b5385/mpolab/policy.py#L100-L122)
+
+这份教学资料适合对照记忆的来源字段、所有者权限和修复条件。示例结果来自项目作者，适用范围限于脚本化场景。真实模型和托管服务的安全性仍需各自的评估。[作者说明的证据边界](https://github.com/RishabhPande/memory-poison-lab/blob/3a1f5a2e5af7795a899747890d52a245131b5385/README.md#L134-L139) · [社区投稿 #41](https://github.com/Snseam/awesome-agent-memory/issues/41)
 
 ## 8. 产品横评与行业报告
 
